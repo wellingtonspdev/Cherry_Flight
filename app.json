@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "Cherry Bloom",
+    "slug": "cherry-bloom",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FFF8F2"
+      }
+    },
+    "plugins": [
+      "expo-asset"
+    ]
+  }
+}
