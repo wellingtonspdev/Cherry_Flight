@@ -1,0 +1,5 @@
+{
+  "url": "https://snackager.eascdn.net/git?repo=https%3A%2F%2Fgithub.com%2Fwellingtonspdev%2FCherry_Flight&branch=main",
+  "status": 500,
+  "body": "Failed to create snack: Error generating snackObj: Error parsing files: Failed to upload file asset ({\"errors\":[{\"code\":\"VALIDATION_ERROR\",\"type\":\"USER\",\"message\":\"\\\"$\\\": Required.\",\"isTransient\":false,\"requestId\":\"fcc74ad7-7c73-4117-a851-76052d8732ac\",\"metadata\":{\"validationIssues\":[{\"path\":\"$\",\"message\":\"Required\"}]}}]})"
+}

@@ -1,0 +1,6 @@
+{
+  "gitUrl": "https://github.com/wellingtonspdev/Cherry_Flight/tree/main/snack",
+  "endpoint": "https://snackager.eascdn.net/git?repo=https%3A%2F%2Fgithub.com%2Fwellingtonspdev%2FCherry_Flight&branch=main&subpath=snack&noCache=1",
+  "status": 200,
+  "body": "@git/github.com/wellingtonspdev/Cherry_Flight:snack"
+}
