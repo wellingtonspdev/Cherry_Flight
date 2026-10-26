@@ -22,6 +22,18 @@ Projeto acadêmico mobile e Web/PWA desenvolvido em **React Native + Expo + Reac
 - **Link Público do Expo Snack (SDK 54):** [Cherry Flight](https://snack.expo.dev/@wellingtonsp.de/cherry-flight).
 - **Web/PWA:** [Cherry Bloom](https://cherry-flight.vercel.app).
 - No editor do Snack, expanda o Web Preview para uma janela horizontal. A prévia estreita em retrato mostra a instrução para girar o dispositivo.
+
+### Importar do GitHub para o Snack
+
+No campo **Git URL**, use:
+
+```text
+https://github.com/wellingtonspdev/Cherry_Flight/tree/main/snack
+```
+
+O importador Git do Snack falha ao reenviar assets da raiz do repositório. A pasta `snack/` contém uma exportação SDK54 com App, quatro telas, componentes, física, navegação e tema. Os desenhos do jogo são SVG/Views; PNGs, áudio de referência, PDFs e evidências da auditoria permanecem na raiz completa.
+
+Na branch `main` (SDK54), atualizar essa exportação com `npm run prepare:snack` antes de publicar mudanças. `npm test` verifica que as cópias continuam idênticas ao runtime e não incluem arquivos que acionam upload de assets.
 - Compatível com execução direta no navegador (Web Preview do Snack) e no aplicativo **Expo Go (SDK 54)** em Android e iOS.
 
 ---

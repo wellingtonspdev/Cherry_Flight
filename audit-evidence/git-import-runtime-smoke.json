@@ -1,0 +1,16 @@
+{
+  "gitUrl": "https://github.com/wellingtonspdev/Cherry_Flight/tree/main/snack",
+  "sdkVersion": "54.0.0",
+  "viewport": "844x390",
+  "editorErrors": 0,
+  "initialY": 160.86514282226562,
+  "minimumYAfterInput": 85.99092102050781,
+  "maximumYAfterInput": 310.1701965332031,
+  "observedSamples": 193,
+  "gameOver": "PASS",
+  "restartToReady": "PASS",
+  "restartPlayerY": 160.7754364013672,
+  "longScorePlaythroughOnThisImport": "NOT EXECUTED",
+  "physicalDevice": "NOT EXECUTED",
+  "method": "Browser click input and read-only MutationObserver of player bounds; no physics or score writes"
+}

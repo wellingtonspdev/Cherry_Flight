@@ -34,7 +34,7 @@ Não copiar um CNAME de outro projeto nem antecipar alteração no domínio prin
 | Gate | Estado | Evidência |
 |---|---|---|
 | GitHub | PASS | `main` publicada em SDK54; branch `sdk-58-local` preserva a linha moderna. Nenhum force push. |
-| SDK54 | PASS | Expo54.0.38, React19.1.0, RN0.81.5; sete testes, install check e Doctor18/18. |
+| SDK54 | PASS | Expo54.0.38, React19.1.0, RN0.81.5; oito testes após adicionar a verificação do pacote importável, install check e Doctor18/18. |
 | Snack solicitado | PASS | O mesmo alias `@wellingtonsp.de/cherry-flight` foi atualizado, sem criar fork; SDK54.0.0;67 arquivos,38 de código/documentação e29 assets. |
 | Fontes do Snack | PASS | Os19 arquivos de runtime App/src coincidem com a cópia de entrega;29 assets respondem sem falha. |
 | Runtime Snack Web | PASS | Quatro telas, créditos exatos, salto, gravidade, obstáculos/reciclagem,30 pontos, quatro fases, colisão/Game Over e cinco restarts consecutivos. |
@@ -54,6 +54,16 @@ Tentativas anteriores do jogador automatizado perderam ou excederam o orçamento
 Evidências finais: `audit-evidence/published-runtime-results.json`, screenshots `published-snack-*`/`published-vercel-*`, `snack-source-verification.json` e logs de publicação. O Snack inclui o projeto de aplicação, assets e referências; o repositório GitHub também preserva lockfile e evidência de auditoria, que não são enviados como dependências ou builds temporários ao Snack/Vercel.
 
 No editor do Snack, usar o botão de expandir a prévia Web para uma janela horizontal. A prévia estreita em retrato apresenta a instrução para girar o dispositivo; não é erro de bundle.
+
+### Importação Git independente da publicação pela API
+
+O erro `Failed to upload file asset` com validação `"$": Required` foi reproduzido no endpoint real do importador Git para a raiz da branch main. Ele acontece durante preparação/upload dos arquivos, antes de executar o App. A publicação direta pela API e esse importador são gates distintos.
+
+O importador classifica como código apenas `.js`, `.jsx`, `.ts`, `.tsx`, `.json` e `.md`. Outros arquivos, incluindo arte, áudio, PDF, `.mjs`, `.cjs` e logs, passam pelo upload de assets. A raiz completa preserva esses materiais; não foram removidos para contornar o serviço.
+
+Para importar o jogo, usar `https://github.com/wellingtonspdev/Cherry_Flight/tree/main/snack`. Essa pasta contém22 arquivos de texto reconhecidos pelo importador, gerados da entrega SDK54, sem alterar o runtime publicado. A validação local passou em oito testes. O endpoint real de importação retornou HTTP200 e o projeto gerado abriu em SDK54 sem erros. Início, salto, queda, Game Over e replay foram executados no preview horizontal.
+
+O serviço omite package.json do mapa de código e reconstrói as dependências no editor: o resultado tem21 arquivos de código, zero assets de upload e os19 arquivos de runtime idênticos à entrega, após normalizar finais de linha. Evidências em `audit-evidence/git-import-*.json` e `git-import-tests.log`. A raiz completa continua preservada; o endereço de importação é o da pasta `snack/`.
 
 ### Limites mantidos
 
