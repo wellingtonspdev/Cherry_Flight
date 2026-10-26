@@ -5,7 +5,6 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -16,9 +15,6 @@
       "adaptiveIcon": {
         "backgroundColor": "#FFF8F2"
       }
-    },
-    "plugins": [
-      "expo-asset"
-    ]
+    }
   }
 }
