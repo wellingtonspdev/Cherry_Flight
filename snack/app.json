@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "Cherry Bloom",
+    "slug": "cherry-bloom",
+    "version": "1.0.0",
+    "orientation": "landscape",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "requireFullScreen": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FFF8F2"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "name": "Cherry Bloom",
+      "shortName": "Cherry Bloom",
+      "backgroundColor": "#FFF8F2",
+      "themeColor": "#D91E36"
+    }
+  }
+}

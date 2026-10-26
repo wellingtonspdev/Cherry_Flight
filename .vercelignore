@@ -6,6 +6,7 @@ node_modules
 audit-evidence
 references
 tests
+snack
 docs
 *.md
 dist

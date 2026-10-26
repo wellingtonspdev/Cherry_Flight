@@ -55,6 +55,14 @@ Evidências finais: `audit-evidence/published-runtime-results.json`, screenshots
 
 No editor do Snack, usar o botão de expandir a prévia Web para uma janela horizontal. A prévia estreita em retrato apresenta a instrução para girar o dispositivo; não é erro de bundle.
 
+### Importação Git independente da publicação pela API
+
+O erro `Failed to upload file asset` com validação `"$": Required` foi reproduzido no endpoint real do importador Git para a raiz da branch main. Ele acontece durante preparação/upload dos arquivos, antes de executar o App. A publicação direta pela API e esse importador são gates distintos.
+
+O importador classifica como código apenas `.js`, `.jsx`, `.ts`, `.tsx`, `.json` e `.md`. Outros arquivos, incluindo arte, áudio, PDF, `.mjs`, `.cjs` e logs, passam pelo upload de assets. A raiz completa preserva esses materiais; não foram removidos para contornar o serviço.
+
+Para importar o jogo, usar `https://github.com/wellingtonspdev/Cherry_Flight/tree/main/snack`. Essa pasta contém22 arquivos de texto reconhecidos pelo importador, gerados da entrega SDK54, sem alterar o runtime publicado. A validação local passa em oito testes; o resultado da importação real será registrado após o envio da pasta ao GitHub.
+
 ### Limites mantidos
 
 Fidelidade à arte rica, motion opcional, profiling em aparelho e advisories transitivos continuam documentados no relatório. A linha SDK57 não é a autoridade desta publicação e seu Web não foi promovido a PASS. Publicação funcional Web/Snack não significa aprovação integral de plataformas não executadas.
