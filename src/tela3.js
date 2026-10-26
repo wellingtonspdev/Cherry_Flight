@@ -5,6 +5,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import {
   Animated,
+  Platform,
   Pressable,
   StyleSheet,
   Text,
@@ -42,8 +43,14 @@ export default function Tela3({ navigation }) {
   const { width: rawWidth, height: rawHeight } = useWindowDimensions();
   const insets = useSafeAreaInsets();
 
-  const screenWidth = Math.max(320, rawWidth || 360);
-  const screenHeight = Math.max(480, rawHeight || 640);
+  const isWideWeb = Platform.OS === 'web' && rawWidth > 540;
+  const effectiveWidth = isWideWeb ? Math.min(rawWidth, 460) : rawWidth || 360;
+  const effectiveHeight = isWideWeb
+    ? Math.min(Math.max(580, (rawHeight || 720) - 32), 860)
+    : rawHeight || 640;
+
+  const screenWidth = Math.max(320, effectiveWidth);
+  const screenHeight = Math.max(480, effectiveHeight);
   const playableHeight = Math.max(360, screenHeight - GAME.groundHeight);
   const playerX = Math.round(screenWidth * GAME.playerXRatio);
   const initialPlayerY = Math.round(playableHeight * 0.44);
@@ -397,6 +404,55 @@ export default function Tela3({ navigation }) {
     };
   }, [navigation, handleRestart, stopGameLoop, clearPoseTimer]);
 
+  // Desktop & Web Keyboard Controls (Space, ArrowUp, W -> Jump/Start; R/Enter -> Play Again; Escape/H -> Home)
+  useEffect(() => {
+    if (Platform.OS !== 'web' || typeof window === 'undefined') {
+      return undefined;
+    }
+
+    const handleKeyDown = (event) => {
+      if (event.repeat) return;
+      const code = event.code || '';
+      const key = (event.key || '').toLowerCase();
+
+      if (
+        code === 'Space' ||
+        code === 'ArrowUp' ||
+        code === 'KeyW' ||
+        key === ' ' ||
+        key === 'arrowup' ||
+        key === 'w'
+      ) {
+        event.preventDefault();
+        if (gameStateRef.current === GAME_STATE.GAME_OVER) {
+          handleRestart();
+        } else {
+          handleFieldPress();
+        }
+        return;
+      }
+
+      if (
+        (code === 'KeyR' || code === 'Enter' || key === 'r' || key === 'enter') &&
+        gameStateRef.current === GAME_STATE.GAME_OVER
+      ) {
+        event.preventDefault();
+        handleRestart();
+        return;
+      }
+
+      if (code === 'Escape' || code === 'KeyH' || key === 'escape' || key === 'h') {
+        event.preventDefault();
+        handleGoHome();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [handleFieldPress, handleRestart, handleGoHome]);
+
   const currentPhase = getPhaseConfig(score);
 
   // Subtle tilt based on vertical velocity
@@ -461,7 +517,9 @@ export default function Tela3({ navigation }) {
             <View style={styles.readyBanner}>
               <Text style={styles.readyTitle}>TAP TO FLY</Text>
               <Text style={styles.readySubtitle}>
-                Toque na tela para iniciar o voo
+                {Platform.OS === 'web'
+                  ? 'Toque, clique ou pressione ESPAÇO / ↑ para voar'
+                  : 'Toque na tela para iniciar o voo'}
               </Text>
             </View>
           </View>

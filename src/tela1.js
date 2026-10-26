@@ -18,11 +18,13 @@ import CherryPlayer from './components/CherryPlayer';
 import LogoLockup from './components/LogoLockup';
 import PhaseBackground from './components/PhaseBackground';
 import { PHASES } from './game/phase';
+import { usePwaInstall } from './game/pwa';
 import { colors, radius, shadows, spacing } from './theme/theme';
 
 export default function Tela1({ navigation }) {
   const { width, height } = useWindowDimensions();
   const isCompact = width < 360 || height < 660;
+  const { canInstall, isIosSafariPrompt, promptInstall } = usePwaInstall();
 
   // Motion: logo reveal 400ms, Cherri idle bob 1600ms, buttons stagger
   const logoAnim = useRef(new Animated.Value(0)).current;
@@ -164,6 +166,26 @@ export default function Tela1({ navigation }) {
                 style={styles.fullWidthBtn}
               />
             </Animated.View>
+
+            {canInstall && (
+              <View style={styles.pwaWrap}>
+                <CherryButton
+                  title="INSTALAR APP (PWA)"
+                  variant="secondary"
+                  accessibilityLabel="Instalar Cherry Bloom como aplicativo no dispositivo"
+                  onPress={promptInstall}
+                  style={styles.fullWidthBtn}
+                />
+              </View>
+            )}
+
+            {!canInstall && isIosSafariPrompt && (
+              <View style={styles.iosPwaHint}>
+                <Text style={styles.iosPwaHintText}>
+                  Para instalar no iPhone/iPad: toque em Compartilhar e selecione "Adicionar à Tela de Início".
+                </Text>
+              </View>
+            )}
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -238,6 +260,27 @@ const styles = StyleSheet.create({
   },
   btnWrapLast: {
     width: '100%',
+  },
+  pwaWrap: {
+    width: '100%',
+    marginTop: spacing.sm + 4,
+  },
+  iosPwaHint: {
+    width: '100%',
+    marginTop: spacing.sm,
+    backgroundColor: '#FFFFFF',
+    borderRadius: radius.md,
+    borderWidth: 1.5,
+    borderColor: colors.blossom300,
+    paddingHorizontal: spacing.sm + 4,
+    paddingVertical: spacing.xs + 4,
+  },
+  iosPwaHintText: {
+    fontSize: 12,
+    fontWeight: '600',
+    color: colors.bark600,
+    textAlign: 'center',
+    lineHeight: 16,
   },
   fullWidthBtn: {
     width: '100%',

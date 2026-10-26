@@ -16,6 +16,15 @@
       "adaptiveIcon": {
         "backgroundColor": "#FFF8F2"
       }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./public/favicon.png",
+      "name": "Cherry Bloom",
+      "shortName": "Cherry Bloom",
+      "backgroundColor": "#FFF8F2",
+      "themeColor": "#D91E36"
     }
   }
 }

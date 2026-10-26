@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cherry Bloom — Offline</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, #BFE8EF 0%, #FFE3EA 60%, #FFF8F2 100%);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #251A20;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+    .card {
+      max-width: 380px;
+      width: 100%;
+      background: #FFF8F2;
+      border: 3px solid #FFB7C5;
+      border-radius: 28px;
+      padding: 28px 24px;
+      text-align: center;
+      box-shadow: 0 12px 24px rgba(86, 56, 63, 0.16);
+    }
+    h1 {
+      margin: 0 0 8px;
+      color: #A61128;
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+    p {
+      margin: 0 0 20px;
+      color: #56383F;
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 600;
+    }
+    button {
+      background: #D91E36;
+      color: #FFF8F2;
+      border: 2px solid #A61128;
+      border-radius: 999px;
+      padding: 14px 28px;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>CHERRY BLOOM</h1>
+    <p>Você está offline no momento. Conecte-se à internet uma vez para carregar o jardim completo no cache do dispositivo.</p>
+    <button onclick="window.location.reload()">TENTAR NOVAMENTE</button>
+  </div>
+</body>
+</html>
