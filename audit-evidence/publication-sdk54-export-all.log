@@ -1,0 +1,51 @@
+env: load .env.local
+env: export VERCEL_OIDC_TOKEN
+Starting Metro Bundler
+| (node:35832) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+Web node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 97.9% (479/500)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 91.2% (875/924)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 92.3% (656/752)
+Web Bundled 2086ms node_modules\expo\AppEntry.js (500 modules)
+| (node:8880) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:30564) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:17764) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:20040) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:10892) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (959/959)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (957/957)
+iOS Bundled 5910ms node_modules\expo\AppEntry.js (959 modules)
+Android Bundled 8547ms node_modules\expo\AppEntry.js (957 modules)
+
+› Assets (35):
+node_modules\@react-navigation\elements\lib\module\assets\back-icon-mask.0a328cd9c1afd0afe8e3b1ec5165b1b4.png (653 B)
+node_modules\@react-navigation\elements\lib\module\assets\back-icon-mask.png (653 B)
+node_modules\@react-navigation\elements\lib\module\assets\back-icon.35ba0eaec5a4f5ed12ca16fabeae451d.png (207 B)
+node_modules\@react-navigation\elements\lib\module\assets\back-icon.png (8 variations | 359 B)
+node_modules\@react-navigation\elements\lib\module\assets\clear-icon.c94f6478e7ae0cdd9f15de1fcb9e5e55.png (4 variations | 425 B)
+node_modules\@react-navigation\elements\lib\module\assets\clear-icon.png (4 variations | 425 B)
+node_modules\@react-navigation\elements\lib\module\assets\close-icon.808e1b1b9b53114ec2838071a7e6daa7.png (4 variations | 235 B)
+node_modules\@react-navigation\elements\lib\module\assets\close-icon.png (4 variations | 235 B)
+node_modules\@react-navigation\elements\lib\module\assets\search-icon.286d67d3f74808a60a78d3ebf1a5fb57.png (928 B)
+node_modules\@react-navigation\elements\lib\module\assets\search-icon.png (7 variations | 592 B)
+
+› web bundles (1):
+_expo/static/js/web/AppEntry-ce395fd84316e3951da1feb9302e6741.js (881 kB)
+
+› ios bundles (1):
+_expo/static/js/ios/AppEntry-b89eaf003943db8a2bb71915a0d63fe2.hbc (2.48 MB)
+
+› android bundles (1):
+_expo/static/js/android/AppEntry-85380d3823470ed4a24454486646b5ea.hbc (2.49 MB)
+
+› Files (3):
+favicon.ico (14.5 kB)
+index.html (1.26 kB)
+metadata.json (2.68 kB)
+
+Exported: D:\Cherry_Flight_Publish_Tools\release54-export-final

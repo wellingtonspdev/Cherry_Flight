@@ -2,9 +2,11 @@
 
 Data: 26/10/2026 — America/Sao_Paulo.
 
+**Atualização posterior:** o usuário autorizou commit, push e publicação em SDK54 no Snack `@wellingtonsp.de/cherry-flight` e na Vercel. Este relatório preserva a sequência histórica da auditoria. A situação atual das publicações, correções adicionais de nome/contraste/manifesto e testes remotos está em [PUBLICACAO.md](docs/PUBLICACAO.md). Não interpretar as frases históricas de “sem push” ou “Snack não atualizado” como descrição do estado posterior à publicação.
+
 ## Executive Summary
 
-**STATUS: NÃO APROVADO. FINAL AUDIT: FAIL. READY FOR DELIVERY: NO.**
+**PUBLICAÇÃO WEB/SNACK: PASS. AUDITORIA INTEGRAL: PARTIAL. DISPOSITIVO NATIVO: NOT EXECUTED.**
 
 A auditoria começou sem alterações de produto. Depois da coleta do baseline, o usuário determinou que o jogo deve funcionar **na horizontal** e autorizou a correção. O registro anterior às alterações está em [PRE_CORRECTION_BASELINE.md](audit-evidence/PRE_CORRECTION_BASELINE.md).
 
@@ -12,15 +14,32 @@ O produto anterior falhava com input rápido no Web local e no Snack SDK54. O co
 
 A correção horizontal foi aplicada ao checkout ativo SDK58 e validada também em uma cópia isolada SDK54 com dependências próprias. Inclui configuração Expo/PWA em landscape, remoção do gabinete vertical, Home em duas colunas, Game Over compacto, limites pela área real, gaps compatíveis com alturas menores, input imediato e correções dos dois defeitos de lifecycle que comprometiam essa execução.
 
-**A correção local não atualizou branches, Snack ou publicação remota.** O Snack público continua representando o baseline anterior. Não houve commit, push, merge, deploy ou salvamento no editor do Snack.
+**Na primeira etapa, a correção era somente local.** Após autorização explícita, main/SDK54 e a linha SDK58 foram publicadas no GitHub, o Snack solicitado foi atualizado e a Vercel recebeu deploy via CLI. A evidência histórica abaixo foi preservada; a situação final está em docs/PUBLICACAO.md.
 
 | Severidade | Findings registrados | Situação |
 |---|---:|---|
-| BLOCKER | 2 | Dois sintomas da mesma causa de input; corrigidos/retestados localmente, ainda reproduzidos no Snack publicado |
+| BLOCKER | 2 | Dois sintomas históricos da mesma causa; corrigidos e revalidados no Snack solicitado e Vercel |
 | CRITICAL | 0 | Nenhum defeito independente confirmado nessa classe |
 | MAJOR | 6 | Identidade, fidelidade visual, teclado oculto, resize, Web SDK57 e orientação horizontal |
 | MINOR | 5 | Manifesto, motion, performance, dependências e contraste |
 | COSMETIC | 0 | Não foram inventados findings de preferência estética |
+
+### Revalidação posterior à publicação
+
+| Finding | Estado atual | Evidência / limite |
+|---|---|---|
+| REV-001/002 | PASS | Tap10ms inicia; partida publicada chega a30 sem escrever estado do jogo; cinco restarts em Snack/Vercel |
+| REV-003 | PASS | Cherry em UI, labels e documentação atual; oito PNGs renomeados; histórico de auditoria conserva a grafia observada anteriormente |
+| REV-004 | PARTIAL | Nenhum redesign arbitrário; a arte rica continua referência e não foi equiparada às primitivas |
+| REV-005 | PASS | Home+Espaço não cria loop no teste público |
+| REV-006 | PASS local | Resize revalidado em SDK54/58; validação física continua pendente |
+| REV-007 | PARTIAL | Paths/documentação corrigidos; sheets originais ausentes foram identificados como não incluídos, não fabricados |
+| REV-008/009/011 | PARTIAL | Motion/performance/advisories permanecem com os limites descritos |
+| REV-010 | FAIL na linha SDK57 | Não é a linha publicada; não se usou SDK54 para aprovar SDK57 |
+| REV-012 | PASS Web | CTA cherry700/cream com contraste7.028:1; screenshot publicado mostra a variante corrigida |
+| REV-013 | PASS Web | Jogo horizontal em SDK54/58 e publicações; Expo/native-stack pedem landscape, sem prova física |
+
+Os resultados públicos finais estão em `audit-evidence/published-runtime-results.json`. Cada serviço chegou a30 pontos, passou pelas quatro fases e completou cinco restarts. O início e replay usaram touch10ms Chromium; o jogador automatizado prolongado usou TouchEvents DOM para reduzir atraso de controle, sem alterar refs de física ou score. Não é teste físico/manual.
 
 São 13 registros, não 13 causas independentes: REV-001 e REV-002 compartilham causa. REV-013 incorpora a determinação de orientação recebida durante a auditoria.
 
@@ -239,7 +258,7 @@ Após a correção, os mesmos arquivos de produto foram aplicados à cópia SDK5
 
 Sete testes unitários PASS. Reteste Web SDK54: 568×320, 844×390, 1366×768; campo com dimensões exatas; tap touch de 10 ms; impulso; queda; Game Over; replay; resize para 960×420; atalhos inativos na Home; aviso em retrato; Instructions/Credits com scroll. Evidência final em [landscape-results.json](audit-evidence/landscape-results.json).
 
-O branch `main` não recebeu commit de correção. Portanto, o gate de entrega do artefato público permanece **FAIL**, mesmo com reteste positivo da cópia local corrigida.
+Depois da autorização de publicação, `main` recebeu as correções em SDK54 e foi enviada ao GitHub. O mesmo runtime foi testado no Snack solicitado e Vercel. O gate funcional Web público passou; native/safe area física e a auditoria visual integral não foram presumidos PASS.
 
 ## SDK 57 Review
 
@@ -251,13 +270,13 @@ A correção ainda precisa ser transportada para a branch SDK57 com sua configur
 
 ## Snack Review
 
-Projeto real: [Cherry Bloom — Snack SDK54](https://snack.expo.dev/7kDnJz_p3s3TVT4VDIrPE).
+Baseline inicialmente auditado: [Cherry Bloom — Snack SDK54 anterior](https://snack.expo.dev/7kDnJz_p3s3TVT4VDIrPE). A publicação solicitada posteriormente é [Cherry Flight — SDK54](https://snack.expo.dev/@wellingtonsp.de/cherry-flight).
 
 PASS para abertura pública sem login em contexto novo, bundle/render Web e navegação das quatro rotas. PASS para Game Over e replay depois de pressão longa. **FAIL para clique rápido**. Score/collision/replay completos por toque normal: PARTIAL; não houve partida longa no Snack. Android/iOS dentro do Snack: NOT EXECUTED.
 
 A árvore de projeto exposta no editor contém App, package e src; os desenhos vistos são programáticos. Não se confirmou paridade byte a byte com o commit main. Requisições do Snack resolveram Navigation7.1.8/native-stack7.3.10, diferentes das versões atuais do manifesto main. Isso reforça que testes locais não substituem o gate público.
 
-Correção horizontal publicada no Snack: **NOT EXECUTED**. O projeto remoto não foi editado. A classificação da publicação atual continua FAIL. O Snack precisará ser reimportado/atualizado e testado em paisagem; app.json local sozinho não comprova orientação do cliente Snack.
+Correção horizontal publicada no Snack solicitado: **PASS Web**, após autorização. O alias existente foi atualizado em SDK54, com67 arquivos, sem fork. O pacote react-native-web foi alinhado a~0.21.0 para remover warning do editor. O preview público foi executado, chegou a30 pontos e completou cinco restarts. A orientação nativa também foi indicada no native-stack, pois app.json local sozinho não comprova a orientação dentro do cliente Snack. Aparelho físico: NOT EXECUTED.
 
 ## Performance Review
 
@@ -287,7 +306,7 @@ Metadados npm consultados indicam atividade recente de Expo, React Navigation e 
 
 ## Acceptance Criteria Matrix
 
-Estado abaixo refere-se à autoridade **SDK54 baseline/main/Snack**, com reteste local indicado quando existe. PASS Web não significa PASS Android/iOS. Todos os 53 IDs da seção 12 da especificação foram incluídos.
+A tabela de53 IDs abaixo conserva o **snapshot da primeira passagem SDK54**, com reteste local indicado. Os FAIL históricos de input/publicação foram posteriormente resolvidos; a tabela de revalidação seguinte registra essa atualização. PASS Web não significa PASS Android/iOS.
 
 | ID | Critério | Estado | Evidência | Finding |
 |---|---|---|---|---|
@@ -345,6 +364,24 @@ Estado abaixo refere-se à autoridade **SDK54 baseline/main/Snack**, com reteste
 | AC-407 | Link público em outra sessão | PASS | Contexto novo, sem login | — |
 | AC-408 | Link entregue corresponde ao SDK54 | PARTIAL | Link README é SDK54; envio Teams e versão horizontal atualizada não verificados | REV-013 |
 
+### Atualização dos critérios após publicação autorizada
+
+| IDs | Estado atual | Evidência |
+|---|---|---|
+| AC-001/003/004/005/006/007/008 | PASS Web | SDK54 e quatro telas executados no alvo Snack solicitado e Vercel |
+| AC-102/103 | PASS Web | Touch10ms inicia e aplica impulso no público |
+| AC-104/105/106/107/111/112/114 | PASS Web | Partida publicada até30, pool reciclado, pontuação, colisão/Game Over e replay |
+| AC-115/116 | PASS Web | Home+Espaço inativo e cinco restarts consecutivos em cada serviço |
+| AC-203 | PASS Web | Agora inclui transições reais até30 nos dois serviços, sem injetar score |
+| AC-301/302/303 | PASS | Doctor18/18, install check e nenhum audit fix force |
+| AC-401/402/403/404/405/407 | PASS Web | Projeto público atualizado, bundle, rotas, loop, score/collision/replay e contexto anônimo |
+| AC-406 | PASS Web | ArteSVG renderizada;29 assets de referência disponíveis por URLs válidos; áudio não ativado |
+| AC-408 | PASS para a versão do link | Alias indicado pelo usuário serve SDK54; envio ao Teams não foi executado |
+| AC-002/014/205/209/304 | PARTIAL | Mantidos limites de prova nativa, estudo de UX, motion/hitbox e advisories |
+| AC-207 | NOT EXECUTED | Nenhum dispositivo iOS/Android físico foi testado |
+
+Os demais critérios mantêm a evidência registrada anteriormente. Os arquivos de auditoria anteriores preservam a ocorrência das falhas e a matriz atual não apaga esse histórico.
+
 ### Gates G0–G11 e Definition of Done
 
 | Gate | Estado | Limite |
@@ -352,14 +389,14 @@ Estado abaixo refere-se à autoridade **SDK54 baseline/main/Snack**, com reteste
 | G0 Enunciado | PASS | PDF e ambiguidades confrontados com especificação |
 | G1 Baseline54 | PASS | Instalação/check/Doctor |
 | G2 Navegação | PASS | Quatro telas no Web/Snack |
-| G3 Física | PARTIAL | Core opera; input público falha |
+| G3 Física | PASS Web | Core e input público revalidados |
 | G4 Obstáculos/collision | PARTIAL | Web/dirigidos; físico não executado |
-| G5 Score/restart | PARTIAL | Local/instrumentado; Snack score incompleto |
+| G5 Score/restart | PASS Web | Score30 e cinco restarts no Snack solicitado e Vercel |
 | G6 Skin | PARTIAL | Tokens/silhueta, fidelidade visual incompleta |
 | G7 Visual QA | PARTIAL | Browser e paisagem testados; safe area física pendente |
 | G8 Polish | PARTIAL | Motion parcial, áudio/haptics não executados |
 | G9 Revisão independente | PASS | Esta revisão falsificou PASS anteriores; não usa relatório do executor como prova |
-| G10 Snack | FAIL | Input curto falha; paisagem corrigida não publicada |
+| G10 Snack | PASS Web | PublicaçãoSDK54 e testes remotos concluídos; nativo físico não executado |
 | G11 Freeze | FAIL | Definition of Done ainda não satisfeita |
 
 ## Planned vs Implemented Matrix
@@ -562,15 +599,16 @@ Harness de reteste: [landscape-audit.cjs](audit-evidence/landscape-audit.cjs). T
 
 ## Final Verdict
 
-**A orientação horizontal está corrigida e funcional no Web local testado, em SDK54 e SDK58.** Configuração nativa solicita paisagem, mas não há comprovação em dispositivo. Não houve atualização da branch SDK54 por commit nem do Snack público.
+**A orientação horizontal está corrigida no Web local e publicada em SDK54 no Snack solicitado e Vercel.** Main/SDK54 e a linha SDK58 foram enviadas ao GitHub. Expo e native-stack solicitam paisagem; não há comprovação física.
 
-O produto ainda tem identidade/nome divergente, fidelidade visual incompleta, motion parcial, dívida de render e contraste insuficiente. A publicação Snack retém o bug de input. Portanto:
+Nome, contraste e input foram corrigidos e revalidados. Fidelidade à arte rica, motion, dívida de render, advisories e plataformas físicas mantêm as limitações descritas. Portanto:
 
 ```text
 LOCAL LANDSCAPE WEB: PASS
-DELIVERY GATE: FAIL
-FINAL AUDIT: FAIL
+SNACK SDK54 WEB: PASS
+VERCEL PRODUCTION: PASS
+FINAL AUDIT: PARTIAL
 READY FOR DELIVERY: NO
 ```
 
-Não foram executados deploy, instalação PWA real, teste físico Android/iOS, submissão Teams, partida manual prolongada nem atualização remota. A avaliação de referência visual é limitada pelos boards/sheets originais ausentes; esses limites não foram transformados em bugs inventados.
+Deploy, atualização do Snack e testes Web remotos foram executados com autorização. Instalação física de PWA, aparelho Android/iOS, submissão Teams e partida manual prolongada não foram executados. READY FOR DELIVERY permanece NO para o congelamento integral da auditoria, sem impedir a publicação Web autorizada e funcional. Boards/sheets originais ausentes continuam limitando a comparação visual.

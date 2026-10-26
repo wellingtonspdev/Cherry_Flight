@@ -1,0 +1,224 @@
+[
+  {
+    "label": "snack",
+    "state": "FAIL",
+    "message": "snack did not reach 30 points: {\"status\":\"PLAYING\",\"y\":171.60044099999334,\"velocity\":240,\"score\":13,\"obstacles\":[{\"id\":\"branch-pair-0\",\"x\":55.28350000000182,\"width\":68,\"gapY\":94,\"gapSize\":168,\"scored\":true,\"variant\":\"lightBlossom\"},{\"id\":\"branch-pair-1\",\"x\":315.2835000000018,\"width\":68,\"gapY\":86,\"gapSize\":168,\"scored\":false,\"variant\":\"oldBark\"},{\"id\":\"branch-pair-2\",\"x\":575.2835000000018,\"width\":68,\"gapY\":85,\"gapSize\":168,\"scored\":false,\"variant\":\"lightBlossom\"}],\"raf\":54647,\"elapsed\":26.034300000000222}"
+  },
+  {
+    "label": "vercel",
+    "url": "https://cherry-flight.vercel.app",
+    "state": "PASS",
+    "sdkVersion": "54.0.0",
+    "score": 30,
+    "timeline": [
+      {
+        "attempt": 1,
+        "score": 0,
+        "elapsed": 0.017600000000000136,
+        "y": 149.44381799999996
+      },
+      {
+        "attempt": 1,
+        "score": 1,
+        "elapsed": 5.250400000000009,
+        "y": 164.42100899999963
+      },
+      {
+        "attempt": 1,
+        "score": 2,
+        "elapsed": 6.933400000000012,
+        "y": 110.68870199999961
+      },
+      {
+        "attempt": 1,
+        "score": 3,
+        "elapsed": 8.61650000000001,
+        "y": 138.05549399999975
+      },
+      {
+        "attempt": 1,
+        "score": 4,
+        "elapsed": 10.283000000000007,
+        "y": 169.57102949999978
+      },
+      {
+        "attempt": 1,
+        "score": 5,
+        "elapsed": 11.966200000000004,
+        "y": 100.40518650000017
+      },
+      {
+        "attempt": 1,
+        "score": 6,
+        "elapsed": 13.665900000000002,
+        "y": 138.51729600000016
+      },
+      {
+        "attempt": 1,
+        "score": 7,
+        "elapsed": 15.315900000000008,
+        "y": 146.69523899999925
+      },
+      {
+        "attempt": 1,
+        "score": 8,
+        "elapsed": 16.998800000000003,
+        "y": 101.85731700000032
+      },
+      {
+        "attempt": 1,
+        "score": 9,
+        "elapsed": 18.681899999999995,
+        "y": 127.14782850000034
+      },
+      {
+        "attempt": 1,
+        "score": 10,
+        "elapsed": 20.43179999999997,
+        "y": 150.67604250000088
+      },
+      {
+        "attempt": 1,
+        "score": 11,
+        "elapsed": 22.031599999999948,
+        "y": 145.45752300000058
+      },
+      {
+        "attempt": 1,
+        "score": 12,
+        "elapsed": 23.731299999999933,
+        "y": 115.07584350000023
+      },
+      {
+        "attempt": 1,
+        "score": 13,
+        "elapsed": 25.397799999999926,
+        "y": 170.2391324999997
+      },
+      {
+        "attempt": 1,
+        "score": 14,
+        "elapsed": 27.064299999999903,
+        "y": 120.07862250000045
+      },
+      {
+        "attempt": 1,
+        "score": 15,
+        "elapsed": 28.74739999999988,
+        "y": 113.40267149999968
+      },
+      {
+        "attempt": 1,
+        "score": 16,
+        "elapsed": 30.413799999999867,
+        "y": 146.95460099999963
+      },
+      {
+        "attempt": 1,
+        "score": 17,
+        "elapsed": 32.096899999999835,
+        "y": 164.9768759999991
+      },
+      {
+        "attempt": 1,
+        "score": 18,
+        "elapsed": 33.77999999999989,
+        "y": 98.48352749999911
+      },
+      {
+        "attempt": 1,
+        "score": 19,
+        "elapsed": 35.446599999999954,
+        "y": 155.66107050000025
+      },
+      {
+        "attempt": 1,
+        "score": 20,
+        "elapsed": 37.12960000000005,
+        "y": 167.8428284999983
+      },
+      {
+        "attempt": 1,
+        "score": 21,
+        "elapsed": 38.81270000000012,
+        "y": 108.58450499999991
+      },
+      {
+        "attempt": 1,
+        "score": 22,
+        "elapsed": 40.47920000000022,
+        "y": 129.0371984999997
+      },
+      {
+        "attempt": 1,
+        "score": 23,
+        "elapsed": 42.1790000000003,
+        "y": 124.7338515000005
+      },
+      {
+        "attempt": 1,
+        "score": 24,
+        "elapsed": 43.845400000000375,
+        "y": 96.31828800000066
+      },
+      {
+        "attempt": 1,
+        "score": 25,
+        "elapsed": 45.51200000000043,
+        "y": 142.12088699999953
+      },
+      {
+        "attempt": 1,
+        "score": 26,
+        "elapsed": 47.1950000000005,
+        "y": 151.43757299999612
+      },
+      {
+        "attempt": 1,
+        "score": 27,
+        "elapsed": 48.87820000000057,
+        "y": 114.10977750000043
+      },
+      {
+        "attempt": 1,
+        "score": 28,
+        "elapsed": 50.544600000000656,
+        "y": 128.37325949999982
+      },
+      {
+        "attempt": 1,
+        "score": 29,
+        "elapsed": 52.277800000000724,
+        "y": 163.61362199999962
+      },
+      {
+        "attempt": 1,
+        "score": 30,
+        "elapsed": 53.89420000000078,
+        "y": 123.15596400000011
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "score": 30,
+        "end": "PLAYING"
+      }
+    ],
+    "restarts": 5,
+    "routes": [
+      "Welcome",
+      "Instructions",
+      "Credits",
+      "Game"
+    ],
+    "input": "Chromium touch 10ms",
+    "pwa": {
+      "registration": {
+        "scope": "https://cherry-flight.vercel.app/",
+        "state": "activated"
+      },
+      "offlineGameplay": true
+    }
+  }
+]

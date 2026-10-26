@@ -1,0 +1,45 @@
+Vercel CLI 65.2.0 (Node.js 24.22.0)
+  Inspect         https://vercel.com/wellington-siqueira-portos-projects/cherry-flight/5Z348nGgngfxk3YpnyBQDkPiRMhG
+  Production      https://cherry-flight-pj9c217ry-wellington-siqueira-portos-projects.vercel.app
+▲ Aliased         https://cherry-flight.vercel.app
+{
+  "status": "ok",
+  "deployment": {
+    "id": "dpl_5Z348nGgngfxk3YpnyBQDkPiRMhG",
+    "url": "https://cherry-flight-pj9c217ry-wellington-siqueira-portos-projects.vercel.app",
+    "productionUrl": "https://cherry-flight.vercel.app",
+    "inspectorUrl": "https://vercel.com/wellington-siqueira-portos-projects/cherry-flight/5Z348nGgngfxk3YpnyBQDkPiRMhG",
+    "readyState": "READY",
+    "target": "production",
+    "deploymentApiUrl": "https://api.vercel.com/v13/deployments/dpl_5Z348nGgngfxk3YpnyBQDkPiRMhG",
+    "buildMachine": {
+      "cores": 2,
+      "memory": 8192,
+      "machine": "basic",
+      "selectionType": "fixed",
+      "selectionSource": "plan-default"
+    },
+    "deploymentProtection": [
+      "vercel_authentication"
+    ]
+  },
+  "message": "Deployment cherry-flight-pj9c217ry-wellington-siqueira-portos-projects.vercel.app ready. Production URL: https://cherry-flight.vercel.app",
+  "next": [
+    {
+      "command": "vercel git connect --scope wellington-siqueira-portos-projects",
+      "when": "Automatically deploy changes on every push"
+    },
+    {
+      "command": "vercel curl https://cherry-flight.vercel.app",
+      "when": "Verify deployment, including when Deployment Protection is enabled"
+    },
+    {
+      "command": "vercel inspect cherry-flight-pj9c217ry-wellington-siqueira-portos-projects.vercel.app --scope wellington-siqueira-portos-projects",
+      "when": "Inspect deployment"
+    },
+    {
+      "command": "vercel deploy --prod --scope wellington-siqueira-portos-projects",
+      "when": "Promote to production"
+    }
+  ]
+}
