@@ -1,0 +1,11 @@
+score 0 elapsed 0.017600000000000025
+score 1 elapsed 5.283900000000008
+AssertionError [ERR_ASSERTION]: Real-input playthrough must reach 30 points: {"status":"GAME_OVER","y":218.91687299999992,"velocity":397.5000000000001,"score":1,"elapsed":6.667100000000016,"obstacles":[{"id":"branch-pair-0","x":-62.80049999999913,"width":68,"gapY":97,"gapSize":168,"scored":true,"variant":"lightBlossom"},{"id":"branch-pair-1","x":197.19949999999807,"width":68,"gapY":89,"gapSize":168,"scored":false,"variant":"leafyBranch"},{"id":"branch-pair-2","x":457.19949999999193,"width":68,"gapY":107,"gapSize":168,"scored":false,"variant":"oldBark"}]}
+    at main (D:\Cherry_Flight\audit-evidence\landscape-playthrough.cjs:48:12) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}

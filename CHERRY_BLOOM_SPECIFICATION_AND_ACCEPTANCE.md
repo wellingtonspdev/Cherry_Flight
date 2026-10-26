@@ -7,6 +7,8 @@
 **Primary delivery:** Expo Snack, Expo SDK 54  
 **Parallel development copy:** Expo SDK 57  
 
+**Atualização de aceite — 26/10/2026:** o jogo deve funcionar em paisagem (horizontal), conforme determinação do usuário. Validar 568×320, 844×390 e desktop horizontal; confirmar instrução de rotação no navegador em retrato, geometria baseada na área real e reinício seguro ao redimensionar. A configuração nativa solicita landscape; execução física continua sendo um gate independente.
+
 ---
 
 ## 1. Purpose
@@ -82,7 +84,7 @@ Core replacements:
 
 | Flappy-style concept | Cherry Bloom |
 |---|---|
-| bird | Cherri, a cherry character |
+| bird | Cherry, a cherry character |
 | green pipes | flowering Bloom Branches |
 | sky background | Bloom Garden phases |
 | flap | jump/wind impulse |
@@ -216,10 +218,10 @@ Movement must account for elapsed time (`dt`) rather than assuming exactly 60 FP
 
 ### 8.5 Collision
 Required collision cases:
-- Cherri intersects top branch;
-- Cherri intersects bottom branch;
-- Cherri exits top boundary, if top boundary is treated as lethal;
-- Cherri reaches ground/bottom boundary.
+- Cherry intersects top branch;
+- Cherry intersects bottom branch;
+- Cherry exits top boundary, if top boundary is treated as lethal;
+- Cherry reaches ground/bottom boundary.
 
 Use simple AABB or circle-vs-rect math. Do not add a physics engine solely for this.
 
@@ -227,7 +229,7 @@ Use simple AABB or circle-vs-rect math. Do not add a physics engine solely for t
 Decorative petals/leaves on obstacles must not silently enlarge collision bounds. Collision boxes must correspond to the readable trunk/branch shape.
 
 ### 8.7 Score
-Increment by 1 exactly when Cherri fully passes the obstacle pair and that pair has not already scored.
+Increment by 1 exactly when Cherry fully passes the obstacle pair and that pair has not already scored.
 
 ### 8.8 Restart
 Restart must reset:
@@ -374,7 +376,7 @@ Never label PASS without direct evidence.
 | AC-101 | Game can enter READY | runtime |
 | AC-102 | First input starts gameplay | runtime |
 | AC-103 | Tap applies immediate upward impulse | runtime |
-| AC-104 | Gravity pulls Cherri downward | runtime |
+| AC-104 | Gravity pulls Cherry downward | runtime |
 | AC-105 | Obstacles move continuously | runtime |
 | AC-106 | Obstacles recycle after leaving screen | runtime/log/inspection |
 | AC-107 | Gap position varies within valid bounds | repeated runtime |
@@ -392,7 +394,7 @@ Never label PASS without direct evidence.
 
 | ID | Criterion | Evidence required |
 |---|---|---|
-| AC-201 | Cherri is readable at gameplay scale | screenshot |
+| AC-201 | Cherry is readable at gameplay scale | screenshot |
 | AC-202 | Obstacle corridor is obvious | screenshot |
 | AC-203 | Score readable in all world phases | screenshots |
 | AC-204 | Welcome actions are all reachable | runtime |

@@ -2,7 +2,7 @@
 // Source of Truth: CHERRY_BLOOM_SPECIFICATION_AND_ACCEPTANCE.md (Section 7.1 & 7.2)
 
 import React, { useEffect } from 'react';
-import { Platform, StyleSheet, useWindowDimensions, View } from 'react-native';
+import { Platform, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -17,7 +17,7 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   const { width, height } = useWindowDimensions();
-  const isWideWeb = Platform.OS === 'web' && width > 540;
+  const isPortraitWeb = Platform.OS === 'web' && height > width;
 
   useEffect(() => {
     registerWebPwa();
@@ -25,19 +25,13 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      <View style={isWideWeb ? styles.desktopBackdrop : styles.mobileRoot}>
-        <View
-          style={
-            isWideWeb
-              ? [
-                  styles.arcadeCabinet,
-                  {
-                    height: Math.min(Math.max(580, height - 32), 860),
-                  },
-                ]
-              : styles.mobileRoot
-          }
-        >
+      <View style={styles.mobileRoot}>
+        {isPortraitWeb ? (
+          <View style={styles.orientationNotice}>
+            <Text accessibilityRole="header" style={styles.orientationTitle}>Gire o dispositivo</Text>
+            <Text style={styles.orientationText}>Cherry Bloom é jogado na horizontal. Use o modo paisagem para continuar.</Text>
+          </View>
+        ) : (
           <NavigationContainer>
             <StatusBar style="dark" />
             <Stack.Navigator
@@ -54,7 +48,7 @@ export default function App() {
               <Stack.Screen name="Credits" component={Tela4} />
             </Stack.Navigator>
           </NavigationContainer>
-        </View>
+        )}
       </View>
     </SafeAreaProvider>
   );
@@ -64,20 +58,23 @@ const styles = StyleSheet.create({
   mobileRoot: {
     flex: 1,
   },
-  desktopBackdrop: {
+  orientationNotice: {
     flex: 1,
     backgroundColor: '#251A20',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 16,
+    padding: 24,
   },
-  arcadeCabinet: {
-    width: '100%',
-    maxWidth: 460,
-    borderRadius: 28,
-    overflow: 'hidden',
-    borderWidth: 3,
-    borderColor: '#FFB7C5',
-    backgroundColor: '#FFF8F2',
+  orientationTitle: {
+    color: '#FFF8F2',
+    fontSize: 28,
+    fontWeight: '800',
+    textAlign: 'center',
+  },
+  orientationText: {
+    color: '#FFF8F2',
+    fontSize: 16,
+    textAlign: 'center',
+    marginTop: 12,
   },
 });

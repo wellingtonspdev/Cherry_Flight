@@ -1,0 +1,98 @@
+[
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\audio\\ambient_bloom_prototype.wav",
+    "Length": 705644
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\audio\\collision_thump.wav",
+    "Length": 24740
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\audio\\jump_pop.wav",
+    "Length": 12392
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\audio\\score_chime.wav",
+    "Length": 26504
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\audio\\ui_tap.wav",
+    "Length": 6218
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\backgrounds\\01_first_bloom.jpg",
+    "Length": 117516
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\backgrounds\\02_sakura_garden.jpg",
+    "Length": 137691
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\backgrounds\\03_golden_bloom.jpg",
+    "Length": 133749
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\backgrounds\\04_yozakura.jpg",
+    "Length": 140825
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\characters\\app_icon_candidate.jpg",
+    "Length": 64470
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\characters\\cherri_celebrate.png",
+    "Length": 140980
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\characters\\cherri_dizzy.png",
+    "Length": 118306
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\characters\\cherri_fall.png",
+    "Length": 109323
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\characters\\cherri_happy.png",
+    "Length": 116597
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\characters\\cherri_hit.png",
+    "Length": 105058
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\characters\\cherri_idle.png",
+    "Length": 107845
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\characters\\cherri_neutral.png",
+    "Length": 98828
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\characters\\cherri_wink.png",
+    "Length": 118936
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\vector\\blossom.svg",
+    "Length": 563
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\vector\\branch_bottom.svg",
+    "Length": 622
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\vector\\branch_top.svg",
+    "Length": 704
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\vector\\cherry_mark.svg",
+    "Length": 776
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\vector\\leaf.svg",
+    "Length": 418
+  },
+  {
+    "FullName": "D:\\Cherry_Flight\\assets\\vector\\logo_lockup.svg",
+    "Length": 1043
+  }
+]

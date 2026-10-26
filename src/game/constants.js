@@ -9,7 +9,7 @@ export const GAME = {
   obstacleWidth: 68,      // dp width of Bloom Branch trunk
   obstacleSpacing: 260,   // dp horizontal distance between obstacle pairs
   gapSize: 168,           // dp vertical safe corridor
-  playerSize: 48,         // dp visual diameter of Cherri
+  playerSize: 48,         // dp visual diameter of Cherry
   playerHitboxInset: 6,   // dp forgiving inset so petal/stem edge doesn't feel unfair
   playerXRatio: 0.26,     // horizontal position ratio on screen
   topClearance: 84,       // dp minimum top branch height / HUD clearance

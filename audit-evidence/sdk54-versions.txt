@@ -1,0 +1,5 @@
+cherry-bloom@1.0.0 D:\Cherry_Flight\audit-evidence\sdk54
+├── expo@54.0.38
+├── react-native@0.81.5
+└── react@19.1.0
+

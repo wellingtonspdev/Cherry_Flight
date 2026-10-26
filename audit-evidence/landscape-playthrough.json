@@ -1,0 +1,1338 @@
+{
+  "timeline": [
+    {
+      "status": "PLAYING",
+      "y": 127.58302200000001,
+      "velocity": -301.4850000000001,
+      "score": 0,
+      "elapsed": 0.08429999999999996,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 957.5335000000001,
+          "width": 68,
+          "gapY": 93,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 1217.5334999999995,
+          "width": 68,
+          "gapY": 96,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "leafyBranch"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 1477.5334999999995,
+          "width": 68,
+          "gapY": 95,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 163.17657300000025,
+      "velocity": -285,
+      "score": 1,
+      "elapsed": 5.267100000000007,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 154.19950000000162,
+          "width": 68,
+          "gapY": 93,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 414.19949999999636,
+          "width": 68,
+          "gapY": 96,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "leafyBranch"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 674.1994999999919,
+          "width": 68,
+          "gapY": 95,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 134.28133050000005,
+      "velocity": -75,
+      "score": 2,
+      "elapsed": 6.933400000000014,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 675.9229999999928,
+          "width": 68,
+          "gapY": 89,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "nightBranch"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 155.9229999999966,
+          "width": 68,
+          "gapY": 96,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "leafyBranch"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 415.92299999999284,
+          "width": 68,
+          "gapY": 95,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 147.04217100000017,
+      "velocity": 204.92999999999844,
+      "score": 3,
+      "elapsed": 8.633300000000013,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 412.43849999999316,
+          "width": 68,
+          "gapY": 89,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "nightBranch"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 672.4384999999933,
+          "width": 68,
+          "gapY": 100,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 152.4384999999928,
+          "width": 68,
+          "gapY": 95,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "oldBark"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 179.1765975,
+      "velocity": -337.5,
+      "score": 4,
+      "elapsed": 10.299800000000007,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 154.13099999999318,
+          "width": 68,
+          "gapY": 89,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "nightBranch"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 414.1309999999932,
+          "width": 68,
+          "gapY": 100,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 674.1309999999932,
+          "width": 68,
+          "gapY": 92,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "leafyBranch"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 140.11052700000056,
+      "velocity": -127.50000000000006,
+      "score": 5,
+      "elapsed": 11.96620000000001,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 675.8389999999931,
+          "width": 68,
+          "gapY": 101,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "nightBranch"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 155.83899999999292,
+          "width": 68,
+          "gapY": 100,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "oldBark"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 415.838999999993,
+          "width": 68,
+          "gapY": 92,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "leafyBranch"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 135.37332000000026,
+      "velocity": 169.75500000000042,
+      "score": 6,
+      "elapsed": 13.665999999999993,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 412.36999999999335,
+          "width": 68,
+          "gapY": 101,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "nightBranch"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 672.3699999999935,
+          "width": 68,
+          "gapY": 108,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "nightBranch"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 152.36999999999304,
+          "width": 68,
+          "gapY": 92,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "leafyBranch"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 191.70557400000058,
+      "velocity": 344.7900000000011,
+      "score": 7,
+      "elapsed": 15.31569999999999,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 156.6664999999932,
+          "width": 68,
+          "gapY": 101,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "nightBranch"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 416.66649999999356,
+          "width": 68,
+          "gapY": 108,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "nightBranch"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 676.6664999999937,
+          "width": 68,
+          "gapY": 76,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 157.52180400000015,
+      "velocity": -197.42999999999847,
+      "score": 8,
+      "elapsed": 16.998899999999974,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 675.7704999999946,
+          "width": 68,
+          "gapY": 103,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 155.7704999999933,
+          "width": 68,
+          "gapY": 108,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "nightBranch"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 415.77049999999457,
+          "width": 68,
+          "gapY": 76,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 124.31883150000084,
+      "velocity": 134.78999999999922,
+      "score": 9,
+      "elapsed": 18.681999999999952,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 414.889999999996,
+          "width": 68,
+          "gapY": 103,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 674.889999999996,
+          "width": 68,
+          "gapY": 100,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 154.8899999999949,
+          "width": 68,
+          "gapY": 76,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "oldBark"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 182.61801150000113,
+      "velocity": 309.9300000000023,
+      "score": 10,
+      "elapsed": 20.348399999999945,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 156.5979999999956,
+          "width": 68,
+          "gapY": 103,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "oldBark"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 416.59799999999706,
+          "width": 68,
+          "gapY": 100,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 676.597999999997,
+          "width": 68,
+          "gapY": 107,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 159.20664600000003,
+      "velocity": -214.96499999999924,
+      "score": 11,
+      "elapsed": 22.031499999999912,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 675.7174999999987,
+          "width": 68,
+          "gapY": 85,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "nightBranch"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 155.71749999999727,
+          "width": 68,
+          "gapY": 100,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "oldBark"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 415.7174999999987,
+          "width": 68,
+          "gapY": 107,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 138.83517450000028,
+      "velocity": 29.895000000001517,
+      "score": 12,
+      "elapsed": 23.71469999999988,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 414.82149999999973,
+          "width": 68,
+          "gapY": 85,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "nightBranch"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 674.8214999999998,
+          "width": 68,
+          "gapY": 84,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 154.82149999999848,
+          "width": 68,
+          "gapY": 107,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "oldBark"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 173.1825870000002,
+      "velocity": 344.8949999999977,
+      "score": 13,
+      "elapsed": 25.397799999999847,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 153.94100000000006,
+          "width": 68,
+          "gapY": 85,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "nightBranch"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 413.9410000000012,
+          "width": 68,
+          "gapY": 84,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 673.9410000000013,
+          "width": 68,
+          "gapY": 93,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 132.97483050000116,
+      "velocity": -197.53500000000076,
+      "score": 14,
+      "elapsed": 27.06419999999983,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 675.6490000000027,
+          "width": 68,
+          "gapY": 97,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 155.64900000000085,
+          "width": 68,
+          "gapY": 84,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 415.6490000000026,
+          "width": 68,
+          "gapY": 93,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 123.32779650000084,
+      "velocity": 30.000000000000014,
+      "score": 15,
+      "elapsed": 28.74739999999979,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 414.75300000000396,
+          "width": 68,
+          "gapY": 97,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 674.7530000000041,
+          "width": 68,
+          "gapY": 93,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "nightBranch"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 154.7530000000024,
+          "width": 68,
+          "gapY": 93,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "oldBark"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 157.5143850000008,
+      "velocity": 240,
+      "score": 16,
+      "elapsed": 30.41389999999975,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 156.44550000000368,
+          "width": 68,
+          "gapY": 97,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 416.44550000000584,
+          "width": 68,
+          "gapY": 93,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "nightBranch"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 676.4455000000058,
+          "width": 68,
+          "gapY": 102,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "lightBlossom"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 151.10486400000005,
+      "velocity": -249.72000000000153,
+      "score": 17,
+      "elapsed": 32.113699999999724,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 672.9765000000086,
+          "width": 68,
+          "gapY": 106,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 152.97650000000638,
+          "width": 68,
+          "gapY": 93,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "nightBranch"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 412.9765000000085,
+          "width": 68,
+          "gapY": 102,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "lightBlossom"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 129.688151999999,
+      "velocity": -40.03499999999693,
+      "score": 18,
+      "elapsed": 33.77999999999978,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 414.7000000000092,
+          "width": 68,
+          "gapY": 106,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 674.7000000000093,
+          "width": 68,
+          "gapY": 93,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 154.70000000000843,
+          "width": 68,
+          "gapY": 102,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "lightBlossom"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 154.2696420000005,
+      "velocity": 152.53499999999696,
+      "score": 19,
+      "elapsed": 35.44659999999984,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 156.3770000000097,
+          "width": 68,
+          "gapY": 106,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 416.37700000001075,
+          "width": 68,
+          "gapY": 93,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 676.3770000000108,
+          "width": 68,
+          "gapY": 87,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "nightBranch"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 167.5213455000024,
+      "velocity": -302.5350000000046,
+      "score": 20,
+      "elapsed": 37.1461999999999,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 672.939000000012,
+          "width": 68,
+          "gapY": 88,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 152.9390000000112,
+          "width": 68,
+          "gapY": 93,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 412.939000000012,
+          "width": 68,
+          "gapY": 87,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "nightBranch"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 120.65437050000008,
+      "velocity": -57.5700000000015,
+      "score": 21,
+      "elapsed": 38.81270000000001,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 414.6315000000137,
+          "width": 68,
+          "gapY": 88,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 674.6315000000137,
+          "width": 68,
+          "gapY": 78,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 154.6315000000121,
+          "width": 68,
+          "gapY": 87,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "nightBranch"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 133.8216840000004,
+      "velocity": 169.75499999999843,
+      "score": 22,
+      "elapsed": 40.479100000000045,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 156.33950000001371,
+          "width": 68,
+          "gapY": 88,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 416.3395000000148,
+          "width": 68,
+          "gapY": 78,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 676.3395000000148,
+          "width": 68,
+          "gapY": 96,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "lightBlossom"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 154.19180100000045,
+      "velocity": -320.0700000000015,
+      "score": 23,
+      "elapsed": 42.16220000000011,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 675.4590000000165,
+          "width": 68,
+          "gapY": 82,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "leafyBranch"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 155.45900000001538,
+          "width": 68,
+          "gapY": 78,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "oldBark"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 415.4590000000164,
+          "width": 68,
+          "gapY": 96,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "lightBlossom"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 132.79979850000043,
+      "velocity": -110.17500000000001,
+      "score": 24,
+      "elapsed": 43.86200000000019,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 411.9900000000173,
+          "width": 68,
+          "gapY": 82,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "leafyBranch"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 671.9900000000175,
+          "width": 68,
+          "gapY": 83,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 151.99000000001632,
+          "width": 68,
+          "gapY": 96,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "lightBlossom"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 120.95132550000132,
+      "velocity": 152.42999999999844,
+      "score": 25,
+      "elapsed": 45.51190000000025,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 156.25550000001738,
+          "width": 68,
+          "gapY": 82,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "leafyBranch"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 416.25550000001823,
+          "width": 68,
+          "gapY": 83,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 676.2555000000184,
+          "width": 68,
+          "gapY": 74,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "nightBranch"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 151.53299400000185,
+      "velocity": -302.64000000000306,
+      "score": 26,
+      "elapsed": 47.26160000000033,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 665.0520000000199,
+          "width": 68,
+          "gapY": 80,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "leafyBranch"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 145.05200000001904,
+          "width": 68,
+          "gapY": 83,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "oldBark"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 405.0520000000198,
+          "width": 68,
+          "gapY": 74,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "nightBranch"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 108.03059250000081,
+      "velocity": -109.96500000000304,
+      "score": 27,
+      "elapsed": 48.8782000000004,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 414.4790000000213,
+          "width": 68,
+          "gapY": 80,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "leafyBranch"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 674.4790000000213,
+          "width": 68,
+          "gapY": 90,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "nightBranch"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 154.47900000002033,
+          "width": 68,
+          "gapY": 74,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "nightBranch"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 119.14632150000001,
+      "velocity": 82.49999999999996,
+      "score": 28,
+      "elapsed": 50.54460000000047,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 156.187000000021,
+          "width": 68,
+          "gapY": 80,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "leafyBranch"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 416.18700000002264,
+          "width": 68,
+          "gapY": 90,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "nightBranch"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 676.1870000000226,
+          "width": 68,
+          "gapY": 94,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 170.43594600000006,
+      "velocity": 292.39499999999396,
+      "score": 29,
+      "elapsed": 52.22770000000056,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 675.3065000000245,
+          "width": 68,
+          "gapY": 102,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "nightBranch"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 155.30650000002305,
+          "width": 68,
+          "gapY": 90,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "nightBranch"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 415.3065000000243,
+          "width": 68,
+          "gapY": 94,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 142.94413349999925,
+      "velocity": -214.96499999999546,
+      "score": 30,
+      "elapsed": 53.91080000000065,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 414.4260000000247,
+          "width": 68,
+          "gapY": 102,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "nightBranch"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 674.4260000000248,
+          "width": 68,
+          "gapY": 89,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "leafyBranch"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 154.42600000002366,
+          "width": 68,
+          "gapY": 94,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "oldBark"
+        }
+      ]
+    }
+  ],
+  "state": {
+    "status": "PLAYING",
+    "y": 142.94413349999925,
+    "velocity": -214.96499999999546,
+    "score": 30,
+    "elapsed": 53.91080000000065,
+    "obstacles": [
+      {
+        "id": "branch-pair-0",
+        "x": 414.4260000000247,
+        "width": 68,
+        "gapY": 102,
+        "gapSize": 168,
+        "scored": false,
+        "variant": "nightBranch"
+      },
+      {
+        "id": "branch-pair-1",
+        "x": 674.4260000000248,
+        "width": 68,
+        "gapY": 89,
+        "gapSize": 168,
+        "scored": false,
+        "variant": "leafyBranch"
+      },
+      {
+        "id": "branch-pair-2",
+        "x": 154.42600000002366,
+        "width": 68,
+        "gapY": 94,
+        "gapSize": 168,
+        "scored": true,
+        "variant": "oldBark"
+      }
+    ]
+  },
+  "restarts": [
+    {
+      "status": "READY",
+      "y": 156,
+      "velocity": 0,
+      "score": 0,
+      "elapsed": 0,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 970.5999999999999,
+          "width": 68,
+          "gapY": 108,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 1230.6,
+          "width": 68,
+          "gapY": 89,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "leafyBranch"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 1490.6,
+          "width": 68,
+          "gapY": 103,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        }
+      ]
+    },
+    {
+      "status": "READY",
+      "y": 156,
+      "velocity": 0,
+      "score": 0,
+      "elapsed": 0,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 970.5999999999999,
+          "width": 68,
+          "gapY": 89,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 1230.6,
+          "width": 68,
+          "gapY": 84,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "leafyBranch"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 1490.6,
+          "width": 68,
+          "gapY": 89,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        }
+      ]
+    },
+    {
+      "status": "READY",
+      "y": 156,
+      "velocity": 0,
+      "score": 0,
+      "elapsed": 0,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 970.5999999999999,
+          "width": 68,
+          "gapY": 94,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 1230.6,
+          "width": 68,
+          "gapY": 75,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "leafyBranch"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 1490.6,
+          "width": 68,
+          "gapY": 90,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        }
+      ]
+    },
+    {
+      "status": "READY",
+      "y": 156,
+      "velocity": 0,
+      "score": 0,
+      "elapsed": 0,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 970.5999999999999,
+          "width": 68,
+          "gapY": 107,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 1230.6,
+          "width": 68,
+          "gapY": 92,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "leafyBranch"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 1490.6,
+          "width": 68,
+          "gapY": 92,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        }
+      ]
+    },
+    {
+      "status": "READY",
+      "y": 156,
+      "velocity": 0,
+      "score": 0,
+      "elapsed": 0,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 970.5999999999999,
+          "width": 68,
+          "gapY": 106,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 1230.6,
+          "width": 68,
+          "gapY": 105,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "leafyBranch"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 1490.6,
+          "width": 68,
+          "gapY": 79,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        }
+      ]
+    }
+  ]
+}

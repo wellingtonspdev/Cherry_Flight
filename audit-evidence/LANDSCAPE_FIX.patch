@@ -1,0 +1,509 @@
+diff --git a/App.js b/App.js
+index c0da66a..dac642e 100644
+--- a/App.js
++++ b/App.js
+@@ -2,7 +2,7 @@
+ // Source of Truth: CHERRY_BLOOM_SPECIFICATION_AND_ACCEPTANCE.md (Section 7.1 & 7.2)
+ 
+ import React, { useEffect } from 'react';
+-import { Platform, StyleSheet, useWindowDimensions, View } from 'react-native';
++import { Platform, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+ import { StatusBar } from 'expo-status-bar';
+ import { NavigationContainer } from '@react-navigation/native';
+ import { createNativeStackNavigator } from '@react-navigation/native-stack';
+@@ -17,7 +17,7 @@ const Stack = createNativeStackNavigator();
+ 
+ export default function App() {
+   const { width, height } = useWindowDimensions();
+-  const isWideWeb = Platform.OS === 'web' && width > 540;
++  const isPortraitWeb = Platform.OS === 'web' && height > width;
+ 
+   useEffect(() => {
+     registerWebPwa();
+@@ -25,19 +25,13 @@ export default function App() {
+ 
+   return (
+     <SafeAreaProvider>
+-      <View style={isWideWeb ? styles.desktopBackdrop : styles.mobileRoot}>
+-        <View
+-          style={
+-            isWideWeb
+-              ? [
+-                  styles.arcadeCabinet,
+-                  {
+-                    height: Math.min(Math.max(580, height - 32), 860),
+-                  },
+-                ]
+-              : styles.mobileRoot
+-          }
+-        >
++      <View style={styles.mobileRoot}>
++        {isPortraitWeb ? (
++          <View style={styles.orientationNotice}>
++            <Text accessibilityRole="header" style={styles.orientationTitle}>Gire o dispositivo</Text>
++            <Text style={styles.orientationText}>Cherry Bloom é jogado na horizontal. Use o modo paisagem para continuar.</Text>
++          </View>
++        ) : (
+           <NavigationContainer>
+             <StatusBar style="dark" />
+             <Stack.Navigator
+@@ -54,7 +48,7 @@ export default function App() {
+               <Stack.Screen name="Credits" component={Tela4} />
+             </Stack.Navigator>
+           </NavigationContainer>
+-        </View>
++        )}
+       </View>
+     </SafeAreaProvider>
+   );
+@@ -64,20 +58,23 @@ const styles = StyleSheet.create({
+   mobileRoot: {
+     flex: 1,
+   },
+-  desktopBackdrop: {
++  orientationNotice: {
+     flex: 1,
+     backgroundColor: '#251A20',
+     alignItems: 'center',
+     justifyContent: 'center',
+-    paddingVertical: 16,
++    padding: 24,
+   },
+-  arcadeCabinet: {
+-    width: '100%',
+-    maxWidth: 460,
+-    borderRadius: 28,
+-    overflow: 'hidden',
+-    borderWidth: 3,
+-    borderColor: '#FFB7C5',
+-    backgroundColor: '#FFF8F2',
++  orientationTitle: {
++    color: '#FFF8F2',
++    fontSize: 28,
++    fontWeight: '800',
++    textAlign: 'center',
++  },
++  orientationText: {
++    color: '#FFF8F2',
++    fontSize: 16,
++    textAlign: 'center',
++    marginTop: 12,
+   },
+ });
+diff --git a/CHERRY_BLOOM_DESIGN_SYSTEM.md b/CHERRY_BLOOM_DESIGN_SYSTEM.md
+index b3aca33..1a509b7 100644
+--- a/CHERRY_BLOOM_DESIGN_SYSTEM.md
++++ b/CHERRY_BLOOM_DESIGN_SYSTEM.md
+@@ -7,6 +7,8 @@
+ **Parallel local target:** Expo SDK 57  
+ **Theme:** Cherry / Cherry Blossom / arcade flight game  
+ 
++**Atualização de contrato — 26/10/2026:** por determinação do usuário, o produto deve funcionar em paisagem (horizontal). Referências e proporções verticais deste handoff permanecem históricas. A implementação usa a área horizontal real, menus adaptados e Game Over compacto; o navegador em retrato solicita a rotação do dispositivo.
++
+ > This document is the visual and interaction source of truth. If generated concept art conflicts with tokens or rules in this document, **this document wins**.
+ 
+ ---
+diff --git a/CHERRY_BLOOM_SPECIFICATION_AND_ACCEPTANCE.md b/CHERRY_BLOOM_SPECIFICATION_AND_ACCEPTANCE.md
+index 24e0191..aca5dea 100644
+--- a/CHERRY_BLOOM_SPECIFICATION_AND_ACCEPTANCE.md
++++ b/CHERRY_BLOOM_SPECIFICATION_AND_ACCEPTANCE.md
+@@ -7,6 +7,8 @@
+ **Primary delivery:** Expo Snack, Expo SDK 54  
+ **Parallel development copy:** Expo SDK 57  
+ 
++**Atualização de aceite — 26/10/2026:** o jogo deve funcionar em paisagem (horizontal), conforme determinação do usuário. Validar 568×320, 844×390 e desktop horizontal; confirmar instrução de rotação no navegador em retrato, geometria baseada na área real e reinício seguro ao redimensionar. A configuração nativa solicita landscape; execução física continua sendo um gate independente.
++
+ ---
+ 
+ ## 1. Purpose
+diff --git a/README.md b/README.md
+index 9640e40..5823ee3 100644
+--- a/README.md
++++ b/README.md
+@@ -34,7 +34,9 @@ O jogo detecta automaticamente o ambiente e oferece suporte híbrido completo:
+   - `Espaço` (`Space`), `Seta para Cima` (`↑`), `W` ou **Clique do Mouse**: inicia a partida e faz a Cherri saltar.
+   - `R` ou `Enter` (no Game Over): reinicia a partida imediatamente (`PLAY AGAIN`).
+   - `Esc` ou `H`: retorna para a tela inicial (`HOME`).
+-  - Em monitores widescreen (`> 540px`), o jogo é exibido centralizado em um gabinete vertical mobile (`maxWidth: 460px`), preservando a física e a proporção arcade original.
++  - O jogo funciona em **paisagem (horizontal)**, usando toda a área disponível, sem gabinete vertical de 460 px.
++  - No navegador em retrato, aparece a instrução para girar o dispositivo. A configuração nativa e o manifesto PWA solicitam paisagem.
++  - Alterar o tamanho da área de jogo reinicia a rodada em READY, com limites e obstáculos recalculados.
+ 
+ ---
+ 
+diff --git a/app.json b/app.json
+index 47e62b0..e31da1f 100644
+--- a/app.json
++++ b/app.json
+@@ -3,13 +3,14 @@
+     "name": "Cherry Bloom",
+     "slug": "cherry-bloom",
+     "version": "1.0.0",
+-    "orientation": "portrait",
++    "orientation": "landscape",
+     "userInterfaceStyle": "light",
+     "assetBundlePatterns": [
+       "**/*"
+     ],
+     "ios": {
+-      "supportsTablet": true
++      "supportsTablet": true,
++      "requireFullScreen": true
+     },
+     "android": {
+       "adaptiveIcon": {
+diff --git a/public/manifest.json b/public/manifest.json
+index a952034..b9d7f1b 100644
+--- a/public/manifest.json
++++ b/public/manifest.json
+@@ -5,7 +5,7 @@
+   "start_url": "/",
+   "scope": "/",
+   "display": "standalone",
+-  "orientation": "portrait",
++  "orientation": "landscape",
+   "background_color": "#FFF8F2",
+   "theme_color": "#D91E36",
+   "categories": ["games", "education"],
+diff --git a/public/sw.js b/public/sw.js
+index 6118495..b73da04 100644
+--- a/public/sw.js
++++ b/public/sw.js
+@@ -1,4 +1,4 @@
+-const CACHE_VERSION = 'cherry-bloom-v1';
++const CACHE_VERSION = 'cherry-bloom-v2-landscape';
+ const STATIC_CACHE = `static-${CACHE_VERSION}`;
+ const DYNAMIC_CACHE = `dynamic-${CACHE_VERSION}`;
+ 
+diff --git a/src/components/GameOverCard.js b/src/components/GameOverCard.js
+index bec9426..a8412e4 100644
+--- a/src/components/GameOverCard.js
++++ b/src/components/GameOverCard.js
+@@ -2,7 +2,7 @@
+ // Source of Truth: CHERRY_BLOOM_DESIGN_SYSTEM.md (Section 12.2, 12.5)
+ 
+ import React, { useEffect, useRef } from 'react';
+-import { Animated, StyleSheet, Text, View } from 'react-native';
++import { Animated, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+ import { colors, radius, shadows, spacing } from '../theme/theme';
+ import CherryButton from './CherryButton';
+ import CherryPlayer from './CherryPlayer';
+@@ -14,6 +14,8 @@ export default function GameOverCard({
+   onPlayAgain,
+   onHome,
+ }) {
++  const { width, height } = useWindowDimensions();
++  const isLandscape = width > height;
+   const fadeAnim = useRef(new Animated.Value(0)).current;
+   const scaleAnim = useRef(new Animated.Value(0.92)).current;
+ 
+@@ -38,21 +40,23 @@ export default function GameOverCard({
+       <Animated.View
+         style={[
+           styles.card,
++          isLandscape && styles.landscapeCard,
+           {
+             opacity: fadeAnim,
+             transform: [{ scale: scaleAnim }],
+           },
+         ]}
+       >
++        <ScrollView contentContainerStyle={[styles.cardContent, isLandscape && styles.landscapeContent]}>
+         <Text style={styles.title} accessibilityRole="header">
+           GAME OVER
+         </Text>
+ 
+-        <View style={styles.characterWrap}>
++        {!isLandscape && <View style={styles.characterWrap}>
+           <CherryPlayer size={58} state="hit" />
+-        </View>
++        </View>}
+ 
+-        {phaseLabel ? (
++        {phaseLabel && !isLandscape ? (
+           <View style={styles.phaseChip}>
+             <Text style={styles.phaseChipText}>{phaseLabel}</Text>
+           </View>
+@@ -82,22 +86,23 @@ export default function GameOverCard({
+           </View>
+         </View>
+ 
+-        <View style={styles.actions}>
++        <View style={[styles.actions, isLandscape && styles.landscapeActions]}>
+           <CherryButton
+             title="PLAY AGAIN"
+             onPress={onPlayAgain}
+             variant="primary"
+             accessibilityLabel="Jogar novamente"
+-            style={styles.buttonSpacing}
++            style={[styles.buttonSpacing, isLandscape && styles.landscapeButton]}
+           />
+           <CherryButton
+             title="HOME"
+             onPress={onHome}
+             variant="secondary"
+             accessibilityLabel="Voltar para a tela inicial"
+-            style={styles.buttonSpacing}
++            style={[styles.buttonSpacing, isLandscape && styles.landscapeButton]}
+           />
+         </View>
++        </ScrollView>
+       </Animated.View>
+     </View>
+   );
+@@ -110,19 +115,38 @@ const styles = StyleSheet.create({
+     alignItems: 'center',
+     justifyContent: 'center',
+     paddingHorizontal: spacing.md,
++    paddingVertical: spacing.sm,
+     zIndex: 80,
+   },
+   card: {
+     width: '100%',
+     maxWidth: 360,
++    maxHeight: '100%',
+     backgroundColor: colors.cream50,
+     borderRadius: radius.xl,
+     borderWidth: 3,
+     borderColor: colors.blossom300,
++    ...shadows.warmCard,
++  },
++  landscapeCard: {
++    maxWidth: 560,
++  },
++  landscapeContent: {
++    paddingVertical: spacing.md,
++  },
++  landscapeActions: {
++    flexDirection: 'row',
++    gap: spacing.sm,
++  },
++  landscapeButton: {
++    flex: 1,
++    width: undefined,
++    marginBottom: 0,
++  },
++  cardContent: {
+     paddingHorizontal: spacing.lg,
+     paddingVertical: spacing.lg,
+     alignItems: 'center',
+-    ...shadows.warmCard,
+   },
+   title: {
+     fontSize: 28,
+diff --git a/src/game/createObstacle.js b/src/game/createObstacle.js
+index fdcce8d..3312f57 100644
+--- a/src/game/createObstacle.js
++++ b/src/game/createObstacle.js
+@@ -9,9 +9,10 @@ const VARIANTS = ['lightBlossom', 'leafyBranch', 'oldBark', 'nightBranch'];
+  * Computes a valid vertical gap Y coordinate within safe playable bounds.
+  */
+ export function computeRandomGapY(playableHeight, gapSize = GAME.gapSize, randomFn = Math.random) {
+-  const minY = GAME.topClearance;
+-  const maxY = Math.max(minY + 20, playableHeight - GAME.bottomClearance - gapSize);
+-  const range = Math.max(1, maxY - minY);
++  const clearance = Math.max(0, (playableHeight - gapSize) * 0.4);
++  const minY = Math.min(GAME.topClearance, clearance);
++  const maxY = Math.max(minY, playableHeight - Math.min(GAME.bottomClearance, clearance) - gapSize);
++  const range = maxY - minY;
+   return Math.round(minY + randomFn() * range);
+ }
+ 
+diff --git a/src/tela1.js b/src/tela1.js
+index 1b77bed..7037ba3 100644
+--- a/src/tela1.js
++++ b/src/tela1.js
+@@ -24,6 +24,7 @@ import { colors, radius, shadows, spacing } from './theme/theme';
+ export default function Tela1({ navigation }) {
+   const { width, height } = useWindowDimensions();
+   const isCompact = width < 360 || height < 660;
++  const isLandscape = width > height;
+   const { canInstall, isIosSafariPrompt, promptInstall } = usePwaInstall();
+ 
+   // Motion: logo reveal 400ms, Cherri idle bob 1600ms, buttons stagger
+@@ -97,11 +98,13 @@ export default function Tela1({ navigation }) {
+         <ScrollView
+           contentContainerStyle={[
+             styles.scrollContent,
++            isLandscape && styles.landscapeContent,
+             { paddingHorizontal: width < 350 ? spacing.md : spacing.lg },
+           ]}
+           showsVerticalScrollIndicator={false}
+         >
+           {/* 1. Logo Lockup */}
++          <View style={isLandscape && styles.brandColumn}>
+           <Animated.View
+             style={[
+               styles.logoSection,
+@@ -123,9 +126,9 @@ export default function Tela1({ navigation }) {
+ 
+           {/* 2. Cherri Idle Mascot Showcase */}
+           <View style={styles.heroCenter}>
+-            <View style={styles.mascotHalo}>
++            <View style={[styles.mascotHalo, isLandscape && styles.landscapeHalo]}>
+               <Animated.View style={{ transform: [{ translateY: bobAnim }] }}>
+-                <CherryPlayer size={isCompact ? 76 : 92} state="idle" />
++                <CherryPlayer size={isLandscape ? 64 : isCompact ? 76 : 92} state="idle" />
+               </Animated.View>
+             </View>
+             <View style={styles.lorePill}>
+@@ -135,8 +138,10 @@ export default function Tela1({ navigation }) {
+             </View>
+           </View>
+ 
++          </View>
++
+           {/* 3. Navigation Actions (Play, How to Play, Credits) */}
+-          <View style={styles.menuCard}>
++          <View style={[styles.menuCard, isLandscape && styles.landscapeMenu]}>
+             <Animated.View style={[styles.btnWrap, { opacity: btn1Anim }]}>
+               <CherryButton
+                 title="PLAY"
+@@ -213,6 +218,25 @@ const styles = StyleSheet.create({
+     alignItems: 'center',
+     marginTop: spacing.xs,
+   },
++  landscapeContent: {
++    flexDirection: 'row',
++    justifyContent: 'center',
++    paddingBottom: spacing.md,
++    gap: spacing.lg,
++  },
++  brandColumn: {
++    flex: 1,
++    maxWidth: 380,
++    alignItems: 'center',
++  },
++  landscapeMenu: {
++    flex: 1,
++  },
++  landscapeHalo: {
++    width: 88,
++    height: 88,
++    borderRadius: 44,
++  },
+   heroCenter: {
+     alignItems: 'center',
+     marginVertical: spacing.md,
+diff --git a/src/tela3.js b/src/tela3.js
+index 508d7d2..e2bb085 100644
+--- a/src/tela3.js
++++ b/src/tela3.js
+@@ -42,16 +42,11 @@ const BEST_SCORE_KEY = '@cherry_bloom_best_score_v1';
+ export default function Tela3({ navigation }) {
+   const { width: rawWidth, height: rawHeight } = useWindowDimensions();
+   const insets = useSafeAreaInsets();
++  const [gameArea, setGameArea] = useState(null);
+ 
+-  const isWideWeb = Platform.OS === 'web' && rawWidth > 540;
+-  const effectiveWidth = isWideWeb ? Math.min(rawWidth, 460) : rawWidth || 360;
+-  const effectiveHeight = isWideWeb
+-    ? Math.min(Math.max(580, (rawHeight || 720) - 32), 860)
+-    : rawHeight || 640;
+-
+-  const screenWidth = Math.max(320, effectiveWidth);
+-  const screenHeight = Math.max(480, effectiveHeight);
+-  const playableHeight = Math.max(360, screenHeight - GAME.groundHeight);
++  const screenWidth = gameArea?.width || rawWidth || 844;
++  const screenHeight = gameArea?.height || rawHeight || 390;
++  const playableHeight = Math.max(1, screenHeight - GAME.groundHeight);
+   const playerX = Math.round(screenWidth * GAME.playerXRatio);
+   const initialPlayerY = Math.round(playableHeight * 0.44);
+ 
+@@ -385,6 +380,11 @@ export default function Tela3({ navigation }) {
+     navigation.navigate('Welcome');
+   }, [handleRestart, navigation]);
+ 
++  // A resized field starts a fresh round so physics never retain obsolete bounds.
++  useEffect(() => {
++    handleRestart();
++  }, [handleRestart]);
++
+   // Cleanup on unmount or blur, and reset to READY on focus (Spec 7.3 & AC-115)
+   useEffect(() => {
+     const unsubscribeFocus = navigation.addListener('focus', () => {
+@@ -411,6 +411,7 @@ export default function Tela3({ navigation }) {
+     }
+ 
+     const handleKeyDown = (event) => {
++      if (!navigation.isFocused()) return;
+       if (event.repeat) return;
+       const code = event.code || '';
+       const key = (event.key || '').toLowerCase();
+@@ -451,7 +452,7 @@ export default function Tela3({ navigation }) {
+     return () => {
+       window.removeEventListener('keydown', handleKeyDown);
+     };
+-  }, [handleFieldPress, handleRestart, handleGoHome]);
++  }, [handleFieldPress, handleRestart, handleGoHome, navigation]);
+ 
+   const currentPhase = getPhaseConfig(score);
+ 
+@@ -462,7 +463,16 @@ export default function Tela3({ navigation }) {
+       : Math.max(-22, Math.min(28, Math.round(velocityYRef.current * 0.065)));
+ 
+   return (
+-    <View style={styles.root}>
++    <View
++      style={styles.root}
++      onLayout={({ nativeEvent: { layout } }) => {
++        setGameArea((previous) =>
++          previous?.width === layout.width && previous?.height === layout.height
++            ? previous
++            : { width: layout.width, height: layout.height }
++        );
++      }}
++    >
+       {/* Layer 1–5 & 7: World Phase Background + Petals + Ground */}
+       <PhaseBackground
+         phaseConfig={currentPhase}
+@@ -477,6 +487,7 @@ export default function Tela3({ navigation }) {
+         accessibilityRole="button"
+         accessibilityLabel="Área do jogo Cherry Bloom. Toque para fazer a Cherri saltar."
+         onPressIn={handleFieldPress}
++        delayPressIn={0}
+         style={styles.gameField}
+       >
+         {/* Layer 6: Obstacle Pairs */}
+@@ -540,7 +551,8 @@ export default function Tela3({ navigation }) {
+           styles.topBar,
+           {
+             top: Math.max(14, insets.top + 8),
+-            paddingHorizontal: spacing.md,
++            paddingLeft: Math.max(spacing.md, insets.left + spacing.sm),
++            paddingRight: Math.max(spacing.md, insets.right + spacing.sm),
+           },
+         ]}
+       >
+@@ -591,7 +603,7 @@ const styles = StyleSheet.create({
+     ...StyleSheet.absoluteFillObject,
+     alignItems: 'center',
+     justifyContent: 'center',
+-    paddingTop: 120,
++    paddingTop: 80,
+   },
+   readyBanner: {
+     backgroundColor: 'rgba(255, 248, 242, 0.92)',
+diff --git a/tests/game.test.mjs b/tests/game.test.mjs
+index 916904f..0538263 100644
+--- a/tests/game.test.mjs
++++ b/tests/game.test.mjs
+@@ -150,3 +150,18 @@ test('Phase progression maps score thresholds accurately (Section 9.1)', () => {
+ 
+   assert.equal(getPhaseConfig(30).label, 'YOZAKURA');
+ });
++
++test('Landscape gaps fit short game fields and remain playable when recycled', () => {
++  for (const height of [284, 324, 354, 444]) {
++    for (const random of [0, 0.5, 1]) {
++      const gapY = computeRandomGapY(height, GAME.gapSize, () => random);
++      assert.ok(gapY >= 0);
++      assert.ok(gapY + GAME.gapSize <= height);
++      const pairs = createInitialObstacles(844, height, 3, 260, () => random);
++      pairs[0].x = -100;
++      const recycled = updateAndRecycleObstacles(pairs, 0.016, height, 155, 260, () => random);
++      assert.ok(recycled.every(pair => pair.gapY >= 0 && pair.gapY + pair.gapSize <= height));
++      assert.equal(checkCollision(getPlayerHitbox(220, gapY + (GAME.gapSize - GAME.playerSize) / 2), [{ ...pairs[1], x: 220 }], height).collided, false);
++    }
++  }
++});

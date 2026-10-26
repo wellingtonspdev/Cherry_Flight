@@ -1,0 +1,112 @@
+{
+  "timeline": [
+    {
+      "status": "PLAYING",
+      "y": 149.443818,
+      "velocity": -371.52,
+      "score": 0,
+      "elapsed": 0.017600000000000025,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 967.872,
+          "width": 68,
+          "gapY": 97,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 1227.8719999999998,
+          "width": 68,
+          "gapY": 89,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "leafyBranch"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 1487.8719999999998,
+          "width": 68,
+          "gapY": 107,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        }
+      ]
+    },
+    {
+      "status": "PLAYING",
+      "y": 196.04290649999984,
+      "velocity": -319.85999999999984,
+      "score": 1,
+      "elapsed": 5.283900000000008,
+      "obstacles": [
+        {
+          "id": "branch-pair-0",
+          "x": 151.59550000000092,
+          "width": 68,
+          "gapY": 97,
+          "gapSize": 168,
+          "scored": true,
+          "variant": "lightBlossom"
+        },
+        {
+          "id": "branch-pair-1",
+          "x": 411.5954999999976,
+          "width": 68,
+          "gapY": 89,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "leafyBranch"
+        },
+        {
+          "id": "branch-pair-2",
+          "x": 671.5954999999917,
+          "width": 68,
+          "gapY": 107,
+          "gapSize": 168,
+          "scored": false,
+          "variant": "oldBark"
+        }
+      ]
+    }
+  ],
+  "state": {
+    "status": "PLAYING",
+    "y": 196.04290649999984,
+    "velocity": -319.85999999999984,
+    "score": 1,
+    "elapsed": 5.283900000000008,
+    "obstacles": [
+      {
+        "id": "branch-pair-0",
+        "x": 151.59550000000092,
+        "width": 68,
+        "gapY": 97,
+        "gapSize": 168,
+        "scored": true,
+        "variant": "lightBlossom"
+      },
+      {
+        "id": "branch-pair-1",
+        "x": 411.5954999999976,
+        "width": 68,
+        "gapY": 89,
+        "gapSize": 168,
+        "scored": false,
+        "variant": "leafyBranch"
+      },
+      {
+        "id": "branch-pair-2",
+        "x": 671.5954999999917,
+        "width": 68,
+        "gapY": 107,
+        "gapSize": 168,
+        "scored": false,
+        "variant": "oldBark"
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+src\theme\theme.js:6:  cherry500: '#E63750',
+src\tela4.js:31:        animatePetals
+src\tela4.js:173:    color: colors.cherry500,
+src\tela4.js:207:    borderColor: colors.cherry500,
+src\tela1.js:29:  // Motion: logo reveal 400ms, Cherri idle bob 1600ms, buttons stagger
+src\tela1.js:92:        animatePetals
+src\tela1.js:124:          {/* 2. Cherri Idle Mascot Showcase */}
+src\tela1.js:133:                Ajude a Cherri a cruzar o Bloom Garden!
+src\tela3.js:62:  const [cherriPose, setCherriPose] = useState('idle');
+src\tela3.js:222:    setCherriPose('hit');
+src\tela3.js:263:        setCherriPose((prev) => (prev !== 'fall' ? 'fall' : prev));
+src\tela3.js:323:    setCherriPose('jump');
+src\tela3.js:330:        setCherriPose('idle');
+src\tela3.js:369:    setCherriPose('idle');
+src\tela3.js:471:        animatePetals={gameState !== GAME_STATE.GAME_OVER}
+src\tela3.js:478:        accessibilityLabel="Área do jogo Cherry Bloom. Toque para fazer a Cherri saltar."
+src\tela3.js:488:            phaseVariant={currentPhase.branchVariant}
+src\tela3.js:492:        {/* Layer 8: Cherri Protagonist */}
+src\tela3.js:494:          pointerEvents="none"
+src\tela3.js:511:          <CherryPlayer size={GAME.playerSize} state={cherriPose} />
+src\tela3.js:516:          <View pointerEvents="none" style={styles.readyOverlay}>
+src\tela3.js:538:        pointerEvents="box-none"
+src\tela3.js:556:        <View style={styles.timePill} pointerEvents="none">
+src\tela3.js:602:    borderColor: colors.cherry500,
+src\tela3.js:634:    borderColor: colors.cherry500,
+src\tela2.js:29:        animatePetals
+src\tela2.js:69:                  <Text style={styles.ruleTitle}>Tap to make Cherri jump</Text>
+src\tela2.js:71:                    Toque na tela (ou use Clique, Espaço, ↑ / W no Desktop) para impulsionar a Cherri contra a gravidade.
+src\tela2.js:218:    backgroundColor: colors.cherry500,
+src\tela2.js:246:    backgroundColor: colors.cherry500,
+src\components\CherryButton.js:78:    backgroundColor: colors.cherry500,
+src\components\CherryButton.js:86:    borderColor: colors.cherry500,
+src\components\BloomBranchPair.js:26:    petalCenter: colors.cherry500,
+src\components\BloomBranchPair.js:88:export default function BloomBranchPair({ pair, playableHeight, phaseVariant }) {
+src\components\BloomBranchPair.js:91:    VARIANT_PALETTE[phaseVariant] ||
+src\components\BloomBranchPair.js:100:      pointerEvents="none"
+src\components\CherryPlayer.js:1:// Cherry Bloom — CherryPlayer (Cherri Character System)
+src\components\CherryPlayer.js:9: * Lightweight, Snack-safe SVG Cherri with state-based facial expressions:
+src\components\CherryPlayer.js:46:        fill={colors.cherry500}
+src\components\GameOverCard.js:184:    color: colors.cherry500,
+src\components\PhaseBackground.js:63:      pointerEvents="none"
+src\components\PhaseBackground.js:82:  animatePetals = true,
+src\components\PhaseBackground.js:88:    <View pointerEvents="none" style={StyleSheet.absoluteFill}>
+src\components\PhaseBackground.js:157:            active={animatePetals}
+src\components\ScoreHUD.js:53:      pointerEvents="none"
+src\components\LogoLockup.js:42:                    <Stop offset="1" stopColor={colors.cherry500} />
+src\components\LogoLockup.js:109:    color: colors.cherry500,
+src\game\collision.js:20: * Builds the logical collision box for Cherri, inset slightly from visual sprite
+src\game\collision.js:99: * Checks if Cherri has safely crossed an obstacle pair to award +1 point once (Spec 8.7).
+src\game\constants.js:12:  playerSize: 48,         // dp visual diameter of Cherri
+src\game\constants.js:18:  maxDeltaTime: 0.05,     // s cap to prevent huge jump on frame drop/tab switch

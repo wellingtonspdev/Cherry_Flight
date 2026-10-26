@@ -1,0 +1,10 @@
+node_modules
+.git
+.expo
+.vercel
+audit-evidence
+references
+tests
+docs
+*.md
+dist

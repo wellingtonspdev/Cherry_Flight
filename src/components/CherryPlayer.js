@@ -1,4 +1,4 @@
-// Cherry Bloom — CherryPlayer (Cherri Character System)
+// Cherry Bloom — CherryPlayer (Cherry Character System)
 // Source of Truth: CHERRY_BLOOM_DESIGN_SYSTEM.md (Section 8)
 
 import React from 'react';
@@ -6,7 +6,7 @@ import Svg, { Circle, Ellipse, G, Path } from 'react-native-svg';
 import { colors } from '../theme/theme';
 
 /**
- * Lightweight, Snack-safe SVG Cherri with state-based facial expressions:
+ * Lightweight, Snack-safe SVG Cherry with state-based facial expressions:
  * - 'idle' | 'jump' | 'fall' | 'hit' | 'celebrate'
  */
 export default function CherryPlayer({ size = 48, state = 'idle' }) {

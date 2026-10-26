@@ -9,9 +9,10 @@ const VARIANTS = ['lightBlossom', 'leafyBranch', 'oldBark', 'nightBranch'];
  * Computes a valid vertical gap Y coordinate within safe playable bounds.
  */
 export function computeRandomGapY(playableHeight, gapSize = GAME.gapSize, randomFn = Math.random) {
-  const minY = GAME.topClearance;
-  const maxY = Math.max(minY + 20, playableHeight - GAME.bottomClearance - gapSize);
-  const range = Math.max(1, maxY - minY);
+  const clearance = Math.max(0, (playableHeight - gapSize) * 0.4);
+  const minY = Math.min(GAME.topClearance, clearance);
+  const maxY = Math.max(minY, playableHeight - Math.min(GAME.bottomClearance, clearance) - gapSize);
+  const range = maxY - minY;
   return Math.round(minY + randomFn() * range);
 }
 
