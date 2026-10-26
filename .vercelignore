@@ -2,6 +2,7 @@ node_modules
 .git
 .expo
 .vercel
+.env*
 audit-evidence
 references
 tests

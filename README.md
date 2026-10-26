@@ -20,6 +20,8 @@ Projeto acadêmico mobile e Web/PWA desenvolvido em **React Native + Expo + Reac
 ## 2. Demonstração e Entrega no Expo Snack (SDK 54)
 
 - **Link Público do Expo Snack (SDK 54):** [Cherry Flight](https://snack.expo.dev/@wellingtonsp.de/cherry-flight).
+- **Web/PWA:** [Cherry Bloom](https://cherry-flight.vercel.app).
+- No editor do Snack, expanda o Web Preview para uma janela horizontal. A prévia estreita em retrato mostra a instrução para girar o dispositivo.
 - Compatível com execução direta no navegador (Web Preview do Snack) e no aplicativo **Expo Go (SDK 54)** em Android e iOS.
 
 ---
