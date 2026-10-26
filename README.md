@@ -19,7 +19,7 @@ Projeto acadêmico mobile e Web/PWA desenvolvido em **React Native + Expo + Reac
 
 ## 2. Demonstração e Entrega no Expo Snack (SDK 54)
 
-- **Link Público do Expo Snack (SDK 54):** `https://snack.expo.dev/7kDnJz_p3s3TVT4VDIrPE`
+- **Link Público do Expo Snack (SDK 54):** [Cherry Flight](https://snack.expo.dev/@wellingtonsp.de/cherry-flight).
 - Compatível com execução direta no navegador (Web Preview do Snack) e no aplicativo **Expo Go (SDK 54)** em Android e iOS.
 
 ---
@@ -29,12 +29,14 @@ Projeto acadêmico mobile e Web/PWA desenvolvido em **React Native + Expo + Reac
 O jogo detecta automaticamente o ambiente e oferece suporte híbrido completo:
 
 - **Mobile (Touch):**
-  - Toque em qualquer lugar da área do jogo para iniciar o voo e fazer a Cherri saltar.
+  - Toque em qualquer lugar da área do jogo para iniciar o voo e fazer a Cherry saltar.
 - **Desktop / Web (Mouse + Teclado):**
-  - `Espaço` (`Space`), `Seta para Cima` (`↑`), `W` ou **Clique do Mouse**: inicia a partida e faz a Cherri saltar.
+  - `Espaço` (`Space`), `Seta para Cima` (`↑`), `W` ou **Clique do Mouse**: inicia a partida e faz a Cherry saltar.
   - `R` ou `Enter` (no Game Over): reinicia a partida imediatamente (`PLAY AGAIN`).
   - `Esc` ou `H`: retorna para a tela inicial (`HOME`).
-  - Em monitores widescreen (`> 540px`), o jogo é exibido centralizado em um gabinete vertical mobile (`maxWidth: 460px`), preservando a física e a proporção arcade original.
+  - O jogo funciona em **paisagem (horizontal)**, usando toda a área disponível, sem gabinete vertical de 460 px.
+  - No navegador em retrato, aparece a instrução para girar o dispositivo. A configuração nativa e o manifesto PWA solicitam paisagem.
+  - Alterar o tamanho da área de jogo reinicia a rodada em READY, com limites e obstáculos recalculados.
 
 ---
 

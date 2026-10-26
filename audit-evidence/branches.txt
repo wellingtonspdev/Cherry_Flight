@@ -1,0 +1,4 @@
+  main                5cce0b1 [origin/main: ahead 4] feat: add Web/Desktop keyboard controls, installable PWA support, and Vercel config
+  sdk-57-local        77fd142 sync: add Web/Desktop controls, PWA assets, and Vercel config to sdk-57-local
+* sdk-58-local        0571285 chore: configure Expo SDK 58 local and Web/PWA baseline on sdk-58-local
+  remotes/origin/main 3d42a33 first commit

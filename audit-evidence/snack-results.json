@@ -1,0 +1,15 @@
+{
+  "url": "https://snack.expo.dev/7kDnJz_p3s3TVT4VDIrPE",
+  "runtimeUrl": "https://snack-runtime.eascdn.net/v2/54/index.html",
+  "routes": [
+    "Instructions",
+    "Welcome",
+    "Credits",
+    "Game"
+  ],
+  "credits": "CHERRY\nBLOOM\nCRÉDITOS ACADÊMICOS\nALUNO / AUTOR\nWellington Siqueira Porto\nINSTITUIÇÃO\nFATEC Itaquera — Prof. Miguel Reale\nCURSO\nDesenvolvimento de Software Multiplataforma\nDISCIPLINA & PROFESSOR\nProgramação para Dispositivos Móveis II\nProf. Jeferson de Souza Dias • 5º Semestre\nEste site é um projeto acadêmico da FATEC, criado apenas para fins de estudo. Não utilize as informações aqui para uso real.\nPLAY\nHOME\nUpdating…",
+  "afterQuickClick": "TAP TO FLY\nToque, clique ou pressione ESPAÇO / ↑ para voar\n0\nFIRST BLOOM\n← HOME\n0s\nUpdating…",
+  "afterLongPress": "0\nFIRST BLOOM\n← HOME\n0s\nUpdating…",
+  "gameOver": "0\nFIRST BLOOM\n← HOME\n1s\nGAME OVER\nFIRST BLOOM\nSCORE\n0\nBEST\n0\nPLAY AGAIN\nHOME\nUpdating…",
+  "replay": "TAP TO FLY\nToque, clique ou pressione ESPAÇO / ↑ para voar\n0\nFIRST BLOOM\n← HOME\n0s\nUpdating…"
+}

@@ -150,3 +150,18 @@ test('Phase progression maps score thresholds accurately (Section 9.1)', () => {
 
   assert.equal(getPhaseConfig(30).label, 'YOZAKURA');
 });
+
+test('Landscape gaps fit short game fields and remain playable when recycled', () => {
+  for (const height of [284, 324, 354, 444]) {
+    for (const random of [0, 0.5, 1]) {
+      const gapY = computeRandomGapY(height, GAME.gapSize, () => random);
+      assert.ok(gapY >= 0);
+      assert.ok(gapY + GAME.gapSize <= height);
+      const pairs = createInitialObstacles(844, height, 3, 260, () => random);
+      pairs[0].x = -100;
+      const recycled = updateAndRecycleObstacles(pairs, 0.016, height, 155, 260, () => random);
+      assert.ok(recycled.every(pair => pair.gapY >= 0 && pair.gapY + pair.gapSize <= height));
+      assert.equal(checkCollision(getPlayerHitbox(220, gapY + (GAME.gapSize - GAME.playerSize) / 2), [{ ...pairs[1], x: 220 }], height).collided, false);
+    }
+  }
+});

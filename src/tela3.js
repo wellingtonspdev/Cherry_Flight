@@ -42,16 +42,11 @@ const BEST_SCORE_KEY = '@cherry_bloom_best_score_v1';
 export default function Tela3({ navigation }) {
   const { width: rawWidth, height: rawHeight } = useWindowDimensions();
   const insets = useSafeAreaInsets();
+  const [gameArea, setGameArea] = useState(null);
 
-  const isWideWeb = Platform.OS === 'web' && rawWidth > 540;
-  const effectiveWidth = isWideWeb ? Math.min(rawWidth, 460) : rawWidth || 360;
-  const effectiveHeight = isWideWeb
-    ? Math.min(Math.max(580, (rawHeight || 720) - 32), 860)
-    : rawHeight || 640;
-
-  const screenWidth = Math.max(320, effectiveWidth);
-  const screenHeight = Math.max(480, effectiveHeight);
-  const playableHeight = Math.max(360, screenHeight - GAME.groundHeight);
+  const screenWidth = gameArea?.width || rawWidth || 844;
+  const screenHeight = gameArea?.height || rawHeight || 390;
+  const playableHeight = Math.max(1, screenHeight - GAME.groundHeight);
   const playerX = Math.round(screenWidth * GAME.playerXRatio);
   const initialPlayerY = Math.round(playableHeight * 0.44);
 
@@ -59,7 +54,7 @@ export default function Tela3({ navigation }) {
   const [gameState, setGameState] = useState(GAME_STATE.READY);
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
-  const [cherriPose, setCherriPose] = useState('idle');
+  const [cherryPose, setCherryPose] = useState('idle');
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
   const [renderTick, setRenderTick] = useState(0);
 
@@ -219,7 +214,7 @@ export default function Tela3({ navigation }) {
     clearPoseTimer();
     gameStateRef.current = GAME_STATE.GAME_OVER;
     setGameState(GAME_STATE.GAME_OVER);
-    setCherriPose('hit');
+    setCherryPose('hit');
     triggerCollisionSquash();
     triggerCollisionFeedback();
 
@@ -260,7 +255,7 @@ export default function Tela3({ navigation }) {
       playerYRef.current = nextY;
 
       if (nextVy > 140) {
-        setCherriPose((prev) => (prev !== 'fall' ? 'fall' : prev));
+        setCherryPose((prev) => (prev !== 'fall' ? 'fall' : prev));
       }
 
       // 2. Advance & recycle obstacle pairs
@@ -320,14 +315,14 @@ export default function Tela3({ navigation }) {
   // Apply upward jump impulse
   const applyJump = useCallback(() => {
     velocityYRef.current = GAME.jumpVelocity;
-    setCherriPose('jump');
+    setCherryPose('jump');
     triggerJumpSquash();
     triggerJumpFeedback();
 
     clearPoseTimer();
     poseTimeoutRef.current = setTimeout(() => {
       if (gameStateRef.current === GAME_STATE.PLAYING) {
-        setCherriPose('idle');
+        setCherryPose('idle');
       }
     }, 220);
   }, [triggerJumpSquash, clearPoseTimer]);
@@ -366,7 +361,7 @@ export default function Tela3({ navigation }) {
 
     setScore(0);
     setElapsedSeconds(0);
-    setCherriPose('idle');
+    setCherryPose('idle');
     gameStateRef.current = GAME_STATE.READY;
     setGameState(GAME_STATE.READY);
     setRenderTick((t) => t + 1);
@@ -384,6 +379,11 @@ export default function Tela3({ navigation }) {
     handleRestart();
     navigation.navigate('Welcome');
   }, [handleRestart, navigation]);
+
+  // A resized field starts a fresh round so physics never retain obsolete bounds.
+  useEffect(() => {
+    handleRestart();
+  }, [handleRestart]);
 
   // Cleanup on unmount or blur, and reset to READY on focus (Spec 7.3 & AC-115)
   useEffect(() => {
@@ -411,6 +411,7 @@ export default function Tela3({ navigation }) {
     }
 
     const handleKeyDown = (event) => {
+      if (!navigation.isFocused()) return;
       if (event.repeat) return;
       const code = event.code || '';
       const key = (event.key || '').toLowerCase();
@@ -451,7 +452,7 @@ export default function Tela3({ navigation }) {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [handleFieldPress, handleRestart, handleGoHome]);
+  }, [handleFieldPress, handleRestart, handleGoHome, navigation]);
 
   const currentPhase = getPhaseConfig(score);
 
@@ -462,7 +463,16 @@ export default function Tela3({ navigation }) {
       : Math.max(-22, Math.min(28, Math.round(velocityYRef.current * 0.065)));
 
   return (
-    <View style={styles.root}>
+    <View
+      style={styles.root}
+      onLayout={({ nativeEvent: { layout } }) => {
+        setGameArea((previous) =>
+          previous?.width === layout.width && previous?.height === layout.height
+            ? previous
+            : { width: layout.width, height: layout.height }
+        );
+      }}
+    >
       {/* Layer 1–5 & 7: World Phase Background + Petals + Ground */}
       <PhaseBackground
         phaseConfig={currentPhase}
@@ -475,8 +485,9 @@ export default function Tela3({ navigation }) {
       {/* Interactive Game Field */}
       <Pressable
         accessibilityRole="button"
-        accessibilityLabel="Área do jogo Cherry Bloom. Toque para fazer a Cherri saltar."
+        accessibilityLabel="Área do jogo Cherry Bloom. Toque para fazer a Cherry saltar."
         onPressIn={handleFieldPress}
+        delayPressIn={0}
         style={styles.gameField}
       >
         {/* Layer 6: Obstacle Pairs */}
@@ -489,7 +500,7 @@ export default function Tela3({ navigation }) {
           />
         ))}
 
-        {/* Layer 8: Cherri Protagonist */}
+        {/* Layer 8: Cherry Protagonist */}
         <Animated.View
           pointerEvents="none"
           style={[
@@ -508,7 +519,7 @@ export default function Tela3({ navigation }) {
             },
           ]}
         >
-          <CherryPlayer size={GAME.playerSize} state={cherriPose} />
+          <CherryPlayer size={GAME.playerSize} state={cherryPose} />
         </Animated.View>
 
         {/* Ready Prompt Overlay */}
@@ -540,7 +551,8 @@ export default function Tela3({ navigation }) {
           styles.topBar,
           {
             top: Math.max(14, insets.top + 8),
-            paddingHorizontal: spacing.md,
+            paddingLeft: Math.max(spacing.md, insets.left + spacing.sm),
+            paddingRight: Math.max(spacing.md, insets.right + spacing.sm),
           },
         ]}
       >
@@ -591,7 +603,7 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: 120,
+    paddingTop: 80,
   },
   readyBanner: {
     backgroundColor: 'rgba(255, 248, 242, 0.92)',

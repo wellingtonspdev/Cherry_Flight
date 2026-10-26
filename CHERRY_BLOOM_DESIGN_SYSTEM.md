@@ -7,6 +7,8 @@
 **Parallel local target:** Expo SDK 57  
 **Theme:** Cherry / Cherry Blossom / arcade flight game  
 
+**Atualização de contrato — 26/10/2026:** por determinação do usuário, o produto deve funcionar em paisagem (horizontal). Referências e proporções verticais deste handoff permanecem históricas. A implementação usa a área horizontal real, menus adaptados e Game Over compacto; o navegador em retrato solicita a rotação do dispositivo.
+
 > This document is the visual and interaction source of truth. If generated concept art conflicts with tokens or rules in this document, **this document wins**.
 
 ---
@@ -20,14 +22,14 @@
 **Fly Through the Blossom**
 
 ### 1.3 High-level concept
-Cherry Bloom is a compact arcade game inspired by the core interaction pattern of Flappy Bird, but with an original cherry-and-blossom identity. The player controls **Cherri**, a living cherry carried through the **Bloom Garden**, avoiding flowering branches while the environment transitions from morning to night as the score rises.
+Cherry Bloom is a compact arcade game inspired by the core interaction pattern of Flappy Bird, but with an original cherry-and-blossom identity. The player controls **Cherry**, a living cherry carried through the **Bloom Garden**, avoiding flowering branches while the environment transitions from morning to night as the score rises.
 
 ### 1.4 Brand promise
 A game that **looks calm, soft and delightful but plays fast and demanding**.
 
 ### 1.5 Design pillars
 1. **Readable at game speed** — gameplay silhouette and gap readability always beat decoration.
-2. **Cherry = gameplay; blossom = world** — cherries represent player/action; sakura represents atmosphere/progression.
+2. **Cherry = gameplay; blossom = world** — cherryes represent player/action; sakura represents atmosphere/progression.
 3. **Soft UI, fast mechanics** — menus float and bounce; gameplay reacts instantly.
 4. **Original, not a pink Flappy Bird clone** — no green pipes, no copied bird sprite, no copied title treatment.
 5. **Snack-safe first** — the visual system must remain implementable in Expo SDK 54 / Snack without a heavy native graphics stack.
@@ -37,10 +39,10 @@ A game that **looks calm, soft and delightful but plays fast and demanding**.
 ## 2. Narrative foundation
 
 ### 2.1 Protagonist
-**Cherri** — a small cherry born from the Bloom Tree.
+**Cherry** — a small cherry born from the Bloom Tree.
 
 ### 2.2 Minimal lore
-At the beginning of spring, a gust of wind separates Cherri from her branch. She must cross the Bloom Garden, using the wind and drifting petals to stay in the air until she reaches the Heart Tree.
+At the beginning of spring, a gust of wind separates Cherry from her branch. She must cross the Bloom Garden, using the wind and drifting petals to stay in the air until she reaches the Heart Tree.
 
 The lore exists to make design decisions coherent. It does **not** require cutscenes or long text.
 
@@ -77,7 +79,7 @@ Characteristics:
 `CB` + cherry icon.
 
 ### 3.3 Icon mark
-Single Cherri/cherry symbol, no text.
+Single Cherry/cherry symbol, no text.
 
 ### 3.4 Usage rules
 - Do not stretch.
@@ -89,7 +91,7 @@ Single Cherri/cherry symbol, no text.
 ### 3.5 Bundled references
 - `assets/vector/logo_lockup.svg`
 - `assets/vector/cherry_mark.svg`
-- `assets/generated/concept/cherry_bloom_concept_board.png`
+- original concept board (not included in this checkout; see the asset manifest)
 
 The generated board is a **visual reference**, not the source of truth for text, numbers, colors, or layout measurements.
 
@@ -101,7 +103,7 @@ The generated board is a **visual reference**, not the source of truth for text,
 
 | Token | Hex | Usage |
 |---|---:|---|
-| `cherry.500` | `#E63750` | primary CTA, Cherri base, highlights |
+| `cherry.500` | `#E63750` | primary CTA, Cherry base, highlights |
 | `cherry.700` | `#A91532` | pressed states, titles, deep accents |
 | `cherry.900` | `#541021` | dark contrast, deep shadows |
 | `blossom.300` | `#F5AFC1` | flowers, decorative surfaces |
@@ -230,7 +232,7 @@ Avoid sharp 90° cards unless they are part of the gameplay obstacle silhouette.
 
 ---
 
-## 8. Cherri — character system
+## 8. Cherry — character system
 
 ### 8.1 Required silhouette
 - one cherry body during gameplay;
@@ -255,11 +257,11 @@ Avoid sharp 90° cards unless they are part of the gameplay obstacle silhouette.
 | Celebrate | optional | petals / smile |
 
 ### 8.3 Bundled generated character references
-- `assets/generated/characters/cherri_sprite_sheet.png`
-- individual PNG crops in the same folder
+- original sprite sheet (not included in this checkout)
+- individual PNG crops in `assets/characters/`
 - `assets/vector/cherry_mark.svg`
 
-Generated PNGs are suitable as concept/prototype assets. For the most predictable Snack build, the final runtime Cherri may be recreated using `react-native-svg` primitives and animated with Reanimated/Animated.
+Generated PNGs are suitable as concept/prototype assets. For the most predictable Snack build, the final runtime Cherry may be recreated using `react-native-svg` primitives and animated with Reanimated/Animated.
 
 ### 8.4 Character animation values
 
@@ -292,11 +294,11 @@ Do not make character animation delay the physics response.
 The thresholds are defaults and may be tuned without changing the concept.
 
 ### 9.2 Bundled background concepts
-- `assets/generated/backgrounds/01_first_bloom.jpg`
-- `assets/generated/backgrounds/02_sakura_garden.jpg`
-- `assets/generated/backgrounds/03_golden_bloom.jpg`
-- `assets/generated/backgrounds/04_yozakura.jpg`
-- combined sheet: `cherry_bloom_phase_sheet.png`
+- `assets/backgrounds/01_first_bloom.jpg`
+- `assets/backgrounds/02_sakura_garden.jpg`
+- `assets/backgrounds/03_golden_bloom.jpg`
+- `assets/backgrounds/04_yozakura.jpg`
+- original combined phase sheet is not included in this checkout
 
 These can be used directly for prototyping but should not make the obstacle corridor visually ambiguous.
 
@@ -310,7 +312,7 @@ Layer 4 — distant tree silhouettes
 Layer 5 — middle-ground blossom shapes
 Layer 6 — gameplay obstacles
 Layer 7 — particles/petals
-Layer 8 — Cherri
+Layer 8 — Cherry
 Layer 9 — HUD
 ```
 
@@ -441,7 +443,7 @@ High-readability card for required academic information. The mandatory sentence 
 
 Required hierarchy:
 1. logo;
-2. Cherri idle visual;
+2. Cherry idle visual;
 3. optional tagline;
 4. primary `PLAY`;
 5. `HOW TO PLAY`;
@@ -449,7 +451,7 @@ Required hierarchy:
 
 Motion:
 - logo reveal 350–500 ms;
-- Cherri idle loop;
+- Cherry idle loop;
 - 3–6 background petals;
 - buttons stagger max 60 ms each.
 
@@ -463,7 +465,7 @@ Acceptance:
 **Purpose:** explain controls in under 10 seconds.
 
 Content:
-- `Tap to make Cherri jump`;
+- `Tap to make Cherry jump`;
 - `Avoid the branches`;
 - `Every gap = +1 point`;
 - optional micro-demo animation;
@@ -484,7 +486,7 @@ Required states:
 Required layers:
 - background phase;
 - obstacle pairs;
-- Cherri;
+- Cherry;
 - score;
 - optional pause button;
 - Game Over overlay/card.
@@ -648,7 +650,7 @@ Rules:
 
 - [ ] Game is recognizable as Cherry Bloom without reading its title.
 - [ ] No Flappy Bird pipe or bird artwork remains.
-- [ ] Cherri is readable at gameplay size.
+- [ ] Cherry is readable at gameplay size.
 - [ ] Gap edges are unambiguous.
 - [ ] HUD is readable in all four phases.
 - [ ] UI uses palette tokens rather than random hardcoded colors.

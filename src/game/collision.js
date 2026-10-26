@@ -17,7 +17,7 @@ export function intersects(boxA, boxB) {
 }
 
 /**
- * Builds the logical collision box for Cherri, inset slightly from visual sprite
+ * Builds the logical collision box for Cherry, inset slightly from visual sprite
  * so decorative stem/leaf tips do not cause unfair hits (Spec 8.6).
  */
 export function getPlayerHitbox(playerX, playerY, playerSize = GAME.playerSize, inset = GAME.playerHitboxInset) {
@@ -96,7 +96,7 @@ export function playerHitsPair(playerBox, pair, gameHeight) {
 }
 
 /**
- * Checks if Cherri has safely crossed an obstacle pair to award +1 point once (Spec 8.7).
+ * Checks if Cherry has safely crossed an obstacle pair to award +1 point once (Spec 8.7).
  */
 export function checkPairScored(playerX, pair) {
   if (!pair || pair.scored) return false;

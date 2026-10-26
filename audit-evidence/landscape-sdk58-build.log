@@ -1,0 +1,39 @@
+
+> cherry-bloom-local-sdk58@1.0.0 build:web
+> expo export --platform web --output-dir dist && node scripts/prepare-pwa.mjs
+
+Starting Metro Bundler
+
+Error while reading cache, falling back to a full crawl:
+ Error: Unable to deserialize cloned data.
+    at deserialize (node:v8:469:14)
+    at DiskCacheManager.read (D:\Cherry_Flight\node_modules\@expo\metro-file-map\build\cache\DiskCacheManager.js:95:42)
+    at async FileMap.read (D:\Cherry_Flight\node_modules\@expo\metro-file-map\build\index.js:447:20)
+    at async D:\Cherry_Flight\node_modules\@expo\metro-file-map\build\index.js:330:35
+    at async DependencyGraph.ready (D:\Cherry_Flight\node_modules\metro\src\node-haste\DependencyGraph.js:95:5)
+    at async Bundler.ready (D:\Cherry_Flight\node_modules\metro\src\Bundler.js:62:5)
+    at async IncrementalBundler.ready (D:\Cherry_Flight\node_modules\metro\src\IncrementalBundler.js:310:5)
+    at async Server.ready (D:\Cherry_Flight\node_modules\metro\src\Server.js:1465:5)
+| (node:6924) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:6924) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+Web Bundled 5065ms node_modules\expo\AppEntry.js (509 modules)
+
+› Assets (11):
+node_modules\@react-navigation\elements\lib\module\assets\back-icon-mask.0a328cd9c1afd0afe8e3b1ec5165b1b4.png (653B)
+node_modules\@react-navigation\elements\lib\module\assets\back-icon.35ba0eaec5a4f5ed12ca16fabeae451d.png (207B)
+node_modules\@react-navigation\elements\lib\module\assets\clear-icon.c94f6478e7ae0cdd9f15de1fcb9e5e55.png (4 variations | 425B)
+node_modules\@react-navigation\elements\lib\module\assets\close-icon.808e1b1b9b53114ec2838071a7e6daa7.png (4 variations | 235B)
+node_modules\@react-navigation\elements\lib\module\assets\search-icon.286d67d3f74808a60a78d3ebf1a5fb57.png (928B)
+
+› web bundles (1):
+_expo/static/js/web/AppEntry-ba011f95bf42e0d6c3d8b1d098ed622b.js (895KB)
+
+› Files (3):
+favicon.ico (15KB)
+index.html (1.3KB)
+metadata.json (49B)
+
+Exported: dist
+[prepare-pwa] PWA manifest, iOS meta tags, and Service Worker injected into dist/index.html.

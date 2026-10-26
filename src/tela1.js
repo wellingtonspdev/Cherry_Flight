@@ -24,9 +24,10 @@ import { colors, radius, shadows, spacing } from './theme/theme';
 export default function Tela1({ navigation }) {
   const { width, height } = useWindowDimensions();
   const isCompact = width < 360 || height < 660;
+  const isLandscape = width > height;
   const { canInstall, isIosSafariPrompt, promptInstall } = usePwaInstall();
 
-  // Motion: logo reveal 400ms, Cherri idle bob 1600ms, buttons stagger
+  // Motion: logo reveal 400ms, Cherry idle bob 1600ms, buttons stagger
   const logoAnim = useRef(new Animated.Value(0)).current;
   const bobAnim = useRef(new Animated.Value(0)).current;
   const btn1Anim = useRef(new Animated.Value(0)).current;
@@ -97,11 +98,13 @@ export default function Tela1({ navigation }) {
         <ScrollView
           contentContainerStyle={[
             styles.scrollContent,
+            isLandscape && styles.landscapeContent,
             { paddingHorizontal: width < 350 ? spacing.md : spacing.lg },
           ]}
           showsVerticalScrollIndicator={false}
         >
           {/* 1. Logo Lockup */}
+          <View style={isLandscape && styles.brandColumn}>
           <Animated.View
             style={[
               styles.logoSection,
@@ -121,22 +124,24 @@ export default function Tela1({ navigation }) {
             <LogoLockup compact={isCompact} />
           </Animated.View>
 
-          {/* 2. Cherri Idle Mascot Showcase */}
+          {/* 2. Cherry Idle Mascot Showcase */}
           <View style={styles.heroCenter}>
-            <View style={styles.mascotHalo}>
+            <View style={[styles.mascotHalo, isLandscape && styles.landscapeHalo]}>
               <Animated.View style={{ transform: [{ translateY: bobAnim }] }}>
-                <CherryPlayer size={isCompact ? 76 : 92} state="idle" />
+                <CherryPlayer size={isLandscape ? 64 : isCompact ? 76 : 92} state="idle" />
               </Animated.View>
             </View>
             <View style={styles.lorePill}>
               <Text style={styles.loreText}>
-                Ajude a Cherri a cruzar o Bloom Garden!
+                Ajude a Cherry a cruzar o Bloom Garden!
               </Text>
             </View>
           </View>
 
+          </View>
+
           {/* 3. Navigation Actions (Play, How to Play, Credits) */}
-          <View style={styles.menuCard}>
+          <View style={[styles.menuCard, isLandscape && styles.landscapeMenu]}>
             <Animated.View style={[styles.btnWrap, { opacity: btn1Anim }]}>
               <CherryButton
                 title="PLAY"
@@ -212,6 +217,25 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     marginTop: spacing.xs,
+  },
+  landscapeContent: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    paddingBottom: spacing.md,
+    gap: spacing.lg,
+  },
+  brandColumn: {
+    flex: 1,
+    maxWidth: 380,
+    alignItems: 'center',
+  },
+  landscapeMenu: {
+    flex: 1,
+  },
+  landscapeHalo: {
+    width: 88,
+    height: 88,
+    borderRadius: 44,
   },
   heroCenter: {
     alignItems: 'center',

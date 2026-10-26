@@ -1,0 +1,35 @@
+README.md:32:  - Toque em qualquer lugar da área do jogo para iniciar o voo e fazer a Cherri saltar.
+README.md:34:  - `Espaço` (`Space`), `Seta para Cima` (`↑`), `W` ou **Clique do Mouse**: inicia a partida e faz a Cherri saltar.
+public\manifest.json:4:  "description": "Ajude a Cherri a cruzar o Bloom Garden! Jogo arcade inspirado em Flappy Bird — FATEC Itaquera DSM PDM II.",
+docs\ASSET_GENERATION_PROMPTS.md:6:Create a polished mobile-game visual design board for an original game called “Cherry Bloom”. Show: logo, Cherri cherry protagonist, idle/jump/fall/collision states, four environments (First Bloom dawn, Sakura Garden daytime, Golden Bloom sunset, Yozakura night), flowering branch obstacles, Welcome/How To Play/Game/Game Over/Credits screen concepts, primary/secondary buttons, score HUD, petals and icon language. Rounded premium 2D game art, cherry red + blossom pink + cream + leaf green + violet night palette, crisp readable forms, no copyrighted characters, no Flappy Bird art.
+docs\ASSET_GENERATION_PROMPTS.md:9:Create a transparent-background 2×4 sprite/reference sheet of one consistent original cherry mascot named Cherri. Single glossy cherry body, curved brown stem, green leaf, tiny black eyes and minimal mouth. States: idle, happy/jump, falling/tilted, wink, collision/squash, dizzy, celebrate with petals, neutral. Maintain identical proportions and colors across states. No text.
+docs\ASSET_MANIFEST.md:19:| `cherri_idle.png` | menu/idle |
+docs\ASSET_MANIFEST.md:20:| `cherri_happy.png` | positive state |
+docs\ASSET_MANIFEST.md:21:| `cherri_fall.png` | falling reference |
+docs\ASSET_MANIFEST.md:22:| `cherri_wink.png` | menu polish |
+docs\ASSET_MANIFEST.md:23:| `cherri_hit.png` | collision reference |
+docs\ASSET_MANIFEST.md:24:| `cherri_dizzy.png` | Game Over reference |
+docs\ASSET_MANIFEST.md:25:| `cherri_celebrate.png` | score/celebration |
+docs\ASSET_MANIFEST.md:26:| `cherri_neutral.png` | neutral alternate |
+docs\ASSET_MANIFEST.md:27:| `cherri_sprite_sheet.png` | source/reference sheet |
+src\tela2.js:69:                  <Text style={styles.ruleTitle}>Tap to make Cherri jump</Text>
+src\tela2.js:71:                    Toque na tela (ou use Clique, Espaço, ↑ / W no Desktop) para impulsionar a Cherri contra a gravidade.
+src\tela3.js:62:  const [cherriPose, setCherriPose] = useState('idle');
+src\tela3.js:222:    setCherriPose('hit');
+src\tela3.js:263:        setCherriPose((prev) => (prev !== 'fall' ? 'fall' : prev));
+src\tela3.js:323:    setCherriPose('jump');
+src\tela3.js:330:        setCherriPose('idle');
+src\tela3.js:369:    setCherriPose('idle');
+src\tela3.js:478:        accessibilityLabel="Área do jogo Cherry Bloom. Toque para fazer a Cherri saltar."
+src\tela3.js:492:        {/* Layer 8: Cherri Protagonist */}
+src\tela3.js:511:          <CherryPlayer size={GAME.playerSize} state={cherriPose} />
+src\tela1.js:29:  // Motion: logo reveal 400ms, Cherri idle bob 1600ms, buttons stagger
+src\tela1.js:124:          {/* 2. Cherri Idle Mascot Showcase */}
+src\tela1.js:133:                Ajude a Cherri a cruzar o Bloom Garden!
+docs\RESEARCH_SOURCES.md:33:No images or audio from the external research sources above are bundled in this package. Bundled visual/audio prototype assets were generated specifically for this handoff.
+src\game\constants.js:12:  playerSize: 48,         // dp visual diameter of Cherri
+src\components\CherryPlayer.js:1:// Cherry Bloom — CherryPlayer (Cherri Character System)
+src\components\CherryPlayer.js:9: * Lightweight, Snack-safe SVG Cherri with state-based facial expressions:
+src\game\collision.js:20: * Builds the logical collision box for Cherri, inset slightly from visual sprite
+src\game\collision.js:99: * Checks if Cherri has safely crossed an obstacle pair to award +1 point once (Spec 8.7).
+src\game\feedback.js:10:  HapticsModule = require('expo-haptics');

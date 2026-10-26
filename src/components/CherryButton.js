@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   primary: {
-    backgroundColor: colors.cherry500,
+    backgroundColor: colors.cherry700,
     borderWidth: 2,
     borderColor: colors.cherry700,
     ...shadows.buttonPrimary,

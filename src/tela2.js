@@ -66,9 +66,9 @@ export default function Tela2({ navigation }) {
                   <Text style={styles.ruleNumberText}>1</Text>
                 </View>
                 <View style={styles.ruleTextGroup}>
-                  <Text style={styles.ruleTitle}>Tap to make Cherri jump</Text>
+                  <Text style={styles.ruleTitle}>Tap to make Cherry jump</Text>
                   <Text style={styles.ruleDesc}>
-                    Toque na tela (ou use Clique, Espaço, ↑ / W no Desktop) para impulsionar a Cherri contra a gravidade.
+                    Toque na tela (ou use Clique, Espaço, ↑ / W no Desktop) para impulsionar a Cherry contra a gravidade.
                   </Text>
                 </View>
               </View>
