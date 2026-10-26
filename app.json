@@ -5,7 +5,6 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -25,6 +24,9 @@
       "shortName": "Cherry Bloom",
       "backgroundColor": "#FFF8F2",
       "themeColor": "#D91E36"
-    }
+    },
+    "plugins": [
+      "expo-status-bar"
+    ]
   }
 }
