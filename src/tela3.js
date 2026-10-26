@@ -325,16 +325,8 @@ export default function Tela3({ navigation }) {
     }, 220);
   }, [triggerJumpSquash, clearPoseTimer]);
 
-  const lastPressTimeRef = useRef(0);
-
   // Tap handler in active game field (Spec 13.3)
   const handleFieldPress = useCallback(() => {
-    const now = Date.now();
-    if (now - lastPressTimeRef.current < 45) {
-      return;
-    }
-    lastPressTimeRef.current = now;
-
     if (gameStateRef.current === GAME_STATE.GAME_OVER) {
       // Spec 13.3: GAME_OVER tap must not accidentally restart unless on explicit button
       return;
@@ -357,6 +349,8 @@ export default function Tela3({ navigation }) {
   const handleRestart = useCallback(() => {
     stopGameLoop();
     clearPoseTimer();
+    scaleXAnim.setValue(1);
+    scaleYAnim.setValue(1);
     playerYRef.current = initialPlayerY;
     velocityYRef.current = 0;
     scoreRef.current = 0;
@@ -369,26 +363,39 @@ export default function Tela3({ navigation }) {
     gameStateRef.current = GAME_STATE.READY;
     setGameState(GAME_STATE.READY);
     setRenderTick((t) => t + 1);
-  }, [stopGameLoop, clearPoseTimer, initialPlayerY, screenWidth, playableHeight]);
+  }, [
+    stopGameLoop,
+    clearPoseTimer,
+    scaleXAnim,
+    scaleYAnim,
+    initialPlayerY,
+    screenWidth,
+    playableHeight,
+  ]);
 
   const handleGoHome = useCallback(() => {
-    stopGameLoop();
-    clearPoseTimer();
+    handleRestart();
     navigation.navigate('Welcome');
-  }, [stopGameLoop, clearPoseTimer, navigation]);
+  }, [handleRestart, navigation]);
 
-  // Cleanup on unmount or blur so no zombie timer/game loop survives (Spec 7.3 & AC-115)
+  // Cleanup on unmount or blur, and reset to READY on focus (Spec 7.3 & AC-115)
   useEffect(() => {
+    const unsubscribeFocus = navigation.addListener('focus', () => {
+      if (gameStateRef.current !== GAME_STATE.READY) {
+        handleRestart();
+      }
+    });
     const unsubscribeBlur = navigation.addListener('blur', () => {
       stopGameLoop();
       clearPoseTimer();
     });
     return () => {
+      unsubscribeFocus();
       unsubscribeBlur();
       stopGameLoop();
       clearPoseTimer();
     };
-  }, [navigation, stopGameLoop, clearPoseTimer]);
+  }, [navigation, handleRestart, stopGameLoop, clearPoseTimer]);
 
   const currentPhase = getPhaseConfig(score);
 
@@ -414,7 +421,6 @@ export default function Tela3({ navigation }) {
         accessibilityRole="button"
         accessibilityLabel="Área do jogo Cherry Bloom. Toque para fazer a Cherri saltar."
         onPressIn={handleFieldPress}
-        onPress={handleFieldPress}
         style={styles.gameField}
       >
         {/* Layer 6: Obstacle Pairs */}
