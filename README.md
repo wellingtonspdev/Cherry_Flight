@@ -19,7 +19,7 @@ Projeto acadêmico mobile desenvolvido em **React Native + Expo + React Navigati
 
 ## 2. Demonstração e Entrega no Expo Snack (SDK 54)
 
-- **Link Público do Expo Snack (SDK 54):** `https://snack.expo.dev/gm1tXnoJqFQQepn8uwR9q`
+- **Link Público do Expo Snack (SDK 54):** `https://snack.expo.dev/XfDHNKv2NsZ7QEpAYhHiX`
 - Compatível com execução direta no navegador (Web Preview do Snack) e no aplicativo **Expo Go (SDK 54)** em Android e iOS.
 
 ---
