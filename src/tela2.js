@@ -68,7 +68,7 @@ export default function Tela2({ navigation }) {
                 <View style={styles.ruleTextGroup}>
                   <Text style={styles.ruleTitle}>Tap to make Cherri jump</Text>
                   <Text style={styles.ruleDesc}>
-                    Toque em qualquer lugar da tela para impulsionar a Cherri para cima contra a gravidade.
+                    Toque na tela (ou use Clique, Espaço, ↑ / W no Desktop) para impulsionar a Cherri contra a gravidade.
                   </Text>
                 </View>
               </View>

@@ -1,6 +1,6 @@
 # Cherry Bloom — Fly Through the Blossom
 
-Projeto acadêmico mobile desenvolvido em **React Native + Expo + React Navigation** para a disciplina de **Programação para Dispositivos Móveis II** (5º Semestre — Desenvolvimento de Software Multiplataforma — FATEC Itaquera "Prof. Miguel Reale").
+Projeto acadêmico mobile e Web/PWA desenvolvido em **React Native + Expo + React Navigation** para a disciplina de **Programação para Dispositivos Móveis II** (5º Semestre — Desenvolvimento de Software Multiplataforma — FATEC Itaquera "Prof. Miguel Reale").
 
 ---
 
@@ -19,88 +19,82 @@ Projeto acadêmico mobile desenvolvido em **React Native + Expo + React Navigati
 
 ## 2. Demonstração e Entrega no Expo Snack (SDK 54)
 
-- **Link Público do Expo Snack (SDK 54):** `https://snack.expo.dev/XfDHNKv2NsZ7QEpAYhHiX`
+- **Link Público do Expo Snack (SDK 54):** `https://snack.expo.dev/7kDnJz_p3s3TVT4VDIrPE`
 - Compatível com execução direta no navegador (Web Preview do Snack) e no aplicativo **Expo Go (SDK 54)** em Android e iOS.
 
 ---
 
-## 3. Arquitetura e Arquivos Obrigatórios
+## 3. Controles Mobile & Desktop (Web / PWA)
 
-A estrutura respeita integralmente os requisitos da Atividade Prática 09 (Flappy Bird) e da especificação oficial:
+O jogo detecta automaticamente o ambiente e oferece suporte híbrido completo:
 
-```text
-Cherry_Flight/
-├── App.js                           # Entry point + NavigationContainer + Native Stack
-├── app.json                         # Configuração Expo
-├── package.json                     # Dependências alinhadas ao SDK da branch
-├── src/
-│   ├── tela1.js                     # Tela 1: Boas-vindas (Welcome / Home)
-│   ├── tela2.js                     # Tela 2: Instruções (How to Play)
-│   ├── tela3.js                     # Tela 3: Gameplay Principal (Cherry Bloom)
-│   ├── tela4.js                     # Tela 4: Créditos Acadêmicos e Disclaimer
-│   ├── components/
-│   │   ├── BloomBranchPair.js       # Par de obstáculos (galhos floridos superior/inferior)
-│   │   ├── CherryButton.js          # Botão reutilizável com feedback tátil e escala 0.96
-│   │   ├── CherryPlayer.js          # Protagonista Cherri em SVG leve (idle/jump/fall/hit/celebrate)
-│   │   ├── GameOverCard.js          # Card modal de Game Over com Score, Best Score e ações
-│   │   ├── LogoLockup.js            # Identidade tipográfica Cherry Bloom
-│   │   ├── PhaseBackground.js       # Cenário evolutivo em camadas + pétalas animadas
-│   │   └── ScoreHUD.js              # Placar em tempo real + badge de fase
-│   ├── game/
-│   │   ├── collision.js             # Funções puras AABB de colisão e pontuação por par
-│   │   ├── constants.js             # Constantes físicas, estados do jogo e dados acadêmicos
-│   │   ├── createObstacle.js        # Geração e reciclagem determinística de obstáculos
-│   │   ├── feedback.js              # Feedback háptico opcional seguro (com fallback no Snack/Web)
-│   │   └── phase.js                 # Progressão visual por pontuação (4 fases)
-│   └── theme/
-│       └── theme.js                 # Design tokens do Cherry Bloom Design System
-├── tests/
-│   └── game.test.mjs                # Testes automatizados (colisão, score, obstáculos, fases e disclaimer)
-├── assets/                          # Assets vetoriais, visuais de referência e ícones do pacote
-├── docs/                            # Documentação técnica e manifestos de handoff
-└── references/                      # Enunciado acadêmico e lições aprendidas de PDM II
-```
+- **Mobile (Touch):**
+  - Toque em qualquer lugar da área do jogo para iniciar o voo e fazer a Cherri saltar.
+- **Desktop / Web (Mouse + Teclado):**
+  - `Espaço` (`Space`), `Seta para Cima` (`↑`), `W` ou **Clique do Mouse**: inicia a partida e faz a Cherri saltar.
+  - `R` ou `Enter` (no Game Over): reinicia a partida imediatamente (`PLAY AGAIN`).
+  - `Esc` ou `H`: retorna para a tela inicial (`HOME`).
+  - Em monitores widescreen (`> 540px`), o jogo é exibido centralizado em um gabinete vertical mobile (`maxWidth: 460px`), preservando a física e a proporção arcade original.
 
 ---
 
-## 4. Estratégia de Duas Baselines Expo (SDK 54 & SDK 57)
+## 4. Suporte PWA Instalável & Deploy na Vercel
 
-Conforme documentado em `docs/TECH_STACK_SDK54_SDK57.md`, o repositório mantém duas linhas isoladas por branch, sem misturar versões de SDK no mesmo `package.json`/`package-lock.json`:
+O projeto está configurado para hospedagem estática na **Vercel** com instalação como **PWA (Progressive Web App)** no celular (Android/iOS) e no Desktop (Chrome/Edge):
 
-1. **Branch `main` — Baseline A (Autoridade de Entrega — Expo SDK 54):**
-   - `expo`: `~54.0.38`
-   - `react`: `19.1.0`
-   - `react-native`: `0.81.5`
-   - Validada com `npx expo install --check`, `npx expo-doctor` (18/18 checks) e **Expo Snack**.
-
-2. **Branch `sdk-57-local` — Baseline B (Execução Moderna Local — Expo SDK 57):**
-   - `expo`: `~57.0.31`
-   - `react`: `19.2.3`
-   - `react-native`: `~0.86.3`
-   - Configurada em branch separada com seu próprio `package.json` e `package-lock.json` para desenvolvimento/execução local moderna, mantendo paridade total de código-fonte (`App.js` e `src/`), gameplay e design.
+- [`vercel.json`](file:///d:/Cherry_Flight/vercel.json): Configura `buildCommand: "npm run build:web"`, `outputDirectory: "dist"`, cabeçalhos de cache para Service Worker/Manifest e rewrites de SPA.
+- [`public/manifest.json`](file:///d:/Cherry_Flight/public/manifest.json): Web App Manifest com `display: "standalone"`, `orientation: "portrait"`, cores oficiais (`#D91E36` / `#FFF8F2`) e ícones `192x192` e `512x512` (`any maskable`).
+- [`public/sw.js`](file:///d:/Cherry_Flight/public/sw.js) & [`public/offline.html`](file:///d:/Cherry_Flight/public/offline.html): Service Worker com cache de App Shell e página de fallback offline.
+- [`scripts/prepare-pwa.mjs`](file:///d:/Cherry_Flight/scripts/prepare-pwa.mjs): Injetor pós-build que vincula automaticamente `manifest.json`, meta tags iOS (`apple-mobile-web-app-capable`, `apple-touch-icon`) e registro do `sw.js` no `dist/index.html`.
+- [`src/game/pwa.js`](file:///d:/Cherry_Flight/src/game/pwa.js): Captura o evento `beforeinstallprompt` e exibe o botão **"INSTALAR APP (PWA)"** na Tela 1 quando disponível no navegador, além de instrução nativa para Safari no iOS.
 
 ---
 
-## 5. Como Executar e Validar Localmente
+## 5. Estratégia de Baselines Expo (SDK 54, SDK 57 e SDK 58)
 
-### Pré-requisitos
-- Node.js `>= 20.19.4` (testado em Node `v24.22.0`)
-- npm `>= 10`
+O repositório mantém três branches isoladas, cada uma com seu próprio `package.json` e `package-lock.json` sincronizados e sem contaminação cruzada:
 
-### Instalação e Execução
-```bash
-npm install
-npm start
+1. **Branch `main` — Baseline A (Autoridade de Entrega Acadêmica — Expo SDK 54):**
+   - `expo`: `~54.0.38` | `react`: `19.1.0` | `react-native`: `0.81.5`
+   - Compatível com **Expo Snack** e **Vercel Web/PWA**.
+2. **Branch `sdk-57-local` — Baseline B (Variante Local SDK 57):**
+   - `expo`: `~57.0.31` | `react`: `19.2.3` | `react-native`: `~0.86.3`
+3. **Branch `sdk-58-local` — Baseline C (Execução Local Mais Recente — Expo SDK 58 + Web/PWA):**
+   - `expo`: `~58.0.19`
+   - Ideal para rodar localmente com a versão mais recente do **Expo Go (SDK 58)** no celular e para gerar o build Web/PWA para a **Vercel**.
+
+---
+
+## 6. Como Executar Localmente e Publicar na Vercel
+
+### A) Rodar Localmente no Expo SDK 58 (Celular com Expo Go atual ou Web Desktop)
+```powershell
+git checkout sdk-58-local
+npm ci
+npx expo start
+```
+- Pressione `w` no terminal para abrir no navegador Desktop (com controles de teclado `Espaço` / `↑` / `W`).
+- Ou escaneie o QR Code com o app **Expo Go (SDK 58)** no celular.
+
+### B) Rodar a Versão Principal de Entrega (Expo SDK 54 — `main`)
+```powershell
+git checkout main
+npm ci
+npx expo start
 ```
 
-### Comandos de Validação Técnica
-```bash
-# Executar a suíte de testes unitários (colisões AABB, pontuação, reciclagem e textos acadêmicos)
+### C) Gerar Build Web/PWA Localmente ou Fazer Deploy na Vercel
+```powershell
+# Gerar a pasta estática dist/ pronta para PWA
+npm run build:web
+
+# Ou publicar diretamente na Vercel (via Vercel CLI ou integração Git)
+npx vercel --prod
+```
+
+### D) Comandos de Validação Técnica
+```powershell
 npm test
-
-# Verificar alinhamento de dependências com o Expo SDK
 npx expo install --check
-
-# Executar diagnóstico completo do projeto Expo
 npx expo-doctor@latest
 ```
