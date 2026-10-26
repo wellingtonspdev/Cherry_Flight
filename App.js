@@ -39,6 +39,7 @@ export default function App() {
               screenOptions={{
                 headerShown: false,
                 animation: 'fade',
+                orientation: 'landscape',
                 contentStyle: { backgroundColor: '#FFF8F2' },
               }}
             >

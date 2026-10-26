@@ -390,7 +390,7 @@ Variants:
 - `icon`
 
 Primary:
-- fill `cherry.500`;
+- fill `cherry.700` for the cream 16 px label (contrast 7.028:1); `cherry.500` remains the character/highlight color;
 - text `cream.50`;
 - radius `pill`;
 - min height 52;

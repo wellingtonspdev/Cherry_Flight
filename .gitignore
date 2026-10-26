@@ -19,3 +19,5 @@ audit-evidence/sdk54/
 audit-evidence/sdk57/
 audit-evidence/*-source.zip
 audit-evidence/*.b64
+.vercel
+.env*

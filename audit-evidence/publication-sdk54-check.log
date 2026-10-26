@@ -1,0 +1,3 @@
+env: load .env.local
+env: export VERCEL_OIDC_TOKEN
+Dependencies are up to date

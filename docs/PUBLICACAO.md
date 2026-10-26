@@ -17,7 +17,7 @@ O relatório de auditoria registra o baseline anterior às correções. As evid�
 
 Projeto estático Expo Web. Build: `npm run build:web`. Saída: `dist`. A configuração inclui manifesto PWA em landscape, service worker versionado e fallback SPA. Não há backend ou segredo de runtime a configurar.
 
-O projeto será vinculado à conta Vercel autenticada e validado na URL de produção fornecida pela plataforma. A URL final e o resultado dos testes serão registrados após o deploy.
+Projeto vinculado à conta `wellington-siqueira-portos-projects`, nome `cherry-flight`. URL pública de produção: https://cherry-flight.vercel.app.
 
 ## Domínio posterior
 
@@ -31,4 +31,30 @@ Não copiar um CNAME de outro projeto nem antecipar alteração no domínio prin
 
 ## Evidência de publicação
 
-Estado inicial: PARTIAL — autenticação GitHub/Vercel/Expo confirmada; envio e validação remota ainda em execução.
+| Gate | Estado | Evidência |
+|---|---|---|
+| GitHub | PASS | `main` publicada em SDK54; branch `sdk-58-local` preserva a linha moderna. Nenhum force push. |
+| SDK54 | PASS | Expo54.0.38, React19.1.0, RN0.81.5; sete testes, install check e Doctor18/18. |
+| Snack solicitado | PASS | O mesmo alias `@wellingtonsp.de/cherry-flight` foi atualizado, sem criar fork; SDK54.0.0;67 arquivos,38 de código/documentação e29 assets. |
+| Fontes do Snack | PASS | Os19 arquivos de runtime App/src coincidem com a cópia de entrega;29 assets respondem sem falha. |
+| Runtime Snack Web | PASS | Quatro telas, créditos exatos, salto, gravidade, obstáculos/reciclagem,30 pontos, quatro fases, colisão/Game Over e cinco restarts consecutivos. |
+| Vercel CLI | PASS | CLI65.2.0; deploy de produção Ready em `cherry-flight.vercel.app`. |
+| Runtime Vercel | PASS | Mesma sequência funcional até30 pontos e cinco restarts; Home não reinicia jogo oculto ao pressionar Espaço. |
+| PWA offline | PASS | Service worker ativado; reload e partida funcionaram com a rede do contexto de teste desligada. Instalação física em aparelho não executada. |
+| Rotas/estáticos | PASS | `/`, `/index.html`, `/offline.html`, manifesto, SW, ícones e rota de fallback respondem200. Foi removido cleanUrls, que conflitava com o destino index.html do rewrite. |
+| Nativo físico | NOT EXECUTED | Sem aparelho conectado. Expo e native-stack solicitam paisagem; propriedade native-stack é executada também dentro do Snack/Expo Go. |
+| Domínio/Cloudflare | NOT EXECUTED | Adiado conforme solicitado; nenhum DNS foi alterado. |
+
+Código de aplicação publicado na Vercel e usado no teste remoto: commit `6784ccdda31e0816f227e2c17f2c8629fd0e1f09`. Deployment: `dpl_5Z348nGgngfxk3YpnyBQDkPiRMhG`. Commits posteriores de relatório/evidência não alteram esse runtime.
+
+O teste remoto começou partidas e restarts com eventos touch de10ms pelo protocolo Chromium. Para a partida automatizada prolongada, os taps seguintes foram TouchEvents DOM, executados no próprio navegador para evitar atraso do controlador externo. Nenhuma posição, velocidade, obstáculo ou pontuação foi escrita pelo teste. Isso prova o runtime Web, não um teste manual ou um aparelho físico.
+
+Tentativas anteriores do jogador automatizado perderam ou excederam o orçamento de tempo antes de30 pontos. Esses resultados foram preservados em arquivos `published-runtime-first-run.json` e `published-runtime-before-inpage-controller.json`; não foram reclassificados como bugs de produto nem apagados. A execução final chegou a30 no primeiro attempt em cada serviço.
+
+Evidências finais: `audit-evidence/published-runtime-results.json`, screenshots `published-snack-*`/`published-vercel-*`, `snack-source-verification.json` e logs de publicação. O Snack inclui o projeto de aplicação, assets e referências; o repositório GitHub também preserva lockfile e evidência de auditoria, que não são enviados como dependências ou builds temporários ao Snack/Vercel.
+
+No editor do Snack, usar o botão de expandir a prévia Web para uma janela horizontal. A prévia estreita em retrato apresenta a instrução para girar o dispositivo; não é erro de bundle.
+
+### Limites mantidos
+
+Fidelidade à arte rica, motion opcional, profiling em aparelho e advisories transitivos continuam documentados no relatório. A linha SDK57 não é a autoridade desta publicação e seu Web não foi promovido a PASS. Publicação funcional Web/Snack não significa aprovação integral de plataformas não executadas.
