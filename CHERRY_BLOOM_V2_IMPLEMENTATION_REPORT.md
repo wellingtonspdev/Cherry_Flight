@@ -93,7 +93,7 @@ Idle bob, jump squash/stretch, fall tilt, collision pose/shake, score feedback, 
 
 ## SDK54
 
-Expo Doctor18/18; expo install --check passes. Web production export and Android/iOS Hermes exports pass. Bundle export is compilation evidence, not native runtime evidence. Actual browser runs cover667×375,844×390 and1366×768. No local Android SDK/adb/emulator was found at the standard configured location; physical Android/iOS execution is NOT EXECUTED.
+Expo Doctor18/18; expo install --check passes. Web production export and Android/iOS Hermes exports pass. Bundle export is compilation evidence, not native runtime evidence. Actual browser runs cover667×375,844×390 and1366×768. Environment enumeration found SDK/adb/emulator in D:/Android/Sdk and usable WHPX. The existing AVD failed before boot for insufficient D: space. A separate temporary C: AVD also failed: emulator37.1.11 raises the data minimum to6GiB and requires7372.80MiB free, versus4762.09MiB available. No device registered and no app was installed. Native Android runtime remains NOT EXECUTED for this measured external resource limit; physical Android/iOS execution is also NOT EXECUTED. Evidence: android-runtime-blocker.json/log. The official Expo Go54.0.8 APK SHA256 matched the official release digest; it was not installed.
 
 ## Snack
 
@@ -192,7 +192,7 @@ PASS rows cite executed checks, not source presence alone. Native physical calib
 | SDK54 | Official delivery | Doctor18/18, dependency check, Web/native exports, browser runtime | PASS |
 | SDK57 | Separate equivalent mirror | Own deps/lock, Doctor21/21,26tests, Web completion/checkpoint | PASS |
 | Snack | Official SDK54 target and Git import | Official Web Preview passed; final Git import retest follows push | PARTIAL |
-| Physical native device | Execute when available | No local SDK/adb/emulator or physical device available | NOT EXECUTED |
+| Physical native device | Execute when available | SDK/WHPX present; both boot attempts rejected for measured storage shortage; no physical device | NOT EXECUTED |
 
 ### Root cause and revalidation details
 
@@ -235,11 +235,11 @@ P0 gameplay and lifecycle, P1 academic/SDK54/Snack, P2 identity/progression/asse
 
 The public Vercel URL passed a complete Level1, Next Level, reload/Continue, routes and exact credits. HTTP checks pass for root, manifest, Service Worker, offline fallback, deep SPA route and the JavaScript asset referenced by the deployed index. Linux/Vercel and local Windows exports can produce different bundle hashes; validation downloads the deployed index's actual asset instead of assuming the local hash is a remote filename.
 
-Runtime source revision: `fb0cf90103bfa994faba30e033fbd0ef175fc25b`. SDK54/SDK57 share40 JavaScript runtime files and169 identical V2 asset files; manifests/locks intentionally differ. Fingerprint: `545bfdec53c8f5fe849623db2afdc4e13358311b1402066593d8bf3cfbcfd872`.
+Runtime source revision: `48b56e36a705cafda7e58530334948ed209a29c2`. SDK54/SDK57 share40 JavaScript runtime files and169 identical V2 asset files; manifests/locks intentionally differ. Fingerprint: `4ce84c57b7d7379a799835d90b52b08aea2b55c232986b09eda80567ee816e62`.
 
-Official Snack source ID: `67d1437f-bedb-4129-bef2-641bf7a7ee5a`, SDK54.0.0,43 runtime text files. The publisher read back and compared every file after saving.
+Official Snack source ID: `95acf9e3-079c-4c92-9466-53727567bd93`, SDK54.0.0,43 runtime text files. The publisher read back and compared every file after saving.
 
-Vercel production deployment: `dpl_3AawVecgLneVcMPimoTtKFkeaKQj`, READY, public alias `https://cherry-flight.vercel.app`. Git main synchronization and Git-import verification follow before freeze. DNS/Cloudflare records remain for later domain configuration.
+Vercel production deployment: `dpl_3DEFsmACDhbv9brFJNBH7ach4tyy`, READY, public alias `https://cherry-flight.vercel.app`. Git main synchronization and Git-import verification follow before freeze. DNS/Cloudflare records remain for later domain configuration.
 
 ### Evidence correction during final QA
 
@@ -247,7 +247,7 @@ An earlier lifecycle snapshot exited a freshly resized READY round, so it did no
 
 ## Remaining limitations
 
-- No real Android/iOS device, emulator or native Expo Go test; exported bundles do not substitute for it.
+- No real Android/iOS or native Expo Go execution. Android SDK/WHPX exists, but both AVD boot attempts failed for insufficient storage; exported bundles do not substitute for execution.
 - Twelve successful deterministic engine layouts do not mathematically prove all random sequences or human difficulty calibration.
 - Web long frames occurred under shared CPU load; no locked-FPS, battery or native-memory claim.
 - Native Snack data-URI audio and physical audibility remain unexecuted.

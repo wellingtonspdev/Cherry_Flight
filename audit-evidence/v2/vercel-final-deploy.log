@@ -1,17 +1,17 @@
 Vercel CLI 65.4.0 (Node.js 24.22.0)
-  Inspect         https://vercel.com/wellington-siqueira-portos-projects/cherry-flight/3AawVecgLneVcMPimoTtKFkeaKQj
-  Production      https://cherry-flight-3rxz2o9jv-wellington-siqueira-portos-projects.vercel.app
+  Inspect         https://vercel.com/wellington-siqueira-portos-projects/cherry-flight/3DEFsmACDhbv9brFJNBH7ach4tyy
+  Production      https://cherry-flight-gne6bfvhy-wellington-siqueira-portos-projects.vercel.app
 ▲ Aliased         https://cherry-flight.vercel.app
 {
   "status": "ok",
   "deployment": {
-    "id": "dpl_3AawVecgLneVcMPimoTtKFkeaKQj",
-    "url": "https://cherry-flight-3rxz2o9jv-wellington-siqueira-portos-projects.vercel.app",
+    "id": "dpl_3DEFsmACDhbv9brFJNBH7ach4tyy",
+    "url": "https://cherry-flight-gne6bfvhy-wellington-siqueira-portos-projects.vercel.app",
     "productionUrl": "https://cherry-flight.vercel.app",
-    "inspectorUrl": "https://vercel.com/wellington-siqueira-portos-projects/cherry-flight/3AawVecgLneVcMPimoTtKFkeaKQj",
+    "inspectorUrl": "https://vercel.com/wellington-siqueira-portos-projects/cherry-flight/3DEFsmACDhbv9brFJNBH7ach4tyy",
     "readyState": "READY",
     "target": "production",
-    "deploymentApiUrl": "https://api.vercel.com/v13/deployments/dpl_3AawVecgLneVcMPimoTtKFkeaKQj",
+    "deploymentApiUrl": "https://api.vercel.com/v13/deployments/dpl_3DEFsmACDhbv9brFJNBH7ach4tyy",
     "buildMachine": {
       "cores": 2,
       "memory": 8192,
@@ -23,7 +23,7 @@ Vercel CLI 65.4.0 (Node.js 24.22.0)
       "vercel_authentication"
     ]
   },
-  "message": "Deployment cherry-flight-3rxz2o9jv-wellington-siqueira-portos-projects.vercel.app ready. Production URL: https://cherry-flight.vercel.app",
+  "message": "Deployment cherry-flight-gne6bfvhy-wellington-siqueira-portos-projects.vercel.app ready. Production URL: https://cherry-flight.vercel.app",
   "next": [
     {
       "command": "vercel git connect",
@@ -34,7 +34,7 @@ Vercel CLI 65.4.0 (Node.js 24.22.0)
       "when": "Verify deployment, including when Deployment Protection is enabled"
     },
     {
-      "command": "vercel inspect cherry-flight-3rxz2o9jv-wellington-siqueira-portos-projects.vercel.app",
+      "command": "vercel inspect cherry-flight-gne6bfvhy-wellington-siqueira-portos-projects.vercel.app",
       "when": "Inspect deployment"
     },
     {

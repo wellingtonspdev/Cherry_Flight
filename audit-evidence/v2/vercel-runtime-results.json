@@ -36,59 +36,59 @@
         "gapY": 113.28,
         "gapSize": 127.44,
         "width": 68,
-        "variant": 4,
+        "variant": 1,
         "biome": "first_bloom",
         "scored": false,
         "visible": false,
-        "preparedAt": 1793103846884,
+        "preparedAt": 1793106156763,
         "id": "pair-0",
         "epoch": 0
       },
       {
         "worldX": 1468.56,
         "x": 1468.56,
-        "center": 190.4756877352745,
+        "center": 164.53509594102562,
         "previousCenter": 177,
-        "gapY": 126.7556877352745,
+        "gapY": 100.81509594102562,
         "gapSize": 127.44,
         "width": 68,
-        "variant": 1,
+        "variant": 0,
         "biome": "first_bloom",
         "scored": false,
         "visible": false,
-        "preparedAt": 1793103846884,
+        "preparedAt": 1793106156764,
         "id": "pair-1",
         "epoch": 0
       },
       {
         "worldX": 2008.7199999999998,
         "x": 2008.7199999999998,
-        "center": 199.52312678890024,
-        "previousCenter": 190.4756877352745,
-        "gapY": 135.80312678890024,
+        "center": 146.6691958349555,
+        "previousCenter": 164.53509594102562,
+        "gapY": 82.9491958349555,
         "gapSize": 127.44,
         "width": 68,
-        "variant": 2,
+        "variant": 1,
         "biome": "first_bloom",
         "scored": false,
         "visible": false,
-        "preparedAt": 1793103846884,
+        "preparedAt": 1793106156764,
         "id": "pair-2",
         "epoch": 0
       },
       {
         "worldX": 2548.8799999999997,
         "x": 2548.8799999999997,
-        "center": 158.64336631708758,
-        "previousCenter": 199.52312678890024,
-        "gapY": 94.92336631708758,
+        "center": 178.71100138932178,
+        "previousCenter": 146.6691958349555,
+        "gapY": 114.99100138932178,
         "gapSize": 127.44,
         "width": 68,
-        "variant": 3,
+        "variant": 2,
         "biome": "first_bloom",
         "scored": false,
         "visible": false,
-        "preparedAt": 1793103846884,
+        "preparedAt": 1793106156764,
         "id": "pair-3",
         "epoch": 0
       }
@@ -97,169 +97,169 @@
       {
         "worldX": 3089.0399999999995,
         "x": 3089.0399999999995,
-        "center": 145.91289370199718,
-        "previousCenter": 158.64336631708758,
-        "gapY": 82.19289370199718,
+        "center": 212.98566744772796,
+        "previousCenter": 178.71100138932178,
+        "gapY": 149.26566744772796,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 1,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793106156764
+      },
+      {
+        "worldX": 3629.1999999999994,
+        "x": 3629.1999999999994,
+        "center": 242.24445517881458,
+        "previousCenter": 212.98566744772796,
+        "gapY": 178.52445517881458,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 0,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793106156764
+      },
+      {
+        "worldX": 4169.36,
+        "x": 4169.36,
+        "center": 246.53912758532763,
+        "previousCenter": 242.24445517881458,
+        "gapY": 182.81912758532764,
         "gapSize": 127.44,
         "width": 68,
         "variant": 2,
         "biome": "first_bloom",
         "scored": false,
         "visible": false,
-        "preparedAt": 1793103846884
-      },
-      {
-        "worldX": 3629.1999999999994,
-        "x": 3629.1999999999994,
-        "center": 155.43863082130372,
-        "previousCenter": 145.91289370199718,
-        "gapY": 91.71863082130372,
-        "gapSize": 127.44,
-        "width": 68,
-        "variant": 3,
-        "biome": "first_bloom",
-        "scored": false,
-        "visible": false,
-        "preparedAt": 1793103846884
-      },
-      {
-        "worldX": 4169.36,
-        "x": 4169.36,
-        "center": 139.62516488987066,
-        "previousCenter": 155.43863082130372,
-        "gapY": 75.90516488987066,
-        "gapSize": 127.44,
-        "width": 68,
-        "variant": 4,
-        "biome": "first_bloom",
-        "scored": false,
-        "visible": false,
-        "preparedAt": 1793103846884
+        "preparedAt": 1793106156764
       }
     ],
     "events": [],
     "metrics": [
       {
         "type": "pair_prepared",
-        "at": 1793103846884,
+        "at": 1793106156764,
         "worldX": 928.4000000000001,
         "biome": "first_bloom"
       },
       {
         "type": "pair_prepared",
-        "at": 1793103846884,
+        "at": 1793106156764,
         "worldX": 1468.56,
         "biome": "first_bloom"
       },
       {
         "type": "pair_prepared",
-        "at": 1793103846884,
+        "at": 1793106156764,
         "worldX": 2008.7199999999998,
         "biome": "first_bloom"
       },
       {
         "type": "pair_prepared",
-        "at": 1793103846884,
+        "at": 1793106156764,
         "worldX": 2548.8799999999997,
         "biome": "first_bloom"
       },
       {
         "type": "pair_prepared",
-        "at": 1793103846884,
+        "at": 1793106156764,
         "worldX": 3089.0399999999995,
         "biome": "first_bloom"
       },
       {
         "type": "pair_prepared",
-        "at": 1793103846884,
+        "at": 1793106156764,
         "worldX": 3629.1999999999994,
         "biome": "first_bloom"
       },
       {
         "type": "pair_prepared",
-        "at": 1793103846884,
+        "at": 1793106156764,
         "worldX": 4169.36,
         "biome": "first_bloom"
       },
       {
         "type": "pair_mounted",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-0"
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-0",
         "epoch": 0
       },
       {
         "type": "pair_mounted",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-1"
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-1",
         "epoch": 0
       },
       {
         "type": "pair_mounted",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-2"
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-2",
         "epoch": 0
       },
       {
         "type": "pair_mounted",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-3"
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-3",
         "epoch": 0
       },
       {
         "type": "renderer_ready",
-        "at": 1793103848796,
+        "at": 1793106158561,
         "mountedPairs": 4,
         "futurePrepared": 3
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848809,
+        "at": 1793106158575,
         "id": "pair-0",
         "epoch": 0
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848809,
+        "at": 1793106158575,
         "id": "pair-1",
         "epoch": 0
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848809,
+        "at": 1793106158575,
         "id": "pair-2",
         "epoch": 0
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848809,
+        "at": 1793106158575,
         "id": "pair-3",
         "epoch": 0
       }
     ],
-    "lastCenter": 139.62516488987066,
+    "lastCenter": 246.53912758532763,
     "nextWorldX": 4709.5199999999995,
     "ramp": 0,
-    "lastVariant": 4,
+    "lastVariant": 2,
     "rafActive": false,
     "diagnostics": {
       "frames": 0,
@@ -293,76 +293,76 @@
     },
     "status": "PLAYING",
     "score": 0,
-    "elapsed": 0.23230000000000017,
-    "distance": 68.62142000000004,
+    "elapsed": 0.2332000000000007,
+    "distance": 68.8872800000002,
     "collision": null,
     "player": {
       "x": 219,
-      "y": 90.73372724999997,
-      "velocity": -146.0849999999998
+      "y": 90.60267599999989,
+      "velocity": -145.13999999999922
     },
     "pairs": [
       {
         "worldX": 928.4000000000001,
-        "x": 859.77858,
+        "x": 859.51272,
         "center": 177,
         "previousCenter": 177,
         "gapY": 113.28,
-        "gapSize": 127.44,
-        "width": 68,
-        "variant": 4,
-        "biome": "first_bloom",
-        "scored": false,
-        "visible": false,
-        "preparedAt": 1793103846884,
-        "id": "pair-0",
-        "epoch": 0
-      },
-      {
-        "worldX": 1468.56,
-        "x": 1399.93858,
-        "center": 190.4756877352745,
-        "previousCenter": 177,
-        "gapY": 126.7556877352745,
         "gapSize": 127.44,
         "width": 68,
         "variant": 1,
         "biome": "first_bloom",
         "scored": false,
         "visible": false,
-        "preparedAt": 1793103846884,
+        "preparedAt": 1793106156763,
+        "id": "pair-0",
+        "epoch": 0
+      },
+      {
+        "worldX": 1468.56,
+        "x": 1399.6727199999998,
+        "center": 164.53509594102562,
+        "previousCenter": 177,
+        "gapY": 100.81509594102562,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 0,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793106156764,
         "id": "pair-1",
         "epoch": 0
       },
       {
         "worldX": 2008.7199999999998,
-        "x": 1940.0985799999999,
-        "center": 199.52312678890024,
-        "previousCenter": 190.4756877352745,
-        "gapY": 135.80312678890024,
+        "x": 1939.8327199999997,
+        "center": 146.6691958349555,
+        "previousCenter": 164.53509594102562,
+        "gapY": 82.9491958349555,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 1,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793106156764,
+        "id": "pair-2",
+        "epoch": 0
+      },
+      {
+        "worldX": 2548.8799999999997,
+        "x": 2479.9927199999993,
+        "center": 178.71100138932178,
+        "previousCenter": 146.6691958349555,
+        "gapY": 114.99100138932178,
         "gapSize": 127.44,
         "width": 68,
         "variant": 2,
         "biome": "first_bloom",
         "scored": false,
         "visible": false,
-        "preparedAt": 1793103846884,
-        "id": "pair-2",
-        "epoch": 0
-      },
-      {
-        "worldX": 2548.8799999999997,
-        "x": 2480.2585799999997,
-        "center": 158.64336631708758,
-        "previousCenter": 199.52312678890024,
-        "gapY": 94.92336631708758,
-        "gapSize": 127.44,
-        "width": 68,
-        "variant": 3,
-        "biome": "first_bloom",
-        "scored": false,
-        "visible": false,
-        "preparedAt": 1793103846884,
+        "preparedAt": 1793106156764,
         "id": "pair-3",
         "epoch": 0
       }
@@ -370,170 +370,170 @@
     "future": [
       {
         "worldX": 3089.0399999999995,
-        "x": 3020.4185799999996,
-        "center": 145.91289370199718,
-        "previousCenter": 158.64336631708758,
-        "gapY": 82.19289370199718,
+        "x": 3020.152719999999,
+        "center": 212.98566744772796,
+        "previousCenter": 178.71100138932178,
+        "gapY": 149.26566744772796,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 1,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793106156764
+      },
+      {
+        "worldX": 3629.1999999999994,
+        "x": 3560.312719999999,
+        "center": 242.24445517881458,
+        "previousCenter": 212.98566744772796,
+        "gapY": 178.52445517881458,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 0,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793106156764
+      },
+      {
+        "worldX": 4169.36,
+        "x": 4100.47272,
+        "center": 246.53912758532763,
+        "previousCenter": 242.24445517881458,
+        "gapY": 182.81912758532764,
         "gapSize": 127.44,
         "width": 68,
         "variant": 2,
         "biome": "first_bloom",
         "scored": false,
         "visible": false,
-        "preparedAt": 1793103846884
-      },
-      {
-        "worldX": 3629.1999999999994,
-        "x": 3560.5785799999994,
-        "center": 155.43863082130372,
-        "previousCenter": 145.91289370199718,
-        "gapY": 91.71863082130372,
-        "gapSize": 127.44,
-        "width": 68,
-        "variant": 3,
-        "biome": "first_bloom",
-        "scored": false,
-        "visible": false,
-        "preparedAt": 1793103846884
-      },
-      {
-        "worldX": 4169.36,
-        "x": 4100.738579999999,
-        "center": 139.62516488987066,
-        "previousCenter": 155.43863082130372,
-        "gapY": 75.90516488987066,
-        "gapSize": 127.44,
-        "width": 68,
-        "variant": 4,
-        "biome": "first_bloom",
-        "scored": false,
-        "visible": false,
-        "preparedAt": 1793103846884
+        "preparedAt": 1793106156764
       }
     ],
     "events": [],
     "metrics": [
       {
         "type": "pair_prepared",
-        "at": 1793103846884,
+        "at": 1793106156764,
         "worldX": 928.4000000000001,
         "biome": "first_bloom"
       },
       {
         "type": "pair_prepared",
-        "at": 1793103846884,
+        "at": 1793106156764,
         "worldX": 1468.56,
         "biome": "first_bloom"
       },
       {
         "type": "pair_prepared",
-        "at": 1793103846884,
+        "at": 1793106156764,
         "worldX": 2008.7199999999998,
         "biome": "first_bloom"
       },
       {
         "type": "pair_prepared",
-        "at": 1793103846884,
+        "at": 1793106156764,
         "worldX": 2548.8799999999997,
         "biome": "first_bloom"
       },
       {
         "type": "pair_prepared",
-        "at": 1793103846884,
+        "at": 1793106156764,
         "worldX": 3089.0399999999995,
         "biome": "first_bloom"
       },
       {
         "type": "pair_prepared",
-        "at": 1793103846884,
+        "at": 1793106156764,
         "worldX": 3629.1999999999994,
         "biome": "first_bloom"
       },
       {
         "type": "pair_prepared",
-        "at": 1793103846884,
+        "at": 1793106156764,
         "worldX": 4169.36,
         "biome": "first_bloom"
       },
       {
         "type": "pair_mounted",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-0"
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-0",
         "epoch": 0
       },
       {
         "type": "pair_mounted",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-1"
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-1",
         "epoch": 0
       },
       {
         "type": "pair_mounted",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-2"
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-2",
         "epoch": 0
       },
       {
         "type": "pair_mounted",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-3"
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-3",
         "epoch": 0
       },
       {
         "type": "renderer_ready",
-        "at": 1793103848796,
+        "at": 1793106158561,
         "mountedPairs": 4,
         "futurePrepared": 3
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848809,
+        "at": 1793106158575,
         "id": "pair-0",
         "epoch": 0
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848809,
+        "at": 1793106158575,
         "id": "pair-1",
         "epoch": 0
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848809,
+        "at": 1793106158575,
         "id": "pair-2",
         "epoch": 0
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848809,
+        "at": 1793106158575,
         "id": "pair-3",
         "epoch": 0
       }
     ],
-    "lastCenter": 139.62516488987066,
+    "lastCenter": 246.53912758532763,
     "nextWorldX": 4709.5199999999995,
     "ramp": 0,
-    "lastVariant": 4,
+    "lastVariant": 2,
     "rafActive": true,
     "diagnostics": {
       "frames": 11,
@@ -541,8 +541,8 @@
       "pairRenders": 8,
       "pairMounts": 4,
       "actorRenders": 3,
-      "longFrames": 1,
-      "maxFrameMs": 84.39999999999964,
+      "longFrames": 2,
+      "maxFrameMs": 99.80000000000018,
       "inputCount": 1
     },
     "vectorStats": null
@@ -567,76 +567,76 @@
     },
     "status": "LEVEL_COMPLETE",
     "score": 8,
-    "elapsed": 15.413300000000005,
-    "distance": 4553.0888199999845,
+    "elapsed": 15.41449999999999,
+    "distance": 4553.44329999997,
     "collision": null,
     "player": {
       "x": 219,
-      "y": 108.85877174999975,
-      "velocity": 309.825
+      "y": 155.38067625000045,
+      "velocity": 47.53500000000075
     },
     "pairs": [
       {
         "worldX": 5249.679999999999,
-        "x": 696.5911800000149,
-        "center": 137.65336525092386,
-        "previousCenter": 128.5939923884157,
-        "gapY": 73.93336525092386,
+        "x": 696.2367000000295,
+        "center": 184.32461702973492,
+        "previousCenter": 214.52187542293944,
+        "gapY": 120.60461702973492,
         "gapSize": 127.44,
         "width": 68,
-        "variant": 3,
+        "variant": 1,
         "biome": "first_bloom",
         "scored": false,
         "visible": true,
-        "preparedAt": 1793103854709,
+        "preparedAt": 1793106164445,
         "id": "pair-0",
         "epoch": 2
       },
       {
         "worldX": 5789.839999999999,
-        "x": 1236.7511800000148,
-        "center": 151.5424358111326,
-        "previousCenter": 137.65336525092386,
-        "gapY": 87.8224358111326,
+        "x": 1236.3967000000293,
+        "center": 188.25366742058713,
+        "previousCenter": 184.32461702973492,
+        "gapY": 124.53366742058714,
         "gapSize": 127.44,
         "width": 68,
-        "variant": 4,
+        "variant": 3,
         "biome": "first_bloom",
         "scored": false,
         "visible": false,
-        "preparedAt": 1793103856532,
+        "preparedAt": 1793106166257,
         "id": "pair-1",
         "epoch": 2
       },
       {
         "worldX": 6329.999999999999,
-        "x": 1776.9111800000146,
-        "center": 151.80601884916615,
-        "previousCenter": 151.5424358111326,
-        "gapY": 88.08601884916615,
+        "x": 1776.5567000000292,
+        "center": 179.49646465048812,
+        "previousCenter": 188.25366742058713,
+        "gapY": 115.77646465048812,
         "gapSize": 127.44,
         "width": 68,
-        "variant": 2,
+        "variant": 1,
         "biome": "first_bloom",
         "scored": false,
         "visible": false,
-        "preparedAt": 1793103858365,
+        "preparedAt": 1793106168093,
         "id": "pair-2",
         "epoch": 2
       },
       {
         "worldX": 4709.5199999999995,
-        "x": 156.43118000001505,
-        "center": 128.5939923884157,
-        "previousCenter": 139.62516488987066,
-        "gapY": 64.8739923884157,
+        "x": 156.07670000002963,
+        "center": 214.52187542293944,
+        "previousCenter": 246.53912758532763,
+        "gapY": 150.80187542293945,
         "gapSize": 127.44,
         "width": 68,
-        "variant": 5,
+        "variant": 0,
         "biome": "first_bloom",
         "scored": true,
         "visible": true,
-        "preparedAt": 1793103852880,
+        "preparedAt": 1793106162618,
         "id": "pair-3",
         "epoch": 1
       }
@@ -644,45 +644,45 @@
     "future": [
       {
         "worldX": 6870.159999999999,
-        "x": 2317.0711800000145,
-        "center": 190.57354954491458,
-        "previousCenter": 151.80601884916615,
-        "gapY": 126.85354954491459,
-        "gapSize": 127.44,
-        "width": 68,
-        "variant": 3,
-        "biome": "first_bloom",
-        "scored": false,
-        "visible": false,
-        "preparedAt": 1793103860192
-      },
-      {
-        "worldX": 7410.319999999999,
-        "x": 2857.2311800000143,
-        "center": 209.4640101034725,
-        "previousCenter": 190.57354954491458,
-        "gapY": 145.7440101034725,
-        "gapSize": 127.44,
-        "width": 68,
-        "variant": 4,
-        "biome": "first_bloom",
-        "scored": false,
-        "visible": false,
-        "preparedAt": 1793103862039
-      },
-      {
-        "worldX": 7950.479999999999,
-        "x": 3397.391180000014,
-        "center": 245.02463412362778,
-        "previousCenter": 209.4640101034725,
-        "gapY": 181.30463412362778,
+        "x": 2316.716700000029,
+        "center": 210.69978204456714,
+        "previousCenter": 179.49646465048812,
+        "gapY": 146.97978204456714,
         "gapSize": 127.44,
         "width": 68,
         "variant": 5,
         "biome": "first_bloom",
         "scored": false,
         "visible": false,
-        "preparedAt": 1793103863844
+        "preparedAt": 1793106169926
+      },
+      {
+        "worldX": 7410.319999999999,
+        "x": 2856.876700000029,
+        "center": 233.3613278928185,
+        "previousCenter": 210.69978204456714,
+        "gapY": 169.6413278928185,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 0,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793106171742
+      },
+      {
+        "worldX": 7950.479999999999,
+        "x": 3397.0367000000288,
+        "center": 201.45375415720554,
+        "previousCenter": 233.3613278928185,
+        "gapY": 137.73375415720554,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 3,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793106173591
       }
     ],
     "events": [
@@ -699,281 +699,281 @@
     "metrics": [
       {
         "type": "pair_prepared",
-        "at": 1793103846884,
+        "at": 1793106156764,
         "worldX": 928.4000000000001,
         "biome": "first_bloom"
       },
       {
         "type": "pair_prepared",
-        "at": 1793103846884,
+        "at": 1793106156764,
         "worldX": 1468.56,
         "biome": "first_bloom"
       },
       {
         "type": "pair_prepared",
-        "at": 1793103846884,
+        "at": 1793106156764,
         "worldX": 2008.7199999999998,
         "biome": "first_bloom"
       },
       {
         "type": "pair_prepared",
-        "at": 1793103846884,
+        "at": 1793106156764,
         "worldX": 2548.8799999999997,
         "biome": "first_bloom"
       },
       {
         "type": "pair_prepared",
-        "at": 1793103846884,
+        "at": 1793106156764,
         "worldX": 3089.0399999999995,
         "biome": "first_bloom"
       },
       {
         "type": "pair_prepared",
-        "at": 1793103846884,
+        "at": 1793106156764,
         "worldX": 3629.1999999999994,
         "biome": "first_bloom"
       },
       {
         "type": "pair_prepared",
-        "at": 1793103846884,
+        "at": 1793106156764,
         "worldX": 4169.36,
         "biome": "first_bloom"
       },
       {
         "type": "pair_mounted",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-0"
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-0",
         "epoch": 0
       },
       {
         "type": "pair_mounted",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-1"
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-1",
         "epoch": 0
       },
       {
         "type": "pair_mounted",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-2"
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-2",
         "epoch": 0
       },
       {
         "type": "pair_mounted",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-3"
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848794,
+        "at": 1793106158559,
         "id": "pair-3",
         "epoch": 0
       },
       {
         "type": "renderer_ready",
-        "at": 1793103848796,
+        "at": 1793106158561,
         "mountedPairs": 4,
         "futurePrepared": 3
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848809,
+        "at": 1793106158575,
         "id": "pair-0",
         "epoch": 0
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848809,
+        "at": 1793106158575,
         "id": "pair-1",
         "epoch": 0
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848809,
+        "at": 1793106158575,
         "id": "pair-2",
         "epoch": 0
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103848809,
+        "at": 1793106158575,
         "id": "pair-3",
         "epoch": 0
       },
       {
         "type": "pair_visible",
-        "at": 1793103849421,
+        "at": 1793106159210,
         "id": "pair-0",
         "epoch": 0,
-        "preparedAt": 1793103846884
+        "preparedAt": 1793106156763
       },
       {
         "type": "pair_visible",
-        "at": 1793103851523,
+        "at": 1793106161268,
         "id": "pair-1",
         "epoch": 0,
-        "preparedAt": 1793103846884
+        "preparedAt": 1793106156764
       },
       {
         "type": "pair_prepared",
-        "at": 1793103852880,
+        "at": 1793106162618,
         "worldX": 4709.5199999999995,
         "biome": "first_bloom"
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103852887,
+        "at": 1793106162628,
         "id": "pair-0",
         "epoch": 1
       },
       {
         "type": "pair_visible",
-        "at": 1793103853363,
+        "at": 1793106163099,
         "id": "pair-2",
         "epoch": 0,
-        "preparedAt": 1793103846884
+        "preparedAt": 1793106156764
       },
       {
         "type": "pair_prepared",
-        "at": 1793103854709,
+        "at": 1793106164445,
         "worldX": 5249.679999999999,
         "biome": "first_bloom"
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103854718,
+        "at": 1793106164451,
         "id": "pair-1",
         "epoch": 1
       },
       {
         "type": "pair_visible",
-        "at": 1793103855197,
+        "at": 1793106164939,
         "id": "pair-3",
         "epoch": 0,
-        "preparedAt": 1793103846884
+        "preparedAt": 1793106156764
       },
       {
         "type": "pair_prepared",
-        "at": 1793103856532,
+        "at": 1793106166257,
         "worldX": 5789.839999999999,
         "biome": "first_bloom"
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103856543,
+        "at": 1793106166270,
         "id": "pair-2",
         "epoch": 1
       },
       {
         "type": "pair_visible",
-        "at": 1793103857023,
+        "at": 1793106166761,
         "id": "pair-0",
         "epoch": 1,
-        "preparedAt": 1793103846884
+        "preparedAt": 1793106156764
       },
       {
         "type": "pair_prepared",
-        "at": 1793103858365,
+        "at": 1793106168093,
         "worldX": 6329.999999999999,
         "biome": "first_bloom"
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103858375,
+        "at": 1793106168101,
         "id": "pair-3",
         "epoch": 1
       },
       {
         "type": "pair_visible",
-        "at": 1793103858853,
+        "at": 1793106168584,
         "id": "pair-1",
         "epoch": 1,
-        "preparedAt": 1793103846884
+        "preparedAt": 1793106156764
       },
       {
         "type": "pair_prepared",
-        "at": 1793103860192,
+        "at": 1793106169926,
         "worldX": 6870.159999999999,
         "biome": "first_bloom"
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103860206,
+        "at": 1793106169933,
         "id": "pair-0",
         "epoch": 2
       },
       {
         "type": "pair_visible",
-        "at": 1793103860688,
+        "at": 1793106170410,
         "id": "pair-2",
         "epoch": 1,
-        "preparedAt": 1793103846884
+        "preparedAt": 1793106156764
       },
       {
         "type": "pair_prepared",
-        "at": 1793103862039,
+        "at": 1793106171742,
         "worldX": 7410.319999999999,
         "biome": "first_bloom"
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103862050,
+        "at": 1793106171753,
         "id": "pair-1",
         "epoch": 2
       },
       {
         "type": "pair_visible",
-        "at": 1793103862524,
+        "at": 1793106172240,
         "id": "pair-3",
         "epoch": 1,
-        "preparedAt": 1793103852880
+        "preparedAt": 1793106162618
       },
       {
         "type": "pair_prepared",
-        "at": 1793103863844,
+        "at": 1793106173591,
         "worldX": 7950.479999999999,
         "biome": "first_bloom"
       },
       {
         "type": "pair_visual_prepared",
-        "at": 1793103863852,
+        "at": 1793106173602,
         "id": "pair-2",
         "epoch": 2
       },
       {
         "type": "pair_visible",
-        "at": 1793103864338,
+        "at": 1793106174065,
         "id": "pair-0",
         "epoch": 2,
-        "preparedAt": 1793103854709
+        "preparedAt": 1793106164445
       }
     ],
-    "lastCenter": 245.02463412362778,
+    "lastCenter": 201.45375415720554,
     "nextWorldX": 8490.64,
     "ramp": 0,
-    "lastVariant": 5,
+    "lastVariant": 3,
     "rafActive": false,
     "diagnostics": {
-      "frames": 623,
+      "frames": 687,
       "rootRenders": 29,
       "pairRenders": 15,
       "pairMounts": 4,
       "actorRenders": 44,
       "longFrames": 7,
-      "maxFrameMs": 183.19999999999982,
+      "maxFrameMs": 166.69999999999982,
       "inputCount": 21
     },
     "vectorStats": null
