@@ -1,0 +1,2 @@
+PASS: instructions PLAY starts Level1, persists checkpoint1 and Continue returns Level1.
+PASS: credits PLAY starts Level1, persists checkpoint1 and Continue returns Level1.

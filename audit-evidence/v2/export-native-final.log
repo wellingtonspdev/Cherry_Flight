@@ -1,0 +1,76 @@
+env: load .env.local
+env: export VERCEL_OIDC_TOKEN
+Starting Metro Bundler
+Android node_modules\expo\AppEntry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+iOS node_modules\expo\AppEntry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Android node_modules\expo\AppEntry.js ▓░░░░░░░░░░░░░░░  6.9% ( 17/142)
+iOS node_modules\expo\AppEntry.js ▓░░░░░░░░░░░░░░░  9.0% (3/5)
+Android node_modules\expo\AppEntry.js ▓░░░░░░░░░░░░░░░  7.1% ( 62/238)
+iOS node_modules\expo\AppEntry.js ▓░░░░░░░░░░░░░░░  9.0% ( 18/154)
+Android node_modules\expo\AppEntry.js ▓▓░░░░░░░░░░░░░░ 16.7% (127/311)
+iOS node_modules\expo\AppEntry.js ▓░░░░░░░░░░░░░░░  9.0% ( 18/154)
+| (node:15956) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:36132) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:19852) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:21468) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+Android node_modules\expo\AppEntry.js ▓▓▓▓░░░░░░░░░░░░ 26.9% (227/466)
+iOS node_modules\expo\AppEntry.js ▓▓▓░░░░░░░░░░░░░ 21.4% (153/331)
+Android node_modules\expo\AppEntry.js ▓▓▓▓░░░░░░░░░░░░ 27.3% (275/531)
+iOS node_modules\expo\AppEntry.js ▓▓▓░░░░░░░░░░░░░ 21.4% (153/331)
+Android node_modules\expo\AppEntry.js ▓▓▓▓░░░░░░░░░░░░ 30.7% (328/592)
+iOS node_modules\expo\AppEntry.js ▓▓▓░░░░░░░░░░░░░ 21.4% (171/424)
+| (node:33944) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓░░░░░░░░░ 47.2% (476/698)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓░░░░░░░░░░░░ 28.5% (331/620)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 69.2% (631/787)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓░░░░░░ 64.7% (597/742)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓░░░ 83.2% (799/876)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 77.0% (741/865)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 98.5% (923/930)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 96.2% (912/930)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.8% (954/974)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 97.5% (960/982)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (992/992)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (994/994)
+Android Bundled 52664ms node_modules\expo\AppEntry.js (992 modules)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (992/992)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (994/994)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (994/994)
+iOS Bundled 60137ms node_modules\expo\AppEntry.js (994 modules)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (994/994)
+
+› Assets (37):
+assets\v2\audio\checkpoint.wav (21.2 kB)
+assets\v2\audio\collision.wav (15.9 kB)
+assets\v2\audio\complete.wav (21.2 kB)
+assets\v2\audio\first_bloom.wav (226 kB)
+assets\v2\audio\golden_bloom.wav (226 kB)
+assets\v2\audio\jump.wav (6.66 kB)
+assets\v2\audio\pause.wav (10.6 kB)
+assets\v2\audio\resume.wav (10.6 kB)
+assets\v2\audio\sakura_garden.wav (226 kB)
+assets\v2\audio\score.wav (6.66 kB)
+assets\v2\audio\ui.wav (3.35 kB)
+assets\v2\audio\unlock.wav (21.2 kB)
+assets\v2\audio\yozakura.wav (296 kB)
+node_modules\@react-navigation\elements\lib\module\assets\back-icon-mask.png (653 B)
+node_modules\@react-navigation\elements\lib\module\assets\back-icon.png (8 variations | 359 B)
+node_modules\@react-navigation\elements\lib\module\assets\clear-icon.png (4 variations | 425 B)
+node_modules\@react-navigation\elements\lib\module\assets\close-icon.png (4 variations | 235 B)
+node_modules\@react-navigation\elements\lib\module\assets\search-icon.png (7 variations | 592 B)
+
+› android bundles (1):
+_expo/static/js/android/AppEntry-2d384ac6c575a0eaf5b1c00116604ef6.hbc (2.74 MB)
+
+› ios bundles (1):
+_expo/static/js/ios/AppEntry-cc183eac23b1f043c602397f44a09912.hbc (2.73 MB)
+
+› Files (1):
+metadata.json (4.34 kB)
+
+Exported: dist-native-v2

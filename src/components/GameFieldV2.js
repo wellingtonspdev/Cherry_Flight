@@ -24,6 +24,8 @@ export default function GameFieldV2({ navigation, route }) {
   const progress = useProgress();
   const settingsRef = useRef(progress.data.settings);
   settingsRef.current = progress.data.settings;
+  const checkpointRef = useRef(progress.data.lastPlayedLevel);
+  checkpointRef.current = progress.data.lastPlayedLevel;
   const [checkpointSaved, setCheckpointSaved] = useState(false);
   const [saving, setSaving] = useState(false);
   const allowed = progress.loaded && (route?.params?.mode === 'endless' ? progress.data.endlessUnlocked : isUnlocked(progress.data, Number(route?.params?.levelId || 1)));
@@ -69,6 +71,8 @@ export default function GameFieldV2({ navigation, route }) {
     (async () => {
       try {
         const next = createRound({ width, height: height - GAME.groundHeight, levelId, endless });
+        if (!endless && checkpointRef.current !== levelId) await progress.begin(levelId);
+        if (cancelled) return;
         await preloadChapter(next.biome, width, height, endless);
         if (cancelled) return;
         await audioManager.prepare(next.biome);
@@ -81,7 +85,7 @@ export default function GameFieldV2({ navigation, route }) {
       }
     })();
     return () => { cancelled = true; stop(); };
-  }, [focused, allowed, width, height, levelId, endless, retry, stop, distance]);
+  }, [focused, allowed, width, height, levelId, endless, retry, stop, distance, progress.begin]);
 
   useEffect(() => { audioManager.settings(progress.data.settings); }, [progress.data.settings]);
   useEffect(() => { if (!focused) audioManager.release(); return () => audioManager.release(); }, [focused]);

@@ -45,3 +45,9 @@ Inspected endless-lifecycle-runtime.cjs assertions and its resulting JSON: resiz
 ## Completed replay checkpoint marker — CLOSED MINOR
 
 Inspected LevelSelectV2.js:24-30: completed current replay now displays both Concluído and Checkpoint atual, including an appended accessible-name marker. checkpoint requires available=true; Pressable disabled/accessibilityState and open() loaded/isUnlocked guards remain intact. Existing incomplete-current and locked states are unchanged. Inspected visual-audio-runtime.cjs:11 exact accessible-name assertion for Level1 after replay from the checkpoint12 fixture. No blocker or missing locked guard identified. No broad rerun by reviewer.
+
+## Alternate PLAY entry checkpoint — CLOSED MAJOR
+
+Reviewed final GameFieldV2 checkpoint-entry delta: Instructions/Credits PLAY could previously start Level1 while leaving lastPlayedLevel2 persisted. Loading now invokes the shared progress.begin(levelId) for an allowed campaign entry whose checkpoint differs, awaits it, checks cancellation before preload, and retains existing loaded/unlocked guards. Endless is excluded. checkpointRef is refreshed each render but is deliberately not an effect dependency; completion's update to the next checkpoint therefore does not restart the completed round. Stable progress.begin is included in dependencies. Shared begin updates in-memory progress even when storage fails, allowing existing fail-open warning behavior. No physics or score change.
+
+Inspected entry-checkpoint-runtime.cjs: separate Instructions/Credits contexts seed checkpoint2, assert the resulting round and persisted checkpoint are1, then return Home and assert Continue opens1. Parent reports GREEN runtime; reviewer did not rerun. Root-cause fix covers both entry paths centrally; no open blocker/critical/major identified in this delta.

@@ -1,0 +1,39 @@
+Starting Metro Bundler
+
+| (node:38660) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:38660) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+iOS Bundled 24252ms node_modules\expo\AppEntry.js (1002 modules)
+Android Bundled 41379ms node_modules\expo\AppEntry.js (997 modules)
+
+› Assets (37):
+assets\v2\audio\checkpoint.wav (21KB)
+assets\v2\audio\collision.wav (16KB)
+assets\v2\audio\complete.wav (21KB)
+assets\v2\audio\first_bloom.wav (226KB)
+assets\v2\audio\golden_bloom.wav (226KB)
+assets\v2\audio\jump.wav (6.7KB)
+assets\v2\audio\pause.wav (11KB)
+assets\v2\audio\resume.wav (11KB)
+assets\v2\audio\sakura_garden.wav (226KB)
+assets\v2\audio\score.wav (6.7KB)
+assets\v2\audio\ui.wav (3.4KB)
+assets\v2\audio\unlock.wav (21KB)
+assets\v2\audio\yozakura.wav (296KB)
+node_modules\@react-navigation\elements\lib\module\assets\back-icon-mask.png (653B)
+node_modules\@react-navigation\elements\lib\module\assets\back-icon.png (8 variations | 359B)
+node_modules\@react-navigation\elements\lib\module\assets\clear-icon.png (4 variations | 425B)
+node_modules\@react-navigation\elements\lib\module\assets\close-icon.png (4 variations | 235B)
+node_modules\@react-navigation\elements\lib\module\assets\search-icon.png (7 variations | 592B)
+
+› ios bundles (1):
+_expo/static/js/ios/AppEntry-8922657f33536fa50579e9e1cd43e9dd.hbc (2.4MB)
+
+› android bundles (1):
+_expo/static/js/android/AppEntry-b748d93ebec2a92516eebb3377e2b65c.hbc (2.4MB)
+
+› Files (1):
+metadata.json (4KB)
+
+Exported: D:/Cherry_Flight_Publish_Tools/v2-discovery/sdk57-native
