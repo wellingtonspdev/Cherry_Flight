@@ -1,0 +1,169 @@
+{
+  "runtimeSourceRevision": "66e7399b3d2564513a412dc2f900dbcc620fd1e9",
+  "sdk54": "54.0.38",
+  "sdk57": "57.0.31",
+  "sharedRuntimeFiles": [
+    {
+      "path": "App.js",
+      "sha256": "3d5a9172407dd19759ddf5bfb369916156a68ad414a2f5144bf603a466c00399"
+    },
+    {
+      "path": "src/components/BloomBranchPair.js",
+      "sha256": "3c5854ae96be14d6f48a3d1cc2bde8cae0bbcd176448023cc2fc3af6bcde0d04"
+    },
+    {
+      "path": "src/components/BloomBranchV2.js",
+      "sha256": "e725097de10f8622a6006f2c162323ef2bcd457f915d8b2b6602ce158ed1b762"
+    },
+    {
+      "path": "src/components/BloomBurstV2.js",
+      "sha256": "19734bd66e053ff7616700efab847c103bfbb74280d75380c7bf58b4fa136192"
+    },
+    {
+      "path": "src/components/CherryButton.js",
+      "sha256": "f38d75889a05c3e082dfc7f878ac9dc125bad172709ec40462f243b117ebeaeb"
+    },
+    {
+      "path": "src/components/CherryPlayer.js",
+      "sha256": "2b842ce5853ff34f272650b778bb3dbdf17de683c1657b4a858fe73d6de1a217"
+    },
+    {
+      "path": "src/components/CherryV2.js",
+      "sha256": "a836ef148fe5b560327806adfd3d86b63a791467fb39ed1edd9625dbc66725ac"
+    },
+    {
+      "path": "src/components/GameFieldV2.js",
+      "sha256": "449132b9830216b161b23a7143303192dde89321e6c70a793f7befde5f3ba794"
+    },
+    {
+      "path": "src/components/GameOverCard.js",
+      "sha256": "9805daabcf3c445742136a04c305d33c44df0ddd6be1a95568216ade3d098715"
+    },
+    {
+      "path": "src/components/GameResultV2.js",
+      "sha256": "1dd9a87669f319cac6876f052f87195a404afbff366123a466091e5554a97594"
+    },
+    {
+      "path": "src/components/LevelSelectV2.js",
+      "sha256": "003e82ab239d19a7383ca7161f79148d423e5b6cf170df6865daa20c336804a5"
+    },
+    {
+      "path": "src/components/LogoLockup.js",
+      "sha256": "b68e30efc1fc1622eb6f7b41567e4fc74737f5ab734199f830a7ec2e5662ac7a"
+    },
+    {
+      "path": "src/components/PhaseBackground.js",
+      "sha256": "89391598c2c16b7e206c1b51051fc6c6c4973200d696984c8e6800fafdd96172"
+    },
+    {
+      "path": "src/components/ScoreHUD.js",
+      "sha256": "68672e572d1578d3d65513509976349341e010661d171a993eb9a0a6772e6c06"
+    },
+    {
+      "path": "src/components/SettingsV2.js",
+      "sha256": "331a44c1ea423bdf4a9e5a5eff219736970d7107491dbf7e432cd6264f0cbf57"
+    },
+    {
+      "path": "src/components/VectorAssetV2.js",
+      "sha256": "b6fda1bbf95ec1fbf919fb16bb8f785123259651a9babac69774ed4df1d7e66b"
+    },
+    {
+      "path": "src/components/WorldV2.js",
+      "sha256": "58b1c74dbd0a0fab2c0d1dd0683e470af9ef040a833a157e46f014bd52d49462"
+    },
+    {
+      "path": "src/game/assetPreloaderV2.js",
+      "sha256": "4da3e0ec048514d2a944f1a5d4d34dde4433a7dbaff4b5550d9974a10f2f239d"
+    },
+    {
+      "path": "src/game/AudioManagerV2.js",
+      "sha256": "84a25d58940c30f8235a11a4dff6b83fbfac8f14e9c5d9e6bc486c59fb253ae6"
+    },
+    {
+      "path": "src/game/audioServiceV2.js",
+      "sha256": "042b1f8980ff1edad8dd0aab6d9811b43084698cb6e7765c5350525e60cd1cfb"
+    },
+    {
+      "path": "src/game/audioSourcesV2.js",
+      "sha256": "e6464e2115ca0b5abdb1d5489b598a5ad343691a194186ee706eda481cb9f228"
+    },
+    {
+      "path": "src/game/collision.js",
+      "sha256": "b5c59ed1cef03d36ce48af75abe07d021290dc462bd2e2e72a5751e7eb09110f"
+    },
+    {
+      "path": "src/game/constants.js",
+      "sha256": "1989bfd3ebde35eb7415e09230f080f080e6e1c362d949a110830e0529ddf00f"
+    },
+    {
+      "path": "src/game/createObstacle.js",
+      "sha256": "b0ee07602367741030849302eec6e5cae1defc78bba1e0dbff75e6a1b50d4def"
+    },
+    {
+      "path": "src/game/engineV2.js",
+      "sha256": "15d0f30e57bb65e84de12e9fa6e7363dbd468868dc56cb818f9e7cbf1ff9d2aa"
+    },
+    {
+      "path": "src/game/feedback.js",
+      "sha256": "befbde747710ef8efb8fe1351bcd5b5d48cb637e1247659b26f7136074d67185"
+    },
+    {
+      "path": "src/game/levelConfigV2.js",
+      "sha256": "a9ba2bb89e976925b7326b8ff297eb0708bfe7eff3092358258a6c8f97be0147"
+    },
+    {
+      "path": "src/game/phase.js",
+      "sha256": "32c2d9623e906ae5f5e8cb9759dfb57b5e74060cc8ad4b4d9962b59e738372f6"
+    },
+    {
+      "path": "src/game/progressionV2.js",
+      "sha256": "11f6ea666bc26bac6425c025aaedab10c61035ecd16493b0c494ea57ec4decdd"
+    },
+    {
+      "path": "src/game/ProgressProviderV2.js",
+      "sha256": "cf84437b7714c8241c06c7f7bd06c734bc0e7a99385b8b7a8194df71e393d950"
+    },
+    {
+      "path": "src/game/pwa.js",
+      "sha256": "dff47fd3cba8d1ad120a34b0c6566a3998e43cbb62f27f6511e91625562a99e9"
+    },
+    {
+      "path": "src/game/saveServiceV2.js",
+      "sha256": "0162ed21b9678f146244dfee1dc25c02aeb1caa07c6f58138565bca89f4a2062"
+    },
+    {
+      "path": "src/game/vectorCacheV2.js",
+      "sha256": "2876651d455c5dd9af0c8c390788f6276c8dfc726afeff169e1d07a55ef951b3"
+    },
+    {
+      "path": "src/game/vectorDataV2.js",
+      "sha256": "374e0b8427e78580fa3ad950c35317b2b3ce2809f17f83882ffb83f7301644f8"
+    },
+    {
+      "path": "src/game/vectorIdsV2.js",
+      "sha256": "b31636720642103fe6b02e73ab9cbf6d62131afa02595e98eb1cb69d3a704ed0"
+    },
+    {
+      "path": "src/tela1.js",
+      "sha256": "1835ac5b2bafa68471bf16d0b49a4c504d4871d58d8e9db8e0c34d0de8a6e0c2"
+    },
+    {
+      "path": "src/tela2.js",
+      "sha256": "6a12aafc4d60264aa129695f5f80de57bf094d0dfb7e654c61a2ccd201f445fd"
+    },
+    {
+      "path": "src/tela3.js",
+      "sha256": "756e918b0ed89edd60ffdb6d206149e5affab36bed3ff72e3d19a908820c7c0c"
+    },
+    {
+      "path": "src/tela4.js",
+      "sha256": "77a7014d33a405ed7aad7f402413fc05233642a7f5c756a7fd48796aa6f900cc"
+    },
+    {
+      "path": "src/theme/theme.js",
+      "sha256": "649ec93b1ab5ea390c4a3b376e8670c807625359eb2b0cd8a8b5eefbef007acb"
+    }
+  ],
+  "hashPolicy": "UTF8 normalized LF; manifests/locks intentionally differ",
+  "fingerprint": "2727d0d53197dae54c10857696a7b9c4da79b38853270753df518b8b117ad810"
+}

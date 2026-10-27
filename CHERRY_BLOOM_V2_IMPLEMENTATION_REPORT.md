@@ -6,7 +6,7 @@ Date: 2026-10-27. Delivery authority: Expo SDK54. Character: Cherry. Orientation
 
 V2 replaces the V1 full-tree frame renderer with a mutable simulation, pooled modular vectors and imperative Animated positions. Campaign, twelve levels, checkpoints, Continue, Level Select, Endless, settings, four visual kits and original audio are implemented. Required academic screen files and React Navigation remain.
 
-**Publication verification in progress.** Local/official Snack runtime evidence exists; final Git/Vercel revision and freeze are recorded after the publication gate below. This sentence is not delivery approval.
+**Runtime publication passed on the official SDK54 Snack and public Vercel URL.** Final Git import verification and repository synchronization are recorded below before the delivery freeze.
 
 No confirmed open BLOCKER/CRITICAL/MAJOR remains after independent source review. Known tooling advisories and unexecuted physical-device calibration remain disclosed. Browser engine replay, fixture-based entry and native bundle export are distinct kinds of evidence.
 
@@ -101,7 +101,7 @@ The Git import backend rejects binary uploads; generated `snack/` contains43 tex
 
 ## SDK57
 
-Separate Expo57.0.31 / React19.2.3 / RN0.86.3 manifest and lock. Expo Audio/Asset companions were installed with this checkout's Expo. SDK57 rejects the retired newArchEnabled config key; it was removed only in SDK57. Doctor21/21 and dependency check pass. Actual SDK57 Web Level1 completion, Level2 checkpoint reload and Continue pass. SDK57 is a mirror; it is not used as proof for SDK54 or Snack. SDK58 remains untouched.
+Separate Expo57.0.31 / React19.2.3 / RN0.86.3 manifest and lock. Expo Audio/Asset companions were installed with this checkout's Expo. SDK57 rejects the retired newArchEnabled config key; it was removed only in SDK57. Doctor21/21 and dependency check pass. Actual SDK57 Web Level1 completion, Level2 checkpoint reload and Continue pass. SDK57 Android/iOS Hermes exports also pass; native runtime is still NOT EXECUTED. SDK57 is a mirror; it is not used as proof for SDK54 or Snack. SDK58 remains untouched.
 
 ## Performance
 
@@ -218,6 +218,7 @@ PASS rows cite executed checks, not source presence alone. Native physical calib
 | V2-REV10 | MINOR / configuration bug | SDK57 rejects newArchEnabled copied from SDK54 | Removed only from57; Doctor21/21 | PASS |
 | V2-REV11 | MINOR / dependency risk |7 SDK54 tooling advisories; no compatible force-fix established | Audit retained; isolate dev tooling/untrusted inputs; no forced SDK downgrade | PARTIAL |
 | V2-REV13 | MAJOR / visual divergence | Padded sprite source made the body smaller than the logical hitbox | Corrected gameplay-only anchor/scale; four-pose RED/GREEN + independent math review + fresh screenshots | PASS |
+| V2-REV14 | MINOR / confirmed telemetry bug | Reset reused slot IDs and epoch0, so the old dependency list omitted prepared metrics | Observe the new visual snapshot; browser RED0/5 then GREEN5/5 after resize; active exit verified | PASS |
 | V2-REV12 | MINOR / missing evidence | No physical Android/iOS calibration or native Snack audition | Native bundles pass; actual device/Expo Go still required for platform-specific assurance | NOT EXECUTED |
 
 Historical tap and immobility causes/evidence remain in CHERRY_BLOOM_REVIEW_REPORT.md. Naming search found no deprecated character spelling in active product source; historical quotations remain evidence, not UI copy.
@@ -228,7 +229,13 @@ P0 gameplay and lifecycle, P1 academic/SDK54/Snack, P2 identity/progression/asse
 
 ## Publication
 
-Pending final Git/Vercel revision recording and Git-import retest. DNS/Cloudflare records are intentionally left for later domain configuration.
+The public Vercel URL passed a complete Level1, Next Level, reload/Continue, routes and exact credits. HTTP checks pass for root, manifest, Service Worker, offline fallback, deep SPA route and the JavaScript asset referenced by the deployed index. Linux/Vercel and local Windows exports can produce different bundle hashes; validation downloads the deployed index's actual asset instead of assuming the local hash is a remote filename.
+
+The final character-anchor and reset-telemetry source is being synchronized with Git/official Snack/Vercel. Final deployment identifiers and import evidence follow the last publication gate. DNS/Cloudflare records remain for later domain configuration.
+
+### Evidence correction during final QA
+
+An earlier lifecycle snapshot exited a freshly resized READY round, so it did not prove active-loop cleanup. The corrected test waits for visible TAP TO FLY, uses a trusted touch, verifies PLAYING with elapsed>0, then navigates Home. Final evidence shows elapsed frozen, RAF absent and audio inactive. The same test confirms five newly prepared slot snapshots after resize. Earlier intermittent keyboard probes are not claimed as a confirmed product keyboard defect; readiness must include the visible renderer, not only the mutable round's status.
 
 ## Remaining limitations
 

@@ -1,0 +1,19 @@
+{
+  "status": "PLAYING",
+  "inputs": 4,
+  "events": [
+    {
+      "type": "keydown",
+      "target": null,
+      "code": "Space",
+      "status": "READY"
+    },
+    {
+      "type": "keyup",
+      "target": null,
+      "code": "Space",
+      "status": "PLAYING"
+    }
+  ],
+  "focus": "<body>\n    <!-- Use static rendering with Expo Router to support running without JavaScript. -->\n    <noscript>\n      Yo"
+}

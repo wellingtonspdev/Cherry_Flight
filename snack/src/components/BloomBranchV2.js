@@ -9,7 +9,7 @@ export default memo(forwardRef(function BloomBranchV2({ pair, playableHeight, on
   const onMountRef = useRef(onMount);
   onRender?.();
   useEffect(() => { onMountRef.current?.(pair.id); }, [pair.id]);
-  useEffect(() => { onPrepared?.(visual.id, visual.epoch); }, [visual.id, visual.epoch, onPrepared]);
+  useEffect(() => { onPrepared?.(visual.id, visual.epoch); }, [visual, onPrepared]);
   useImperativeHandle(ref, () => ({
     prepare(next) { epoch.current = next.epoch; setVisual({ ...next }); x.setValue(next.x); },
     update(next) {
