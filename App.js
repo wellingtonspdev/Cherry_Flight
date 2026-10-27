@@ -2,7 +2,7 @@
 // Source of Truth: CHERRY_BLOOM_SPECIFICATION_AND_ACCEPTANCE.md (Section 7.1 & 7.2)
 
 import React, { useEffect } from 'react';
-import { Platform, StyleSheet, useWindowDimensions, View } from 'react-native';
+import { Platform, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -12,12 +12,15 @@ import Tela1 from './src/tela1';
 import Tela2 from './src/tela2';
 import Tela3 from './src/tela3';
 import Tela4 from './src/tela4';
+import { ProgressProvider } from './src/game/ProgressProviderV2';
+import LevelSelectV2 from './src/components/LevelSelectV2';
+import SettingsV2 from './src/components/SettingsV2';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   const { width, height } = useWindowDimensions();
-  const isWideWeb = Platform.OS === 'web' && width > 540;
+  const isPortraitWeb = Platform.OS === 'web' && height > width;
 
   useEffect(() => {
     registerWebPwa();
@@ -25,37 +28,36 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      <View style={isWideWeb ? styles.desktopBackdrop : styles.mobileRoot}>
-        <View
-          style={
-            isWideWeb
-              ? [
-                  styles.arcadeCabinet,
-                  {
-                    height: Math.min(Math.max(580, height - 32), 860),
-                  },
-                ]
-              : styles.mobileRoot
-          }
-        >
+      <ProgressProvider>
+      <View style={styles.mobileRoot}>
+        {isPortraitWeb ? (
+          <View style={styles.orientationNotice}>
+            <Text accessibilityRole="header" style={styles.orientationTitle}>Gire o dispositivo</Text>
+            <Text style={styles.orientationText}>Cherry Bloom é jogado na horizontal. Use o modo paisagem para continuar.</Text>
+          </View>
+        ) : (
           <NavigationContainer>
             <StatusBar style="dark" />
             <Stack.Navigator
-              initialRouteName="Welcome"
+              initialRouteName="Home"
               screenOptions={{
                 headerShown: false,
                 animation: 'fade',
+                orientation: 'landscape',
                 contentStyle: { backgroundColor: '#FFF8F2' },
               }}
             >
-              <Stack.Screen name="Welcome" component={Tela1} />
+              <Stack.Screen name="Home" component={Tela1} />
               <Stack.Screen name="Instructions" component={Tela2} />
               <Stack.Screen name="Game" component={Tela3} />
               <Stack.Screen name="Credits" component={Tela4} />
+              <Stack.Screen name="LevelSelect" component={LevelSelectV2} />
+              <Stack.Screen name="Settings" component={SettingsV2} />
             </Stack.Navigator>
           </NavigationContainer>
-        </View>
+        )}
       </View>
+      </ProgressProvider>
     </SafeAreaProvider>
   );
 }
@@ -64,20 +66,23 @@ const styles = StyleSheet.create({
   mobileRoot: {
     flex: 1,
   },
-  desktopBackdrop: {
+  orientationNotice: {
     flex: 1,
     backgroundColor: '#251A20',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 16,
+    padding: 24,
   },
-  arcadeCabinet: {
-    width: '100%',
-    maxWidth: 460,
-    borderRadius: 28,
-    overflow: 'hidden',
-    borderWidth: 3,
-    borderColor: '#FFB7C5',
-    backgroundColor: '#FFF8F2',
+  orientationTitle: {
+    color: '#FFF8F2',
+    fontSize: 28,
+    fontWeight: '800',
+    textAlign: 'center',
+  },
+  orientationText: {
+    color: '#FFF8F2',
+    fontSize: 16,
+    textAlign: 'center',
+    marginTop: 12,
   },
 });

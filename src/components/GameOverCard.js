@@ -2,7 +2,7 @@
 // Source of Truth: CHERRY_BLOOM_DESIGN_SYSTEM.md (Section 12.2, 12.5)
 
 import React, { useEffect, useRef } from 'react';
-import { Animated, StyleSheet, Text, View } from 'react-native';
+import { Animated, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { colors, radius, shadows, spacing } from '../theme/theme';
 import CherryButton from './CherryButton';
 import CherryPlayer from './CherryPlayer';
@@ -14,6 +14,8 @@ export default function GameOverCard({
   onPlayAgain,
   onHome,
 }) {
+  const { width, height } = useWindowDimensions();
+  const isLandscape = width > height;
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const scaleAnim = useRef(new Animated.Value(0.92)).current;
 
@@ -38,21 +40,23 @@ export default function GameOverCard({
       <Animated.View
         style={[
           styles.card,
+          isLandscape && styles.landscapeCard,
           {
             opacity: fadeAnim,
             transform: [{ scale: scaleAnim }],
           },
         ]}
       >
+        <ScrollView contentContainerStyle={[styles.cardContent, isLandscape && styles.landscapeContent]}>
         <Text style={styles.title} accessibilityRole="header">
           GAME OVER
         </Text>
 
-        <View style={styles.characterWrap}>
+        {!isLandscape && <View style={styles.characterWrap}>
           <CherryPlayer size={58} state="hit" />
-        </View>
+        </View>}
 
-        {phaseLabel ? (
+        {phaseLabel && !isLandscape ? (
           <View style={styles.phaseChip}>
             <Text style={styles.phaseChipText}>{phaseLabel}</Text>
           </View>
@@ -82,22 +86,23 @@ export default function GameOverCard({
           </View>
         </View>
 
-        <View style={styles.actions}>
+        <View style={[styles.actions, isLandscape && styles.landscapeActions]}>
           <CherryButton
             title="PLAY AGAIN"
             onPress={onPlayAgain}
             variant="primary"
             accessibilityLabel="Jogar novamente"
-            style={styles.buttonSpacing}
+            style={[styles.buttonSpacing, isLandscape && styles.landscapeButton]}
           />
           <CherryButton
             title="HOME"
             onPress={onHome}
             variant="secondary"
             accessibilityLabel="Voltar para a tela inicial"
-            style={styles.buttonSpacing}
+            style={[styles.buttonSpacing, isLandscape && styles.landscapeButton]}
           />
         </View>
+        </ScrollView>
       </Animated.View>
     </View>
   );
@@ -110,19 +115,38 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: spacing.md,
+    paddingVertical: spacing.sm,
     zIndex: 80,
   },
   card: {
     width: '100%',
     maxWidth: 360,
+    maxHeight: '100%',
     backgroundColor: colors.cream50,
     borderRadius: radius.xl,
     borderWidth: 3,
     borderColor: colors.blossom300,
+    ...shadows.warmCard,
+  },
+  landscapeCard: {
+    maxWidth: 560,
+  },
+  landscapeContent: {
+    paddingVertical: spacing.md,
+  },
+  landscapeActions: {
+    flexDirection: 'row',
+    gap: spacing.sm,
+  },
+  landscapeButton: {
+    flex: 1,
+    width: undefined,
+    marginBottom: 0,
+  },
+  cardContent: {
     paddingHorizontal: spacing.lg,
     paddingVertical: spacing.lg,
     alignItems: 'center',
-    ...shadows.warmCard,
   },
   title: {
     fontSize: 28,

@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'cherry-bloom-v1';
+const CACHE_VERSION = 'cherry-bloom-v2-campaign-20261027';
 const STATIC_CACHE = `static-${CACHE_VERSION}`;
 const DYNAMIC_CACHE = `dynamic-${CACHE_VERSION}`;
 

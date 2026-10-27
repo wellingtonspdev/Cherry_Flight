@@ -1,11 +1,11 @@
 {
   "name": "Cherry Bloom — Fly Through the Blossom",
   "short_name": "Cherry Bloom",
-  "description": "Ajude a Cherri a cruzar o Bloom Garden! Jogo arcade inspirado em Flappy Bird — FATEC Itaquera DSM PDM II.",
+  "description": "Ajude a Cherry a cruzar o Bloom Garden! Jogo arcade inspirado em Flappy Bird — FATEC Itaquera DSM PDM II.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "orientation": "portrait",
+  "orientation": "landscape",
   "background_color": "#FFF8F2",
   "theme_color": "#D91E36",
   "categories": ["games", "education"],

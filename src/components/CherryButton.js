@@ -4,6 +4,7 @@
 import React, { useRef } from 'react';
 import { Animated, Pressable, StyleSheet, Text } from 'react-native';
 import { colors, radius, shadows, spacing } from '../theme/theme';
+import { audioManager } from '../game/AudioManagerV2';
 
 export default function CherryButton({
   title,
@@ -40,7 +41,7 @@ export default function CherryButton({
         accessibilityRole="button"
         accessibilityLabel={accessibilityLabel || title}
         disabled={disabled}
-        onPress={onPress}
+        onPress={event => { audioManager.effect('ui'); onPress?.(event); }}
         onPressIn={handlePressIn}
         onPressOut={handlePressOut}
         style={({ pressed }) => [
@@ -75,7 +76,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   primary: {
-    backgroundColor: colors.cherry500,
+    backgroundColor: colors.cherry700,
     borderWidth: 2,
     borderColor: colors.cherry700,
     ...shadows.buttonPrimary,

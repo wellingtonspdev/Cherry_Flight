@@ -12,9 +12,9 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CherryButton from './components/CherryButton';
-import CherryPlayer from './components/CherryPlayer';
+import CherryPlayer from './components/CherryV2';
 import LogoLockup from './components/LogoLockup';
-import PhaseBackground from './components/PhaseBackground';
+import PhaseBackground from './components/WorldV2';
 import { ACADEMIC_INFO } from './game/constants';
 import { PHASES } from './game/phase';
 import { colors, radius, shadows, spacing } from './theme/theme';
@@ -108,7 +108,7 @@ export default function Tela4({ navigation }) {
                 title="HOME"
                 variant="secondary"
                 accessibilityLabel="Voltar para a tela inicial"
-                onPress={() => navigation.navigate('Welcome')}
+                onPress={() => navigation.popToTop()}
                 style={styles.btnSpacing}
               />
             </View>

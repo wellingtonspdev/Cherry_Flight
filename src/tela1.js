@@ -14,19 +14,30 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CherryButton from './components/CherryButton';
-import CherryPlayer from './components/CherryPlayer';
+import CherryPlayer from './components/CherryV2';
 import LogoLockup from './components/LogoLockup';
-import PhaseBackground from './components/PhaseBackground';
+import PhaseBackground from './components/WorldV2';
 import { PHASES } from './game/phase';
 import { usePwaInstall } from './game/pwa';
 import { colors, radius, shadows, spacing } from './theme/theme';
+import { useProgress } from './game/ProgressProviderV2';
+import { useIsFocused } from '@react-navigation/native';
+import { audioManager } from './game/AudioManagerV2';
 
 export default function Tela1({ navigation }) {
+  const progress = useProgress();
+  const focused = useIsFocused();
   const { width, height } = useWindowDimensions();
   const isCompact = width < 360 || height < 660;
+  const isLandscape = width > height;
   const { canInstall, isIosSafariPrompt, promptInstall } = usePwaInstall();
+  useEffect(() => {
+    if (!focused) return undefined;
+    audioManager.prepare('first_bloom');
+    return () => audioManager.release();
+  }, [focused]);
 
-  // Motion: logo reveal 400ms, Cherri idle bob 1600ms, buttons stagger
+  // Motion: logo reveal 400ms, Cherry idle bob 1600ms, buttons stagger
   const logoAnim = useRef(new Animated.Value(0)).current;
   const bobAnim = useRef(new Animated.Value(0)).current;
   const btn1Anim = useRef(new Animated.Value(0)).current;
@@ -34,6 +45,7 @@ export default function Tela1({ navigation }) {
   const btn3Anim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
+    if (!focused) return undefined;
     Animated.sequence([
       Animated.timing(logoAnim, {
         toValue: 1,
@@ -81,7 +93,7 @@ export default function Tela1({ navigation }) {
     return () => {
       bobLoop.stop();
     };
-  }, [logoAnim, bobAnim, btn1Anim, btn2Anim, btn3Anim]);
+  }, [logoAnim, bobAnim, btn1Anim, btn2Anim, btn3Anim, focused]);
 
   return (
     <View style={styles.root}>
@@ -97,11 +109,13 @@ export default function Tela1({ navigation }) {
         <ScrollView
           contentContainerStyle={[
             styles.scrollContent,
+            isLandscape && styles.landscapeContent,
             { paddingHorizontal: width < 350 ? spacing.md : spacing.lg },
           ]}
           showsVerticalScrollIndicator={false}
         >
           {/* 1. Logo Lockup */}
+          <View style={isLandscape && styles.brandColumn}>
           <Animated.View
             style={[
               styles.logoSection,
@@ -121,31 +135,38 @@ export default function Tela1({ navigation }) {
             <LogoLockup compact={isCompact} />
           </Animated.View>
 
-          {/* 2. Cherri Idle Mascot Showcase */}
+          {/* 2. Cherry Idle Mascot Showcase */}
           <View style={styles.heroCenter}>
-            <View style={styles.mascotHalo}>
+            <View style={[styles.mascotHalo, isLandscape && styles.landscapeHalo]}>
               <Animated.View style={{ transform: [{ translateY: bobAnim }] }}>
-                <CherryPlayer size={isCompact ? 76 : 92} state="idle" />
+                <CherryPlayer size={isLandscape ? 64 : isCompact ? 76 : 92} state="idle" />
               </Animated.View>
             </View>
             <View style={styles.lorePill}>
               <Text style={styles.loreText}>
-                Ajude a Cherri a cruzar o Bloom Garden!
+                Ajude a Cherry a cruzar o Bloom Garden!
               </Text>
             </View>
           </View>
 
+          </View>
+
           {/* 3. Navigation Actions (Play, How to Play, Credits) */}
-          <View style={styles.menuCard}>
+          <View style={[styles.menuCard, isLandscape && styles.landscapeMenu]}>
             <Animated.View style={[styles.btnWrap, { opacity: btn1Anim }]}>
               <CherryButton
-                title="PLAY"
+                title={progress.hasSave ? 'CONTINUE' : 'PLAY'}
                 variant="primary"
                 accessibilityLabel="Iniciar o jogo Cherry Bloom"
-                onPress={() => navigation.navigate('Game')}
+                disabled={!progress.loaded}
+                onPress={async () => { const id = progress.data.lastPlayedLevel; await progress.begin(id); navigation.navigate('Game', { levelId: id, mode: 'campaign' }); }}
                 style={styles.fullWidthBtn}
               />
             </Animated.View>
+
+            <View style={styles.btnWrap}><CherryButton title="LEVEL SELECT" variant="secondary" disabled={!progress.loaded} onPress={() => navigation.navigate('LevelSelect')} style={styles.fullWidthBtn} /></View>
+            <View style={styles.btnWrap}><CherryButton title="SETTINGS" variant="ghost" onPress={() => navigation.navigate('Settings')} style={styles.fullWidthBtn} /></View>
+            {!!progress.warning && <Text style={styles.loreText}>{progress.warning}</Text>}
 
             <Animated.View style={[styles.btnWrap, { opacity: btn2Anim }]}>
               <CherryButton
@@ -212,6 +233,25 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     marginTop: spacing.xs,
+  },
+  landscapeContent: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    paddingBottom: spacing.md,
+    gap: spacing.lg,
+  },
+  brandColumn: {
+    flex: 1,
+    maxWidth: 380,
+    alignItems: 'center',
+  },
+  landscapeMenu: {
+    flex: 1,
+  },
+  landscapeHalo: {
+    width: 88,
+    height: 88,
+    borderRadius: 44,
   },
   heroCenter: {
     alignItems: 'center',

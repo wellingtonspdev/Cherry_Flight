@@ -1,0 +1,847 @@
+{
+  "runtimeSourceRevision": "fb0cf90103bfa994faba30e033fbd0ef175fc25b",
+  "sdk54": "54.0.38",
+  "sdk57": "57.0.31",
+  "sharedRuntimeFiles": [
+    {
+      "path": "App.js",
+      "sha256": "3d5a9172407dd19759ddf5bfb369916156a68ad414a2f5144bf603a466c00399"
+    },
+    {
+      "path": "src/components/BloomBranchPair.js",
+      "sha256": "3c5854ae96be14d6f48a3d1cc2bde8cae0bbcd176448023cc2fc3af6bcde0d04"
+    },
+    {
+      "path": "src/components/BloomBranchV2.js",
+      "sha256": "db1eaca1af2ec5b66908080d62e654804ca9a7c1a9a4a6aa4bc4f1a16375a8c7"
+    },
+    {
+      "path": "src/components/BloomBurstV2.js",
+      "sha256": "19734bd66e053ff7616700efab847c103bfbb74280d75380c7bf58b4fa136192"
+    },
+    {
+      "path": "src/components/CherryButton.js",
+      "sha256": "f38d75889a05c3e082dfc7f878ac9dc125bad172709ec40462f243b117ebeaeb"
+    },
+    {
+      "path": "src/components/CherryPlayer.js",
+      "sha256": "2b842ce5853ff34f272650b778bb3dbdf17de683c1657b4a858fe73d6de1a217"
+    },
+    {
+      "path": "src/components/CherryV2.js",
+      "sha256": "a836ef148fe5b560327806adfd3d86b63a791467fb39ed1edd9625dbc66725ac"
+    },
+    {
+      "path": "src/components/GameFieldV2.js",
+      "sha256": "449132b9830216b161b23a7143303192dde89321e6c70a793f7befde5f3ba794"
+    },
+    {
+      "path": "src/components/GameOverCard.js",
+      "sha256": "9805daabcf3c445742136a04c305d33c44df0ddd6be1a95568216ade3d098715"
+    },
+    {
+      "path": "src/components/GameResultV2.js",
+      "sha256": "1dd9a87669f319cac6876f052f87195a404afbff366123a466091e5554a97594"
+    },
+    {
+      "path": "src/components/LevelSelectV2.js",
+      "sha256": "db745cdcd0875854419d3964b0509f35ac5be6b9c6b32a16ad6c4e420af2ee24"
+    },
+    {
+      "path": "src/components/LogoLockup.js",
+      "sha256": "b68e30efc1fc1622eb6f7b41567e4fc74737f5ab734199f830a7ec2e5662ac7a"
+    },
+    {
+      "path": "src/components/PhaseBackground.js",
+      "sha256": "89391598c2c16b7e206c1b51051fc6c6c4973200d696984c8e6800fafdd96172"
+    },
+    {
+      "path": "src/components/ScoreHUD.js",
+      "sha256": "68672e572d1578d3d65513509976349341e010661d171a993eb9a0a6772e6c06"
+    },
+    {
+      "path": "src/components/SettingsV2.js",
+      "sha256": "331a44c1ea423bdf4a9e5a5eff219736970d7107491dbf7e432cd6264f0cbf57"
+    },
+    {
+      "path": "src/components/VectorAssetV2.js",
+      "sha256": "b6fda1bbf95ec1fbf919fb16bb8f785123259651a9babac69774ed4df1d7e66b"
+    },
+    {
+      "path": "src/components/WorldV2.js",
+      "sha256": "58b1c74dbd0a0fab2c0d1dd0683e470af9ef040a833a157e46f014bd52d49462"
+    },
+    {
+      "path": "src/game/assetPreloaderV2.js",
+      "sha256": "4da3e0ec048514d2a944f1a5d4d34dde4433a7dbaff4b5550d9974a10f2f239d"
+    },
+    {
+      "path": "src/game/AudioManagerV2.js",
+      "sha256": "84a25d58940c30f8235a11a4dff6b83fbfac8f14e9c5d9e6bc486c59fb253ae6"
+    },
+    {
+      "path": "src/game/audioServiceV2.js",
+      "sha256": "042b1f8980ff1edad8dd0aab6d9811b43084698cb6e7765c5350525e60cd1cfb"
+    },
+    {
+      "path": "src/game/audioSourcesV2.js",
+      "sha256": "e6464e2115ca0b5abdb1d5489b598a5ad343691a194186ee706eda481cb9f228"
+    },
+    {
+      "path": "src/game/collision.js",
+      "sha256": "b5c59ed1cef03d36ce48af75abe07d021290dc462bd2e2e72a5751e7eb09110f"
+    },
+    {
+      "path": "src/game/constants.js",
+      "sha256": "1989bfd3ebde35eb7415e09230f080f080e6e1c362d949a110830e0529ddf00f"
+    },
+    {
+      "path": "src/game/createObstacle.js",
+      "sha256": "b0ee07602367741030849302eec6e5cae1defc78bba1e0dbff75e6a1b50d4def"
+    },
+    {
+      "path": "src/game/engineV2.js",
+      "sha256": "15d0f30e57bb65e84de12e9fa6e7363dbd468868dc56cb818f9e7cbf1ff9d2aa"
+    },
+    {
+      "path": "src/game/feedback.js",
+      "sha256": "befbde747710ef8efb8fe1351bcd5b5d48cb637e1247659b26f7136074d67185"
+    },
+    {
+      "path": "src/game/levelConfigV2.js",
+      "sha256": "a9ba2bb89e976925b7326b8ff297eb0708bfe7eff3092358258a6c8f97be0147"
+    },
+    {
+      "path": "src/game/phase.js",
+      "sha256": "32c2d9623e906ae5f5e8cb9759dfb57b5e74060cc8ad4b4d9962b59e738372f6"
+    },
+    {
+      "path": "src/game/progressionV2.js",
+      "sha256": "11f6ea666bc26bac6425c025aaedab10c61035ecd16493b0c494ea57ec4decdd"
+    },
+    {
+      "path": "src/game/ProgressProviderV2.js",
+      "sha256": "cf84437b7714c8241c06c7f7bd06c734bc0e7a99385b8b7a8194df71e393d950"
+    },
+    {
+      "path": "src/game/pwa.js",
+      "sha256": "dff47fd3cba8d1ad120a34b0c6566a3998e43cbb62f27f6511e91625562a99e9"
+    },
+    {
+      "path": "src/game/saveServiceV2.js",
+      "sha256": "0162ed21b9678f146244dfee1dc25c02aeb1caa07c6f58138565bca89f4a2062"
+    },
+    {
+      "path": "src/game/vectorCacheV2.js",
+      "sha256": "2876651d455c5dd9af0c8c390788f6276c8dfc726afeff169e1d07a55ef951b3"
+    },
+    {
+      "path": "src/game/vectorDataV2.js",
+      "sha256": "374e0b8427e78580fa3ad950c35317b2b3ce2809f17f83882ffb83f7301644f8"
+    },
+    {
+      "path": "src/game/vectorIdsV2.js",
+      "sha256": "b31636720642103fe6b02e73ab9cbf6d62131afa02595e98eb1cb69d3a704ed0"
+    },
+    {
+      "path": "src/tela1.js",
+      "sha256": "1835ac5b2bafa68471bf16d0b49a4c504d4871d58d8e9db8e0c34d0de8a6e0c2"
+    },
+    {
+      "path": "src/tela2.js",
+      "sha256": "6a12aafc4d60264aa129695f5f80de57bf094d0dfb7e654c61a2ccd201f445fd"
+    },
+    {
+      "path": "src/tela3.js",
+      "sha256": "756e918b0ed89edd60ffdb6d206149e5affab36bed3ff72e3d19a908820c7c0c"
+    },
+    {
+      "path": "src/tela4.js",
+      "sha256": "77a7014d33a405ed7aad7f402413fc05233642a7f5c756a7fd48796aa6f900cc"
+    },
+    {
+      "path": "src/theme/theme.js",
+      "sha256": "649ec93b1ab5ea390c4a3b376e8670c807625359eb2b0cd8a8b5eefbef007acb"
+    }
+  ],
+  "assetFiles": [
+    {
+      "path": "assets/v2/audio/checkpoint.wav",
+      "sha256": "594b5ca68fb818110421bfb663185a20bdae0e922661a567b36851cd8b4ff559"
+    },
+    {
+      "path": "assets/v2/audio/collision.wav",
+      "sha256": "66e70c0a24ce42825941009cb74b6a82837b12ecdb0a724deea42ca7413c3466"
+    },
+    {
+      "path": "assets/v2/audio/complete.wav",
+      "sha256": "133a2bcce6c00d39e31151275f6885eefabf23a2eff9506afbd7eac5c6d2dbeb"
+    },
+    {
+      "path": "assets/v2/audio/first_bloom.wav",
+      "sha256": "079ceeb1b8dfa6541822979feb16d2adad408a8cf65b9be97471b47348eea65f"
+    },
+    {
+      "path": "assets/v2/audio/golden_bloom.wav",
+      "sha256": "fc07a28169673a5aacf636c0dfb442879336c9cfab8b6bf695e35194383541aa"
+    },
+    {
+      "path": "assets/v2/audio/jump.wav",
+      "sha256": "b412cd756edc4178d05faac9a3e49cf655995b22043ccc0d59a13147aca77053"
+    },
+    {
+      "path": "assets/v2/audio/pause.wav",
+      "sha256": "b73c02d1d2f9042aebfec23e472c2fd6bd650a2b615d021f68bc6cf3e0330672"
+    },
+    {
+      "path": "assets/v2/audio/resume.wav",
+      "sha256": "cc6860785b68dbc51dc70fe3b3a475e8dca8028266c6462a99d90983c510d216"
+    },
+    {
+      "path": "assets/v2/audio/sakura_garden.wav",
+      "sha256": "a98c4eaf3c5e279a224ebf351d4a9d2f264872ad87124071a9279c9dd56dd5c7"
+    },
+    {
+      "path": "assets/v2/audio/score.wav",
+      "sha256": "8e81d0cd9eb31b1d153beebed3176a20019af3a68fe1ba9fad564bb7f51c8d8e"
+    },
+    {
+      "path": "assets/v2/audio/ui.wav",
+      "sha256": "d8aa74d7c47102c6a9ddf5570efe0558f111f6fc9e4e4535f2a4991c95bda574"
+    },
+    {
+      "path": "assets/v2/audio/unlock.wav",
+      "sha256": "06c7e40f145e860e6e2d7a72effd490131e897b01374e771f18a49283257eb32"
+    },
+    {
+      "path": "assets/v2/audio/yozakura.wav",
+      "sha256": "f68bd3165698389f307f58f1a9beb1e765819a97847f1322949ad6261a6dc182"
+    },
+    {
+      "path": "assets/v2/backgrounds/first_bloom/background_base.png",
+      "sha256": "08ccf1bef8ef9d877c8276264a288967845bd569cc644e42e14a54a81df162c4"
+    },
+    {
+      "path": "assets/v2/backgrounds/first_bloom/background_base.svg",
+      "sha256": "228f5540cca552ca775d0a7eb3c6185906c93255f264b8de611b0a937a8d7ef8"
+    },
+    {
+      "path": "assets/v2/backgrounds/first_bloom/background_composite.png",
+      "sha256": "4a3ce99b28974f64361f9f0d319dba35b19467f98c83bd8a5b29b2a3a8cc0ed6"
+    },
+    {
+      "path": "assets/v2/backgrounds/first_bloom/background_composite.svg",
+      "sha256": "2898c9daf8b352c24752350272149be40994c926a4a84045e75989ba265cbb85"
+    },
+    {
+      "path": "assets/v2/backgrounds/first_bloom/foreground_frame.png",
+      "sha256": "d406375140fbf2db87f77a27d44396a5ef0c902e65c4994b41842680268aa913"
+    },
+    {
+      "path": "assets/v2/backgrounds/first_bloom/foreground_frame.svg",
+      "sha256": "cf887b40dfcd442946191b8c5e7283f95d4570c6242c9638c423064b7b97d569"
+    },
+    {
+      "path": "assets/v2/backgrounds/first_bloom/midground.png",
+      "sha256": "dca6bf4987580edf6645abd0a392c8e253703b965c7982f391a420b56b4626e5"
+    },
+    {
+      "path": "assets/v2/backgrounds/first_bloom/midground.svg",
+      "sha256": "778bf6d9e06bb04cfbc8ea2f6a7f4ae83c684df01429fff1b6b65facd04aa0b7"
+    },
+    {
+      "path": "assets/v2/backgrounds/first_bloom/overlay_fx.png",
+      "sha256": "fc4daa14167913495b00faf16bec4395a97f77f9458f88b502d31128cca01b03"
+    },
+    {
+      "path": "assets/v2/backgrounds/first_bloom/overlay_fx.svg",
+      "sha256": "07d9d5957b42206715ea083293b43b7b88ada0ef9afed099a9ddea8fea2e34e1"
+    },
+    {
+      "path": "assets/v2/backgrounds/golden_bloom/background_base.png",
+      "sha256": "8ec410af621f8f56635036a2aa3286994743fabbee9ebfea6b612a3349a3bba7"
+    },
+    {
+      "path": "assets/v2/backgrounds/golden_bloom/background_base.svg",
+      "sha256": "b9c83fcc6b3603c2710473f716d263f2f958b94bfe4252b431198a92c390c227"
+    },
+    {
+      "path": "assets/v2/backgrounds/golden_bloom/background_composite.png",
+      "sha256": "29de4da6887d23ff13fc9dff5112eb15ce19b1ff40bec11711e3899eb1328b9c"
+    },
+    {
+      "path": "assets/v2/backgrounds/golden_bloom/background_composite.svg",
+      "sha256": "ce58ef875c239cbd89b0e3ab83ff93fd93514a61b7fb0e8874d83af355effb3e"
+    },
+    {
+      "path": "assets/v2/backgrounds/golden_bloom/foreground_frame.png",
+      "sha256": "dfea8943f550a268da265f23d13c086b5ab7182c6c53c5e2abe81156cb29e044"
+    },
+    {
+      "path": "assets/v2/backgrounds/golden_bloom/foreground_frame.svg",
+      "sha256": "df85c9a3ad4e2d7326e75d998a9c073232aed989261e61f214e101585a3dc354"
+    },
+    {
+      "path": "assets/v2/backgrounds/golden_bloom/midground.png",
+      "sha256": "65d3d5eb1a1f768231eb5caffb0f3bea349d48b3eacb3d914b82774b96fa0f31"
+    },
+    {
+      "path": "assets/v2/backgrounds/golden_bloom/midground.svg",
+      "sha256": "612459a453a6e27ee3e3e4788da8c2c458eae3df9e0955cab8308971fcf1086c"
+    },
+    {
+      "path": "assets/v2/backgrounds/golden_bloom/overlay_fx.png",
+      "sha256": "0ff16bf01cd75e7eb9dadd7d6fb57d68f5093cb7a0ed2a323373f6d91b2e97be"
+    },
+    {
+      "path": "assets/v2/backgrounds/golden_bloom/overlay_fx.svg",
+      "sha256": "f66439ee54e4b49fb6543d86d3b2ccad56951859ecd607a786ec3d15f7fbcbc3"
+    },
+    {
+      "path": "assets/v2/backgrounds/sakura_garden/background_base.png",
+      "sha256": "75577a1669326f98df40728f32ebc7ac71cd0ece3d5344356804533489a01998"
+    },
+    {
+      "path": "assets/v2/backgrounds/sakura_garden/background_base.svg",
+      "sha256": "bc8fd33c3541024307ecc110ece8e89cbfdd41a6cd5c6255ec872e31e42975e0"
+    },
+    {
+      "path": "assets/v2/backgrounds/sakura_garden/background_composite.png",
+      "sha256": "52d1412ab5b27577ca2fc3718d13a6c0b76c9f9430daff8b1371394775c4fa49"
+    },
+    {
+      "path": "assets/v2/backgrounds/sakura_garden/background_composite.svg",
+      "sha256": "968ccce8afa8d508b13dd33c4c1842fd8f526d0259b960b208a47d9d0e6da080"
+    },
+    {
+      "path": "assets/v2/backgrounds/sakura_garden/foreground_frame.png",
+      "sha256": "71f26f9c8550b6ed217e4330bf4c36acdf0205d89315bdb3230d47f99f0cd188"
+    },
+    {
+      "path": "assets/v2/backgrounds/sakura_garden/foreground_frame.svg",
+      "sha256": "cb73ca132072e7c5785109edf101e60e07c57341b7ecb70495f8fddef9007beb"
+    },
+    {
+      "path": "assets/v2/backgrounds/sakura_garden/midground.png",
+      "sha256": "c980376cd62b897b1e3b7aa7b6397af42913484dd3fbb10104dfc53084aa91cc"
+    },
+    {
+      "path": "assets/v2/backgrounds/sakura_garden/midground.svg",
+      "sha256": "04b65792c4424a710f474d62adaa9001a68fac3a38507c5982d2003e41d1a5e7"
+    },
+    {
+      "path": "assets/v2/backgrounds/sakura_garden/overlay_fx.png",
+      "sha256": "ff6b7977d8c4ab600c56dc703268bc0f1992ac61b0be00baf8a22ca8873a2969"
+    },
+    {
+      "path": "assets/v2/backgrounds/sakura_garden/overlay_fx.svg",
+      "sha256": "80c7a03785f3173a4ac4bf541240fc3dfc64ec9ccf28d549189b54c3a29f3026"
+    },
+    {
+      "path": "assets/v2/backgrounds/yozakura/background_base.png",
+      "sha256": "587dabe1f6fe8cfbe4f8501e1bca9cb53fbcbee0a4266bbad8917ab696425625"
+    },
+    {
+      "path": "assets/v2/backgrounds/yozakura/background_base.svg",
+      "sha256": "cc790696969aec81855f32551b88d15bb6e3e734a34115160772b132fcde0e41"
+    },
+    {
+      "path": "assets/v2/backgrounds/yozakura/background_composite.png",
+      "sha256": "e0f079ff00d90316e3180d0f561da616725c9b0ea5a119a97d71722f5239118a"
+    },
+    {
+      "path": "assets/v2/backgrounds/yozakura/background_composite.svg",
+      "sha256": "6750b418581f13d8ee32da9914865ff2cacf68401a9b10a70df54793400c7eb6"
+    },
+    {
+      "path": "assets/v2/backgrounds/yozakura/foreground_frame.png",
+      "sha256": "70e2ba35d89b71545732ba0affa62ca0e11d555fd04ca5fa84aaf77e6ad98f74"
+    },
+    {
+      "path": "assets/v2/backgrounds/yozakura/foreground_frame.svg",
+      "sha256": "763d111c858f2a0f79aeed2bdeadb579d63f80ada446b048eab2d22e7a0eceb6"
+    },
+    {
+      "path": "assets/v2/backgrounds/yozakura/midground.png",
+      "sha256": "3578f2e5893545d381fdee7c1a60ab8dad107cfd595fb25fe612acab2d71c684"
+    },
+    {
+      "path": "assets/v2/backgrounds/yozakura/midground.svg",
+      "sha256": "96fc406e8e501d45d0b79759e281c026e7d1a62694d887b876cdea006009202e"
+    },
+    {
+      "path": "assets/v2/backgrounds/yozakura/overlay_fx.png",
+      "sha256": "de8bb3a975e557d5f8e6b3557e4ef4a71425c75fc2a7ec644fe20b47562ed77e"
+    },
+    {
+      "path": "assets/v2/backgrounds/yozakura/overlay_fx.svg",
+      "sha256": "f808f6c8170d57746c5dd48346d29460dc89534a9a3846c4820abcaff390e28c"
+    },
+    {
+      "path": "assets/v2/characters/cherry_fall.png",
+      "sha256": "2110de938816e282f648b320a96d6389c2b5bd6167de8ebf5ef39598d3b2f6f9"
+    },
+    {
+      "path": "assets/v2/characters/cherry_fall.svg",
+      "sha256": "00134b39ac14a1dd8b66841e6d14a3d7f069cf752e465d09c8b1131e6ff2321c"
+    },
+    {
+      "path": "assets/v2/characters/cherry_hit.png",
+      "sha256": "2c99b6596a9fb6d807dc5ade3c49d4a8137dec9c9b64e2613ec30350315d4636"
+    },
+    {
+      "path": "assets/v2/characters/cherry_hit.svg",
+      "sha256": "193cc9c41f21052f60bdd5d455666e5ec399d30e35a88ee3a222007992a4794b"
+    },
+    {
+      "path": "assets/v2/characters/cherry_idle.png",
+      "sha256": "c6e82cff6731d5e1d18a19ca44de57e7d4ec4354988d1ca4aea5edee868f329d"
+    },
+    {
+      "path": "assets/v2/characters/cherry_idle.svg",
+      "sha256": "e5cebe1886de134192f284426c1adb6931c31dcc3d435b281c21ccbaa1bbb778"
+    },
+    {
+      "path": "assets/v2/characters/cherry_jump.png",
+      "sha256": "879a0b101c57a8575046dfa47f2d85a22469fe6cee48f69e054f59ebe9e47b87"
+    },
+    {
+      "path": "assets/v2/characters/cherry_jump.svg",
+      "sha256": "e5d77fdc358a0b5b61ddf00623aae47c9d46fd77708afe1e7fb4903e84e735a6"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/accent_particles.png",
+      "sha256": "886f83750ecb306efce3acd30371eddb084336880847e030d7089322cdb9e1a3"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/accent_particles.svg",
+      "sha256": "9644a3f4d38d34b1022a1dc0f3acf7d1b4fc5d1e497ba61c28de2410b7a2f834"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/blossom_cluster_a.png",
+      "sha256": "b6658dcb1587b3db4f3e7564dd8131a3b41c8ebab324ef21f3d58e1fed539d5d"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/blossom_cluster_a.svg",
+      "sha256": "6356c51d54a7899ff11a91614bf2657cad75735c24942827272aba9eb3edbe2f"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/blossom_cluster_b.png",
+      "sha256": "e88b0569df9099dcb08e4eb83c013f754f3bdf5af7b6cd3bb7b280a549bb717e"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/blossom_cluster_b.svg",
+      "sha256": "7825c7616121dec3b37776bdb277ec03e9242a026d24dad5d1f1ba70481850e5"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/cap_bottom_a.png",
+      "sha256": "f92935abf3bbe113565067cc6953feb3e300c93d59ca27e505508c779c2372c2"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/cap_bottom_a.svg",
+      "sha256": "906afbd0e277f40859da146422e5d76f06a52a56086f779e94fad5bc4dc58687"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/cap_bottom_b.png",
+      "sha256": "7d53a98cdb1b4b7da7ce6c98cf68dc117fcbfab60d43c6025e6280bc9ee8adaa"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/cap_bottom_b.svg",
+      "sha256": "bb7ade47c67dd846a896313f0a40de19f9a6b245bd41a27ca8c737d86c3842cd"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/cap_top_a.png",
+      "sha256": "ce31c52d1b6378d45aacafe77824490d1348fa0c0be8f4972b25a814bfc228f8"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/cap_top_a.svg",
+      "sha256": "ccb043df439e401c6a2935b1ad7a3e8efd9a2dad6d89109d3cdc981a0ea0168e"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/cap_top_b.png",
+      "sha256": "d780bf79beb976809162f84d9593cbd13c638f4d2512dcac51f0ac0bc4adc1c3"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/cap_top_b.svg",
+      "sha256": "add589578ed75eac46ff95c49f8d9916ee62547105cf064d1535e07981505823"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/leaves_cluster.png",
+      "sha256": "9c0f0dcd6d9ef4bb6a93a7b85c6acb215cc57ea5e6fb3d3920eb724a35362f36"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/leaves_cluster.svg",
+      "sha256": "0fa2b94e35ca8fab7d3f2acb99543201679cfec34c85346f626fb7d368901f78"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/side_branch_1.png",
+      "sha256": "9114bb8a21994efaceaf9071f1d574194ba18926174d8d3e18304926eca023f9"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/side_branch_1.svg",
+      "sha256": "45a91a6c545ae94bbe2b4e76e0dc7a07ef7fc5c7a8526699abf5789b2a9f3dbe"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/side_branch_2.png",
+      "sha256": "6cdbe796159733cc14fa4d0025ed73ba4ec69a8dcf7db98bbeba5c61cd2dc1c5"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/side_branch_2.svg",
+      "sha256": "6c61e9147583f2349e0fa9b4f03879aada48080760745ac181cade2ba5e725b7"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/side_branch_3.png",
+      "sha256": "3b96471b76410c03a7614825bd9eaa1dce658fb3254cbb6a9076aa7722725730"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/side_branch_3.svg",
+      "sha256": "2dd81fd830618b8c27aa5afdb4ce696da9f4cc7054b89ae4e10595ac3cefe1dc"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/trunk_body.png",
+      "sha256": "531d7e96493bedc553300ff6e579c6054fe63bd667e61e96d75b243c732fbc5e"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/trunk_body.svg",
+      "sha256": "7bd628cdac445aded780ca418ecba62e20c4bfa3595f4d87c2381941dca3e0eb"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/trunk_edge_overlay.png",
+      "sha256": "baab1850b45f1ebafb231ebd5482d5ead3ea2f5b843d01ad387f185cef2bb313"
+    },
+    {
+      "path": "assets/v2/obstacles/first_bloom/trunk_edge_overlay.svg",
+      "sha256": "4ab1361f147c879b653b4a46e10dea707f75aaf9667d09c4e70f96ce23c74af8"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/accent_particles.png",
+      "sha256": "eaec1c5ae63e9ef070478a59c75cca9df4b944b8e0762b7664bd492c22a90382"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/accent_particles.svg",
+      "sha256": "dfb30bc6b5bac541782df125fe196e0dc9ebc17ecefa62fe1e3279f65a9e3309"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/blossom_cluster_a.png",
+      "sha256": "5545e7530dbc9b5f246f9f2fa33d1d8d442637afc03b3ed861fd478e49a412b2"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/blossom_cluster_a.svg",
+      "sha256": "79ec23aa693b64a7e97ba65643be74fbc03fe826c31dbdb1676507535afc8d2d"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/blossom_cluster_b.png",
+      "sha256": "6bf27d7cd68f15eff3690deec7f7bd0516ca35efceeddb36dcce4d25298e8b54"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/blossom_cluster_b.svg",
+      "sha256": "369393d4d46fe1fb765af6895c37fc8c8ba65006a14fb7d08b41ce64584c8130"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/cap_bottom_a.png",
+      "sha256": "0c20128271df74cbfe4e4deb19e339820c54c170799f7e0f26a68eabc02350bd"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/cap_bottom_a.svg",
+      "sha256": "9a14112276cb7e8b9a05c1fa54e19a24c3317f7f4828366af26e89ff2c2b2a1e"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/cap_bottom_b.png",
+      "sha256": "b649276b4dad9daf653121a20c11546e3495d060c6e8162250b29c122ceabbd1"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/cap_bottom_b.svg",
+      "sha256": "c392f6fa195e70d2e5a8ed6bf99637079bb3d3b0730c6d3db2c1df572d5aad7c"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/cap_top_a.png",
+      "sha256": "daf35bb146a5ffaa000de0b10aaaf670c5195f3b2dae7c4ab95c7b949ca432f8"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/cap_top_a.svg",
+      "sha256": "07364e27d196a712a0fb092079406ac1e73befcf2aa97d0dd8ce46d5aa783014"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/cap_top_b.png",
+      "sha256": "2a0d8e25f33ff5d0c1a27ffc87b70d2cc63517c4bfb056d638626c0aa6c79cdc"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/cap_top_b.svg",
+      "sha256": "eb30b149d481862b1a8361c7271df83255cfadb63dfdbf5488b10dca381ce1a2"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/leaves_cluster.png",
+      "sha256": "532ac3dd7bfe188267ead67647e72d12abbf7493d61b1eaf4bd3d6d97a7e4e53"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/leaves_cluster.svg",
+      "sha256": "d63d5591892d078294aea08161940472cc73c10cd2e8de000f74db88d9614e77"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/side_branch_1.png",
+      "sha256": "6da2f9f5422ce076cf62643722ee171fc593057a2bf0ffbcc1f771b387e01b09"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/side_branch_1.svg",
+      "sha256": "45412acea4c50a07bfa6e5e29a967f8815300769c5b039da861d7df3fae6741d"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/side_branch_2.png",
+      "sha256": "2ad97a430755ab44e18496ef5a0ec2aa23491e9f61eca6395b66c4886a9cfcfa"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/side_branch_2.svg",
+      "sha256": "a46d723fed34187759f1949ede727afb36d79b3dc52ade55f0ae0aedad215964"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/side_branch_3.png",
+      "sha256": "8d7be49e45dd99ebe7438e2f3d93bfcdd64c9121b7c938b3ef1bfbf0b6a2c89c"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/side_branch_3.svg",
+      "sha256": "774510884ad0245ac78f004233eb692e025cc736c1ba98d7f76e2706b521360e"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/trunk_body.png",
+      "sha256": "ae47ae5c6e8c22d333acdd10a7f8f9023a07db7af589cf34692fd90c2c72efe1"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/trunk_body.svg",
+      "sha256": "881c990ea2756b2bb7c7b3ec2e9584d615bf38e8809c29f660b1643f6bd08e2a"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/trunk_edge_overlay.png",
+      "sha256": "579993fa4ee380ee84a9ee562a630ff8a157e29c219f0898179510dbffe075f1"
+    },
+    {
+      "path": "assets/v2/obstacles/golden_bloom/trunk_edge_overlay.svg",
+      "sha256": "694f6db56d2264640b5af2610a356551cd5593f977975999a5455ef872d6dbfa"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/accent_particles.png",
+      "sha256": "9450e57942cdb9e1c43197aceeb7698bf0e3389432b2e0622e9bd76263e1c67a"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/accent_particles.svg",
+      "sha256": "29c8b576ba256a167e0c278a4ea437b6a3a29b856e018e4b7df66db857f062c5"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/blossom_cluster_a.png",
+      "sha256": "84d256a752f6a2aec0e8a37a7001fa10d08adde07c9f085da19acf9374635356"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/blossom_cluster_a.svg",
+      "sha256": "646845f899e3a03e93f198bf2dfa98d8c85a49c492a3a2dd46180a4e35792afe"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/blossom_cluster_b.png",
+      "sha256": "321a018353ec1e2d9172c184e81f04a6ba2fbfba87d6a5b3b01e87b2d14a3070"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/blossom_cluster_b.svg",
+      "sha256": "d37696ca18b62cdfb0df7b4f6ebc30ac1c7654508b4f2c723412e52610164492"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/cap_bottom_a.png",
+      "sha256": "511fe4d0a2e6ae5923caa0db16a2643c0af414b2374a822000830ce928faa270"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/cap_bottom_a.svg",
+      "sha256": "2222f0ea2e24b13457cd9ee38b6ac6b82091dd17ac6e8f1d699cbc5efba79a19"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/cap_bottom_b.png",
+      "sha256": "b832d287617c3363e0d3e249e9970abab27a44adaf92c84fca3af1ef1c8e78fa"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/cap_bottom_b.svg",
+      "sha256": "320b9e6b1c177e20ecc13b7f70f0f71646cd0960fa12728392b57facb4e17e27"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/cap_top_a.png",
+      "sha256": "55fb157e2fe7852822cc3b1e126c84f0204e7fb9687cec0ba6ece5841336ee23"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/cap_top_a.svg",
+      "sha256": "26785bd436beb9543b97dc9143b3e492ce21438b6d7e9c140a2a872ed0cb20cd"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/cap_top_b.png",
+      "sha256": "af66d416a1b1b0cb9d81b65a667f559789e7026b7af299e35febe39faec21902"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/cap_top_b.svg",
+      "sha256": "b714691d43327b7254363c4ac6e30725fe64aa6aad0a9dd7f389c2198505d7c0"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/leaves_cluster.png",
+      "sha256": "065563097b9edb64d5afe2674a37a78ab9111b2e42ba56ba045b1f3e6520633a"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/leaves_cluster.svg",
+      "sha256": "c17fcb0ea9ec77cf60a642864744590ed052e55c10668c65d5ab86a96e0a84ff"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/side_branch_1.png",
+      "sha256": "7bb8646e4fa16e7ff88be53f027893ab1cc31ba6f4bb7f6babe58054122b9bd8"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/side_branch_1.svg",
+      "sha256": "2e5afd566a0a8ede2d64c3ec7a67f549805d6b2cc1c6226bc8eeb161cfdc0252"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/side_branch_2.png",
+      "sha256": "71cca2bf03ffa05d86960ee8796eea9ca0b25096f1e73ac10750d108e96f6f9b"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/side_branch_2.svg",
+      "sha256": "ad1c07207f4007fe01c7d1e6d8234f78c406871e3279a44d10a9bea31479d830"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/side_branch_3.png",
+      "sha256": "c63cbdf8de0e2ed314ed7d6b0bafb9c2f9daf5e039a8e81939a05a6999ce923a"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/side_branch_3.svg",
+      "sha256": "ae6594b943b1b8633649f6cff6c65301750465d2bcf32524feefaf252a42f903"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/trunk_body.png",
+      "sha256": "b7420f602ff5720e26a80bb3a52cf65d2c81e7a503af1bdaae1de47d43729abc"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/trunk_body.svg",
+      "sha256": "c870db6f12af02ece441e1656e6ac2c5f773709ddcd29a234aae0160708f2797"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/trunk_edge_overlay.png",
+      "sha256": "61d57375b3ab91a72c9d74a34118d2ac1ec4a178ff01db663fd8c3eb11993150"
+    },
+    {
+      "path": "assets/v2/obstacles/sakura_garden/trunk_edge_overlay.svg",
+      "sha256": "95bb99ffbab752daa2de6ac522d9a2b3bf4ba448bd50ac695d0b242845457a72"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/accent_particles.png",
+      "sha256": "aa296735c402e5a0ce4cc1e072cc64092d22e08a2e6b39e675ab8b7829424706"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/accent_particles.svg",
+      "sha256": "0c2f3656361dc949912e03adb9d12e45e456edffed004c95a3dcd87975a00a84"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/blossom_cluster_a.png",
+      "sha256": "b34e5443cd3bb9dadcba0d58b23159b375edb17a1d217b63750f6cdd532b52a5"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/blossom_cluster_a.svg",
+      "sha256": "b9628377eb1da7ebd32fbb0e1c64db03f24e9fd71a22533685706d0a774a8b8d"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/blossom_cluster_b.png",
+      "sha256": "ca20d53a0024d6c9553fe905d9db2aca641d442bde891657b95e9ec40429716f"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/blossom_cluster_b.svg",
+      "sha256": "762f0347a71fba762464741fb7a75a4165dc8f20eb1b4948025bcc41ea6b0b15"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/cap_bottom_a.png",
+      "sha256": "96ca2b40abe9dd1be0bb10d1e0cdef7ae9866a9a536e038fc5182e65d5f83098"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/cap_bottom_a.svg",
+      "sha256": "c9128a2086ded29fedae02bf4c926843c43675cbac320fd81fa0879e0b11785a"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/cap_bottom_b.png",
+      "sha256": "c9d9acbbe255259e60f4058c8375b20856e6d8af5ce0698011259dc9154e5ffe"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/cap_bottom_b.svg",
+      "sha256": "aa9b55fc8f026891c55c3fa896967d247f2b425d73601719de1fa860a999a944"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/cap_top_a.png",
+      "sha256": "6bb6cad39e04a3c65e2ce5bf441d873a106dbbfd5ed25091516b6bf36af2b671"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/cap_top_a.svg",
+      "sha256": "e9de81902963451cecddbfae4c6e33e61d45652632bdd6dfb8147d2f372eb3d9"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/cap_top_b.png",
+      "sha256": "c80690d35cb61f4b87d73c185fbf00efa6c7e84d9c55bc0354f0553406c85b95"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/cap_top_b.svg",
+      "sha256": "1289e4472ae4faa99b0a801cc01ca1178773933adbd12ab47fccb1f3cabd4d3d"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/leaves_cluster.png",
+      "sha256": "74bb0d0021afb677a0a01f3d3d0643e5d38f026c122e7d44abd4e587658c458f"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/leaves_cluster.svg",
+      "sha256": "a268bc05fded48d8579f1d7f3acb5b761d27051a47d8755a557c65f81273d289"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/side_branch_1.png",
+      "sha256": "4b1e695ad86fcbaba5f5a98b812700d25eb69f09033cbd440d5e2a467d31b6cb"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/side_branch_1.svg",
+      "sha256": "0e910361f10bb2fcbf4711f80375451985c827c8ce8801636c2f4f336ac1d75c"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/side_branch_2.png",
+      "sha256": "cfc7661d11a52d805af292f9e83370691908b93f7d6af2b4e655ea7e0f6fa8f0"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/side_branch_2.svg",
+      "sha256": "bb00eb0e3d1e9621fc1990437a8e43d56b3f80cca1caa9bb1d0e8d4178e01db1"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/side_branch_3.png",
+      "sha256": "68f36a60b00a6946a69f036275398faf4be91e2a60ff6b7dbdda2d2669620910"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/side_branch_3.svg",
+      "sha256": "cd7883b294309bbfe9b758516168f8ac54bac9eefd81266c22fd60d5910af5c0"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/trunk_body.png",
+      "sha256": "10a8258c06acc69e710482c2ee6f65329b9350b3d76a5bf8b523e7594fac2917"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/trunk_body.svg",
+      "sha256": "9d1e12484e951d99242e4260b899ec12a625bb151f94237467228192f2cb51cf"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/trunk_edge_overlay.png",
+      "sha256": "fa81a6531d418648102da0e37eab4d310a812cad13d0b3124a5714a1b8d3a8c0"
+    },
+    {
+      "path": "assets/v2/obstacles/yozakura/trunk_edge_overlay.svg",
+      "sha256": "aae10dace9d1a55399ca869e034a4c0e4389de44e0b10e301a29b9a67aa53662"
+    },
+    {
+      "path": "assets/v2/previews/first_bloom_preview.png",
+      "sha256": "4a3ce99b28974f64361f9f0d319dba35b19467f98c83bd8a5b29b2a3a8cc0ed6"
+    },
+    {
+      "path": "assets/v2/previews/golden_bloom_preview.png",
+      "sha256": "29de4da6887d23ff13fc9dff5112eb15ce19b1ff40bec11711e3899eb1328b9c"
+    },
+    {
+      "path": "assets/v2/previews/sakura_garden_preview.png",
+      "sha256": "52d1412ab5b27577ca2fc3718d13a6c0b76c9f9430daff8b1371394775c4fa49"
+    },
+    {
+      "path": "assets/v2/previews/yozakura_preview.png",
+      "sha256": "e0f079ff00d90316e3180d0f561da616725c9b0ea5a119a97d71722f5239118a"
+    }
+  ],
+  "hashPolicy": "UTF8 normalized LF for JS, raw asset bytes; manifests/locks intentionally differ",
+  "fingerprint": "545bfdec53c8f5fe849623db2afdc4e13358311b1402066593d8bf3cfbcfd872"
+}
