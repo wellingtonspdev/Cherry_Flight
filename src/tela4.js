@@ -108,7 +108,7 @@ export default function Tela4({ navigation }) {
                 title="HOME"
                 variant="secondary"
                 accessibilityLabel="Voltar para a tela inicial"
-                onPress={() => navigation.navigate('Home')}
+                onPress={() => navigation.popToTop()}
                 style={styles.btnSpacing}
               />
             </View>

@@ -25,3 +25,14 @@ test('V2 vectors are cached before visible use, with theme-scoped gradient IDs',
   registry.preload('first_bloom', 844, 390);
   assert.equal(registry.stats.parsesDuringPlay, 0);
 });
+
+
+test('Repeated viewport changes keep parsed vectors bounded and the latest chapter preloaded', () => {
+  const registry = cache.createVectorCache(xml => ({ xml }));
+  for (let width = 600; width < 1000; width++) registry.preload('yozakura', width, 390);
+  assert.ok(registry.stats.entries <= 256);
+  registry.setPlaying(true);
+  registry.get('backgrounds/yozakura/background_base', 999, 390, 'sky');
+  registry.get('characters/cherry_jump');
+  assert.equal(registry.stats.parsesDuringPlay, 0);
+});

@@ -3,11 +3,13 @@ import { VECTORS } from './vectorDataV2.js';
 export function createVectorCache(compile) {
   const entries = new Map();
   let playing = false;
-  const stats = { parses: 0, parsesDuringPlay: 0, chapters: [] };
+  const stats = { parses: 0, parsesDuringPlay: 0, chapters: [], entries: 0 };
   function get(key, width = 0, height = 0, part = '') {
     width = Math.round(width); height = Math.round(height);
     const cacheKey = `${key}:${width}:${height}:${part}`;
-    if (entries.has(cacheKey)) return entries.get(cacheKey);
+    if (entries.has(cacheKey)) {
+      const cached = entries.get(cacheKey); entries.delete(cacheKey); entries.set(cacheKey, cached); return cached;
+    }
     let xml = VECTORS[key];
     if (!xml) throw new Error(`Missing V2 vector: ${key}`);
     if (part === 'sky') xml = xml.replace(/<path\b[^>]*\/>/g, '');
@@ -21,6 +23,8 @@ export function createVectorCache(compile) {
     }
     const value = { key, ast: compile(xml), parsedAt: Date.now() };
     entries.set(cacheKey, value); stats.parses++;
+    if (entries.size > 256) entries.delete(entries.keys().next().value);
+    stats.entries = entries.size;
     if (playing) stats.parsesDuringPlay++;
     return value;
   }

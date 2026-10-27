@@ -102,3 +102,18 @@ test('V2 preserves the supplied configuration and resolves bounded Endless diffi
   assert.ok(b.speed <= 844 * LEVEL_CONFIG.endless.maxSpeedWidthPerSecond);
   assert.ok(b.gapSize >= 354 * LEVEL_CONFIG.endless.minGapRatio);
 });
+
+
+test('Every level starts with a centered, predictable first opening', () => {
+  for (let levelId = 1; levelId <= 12; levelId++) for (const sample of [0, 0.5, 1]) {
+    const round = engine.createRound({ width: 844, height: 354, levelId }, () => sample);
+    assert.equal(round.pairs[0].center, 177);
+  }
+});
+
+
+test('Obstacle compositions do not repeat consecutively even with repeated random samples', () => {
+  const round = engine.createRound({ width: 844, height: 354, levelId: 1 }, () => 0);
+  const pairs = [...round.pairs, ...round.future];
+  for (let i = 1; i < pairs.length; i++) assert.notEqual(pairs[i].variant, pairs[i - 1].variant);
+});

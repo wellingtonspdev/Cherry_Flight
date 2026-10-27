@@ -20,12 +20,22 @@ import PhaseBackground from './components/WorldV2';
 import { PHASES } from './game/phase';
 import { usePwaInstall } from './game/pwa';
 import { colors, radius, shadows, spacing } from './theme/theme';
+import { useProgress } from './game/ProgressProviderV2';
+import { useIsFocused } from '@react-navigation/native';
+import { audioManager } from './game/AudioManagerV2';
 
 export default function Tela1({ navigation }) {
+  const progress = useProgress();
+  const focused = useIsFocused();
   const { width, height } = useWindowDimensions();
   const isCompact = width < 360 || height < 660;
   const isLandscape = width > height;
   const { canInstall, isIosSafariPrompt, promptInstall } = usePwaInstall();
+  useEffect(() => {
+    if (!focused) return undefined;
+    audioManager.prepare('first_bloom');
+    return () => audioManager.release();
+  }, [focused]);
 
   // Motion: logo reveal 400ms, Cherry idle bob 1600ms, buttons stagger
   const logoAnim = useRef(new Animated.Value(0)).current;
@@ -35,6 +45,7 @@ export default function Tela1({ navigation }) {
   const btn3Anim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
+    if (!focused) return undefined;
     Animated.sequence([
       Animated.timing(logoAnim, {
         toValue: 1,
@@ -82,7 +93,7 @@ export default function Tela1({ navigation }) {
     return () => {
       bobLoop.stop();
     };
-  }, [logoAnim, bobAnim, btn1Anim, btn2Anim, btn3Anim]);
+  }, [logoAnim, bobAnim, btn1Anim, btn2Anim, btn3Anim, focused]);
 
   return (
     <View style={styles.root}>
@@ -144,13 +155,18 @@ export default function Tela1({ navigation }) {
           <View style={[styles.menuCard, isLandscape && styles.landscapeMenu]}>
             <Animated.View style={[styles.btnWrap, { opacity: btn1Anim }]}>
               <CherryButton
-                title="PLAY"
+                title={progress.hasSave ? 'CONTINUE' : 'PLAY'}
                 variant="primary"
                 accessibilityLabel="Iniciar o jogo Cherry Bloom"
-                onPress={() => navigation.navigate('Game')}
+                disabled={!progress.loaded}
+                onPress={async () => { const id = progress.data.lastPlayedLevel; await progress.begin(id); navigation.navigate('Game', { levelId: id, mode: 'campaign' }); }}
                 style={styles.fullWidthBtn}
               />
             </Animated.View>
+
+            <View style={styles.btnWrap}><CherryButton title="LEVEL SELECT" variant="secondary" disabled={!progress.loaded} onPress={() => navigation.navigate('LevelSelect')} style={styles.fullWidthBtn} /></View>
+            <View style={styles.btnWrap}><CherryButton title="SETTINGS" variant="ghost" onPress={() => navigation.navigate('Settings')} style={styles.fullWidthBtn} /></View>
+            {!!progress.warning && <Text style={styles.loreText}>{progress.warning}</Text>}
 
             <Animated.View style={[styles.btnWrap, { opacity: btn2Anim }]}>
               <CherryButton

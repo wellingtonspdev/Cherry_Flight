@@ -1,0 +1,21 @@
+{
+  "saved": {
+    "schemaVersion": 2,
+    "highestUnlockedLevel": 2,
+    "lastPlayedLevel": 2,
+    "lastCompletedLevel": 1,
+    "levelResults": {
+      "1": {
+        "bestScore": 8,
+        "completed": true
+      }
+    },
+    "endlessUnlocked": false,
+    "settings": {
+      "music": true,
+      "sfx": true,
+      "haptics": true
+    }
+  },
+  "errors": []
+}

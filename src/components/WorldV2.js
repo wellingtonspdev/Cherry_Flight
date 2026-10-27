@@ -11,6 +11,8 @@ export default memo(function WorldV2({ biome, phaseConfig, screenWidth = 844, sc
   const zero = useRef(new Animated.Value(0)).current;
   const drift = useRef(new Animated.Value(0)).current;
   const reveal = useRef(new Animated.Value(1)).current;
+  const lastBiome = useRef(biome);
+  const [previousBiome, setPreviousBiome] = useState(null);
   const [reduced, setReduced] = useState(false);
   const focused = useIsFocused();
   useEffect(() => {
@@ -25,13 +27,14 @@ export default memo(function WorldV2({ biome, phaseConfig, screenWidth = 844, sc
     loop.start(); return () => loop.stop();
   }, [animatePetals, drift, reduced, focused]);
   useEffect(() => {
-    reveal.setValue(0.65);
+    if (lastBiome.current === biome) return undefined;
+    setPreviousBiome(lastBiome.current); lastBiome.current = biome;
+    reveal.setValue(0);
     const animation = Animated.timing(reveal, { toValue: 1, duration: 420, useNativeDriver: true });
-    animation.start(); return () => animation.stop();
+    animation.start(({ finished }) => { if (finished) setPreviousBiome(null); }); return () => animation.stop();
   }, [biome, reveal]);
-  const base = `backgrounds/${biome}/`;
   const movement = reduced ? zero : (distance || zero);
-  function panorama(name, speed, part = '') {
+  function panorama(base, name, speed, part = '') {
     const offset = Animated.multiply(Animated.modulo(Animated.multiply(movement, speed), width), -1);
     return (
       <Animated.View style={{ position: 'absolute', left: 0, top: 0, width: width * 2, height, opacity: name === 'midground' ? 0.4 : 1, flexDirection: 'row', transform: [{ translateX: offset }] }}>
@@ -40,17 +43,21 @@ export default memo(function WorldV2({ biome, phaseConfig, screenWidth = 844, sc
     );
   }
   const edgeWidth = height * 540 / 1920;
-  return (
-    <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, { opacity: reveal, backgroundColor: biome === 'yozakura' ? '#292847' : '#FFF8F2' }]}>
+  function renderScene(theme, current) {
+    const base = `backgrounds/${theme}/`;
+    return (
+    <Animated.View key={theme} pointerEvents="none" style={[StyleSheet.absoluteFill, { opacity: current ? reveal : 1, backgroundColor: theme === 'yozakura' ? '#292847' : '#FFF8F2' }]}>
       <VectorAsset assetKey={base + 'background_base'} width={width} height={height} viewportWidth={width} viewportHeight={height} part="sky" stretch />
-      {panorama('background_base', 0.05, 'terrain')}
-      {panorama('midground', 0.12)}
+      {panorama(base, 'background_base', 0.05, 'terrain')}
+      {panorama(base, 'midground', 0.12)}
       <View style={{ position: 'absolute', left: 0, top: 0, opacity: 0.28 }}><VectorAsset assetKey={base + 'foreground_frame'} width={edgeWidth} height={height} viewBox="0 0 540 1920" stretch /></View>
       <View style={{ position: 'absolute', right: 0, top: 0, opacity: 0.28 }}><VectorAsset assetKey={base + 'foreground_frame'} width={edgeWidth} height={height} viewBox="540 0 540 1920" stretch /></View>
       <Animated.View style={{ position: 'absolute', top: -height, left: 0, width, height: height * 2, opacity: 0.65, transform: [{ translateY: drift.interpolate({ inputRange: [0, 1], outputRange: [0, height] }) }] }}>
         {[0, 1].map(i => <VectorAsset key={i} assetKey={base + 'overlay_fx'} width={width} height={height} viewportWidth={width} viewportHeight={height} stretch />)}
       </Animated.View>
-      {showGround && <View style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: GAME.groundHeight, borderTopWidth: 3, borderTopColor: '#4F8A5B', backgroundColor: biome === 'yozakura' ? '#1B2732' : '#28533A', opacity: 0.9 }} />}
+      {showGround && <View style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: GAME.groundHeight, borderTopWidth: 3, borderTopColor: '#4F8A5B', backgroundColor: theme === 'yozakura' ? '#1B2732' : '#28533A', opacity: 0.9 }} />}
     </Animated.View>
-  );
+    );
+  }
+  return <View pointerEvents="none" style={StyleSheet.absoluteFill}>{previousBiome && renderScene(previousBiome, false)}{renderScene(biome, true)}</View>;
 });

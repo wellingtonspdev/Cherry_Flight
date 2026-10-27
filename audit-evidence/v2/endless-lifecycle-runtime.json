@@ -1,0 +1,1850 @@
+{
+  "fixture": "Contiguous completion storage fixture, not twelve real-browser completions",
+  "before": {
+    "audio": {
+      "chapter": "yozakura",
+      "active": false,
+      "failures": 1,
+      "events": [
+        {
+          "event": "ui",
+          "at": 1793077280469
+        }
+      ],
+      "players": 10,
+      "preferences": {
+        "music": true,
+        "sfx": true,
+        "haptics": false
+      },
+      "music": {
+        "loaded": true,
+        "playing": false,
+        "time": 0,
+        "loop": true,
+        "volume": 0.35
+      },
+      "effects": [
+        {
+          "event": "ui",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "jump",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "score",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "collision",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "checkpoint",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "complete",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "unlock",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "pause",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "resume",
+          "loaded": true,
+          "playing": false
+        }
+      ]
+    },
+    "status": "READY",
+    "levelId": 10,
+    "endless": true,
+    "biome": "yozakura",
+    "score": 0,
+    "elapsed": 0,
+    "player": {
+      "x": 219,
+      "y": 153,
+      "velocity": 0
+    },
+    "pairs": [
+      {
+        "worldX": 928.4000000000001,
+        "x": 928.4000000000001,
+        "center": 177,
+        "previousCenter": 177,
+        "gapY": 130.98,
+        "gapSize": 92.04,
+        "width": 68,
+        "variant": 5,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077280744,
+        "id": "pair-0",
+        "epoch": 0
+      },
+      {
+        "worldX": 1358.8400000000001,
+        "x": 1358.8400000000001,
+        "center": 155.33449110540502,
+        "previousCenter": 177,
+        "gapY": 109.31449110540501,
+        "gapSize": 92.04,
+        "width": 68,
+        "variant": 2,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077280744,
+        "id": "pair-1",
+        "epoch": 0
+      },
+      {
+        "worldX": 1789.2800000000002,
+        "x": 1789.2800000000002,
+        "center": 165.09856648226923,
+        "previousCenter": 155.33449110540502,
+        "gapY": 119.07856648226922,
+        "gapSize": 92.04,
+        "width": 68,
+        "variant": 0,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077280744,
+        "id": "pair-2",
+        "epoch": 0
+      },
+      {
+        "worldX": 2219.7200000000003,
+        "x": 2219.7200000000003,
+        "center": 157.59295943303863,
+        "previousCenter": 165.09856648226923,
+        "gapY": 111.57295943303862,
+        "gapSize": 92.04,
+        "width": 68,
+        "variant": 4,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077280744,
+        "id": "pair-3",
+        "epoch": 0
+      },
+      {
+        "worldX": 2650.1600000000003,
+        "x": 2650.1600000000003,
+        "center": 174.88147194778182,
+        "previousCenter": 157.59295943303863,
+        "gapY": 128.8614719477818,
+        "gapSize": 92.04,
+        "width": 68,
+        "variant": 0,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077280744,
+        "id": "pair-4",
+        "epoch": 0
+      }
+    ],
+    "future": [
+      {
+        "worldX": 3080.6000000000004,
+        "x": 3080.6000000000004,
+        "center": 152.29949583895993,
+        "previousCenter": 174.88147194778182,
+        "gapY": 106.27949583895992,
+        "gapSize": 92.04,
+        "width": 68,
+        "variant": 1,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077280744
+      },
+      {
+        "worldX": 3511.0400000000004,
+        "x": 3511.0400000000004,
+        "center": 155.0904952109497,
+        "previousCenter": 152.29949583895993,
+        "gapY": 109.0704952109497,
+        "gapSize": 92.04,
+        "width": 68,
+        "variant": 0,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077280744
+      },
+      {
+        "worldX": 3941.4800000000005,
+        "x": 3941.4800000000005,
+        "center": 185.51996030749297,
+        "previousCenter": 155.0904952109497,
+        "gapY": 139.49996030749296,
+        "gapSize": 92.04,
+        "width": 68,
+        "variant": 2,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077280744
+      }
+    ],
+    "params": {
+      "gapSize": 92.04,
+      "speed": 422,
+      "spacing": 430.44,
+      "maxDelta": 57.94285714285715,
+      "topMargin": 42.48,
+      "bottomMargin": 42.48,
+      "width": 68,
+      "poolSize": 5,
+      "prewarmPairs": 3,
+      "targetScore": null
+    },
+    "rafActive": false,
+    "diagnostics": {
+      "frames": 0,
+      "rootRenders": 4,
+      "pairRenders": 10,
+      "pairMounts": 5,
+      "actorRenders": 2,
+      "longFrames": 0,
+      "maxFrameMs": 0,
+      "inputCount": 0
+    },
+    "metrics": [
+      {
+        "type": "pair_prepared",
+        "at": 1793077280744,
+        "worldX": 928.4000000000001,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077280744,
+        "worldX": 1358.8400000000001,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077280744,
+        "worldX": 1789.2800000000002,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077280744,
+        "worldX": 2219.7200000000003,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077280744,
+        "worldX": 2650.1600000000003,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077280744,
+        "worldX": 3080.6000000000004,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077280744,
+        "worldX": 3511.0400000000004,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077280744,
+        "worldX": 3941.4800000000005,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793077281832,
+        "id": "pair-0"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793077281832,
+        "id": "pair-0",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793077281832,
+        "id": "pair-1"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793077281832,
+        "id": "pair-1",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793077281832,
+        "id": "pair-2"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793077281832,
+        "id": "pair-2",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793077281832,
+        "id": "pair-3"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793077281832,
+        "id": "pair-3",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793077281832,
+        "id": "pair-4"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793077281832,
+        "id": "pair-4",
+        "epoch": 0
+      },
+      {
+        "type": "renderer_ready",
+        "at": 1793077281834,
+        "mountedPairs": 5,
+        "futurePrepared": 3
+      }
+    ],
+    "vectorStats": {
+      "parses": 80,
+      "parsesDuringPlay": 0,
+      "chapters": [
+        {
+          "biome": "first_bloom",
+          "start": 1793077280744,
+          "end": 1793077280808,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "sakura_garden",
+          "start": 1793077280808,
+          "end": 1793077280875,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "golden_bloom",
+          "start": 1793077280875,
+          "end": 1793077280930,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "yozakura",
+          "start": 1793077280930,
+          "end": 1793077280997,
+          "width": 844,
+          "height": 390
+        }
+      ]
+    }
+  },
+  "visualBefore": [
+    "none",
+    "matrix(1, 0, 0, 1, 0, -0.0713858)",
+    "matrix(1, 0, 0, 1, 219, 153)",
+    "none",
+    "none"
+  ],
+  "visualAfter": [
+    "none",
+    "matrix(1.00115, -0.380255, 0.324865, 0.855316, 0, 0)",
+    "matrix(1, 0, 0, 1, 219, 129.323)",
+    "none",
+    "none"
+  ],
+  "retries": [
+    {
+      "score": 0,
+      "y": 153,
+      "velocity": 0,
+      "elapsed": 0,
+      "pairs": 5
+    },
+    {
+      "score": 0,
+      "y": 153,
+      "velocity": 0,
+      "elapsed": 0,
+      "pairs": 5
+    },
+    {
+      "score": 0,
+      "y": 153,
+      "velocity": 0,
+      "elapsed": 0,
+      "pairs": 5
+    }
+  ],
+  "resized": {
+    "audio": {
+      "chapter": "yozakura",
+      "active": false,
+      "failures": 4,
+      "events": [
+        {
+          "event": "ui",
+          "at": 1793077280469
+        },
+        {
+          "event": "jump",
+          "at": 1793077282018
+        },
+        {
+          "event": "collision",
+          "at": 1793077283421
+        },
+        {
+          "event": "ui",
+          "at": 1793077283555
+        },
+        {
+          "event": "jump",
+          "at": 1793077283738
+        },
+        {
+          "event": "collision",
+          "at": 1793077284847
+        },
+        {
+          "event": "ui",
+          "at": 1793077284971
+        },
+        {
+          "event": "jump",
+          "at": 1793077285142
+        },
+        {
+          "event": "collision",
+          "at": 1793077286241
+        },
+        {
+          "event": "ui",
+          "at": 1793077286373
+        },
+        {
+          "event": "jump",
+          "at": 1793077286525
+        },
+        {
+          "event": "pause",
+          "at": 1793077286627
+        }
+      ],
+      "players": 10,
+      "preferences": {
+        "music": true,
+        "sfx": true,
+        "haptics": false
+      },
+      "music": {
+        "loaded": true,
+        "playing": false,
+        "time": 3.479108,
+        "loop": true,
+        "volume": 0.35
+      },
+      "effects": [
+        {
+          "event": "ui",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "jump",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "score",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "collision",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "checkpoint",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "complete",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "unlock",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "pause",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "resume",
+          "loaded": true,
+          "playing": false
+        }
+      ]
+    },
+    "status": "READY",
+    "levelId": 10,
+    "endless": true,
+    "biome": "yozakura",
+    "score": 0,
+    "elapsed": 0,
+    "player": {
+      "x": 250,
+      "y": 228,
+      "velocity": 0
+    },
+    "pairs": [
+      {
+        "worldX": 1056,
+        "x": 1056,
+        "center": 252,
+        "previousCenter": 252,
+        "gapY": 186.48000000000002,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 1,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829,
+        "id": "pair-0",
+        "epoch": 0
+      },
+      {
+        "worldX": 1545.6,
+        "x": 1545.6,
+        "center": 240.7622186794017,
+        "previousCenter": 252,
+        "gapY": 175.24221867940173,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 5,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829,
+        "id": "pair-1",
+        "epoch": 0
+      },
+      {
+        "worldX": 2035.1999999999998,
+        "x": 2035.1999999999998,
+        "center": 256.9085501988186,
+        "previousCenter": 240.7622186794017,
+        "gapY": 191.38855019881862,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 4,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829,
+        "id": "pair-2",
+        "epoch": 0
+      },
+      {
+        "worldX": 2524.7999999999997,
+        "x": 2524.7999999999997,
+        "center": 284.25093567980787,
+        "previousCenter": 256.9085501988186,
+        "gapY": 218.73093567980789,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 5,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829,
+        "id": "pair-3",
+        "epoch": 0
+      },
+      {
+        "worldX": 3014.3999999999996,
+        "x": 3014.3999999999996,
+        "center": 310.4446919438746,
+        "previousCenter": 284.25093567980787,
+        "gapY": 244.92469194387462,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 0,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829,
+        "id": "pair-4",
+        "epoch": 0
+      }
+    ],
+    "future": [
+      {
+        "worldX": 3503.9999999999995,
+        "x": 3503.9999999999995,
+        "center": 264.51286833970937,
+        "previousCenter": 310.4446919438746,
+        "gapY": 198.9928683397094,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 3,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829
+      },
+      {
+        "worldX": 3993.5999999999995,
+        "x": 3993.5999999999995,
+        "center": 313.37292463011516,
+        "previousCenter": 264.51286833970937,
+        "gapY": 247.85292463011518,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 5,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829
+      },
+      {
+        "worldX": 4483.2,
+        "x": 4483.2,
+        "center": 336.4944926046384,
+        "previousCenter": 313.37292463011516,
+        "gapY": 270.97449260463844,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 1,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829
+      }
+    ],
+    "params": {
+      "gapSize": 131.04,
+      "speed": 480,
+      "spacing": 489.6,
+      "maxDelta": 57.94285714285715,
+      "topMargin": 60.48,
+      "bottomMargin": 60.48,
+      "width": 68,
+      "poolSize": 5,
+      "prewarmPairs": 3,
+      "targetScore": null
+    },
+    "rafActive": false,
+    "diagnostics": {
+      "frames": 174,
+      "rootRenders": 36,
+      "pairRenders": 45,
+      "pairMounts": 5,
+      "actorRenders": 19,
+      "longFrames": 5,
+      "maxFrameMs": 166.5999999999999,
+      "inputCount": 4
+    },
+    "metrics": [
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 1056,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 1545.6,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 2035.1999999999998,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 2524.7999999999997,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 3014.3999999999996,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 3503.9999999999995,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 3993.5999999999995,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 4483.2,
+        "biome": "yozakura"
+      }
+    ],
+    "vectorStats": {
+      "parses": 96,
+      "parsesDuringPlay": 0,
+      "chapters": [
+        {
+          "biome": "first_bloom",
+          "start": 1793077280744,
+          "end": 1793077280808,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "sakura_garden",
+          "start": 1793077280808,
+          "end": 1793077280875,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "golden_bloom",
+          "start": 1793077280875,
+          "end": 1793077280930,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "yozakura",
+          "start": 1793077280930,
+          "end": 1793077280997,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "first_bloom",
+          "start": 1793077283566,
+          "end": 1793077283566,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "sakura_garden",
+          "start": 1793077283566,
+          "end": 1793077283566,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "golden_bloom",
+          "start": 1793077283566,
+          "end": 1793077283566,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "yozakura",
+          "start": 1793077283566,
+          "end": 1793077283566,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "first_bloom",
+          "start": 1793077284980,
+          "end": 1793077284981,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "sakura_garden",
+          "start": 1793077284981,
+          "end": 1793077284981,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "golden_bloom",
+          "start": 1793077284981,
+          "end": 1793077284981,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "yozakura",
+          "start": 1793077284981,
+          "end": 1793077284981,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "first_bloom",
+          "start": 1793077286384,
+          "end": 1793077286384,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "sakura_garden",
+          "start": 1793077286384,
+          "end": 1793077286384,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "golden_bloom",
+          "start": 1793077286384,
+          "end": 1793077286384,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "yozakura",
+          "start": 1793077286384,
+          "end": 1793077286384,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "first_bloom",
+          "start": 1793077286829,
+          "end": 1793077286829,
+          "width": 960,
+          "height": 540
+        },
+        {
+          "biome": "sakura_garden",
+          "start": 1793077286829,
+          "end": 1793077286840,
+          "width": 960,
+          "height": 540
+        },
+        {
+          "biome": "golden_bloom",
+          "start": 1793077286840,
+          "end": 1793077286852,
+          "width": 960,
+          "height": 540
+        },
+        {
+          "biome": "yozakura",
+          "start": 1793077286852,
+          "end": 1793077286852,
+          "width": 960,
+          "height": 540
+        }
+      ]
+    }
+  },
+  "exit1": {
+    "audio": {
+      "chapter": "first_bloom",
+      "active": false,
+      "failures": 4,
+      "events": [
+        {
+          "event": "ui",
+          "at": 1793077280469
+        },
+        {
+          "event": "jump",
+          "at": 1793077282018
+        },
+        {
+          "event": "collision",
+          "at": 1793077283421
+        },
+        {
+          "event": "ui",
+          "at": 1793077283555
+        },
+        {
+          "event": "jump",
+          "at": 1793077283738
+        },
+        {
+          "event": "collision",
+          "at": 1793077284847
+        },
+        {
+          "event": "ui",
+          "at": 1793077284971
+        },
+        {
+          "event": "jump",
+          "at": 1793077285142
+        },
+        {
+          "event": "collision",
+          "at": 1793077286241
+        },
+        {
+          "event": "ui",
+          "at": 1793077286373
+        },
+        {
+          "event": "jump",
+          "at": 1793077286525
+        },
+        {
+          "event": "pause",
+          "at": 1793077286627
+        }
+      ],
+      "players": 10,
+      "preferences": {
+        "music": true,
+        "sfx": true,
+        "haptics": false
+      },
+      "music": {
+        "loaded": false,
+        "playing": false,
+        "time": 0,
+        "loop": true,
+        "volume": 0.35
+      },
+      "effects": [
+        {
+          "event": "ui",
+          "loaded": false,
+          "playing": false
+        },
+        {
+          "event": "jump",
+          "loaded": false,
+          "playing": false
+        },
+        {
+          "event": "score",
+          "loaded": false,
+          "playing": false
+        },
+        {
+          "event": "collision",
+          "loaded": false,
+          "playing": false
+        },
+        {
+          "event": "checkpoint",
+          "loaded": false,
+          "playing": false
+        },
+        {
+          "event": "complete",
+          "loaded": false,
+          "playing": false
+        },
+        {
+          "event": "unlock",
+          "loaded": false,
+          "playing": false
+        },
+        {
+          "event": "pause",
+          "loaded": false,
+          "playing": false
+        },
+        {
+          "event": "resume",
+          "loaded": false,
+          "playing": false
+        }
+      ]
+    },
+    "status": "READY",
+    "levelId": 10,
+    "endless": true,
+    "biome": "yozakura",
+    "score": 0,
+    "elapsed": 0,
+    "player": {
+      "x": 250,
+      "y": 228,
+      "velocity": 0
+    },
+    "pairs": [
+      {
+        "worldX": 1056,
+        "x": 1056,
+        "center": 252,
+        "previousCenter": 252,
+        "gapY": 186.48000000000002,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 1,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829,
+        "id": "pair-0",
+        "epoch": 0
+      },
+      {
+        "worldX": 1545.6,
+        "x": 1545.6,
+        "center": 240.7622186794017,
+        "previousCenter": 252,
+        "gapY": 175.24221867940173,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 5,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829,
+        "id": "pair-1",
+        "epoch": 0
+      },
+      {
+        "worldX": 2035.1999999999998,
+        "x": 2035.1999999999998,
+        "center": 256.9085501988186,
+        "previousCenter": 240.7622186794017,
+        "gapY": 191.38855019881862,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 4,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829,
+        "id": "pair-2",
+        "epoch": 0
+      },
+      {
+        "worldX": 2524.7999999999997,
+        "x": 2524.7999999999997,
+        "center": 284.25093567980787,
+        "previousCenter": 256.9085501988186,
+        "gapY": 218.73093567980789,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 5,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829,
+        "id": "pair-3",
+        "epoch": 0
+      },
+      {
+        "worldX": 3014.3999999999996,
+        "x": 3014.3999999999996,
+        "center": 310.4446919438746,
+        "previousCenter": 284.25093567980787,
+        "gapY": 244.92469194387462,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 0,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829,
+        "id": "pair-4",
+        "epoch": 0
+      }
+    ],
+    "future": [
+      {
+        "worldX": 3503.9999999999995,
+        "x": 3503.9999999999995,
+        "center": 264.51286833970937,
+        "previousCenter": 310.4446919438746,
+        "gapY": 198.9928683397094,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 3,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829
+      },
+      {
+        "worldX": 3993.5999999999995,
+        "x": 3993.5999999999995,
+        "center": 313.37292463011516,
+        "previousCenter": 264.51286833970937,
+        "gapY": 247.85292463011518,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 5,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829
+      },
+      {
+        "worldX": 4483.2,
+        "x": 4483.2,
+        "center": 336.4944926046384,
+        "previousCenter": 313.37292463011516,
+        "gapY": 270.97449260463844,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 1,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829
+      }
+    ],
+    "params": {
+      "gapSize": 131.04,
+      "speed": 480,
+      "spacing": 489.6,
+      "maxDelta": 57.94285714285715,
+      "topMargin": 60.48,
+      "bottomMargin": 60.48,
+      "width": 68,
+      "poolSize": 5,
+      "prewarmPairs": 3,
+      "targetScore": null
+    },
+    "rafActive": false,
+    "diagnostics": {
+      "frames": 174,
+      "rootRenders": 37,
+      "pairRenders": 50,
+      "pairMounts": 5,
+      "actorRenders": 20,
+      "longFrames": 5,
+      "maxFrameMs": 166.5999999999999,
+      "inputCount": 4
+    },
+    "metrics": [
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 1056,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 1545.6,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 2035.1999999999998,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 2524.7999999999997,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 3014.3999999999996,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 3503.9999999999995,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 3993.5999999999995,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 4483.2,
+        "biome": "yozakura"
+      },
+      {
+        "type": "renderer_ready",
+        "at": 1793077286892,
+        "mountedPairs": 5,
+        "futurePrepared": 3
+      }
+    ],
+    "vectorStats": {
+      "parses": 96,
+      "parsesDuringPlay": 0,
+      "chapters": [
+        {
+          "biome": "first_bloom",
+          "start": 1793077280744,
+          "end": 1793077280808,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "sakura_garden",
+          "start": 1793077280808,
+          "end": 1793077280875,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "golden_bloom",
+          "start": 1793077280875,
+          "end": 1793077280930,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "yozakura",
+          "start": 1793077280930,
+          "end": 1793077280997,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "first_bloom",
+          "start": 1793077283566,
+          "end": 1793077283566,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "sakura_garden",
+          "start": 1793077283566,
+          "end": 1793077283566,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "golden_bloom",
+          "start": 1793077283566,
+          "end": 1793077283566,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "yozakura",
+          "start": 1793077283566,
+          "end": 1793077283566,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "first_bloom",
+          "start": 1793077284980,
+          "end": 1793077284981,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "sakura_garden",
+          "start": 1793077284981,
+          "end": 1793077284981,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "golden_bloom",
+          "start": 1793077284981,
+          "end": 1793077284981,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "yozakura",
+          "start": 1793077284981,
+          "end": 1793077284981,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "first_bloom",
+          "start": 1793077286384,
+          "end": 1793077286384,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "sakura_garden",
+          "start": 1793077286384,
+          "end": 1793077286384,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "golden_bloom",
+          "start": 1793077286384,
+          "end": 1793077286384,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "yozakura",
+          "start": 1793077286384,
+          "end": 1793077286384,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "first_bloom",
+          "start": 1793077286829,
+          "end": 1793077286829,
+          "width": 960,
+          "height": 540
+        },
+        {
+          "biome": "sakura_garden",
+          "start": 1793077286829,
+          "end": 1793077286840,
+          "width": 960,
+          "height": 540
+        },
+        {
+          "biome": "golden_bloom",
+          "start": 1793077286840,
+          "end": 1793077286852,
+          "width": 960,
+          "height": 540
+        },
+        {
+          "biome": "yozakura",
+          "start": 1793077286852,
+          "end": 1793077286852,
+          "width": 960,
+          "height": 540
+        }
+      ]
+    }
+  },
+  "exit2": {
+    "audio": {
+      "chapter": "first_bloom",
+      "active": false,
+      "failures": 4,
+      "events": [
+        {
+          "event": "ui",
+          "at": 1793077280469
+        },
+        {
+          "event": "jump",
+          "at": 1793077282018
+        },
+        {
+          "event": "collision",
+          "at": 1793077283421
+        },
+        {
+          "event": "ui",
+          "at": 1793077283555
+        },
+        {
+          "event": "jump",
+          "at": 1793077283738
+        },
+        {
+          "event": "collision",
+          "at": 1793077284847
+        },
+        {
+          "event": "ui",
+          "at": 1793077284971
+        },
+        {
+          "event": "jump",
+          "at": 1793077285142
+        },
+        {
+          "event": "collision",
+          "at": 1793077286241
+        },
+        {
+          "event": "ui",
+          "at": 1793077286373
+        },
+        {
+          "event": "jump",
+          "at": 1793077286525
+        },
+        {
+          "event": "pause",
+          "at": 1793077286627
+        }
+      ],
+      "players": 10,
+      "preferences": {
+        "music": true,
+        "sfx": true,
+        "haptics": false
+      },
+      "music": {
+        "loaded": false,
+        "playing": false,
+        "time": 0,
+        "loop": true,
+        "volume": 0.35
+      },
+      "effects": [
+        {
+          "event": "ui",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "jump",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "score",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "collision",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "checkpoint",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "complete",
+          "loaded": false,
+          "playing": false
+        },
+        {
+          "event": "unlock",
+          "loaded": false,
+          "playing": false
+        },
+        {
+          "event": "pause",
+          "loaded": false,
+          "playing": false
+        },
+        {
+          "event": "resume",
+          "loaded": false,
+          "playing": false
+        }
+      ]
+    },
+    "status": "READY",
+    "levelId": 10,
+    "endless": true,
+    "biome": "yozakura",
+    "score": 0,
+    "elapsed": 0,
+    "player": {
+      "x": 250,
+      "y": 228,
+      "velocity": 0
+    },
+    "pairs": [
+      {
+        "worldX": 1056,
+        "x": 1056,
+        "center": 252,
+        "previousCenter": 252,
+        "gapY": 186.48000000000002,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 1,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829,
+        "id": "pair-0",
+        "epoch": 0
+      },
+      {
+        "worldX": 1545.6,
+        "x": 1545.6,
+        "center": 240.7622186794017,
+        "previousCenter": 252,
+        "gapY": 175.24221867940173,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 5,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829,
+        "id": "pair-1",
+        "epoch": 0
+      },
+      {
+        "worldX": 2035.1999999999998,
+        "x": 2035.1999999999998,
+        "center": 256.9085501988186,
+        "previousCenter": 240.7622186794017,
+        "gapY": 191.38855019881862,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 4,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829,
+        "id": "pair-2",
+        "epoch": 0
+      },
+      {
+        "worldX": 2524.7999999999997,
+        "x": 2524.7999999999997,
+        "center": 284.25093567980787,
+        "previousCenter": 256.9085501988186,
+        "gapY": 218.73093567980789,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 5,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829,
+        "id": "pair-3",
+        "epoch": 0
+      },
+      {
+        "worldX": 3014.3999999999996,
+        "x": 3014.3999999999996,
+        "center": 310.4446919438746,
+        "previousCenter": 284.25093567980787,
+        "gapY": 244.92469194387462,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 0,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829,
+        "id": "pair-4",
+        "epoch": 0
+      }
+    ],
+    "future": [
+      {
+        "worldX": 3503.9999999999995,
+        "x": 3503.9999999999995,
+        "center": 264.51286833970937,
+        "previousCenter": 310.4446919438746,
+        "gapY": 198.9928683397094,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 3,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829
+      },
+      {
+        "worldX": 3993.5999999999995,
+        "x": 3993.5999999999995,
+        "center": 313.37292463011516,
+        "previousCenter": 264.51286833970937,
+        "gapY": 247.85292463011518,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 5,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829
+      },
+      {
+        "worldX": 4483.2,
+        "x": 4483.2,
+        "center": 336.4944926046384,
+        "previousCenter": 313.37292463011516,
+        "gapY": 270.97449260463844,
+        "gapSize": 131.04,
+        "width": 68,
+        "variant": 1,
+        "biome": "yozakura",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793077286829
+      }
+    ],
+    "params": {
+      "gapSize": 131.04,
+      "speed": 480,
+      "spacing": 489.6,
+      "maxDelta": 57.94285714285715,
+      "topMargin": 60.48,
+      "bottomMargin": 60.48,
+      "width": 68,
+      "poolSize": 5,
+      "prewarmPairs": 3,
+      "targetScore": null
+    },
+    "rafActive": false,
+    "diagnostics": {
+      "frames": 174,
+      "rootRenders": 37,
+      "pairRenders": 50,
+      "pairMounts": 5,
+      "actorRenders": 20,
+      "longFrames": 5,
+      "maxFrameMs": 166.5999999999999,
+      "inputCount": 4
+    },
+    "metrics": [
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 1056,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 1545.6,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 2035.1999999999998,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 2524.7999999999997,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 3014.3999999999996,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 3503.9999999999995,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 3993.5999999999995,
+        "biome": "yozakura"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793077286829,
+        "worldX": 4483.2,
+        "biome": "yozakura"
+      },
+      {
+        "type": "renderer_ready",
+        "at": 1793077286892,
+        "mountedPairs": 5,
+        "futurePrepared": 3
+      }
+    ],
+    "vectorStats": {
+      "parses": 96,
+      "parsesDuringPlay": 0,
+      "chapters": [
+        {
+          "biome": "first_bloom",
+          "start": 1793077280744,
+          "end": 1793077280808,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "sakura_garden",
+          "start": 1793077280808,
+          "end": 1793077280875,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "golden_bloom",
+          "start": 1793077280875,
+          "end": 1793077280930,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "yozakura",
+          "start": 1793077280930,
+          "end": 1793077280997,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "first_bloom",
+          "start": 1793077283566,
+          "end": 1793077283566,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "sakura_garden",
+          "start": 1793077283566,
+          "end": 1793077283566,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "golden_bloom",
+          "start": 1793077283566,
+          "end": 1793077283566,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "yozakura",
+          "start": 1793077283566,
+          "end": 1793077283566,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "first_bloom",
+          "start": 1793077284980,
+          "end": 1793077284981,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "sakura_garden",
+          "start": 1793077284981,
+          "end": 1793077284981,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "golden_bloom",
+          "start": 1793077284981,
+          "end": 1793077284981,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "yozakura",
+          "start": 1793077284981,
+          "end": 1793077284981,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "first_bloom",
+          "start": 1793077286384,
+          "end": 1793077286384,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "sakura_garden",
+          "start": 1793077286384,
+          "end": 1793077286384,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "golden_bloom",
+          "start": 1793077286384,
+          "end": 1793077286384,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "yozakura",
+          "start": 1793077286384,
+          "end": 1793077286384,
+          "width": 844,
+          "height": 390
+        },
+        {
+          "biome": "first_bloom",
+          "start": 1793077286829,
+          "end": 1793077286829,
+          "width": 960,
+          "height": 540
+        },
+        {
+          "biome": "sakura_garden",
+          "start": 1793077286829,
+          "end": 1793077286840,
+          "width": 960,
+          "height": 540
+        },
+        {
+          "biome": "golden_bloom",
+          "start": 1793077286840,
+          "end": 1793077286852,
+          "width": 960,
+          "height": 540
+        },
+        {
+          "biome": "yozakura",
+          "start": 1793077286852,
+          "end": 1793077286852,
+          "width": 960,
+          "height": 540
+        }
+      ]
+    }
+  },
+  "errors": []
+}

@@ -1,0 +1,16 @@
+(node:32940) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/Cherry_Flight_Release54/src/game/engineV2.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\Cherry_Flight_Release54\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"level":1,"status":"LEVEL_COMPLETE","score":8,"elapsed":15.416666666667012,"inputs":22,"frames":925,"collision":null}
+{"level":2,"status":"LEVEL_COMPLETE","score":10,"elapsed":17.56666666666695,"inputs":26,"frames":1054,"collision":null}
+{"level":3,"status":"LEVEL_COMPLETE","score":12,"elapsed":19.266666666666854,"inputs":29,"frames":1156,"collision":null}
+{"level":4,"status":"LEVEL_COMPLETE","score":12,"elapsed":18.516666666666897,"inputs":26,"frames":1111,"collision":null}
+{"level":5,"status":"LEVEL_COMPLETE","score":14,"elapsed":19.83333333333349,"inputs":30,"frames":1190,"collision":null}
+{"level":6,"status":"LEVEL_COMPLETE","score":15,"elapsed":19.90000000000015,"inputs":31,"frames":1194,"collision":null}
+{"level":7,"status":"LEVEL_COMPLETE","score":15,"elapsed":19.150000000000194,"inputs":28,"frames":1149,"collision":null}
+{"level":8,"status":"LEVEL_COMPLETE","score":17,"elapsed":20.000000000000146,"inputs":36,"frames":1200,"collision":null}
+{"level":9,"status":"LEVEL_COMPLETE","score":18,"elapsed":19.916666666666817,"inputs":30,"frames":1195,"collision":null}
+{"level":10,"status":"LEVEL_COMPLETE","score":18,"elapsed":19.183333333333525,"inputs":32,"frames":1151,"collision":null}
+{"level":11,"status":"LEVEL_COMPLETE","score":20,"elapsed":20.033333333333477,"inputs":32,"frames":1202,"collision":null}
+{"level":12,"status":"LEVEL_COMPLETE","score":22,"elapsed":20.36666666666679,"inputs":33,"frames":1222,"collision":null}

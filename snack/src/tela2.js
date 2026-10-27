@@ -92,7 +92,7 @@ export default function Tela2({ navigation }) {
                 <View style={styles.ruleTextGroup}>
                   <Text style={styles.ruleTitle}>Every gap = +1 point</Text>
                   <Text style={styles.ruleDesc}>
-                    Cada passagem segura vale +1 ponto e faz o cenário evoluir da alvorada até a noite Yozakura!
+                    Cada passagem segura vale +1 ponto. Complete a meta para desbloquear o próximo nível; Continue retorna ao checkpoint salvo.
                   </Text>
                 </View>
               </View>
@@ -101,17 +101,17 @@ export default function Tela2({ navigation }) {
             {/* Phase Progression Preview */}
             <View style={styles.phasesRow}>
               <View style={[styles.phasePill, { backgroundColor: '#BFE8EF' }]}>
-                <Text style={styles.phasePillText}>0+ Dawn</Text>
+                <Text style={styles.phasePillText}>1–3 First Bloom</Text>
               </View>
               <View style={[styles.phasePill, { backgroundColor: '#FFE3EA' }]}>
-                <Text style={styles.phasePillText}>10+ Sakura</Text>
+                <Text style={styles.phasePillText}>4–6 Sakura</Text>
               </View>
               <View style={[styles.phasePill, { backgroundColor: '#F6A58A' }]}>
-                <Text style={styles.phasePillText}>20+ Sunset</Text>
+                <Text style={styles.phasePillText}>7–9 Golden</Text>
               </View>
               <View style={[styles.phasePill, { backgroundColor: '#292847' }]}>
                 <Text style={[styles.phasePillText, { color: colors.cream50 }]}>
-                  30+ Night
+                  10–12 Yozakura
                 </Text>
               </View>
             </View>
@@ -122,14 +122,14 @@ export default function Tela2({ navigation }) {
                 title="PLAY"
                 variant="primary"
                 accessibilityLabel="Começar a jogar agora"
-                onPress={() => navigation.navigate('Game')}
+                onPress={() => navigation.navigate('Game', { levelId: 1, mode: 'campaign' })}
                 style={styles.btnSpacing}
               />
               <CherryButton
                 title="HOME"
                 variant="secondary"
                 accessibilityLabel="Voltar para a tela inicial"
-                onPress={() => navigation.navigate('Home')}
+                onPress={() => navigation.popToTop()}
                 style={styles.btnSpacing}
               />
             </View>

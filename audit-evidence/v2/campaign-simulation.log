@@ -1,0 +1,39 @@
+(node:28096) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/Cherry_Flight_Release54/src/game/engineV2.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\Cherry_Flight_Release54\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"attempt":1,"level":1,"status":"LEVEL_COMPLETE","score":8,"elapsed":15.416666666667012,"inputs":21,"collision":null}
+{"attempt":1,"level":2,"status":"LEVEL_COMPLETE","score":10,"elapsed":17.56666666666695,"inputs":24,"collision":null}
+{"attempt":1,"level":3,"status":"LEVEL_COMPLETE","score":12,"elapsed":19.266666666666854,"inputs":27,"collision":null}
+{"attempt":1,"level":4,"status":"LEVEL_COMPLETE","score":12,"elapsed":18.516666666666897,"inputs":25,"collision":null}
+{"attempt":1,"level":5,"status":"LEVEL_COMPLETE","score":14,"elapsed":19.83333333333349,"inputs":27,"collision":null}
+{"attempt":1,"level":6,"status":"LEVEL_COMPLETE","score":15,"elapsed":19.90000000000015,"inputs":28,"collision":null}
+{"attempt":1,"level":7,"status":"LEVEL_COMPLETE","score":15,"elapsed":19.150000000000194,"inputs":27,"collision":null}
+{"attempt":1,"level":8,"status":"LEVEL_COMPLETE","score":17,"elapsed":20.000000000000146,"inputs":28,"collision":null}
+{"attempt":1,"level":9,"status":"LEVEL_COMPLETE","score":18,"elapsed":19.916666666666817,"inputs":28,"collision":null}
+{"attempt":1,"level":10,"status":"LEVEL_COMPLETE","score":18,"elapsed":19.183333333333525,"inputs":29,"collision":null}
+{"attempt":1,"level":11,"status":"LEVEL_COMPLETE","score":20,"elapsed":20.033333333333477,"inputs":29,"collision":null}
+{"attempt":1,"level":12,"status":"GAME_OVER","score":4,"elapsed":5.18333333333332,"inputs":8,"collision":"topBranch"}
+{"attempt":2,"level":12,"status":"GAME_OVER","score":5,"elapsed":6.11666666666665,"inputs":9,"collision":"topBranch"}
+{"attempt":3,"level":12,"status":"GAME_OVER","score":4,"elapsed":5.166666666666654,"inputs":8,"collision":"topBranch"}
+{"attempt":4,"level":12,"status":"GAME_OVER","score":7,"elapsed":7.883333333333311,"inputs":12,"collision":"topBranch"}
+{"attempt":5,"level":12,"status":"GAME_OVER","score":1,"elapsed":2.533333333333329,"inputs":4,"collision":"topBranch"}
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Controller failed to complete this level within five independent layouts
+    at file:///D:/Cherry_Flight_Release54/audit-evidence/v2/campaign-simulation.mjs:19:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.0

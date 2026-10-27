@@ -12,6 +12,9 @@ import Tela1 from './src/tela1';
 import Tela2 from './src/tela2';
 import Tela3 from './src/tela3';
 import Tela4 from './src/tela4';
+import { ProgressProvider } from './src/game/ProgressProviderV2';
+import LevelSelectV2 from './src/components/LevelSelectV2';
+import SettingsV2 from './src/components/SettingsV2';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +28,7 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
+      <ProgressProvider>
       <View style={styles.mobileRoot}>
         {isPortraitWeb ? (
           <View style={styles.orientationNotice}>
@@ -47,10 +51,13 @@ export default function App() {
               <Stack.Screen name="Instructions" component={Tela2} />
               <Stack.Screen name="Game" component={Tela3} />
               <Stack.Screen name="Credits" component={Tela4} />
+              <Stack.Screen name="LevelSelect" component={LevelSelectV2} />
+              <Stack.Screen name="Settings" component={SettingsV2} />
             </Stack.Navigator>
           </NavigationContainer>
         )}
       </View>
+      </ProgressProvider>
     </SafeAreaProvider>
   );
 }

@@ -20,6 +20,9 @@ function walk(directory, relative = '') {
   }
 }
 walk(path.join(root, 'src'), 'src');
+// The Git importer rejects binary uploads. Keep the same original PCM audio inline in its text package.
+const audio = fs.readFileSync(path.join(root, 'src/game/audioSourcesV2.js'), 'utf8').replace(/require\('\.\.\/\.\.\/(assets\/v2\/audio\/[^']+)'\)/g, (_, name) => `{ uri: 'data:audio/wav;base64,${fs.readFileSync(path.join(root, name)).toString('base64')}' }`);
+files.set('src/game/audioSourcesV2.js', audio);
 files.set('package.json', JSON.stringify({
   name: 'cherry-bloom-snack',
   version: pkg.version,
@@ -29,7 +32,7 @@ files.set('package.json', JSON.stringify({
   dependencies: pkg.dependencies,
 }, null, 2) + '\n');
 files.set('app.json', JSON.stringify(config, null, 2) + '\n');
-files.set('README.md', `# Cherry Bloom — importação SDK54\n\nPacote gerado por \`node scripts/prepare-snack.mjs\` a partir da entrega SDK54. Contém o jogo completo: App, quatro telas, componentes, física, navegação e tema. Os desenhos de runtime são SVG/Views; não exigem os PNGs/WAVs de referência.\n\nImportar no Snack: https://github.com/wellingtonspdev/Cherry_Flight/tree/main/snack\n\nNão editar estas cópias manualmente. Código, arte de referência, PWA e auditoria completos ficam na raiz do repositório.\n`);
+files.set('README.md', `# Cherry Bloom — importação SDK54\n\nPacote gerado por \`node scripts/prepare-snack.mjs\` a partir da entrega SDK54. Contém o jogo completo: App, quatro telas, componentes, física, navegação e tema. A arte SVG V2 e o PCM original de quatro músicas/nove SFX ficam inline em JavaScript. O pacote inclui campanha, checkpoints, Endless, configurações e todas as telas; dispensa upload binário pelo importador Git.\n\nImportar no Snack: https://github.com/wellingtonspdev/Cherry_Flight/tree/main/snack\n\nNão editar estas cópias manualmente. Código, arte de referência, PWA e auditoria completos ficam na raiz do repositório.\n`);
 
 const normalize = text => text.replace(/\r\n/g, '\n');
 for (const [name, contents] of files) {

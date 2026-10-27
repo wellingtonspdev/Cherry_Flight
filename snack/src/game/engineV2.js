@@ -46,12 +46,17 @@ function prepareFuture(round, random) {
   const previousCenter = round.lastCenter;
   const min = Math.max(centerMin, previousCenter - p.maxDelta);
   const max = Math.min(centerMax, previousCenter + p.maxDelta);
-  const center = clamp(min + clamp(random(), 0, 1) * Math.max(0, max - min), centerMin, centerMax);
+  const candidate = min + clamp(random(), 0, 1) * Math.max(0, max - min);
+  // The mandatory opening jump needs a predictable first gate before narrow advanced gaps.
+  const center = clamp(round.nextWorldX === round.width * 1.1 ? previousCenter : candidate, centerMin, centerMax);
   round.lastCenter = center;
+  const candidateVariant = Math.floor(clamp(random(), 0, 0.999999) * 6);
+  const variant = candidateVariant === round.lastVariant ? (candidateVariant + 1) % 6 : candidateVariant;
+  round.lastVariant = variant;
   const pair = {
     worldX: round.nextWorldX, x: round.nextWorldX - round.distance,
     center, previousCenter, gapY: center - p.gapSize / 2, gapSize: p.gapSize,
-    width: p.width, variant: Math.floor(clamp(random(), 0, 0.999999) * 6),
+    width: p.width, variant,
     biome: round.biome, scored: false, visible: false, preparedAt: Date.now(),
   };
   round.nextWorldX += p.spacing;
@@ -69,7 +74,7 @@ export function createRound({ width, height, levelId = 1, endless = false }, ran
     status: 'READY', score: 0, elapsed: 0, distance: 0, collision: null,
     player: { x: Math.round(width * GAME.playerXRatio), y: height * 0.5 - GAME.playerSize / 2, velocity: 0 },
     pairs: [], future: [], events: [], metrics: [],
-    lastCenter: height / 2, nextWorldX: width * 0.72, ramp: 0,
+    lastCenter: height / 2, nextWorldX: width * 1.1, ramp: 0,
   };
   for (let i = 0; i < params.poolSize; i++) round.pairs.push({ ...prepareFuture(round, random), id: `pair-${i}`, epoch: 0 });
   for (let i = 0; i < params.prewarmPairs; i++) round.future.push(prepareFuture(round, random));

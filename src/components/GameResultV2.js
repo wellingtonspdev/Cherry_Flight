@@ -3,7 +3,7 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import CherryButton from './CherryButton';
 import { colors, radius } from '../theme/theme';
 
-export default function GameResultV2({ status, score, level, onRetry, onHome, onNext, checkpointSaved = false }) {
+export default function GameResultV2({ status, score, level, onRetry, onHome, onNext, checkpointSaved = false, saving = false, warning = '' }) {
   const complete = status === 'LEVEL_COMPLETE', paused = status === 'PAUSED';
   return <View style={styles.overlay} accessibilityViewIsModal>
     <View style={styles.card}>
@@ -11,9 +11,11 @@ export default function GameResultV2({ status, score, level, onRetry, onHome, on
         <Text accessibilityRole="header" style={styles.title}>{complete ? `LEVEL ${level.id} COMPLETE` : paused ? 'PAUSED' : 'GAME OVER'}</Text>
         <Text style={styles.chapter}>{level.chapterName} · {score}{complete ? ` / ${level.targetScore}` : ''} pontos</Text>
         {complete && checkpointSaved && <Text style={styles.checkpoint}>Checkpoint salvo no início do próximo nível.</Text>}
+        {!!warning && <Text style={styles.chapter}>{warning}</Text>}
+        {saving && <Text style={styles.chapter}>Salvando progresso…</Text>}
         <View style={styles.actions}>
-          {complete ? <CherryButton title={level.id === 12 ? 'ENDLESS BLOOM' : 'NEXT LEVEL'} accessibilityLabel="Jogar próximo nível" onPress={onNext} style={styles.button} /> : <CherryButton title={paused ? 'RESUME' : 'RETRY'} accessibilityLabel={paused ? 'Retomar partida' : 'Jogar novamente'} onPress={onRetry} style={styles.button} />}
-          <CherryButton title="HOME" variant="secondary" accessibilityLabel="Voltar para a tela inicial" onPress={onHome} style={styles.button} />
+          {complete ? <CherryButton disabled={saving} title={level.id === 12 ? 'ENDLESS BLOOM' : 'NEXT LEVEL'} accessibilityLabel="Jogar próximo nível" onPress={onNext} style={styles.button} /> : <CherryButton disabled={saving} title={paused ? 'RESUME' : 'RETRY'} accessibilityLabel={paused ? 'Retomar partida' : 'Jogar novamente'} onPress={onRetry} style={styles.button} />}
+          <CherryButton disabled={saving} title="HOME" variant="secondary" accessibilityLabel="Voltar para a tela inicial" onPress={onHome} style={styles.button} />
         </View>
       </ScrollView>
     </View>

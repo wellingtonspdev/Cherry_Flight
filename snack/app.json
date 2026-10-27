@@ -2,7 +2,7 @@
   "expo": {
     "name": "Cherry Bloom",
     "slug": "cherry-bloom",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "orientation": "landscape",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
@@ -25,6 +25,16 @@
       "shortName": "Cherry Bloom",
       "backgroundColor": "#FFF8F2",
       "themeColor": "#D91E36"
-    }
+    },
+    "plugins": [
+      [
+        "expo-audio",
+        {
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ],
+      "expo-asset"
+    ]
   }
 }

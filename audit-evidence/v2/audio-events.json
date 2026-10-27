@@ -1,0 +1,375 @@
+{
+  "audioEvents": {
+    "chapter": "first_bloom",
+    "active": false,
+    "failures": 3,
+    "events": [
+      {
+        "event": "ui",
+        "at": 1793076451964
+      },
+      {
+        "event": "ui",
+        "at": 1793076452407
+      },
+      {
+        "event": "jump",
+        "at": 1793076453631
+      },
+      {
+        "event": "pause",
+        "at": 1793076453826
+      },
+      {
+        "event": "ui",
+        "at": 1793076453946
+      },
+      {
+        "event": "resume",
+        "at": 1793076453947
+      },
+      {
+        "event": "collision",
+        "at": 1793076454867
+      }
+    ],
+    "players": 10,
+    "preferences": {
+      "music": true,
+      "sfx": true,
+      "haptics": true
+    },
+    "music": {
+      "loaded": true,
+      "playing": false,
+      "time": 0.391268,
+      "loop": true,
+      "volume": 0.35
+    },
+    "effects": [
+      {
+        "event": "ui",
+        "loaded": true,
+        "playing": false
+      },
+      {
+        "event": "jump",
+        "loaded": true,
+        "playing": false
+      },
+      {
+        "event": "score",
+        "loaded": true,
+        "playing": false
+      },
+      {
+        "event": "collision",
+        "loaded": true,
+        "playing": true
+      },
+      {
+        "event": "checkpoint",
+        "loaded": true,
+        "playing": false
+      },
+      {
+        "event": "complete",
+        "loaded": true,
+        "playing": false
+      },
+      {
+        "event": "unlock",
+        "loaded": true,
+        "playing": false
+      },
+      {
+        "event": "pause",
+        "loaded": true,
+        "playing": false
+      },
+      {
+        "event": "resume",
+        "loaded": true,
+        "playing": false
+      }
+    ]
+  },
+  "pausedAudio": {
+    "chapter": "first_bloom",
+    "active": false,
+    "failures": 3,
+    "events": [
+      {
+        "event": "ui",
+        "at": 1793076451964
+      },
+      {
+        "event": "ui",
+        "at": 1793076452407
+      },
+      {
+        "event": "jump",
+        "at": 1793076453631
+      },
+      {
+        "event": "pause",
+        "at": 1793076453826
+      }
+    ],
+    "players": 10,
+    "preferences": {
+      "music": true,
+      "sfx": true,
+      "haptics": true
+    },
+    "music": {
+      "loaded": true,
+      "playing": false,
+      "time": 0,
+      "loop": true,
+      "volume": 0.35
+    },
+    "effects": [
+      {
+        "event": "ui",
+        "loaded": true,
+        "playing": false
+      },
+      {
+        "event": "jump",
+        "loaded": false,
+        "playing": false
+      },
+      {
+        "event": "score",
+        "loaded": true,
+        "playing": false
+      },
+      {
+        "event": "collision",
+        "loaded": true,
+        "playing": false
+      },
+      {
+        "event": "checkpoint",
+        "loaded": true,
+        "playing": false
+      },
+      {
+        "event": "complete",
+        "loaded": true,
+        "playing": false
+      },
+      {
+        "event": "unlock",
+        "loaded": true,
+        "playing": false
+      },
+      {
+        "event": "pause",
+        "loaded": false,
+        "playing": true
+      },
+      {
+        "event": "resume",
+        "loaded": true,
+        "playing": false
+      }
+    ]
+  },
+  "completedAudio": {
+    "chapter": "first_bloom",
+    "active": false,
+    "failures": 1,
+    "events": [
+      {
+        "event": "jump",
+        "at": 1793076433700
+      },
+      {
+        "event": "jump",
+        "at": 1793076434825
+      },
+      {
+        "event": "jump",
+        "at": 1793076435554
+      },
+      {
+        "event": "jump",
+        "at": 1793076436312
+      },
+      {
+        "event": "score",
+        "at": 1793076436615
+      },
+      {
+        "event": "jump",
+        "at": 1793076436986
+      },
+      {
+        "event": "jump",
+        "at": 1793076437722
+      },
+      {
+        "event": "score",
+        "at": 1793076438436
+      },
+      {
+        "event": "jump",
+        "at": 1793076438557
+      },
+      {
+        "event": "jump",
+        "at": 1793076439323
+      },
+      {
+        "event": "jump",
+        "at": 1793076440047
+      },
+      {
+        "event": "score",
+        "at": 1793076440259
+      },
+      {
+        "event": "jump",
+        "at": 1793076440843
+      },
+      {
+        "event": "jump",
+        "at": 1793076441565
+      },
+      {
+        "event": "score",
+        "at": 1793076442103
+      },
+      {
+        "event": "jump",
+        "at": 1793076442370
+      },
+      {
+        "event": "jump",
+        "at": 1793076443096
+      },
+      {
+        "event": "jump",
+        "at": 1793076443836
+      },
+      {
+        "event": "score",
+        "at": 1793076443917
+      },
+      {
+        "event": "jump",
+        "at": 1793076444457
+      },
+      {
+        "event": "jump",
+        "at": 1793076445216
+      },
+      {
+        "event": "score",
+        "at": 1793076445741
+      },
+      {
+        "event": "jump",
+        "at": 1793076445835
+      },
+      {
+        "event": "jump",
+        "at": 1793076446598
+      },
+      {
+        "event": "jump",
+        "at": 1793076447321
+      },
+      {
+        "event": "score",
+        "at": 1793076447573
+      },
+      {
+        "event": "jump",
+        "at": 1793076448076
+      },
+      {
+        "event": "jump",
+        "at": 1793076448819
+      },
+      {
+        "event": "score",
+        "at": 1793076449396
+      },
+      {
+        "event": "complete",
+        "at": 1793076449442
+      },
+      {
+        "event": "checkpoint",
+        "at": 1793076449470
+      },
+      {
+        "event": "unlock",
+        "at": 1793076449470
+      }
+    ],
+    "players": 10,
+    "preferences": {
+      "music": true,
+      "sfx": true,
+      "haptics": true
+    },
+    "music": {
+      "loaded": true,
+      "playing": false,
+      "time": 4.947533,
+      "loop": true,
+      "volume": 0.35
+    },
+    "effects": [
+      {
+        "event": "ui",
+        "loaded": true,
+        "playing": false
+      },
+      {
+        "event": "jump",
+        "loaded": true,
+        "playing": false
+      },
+      {
+        "event": "score",
+        "loaded": true,
+        "playing": false
+      },
+      {
+        "event": "collision",
+        "loaded": true,
+        "playing": false
+      },
+      {
+        "event": "checkpoint",
+        "loaded": true,
+        "playing": false
+      },
+      {
+        "event": "complete",
+        "loaded": true,
+        "playing": false
+      },
+      {
+        "event": "unlock",
+        "loaded": true,
+        "playing": true
+      },
+      {
+        "event": "pause",
+        "loaded": true,
+        "playing": false
+      },
+      {
+        "event": "resume",
+        "loaded": true,
+        "playing": false
+      }
+    ]
+  }
+}

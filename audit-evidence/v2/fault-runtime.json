@@ -1,0 +1,217 @@
+[
+  {
+    "fault": "corrupt",
+    "before": {
+      "status": "READY",
+      "levelId": 1
+    },
+    "after": {
+      "status": "PLAYING",
+      "player": {
+        "x": 219,
+        "y": 119.28477781409995,
+        "velocity": -285.12809999999985
+      },
+      "audio": {
+        "chapter": "first_bloom",
+        "active": true,
+        "failures": 1,
+        "events": [
+          {
+            "event": "ui",
+            "at": 1793076510108
+          },
+          {
+            "event": "jump",
+            "at": 1793076511466
+          }
+        ],
+        "players": 10,
+        "preferences": {
+          "music": true,
+          "sfx": true,
+          "haptics": true
+        },
+        "music": {
+          "loaded": true,
+          "playing": true,
+          "time": 0,
+          "loop": true,
+          "volume": 0.35
+        },
+        "effects": [
+          {
+            "event": "ui",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "jump",
+            "loaded": false,
+            "playing": true
+          },
+          {
+            "event": "score",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "collision",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "checkpoint",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "complete",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "unlock",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "pause",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "resume",
+            "loaded": true,
+            "playing": false
+          }
+        ]
+      }
+    },
+    "errors": []
+  },
+  {
+    "fault": "audio",
+    "before": {
+      "status": "READY",
+      "levelId": 1
+    },
+    "after": {
+      "status": "PLAYING",
+      "player": {
+        "x": 219,
+        "y": 114.66366900000003,
+        "velocity": -267.5700000000001
+      },
+      "audio": {
+        "chapter": "first_bloom",
+        "active": true,
+        "failures": 20,
+        "events": [],
+        "players": 0,
+        "preferences": {
+          "music": true,
+          "sfx": true,
+          "haptics": true
+        },
+        "music": null,
+        "effects": []
+      }
+    },
+    "errors": []
+  },
+  {
+    "fault": "quota",
+    "before": {
+      "status": "READY",
+      "levelId": 1
+    },
+    "after": {
+      "status": "PLAYING",
+      "player": {
+        "x": 219,
+        "y": 114.71452625250001,
+        "velocity": -267.76950000000005
+      },
+      "audio": {
+        "chapter": "first_bloom",
+        "active": true,
+        "failures": 1,
+        "events": [
+          {
+            "event": "ui",
+            "at": 1793076516231
+          },
+          {
+            "event": "jump",
+            "at": 1793076517354
+          }
+        ],
+        "players": 10,
+        "preferences": {
+          "music": true,
+          "sfx": true,
+          "haptics": true
+        },
+        "music": {
+          "loaded": true,
+          "playing": true,
+          "time": 0,
+          "loop": true,
+          "volume": 0.35
+        },
+        "effects": [
+          {
+            "event": "ui",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "jump",
+            "loaded": false,
+            "playing": true
+          },
+          {
+            "event": "score",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "collision",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "checkpoint",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "complete",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "unlock",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "pause",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "resume",
+            "loaded": true,
+            "playing": false
+          }
+        ]
+      }
+    },
+    "errors": []
+  },
+  {
+    "settingsReload": "PASS"
+  }
+]

@@ -1,0 +1,100 @@
+env: load .env.local
+env: export VERCEL_OIDC_TOKEN
+Starting Metro Bundler
+Android node_modules\expo\AppEntry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+iOS node_modules\expo\AppEntry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+| (node:36528) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+Android node_modules\expo\AppEntry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+iOS node_modules\expo\AppEntry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+| (Use `node --trace-warnings ...` to show where the warning was created)
+Android node_modules\expo\AppEntry.js ░░░░░░░░░░░░░░░░  1.0% (1/1)
+iOS node_modules\expo\AppEntry.js ░░░░░░░░░░░░░░░░  1.0% (1/3)
+| (node:31452) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+Android node_modules\expo\AppEntry.js ░░░░░░░░░░░░░░░░  1.0% (1/1)
+iOS node_modules\expo\AppEntry.js ░░░░░░░░░░░░░░░░  1.0% (1/3)
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:15892) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+Android node_modules\expo\AppEntry.js ▓▓▓▓░░░░░░░░░░░░ 26.1% ( 45/108)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓░░░░░░░░░░░ 32.2% (38/67)
+| (node:13624) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:27380) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:15888) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:36168) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:33624) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:3088) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓░░░░░░░░░ 44.7% (129/279)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓░░░░░░░░░░░ 32.7% ( 71/144)
+| (node:26716) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓░░░░░░░░░ 44.7% (177/354)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓░░░░░░░░░░░ 32.7% (141/287)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓░░░░░░░░░ 44.7% (209/464)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓░░░░░░░░░░░ 32.7% (149/290)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓░░░░░░░░░ 44.7% (253/517)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓░░░░░░░░░░░ 32.7% (149/290)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓░░░░░░░░░ 44.7% (280/536)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓░░░░░░░░░░░ 32.7% (239/422)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓░░░░░░░░░ 44.7% (340/571)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓░░░░░░░░░░░ 35.0% (290/547)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓░░░░░░░░░ 46.7% (474/699)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓░░░░░░░░░░░ 35.0% (297/599)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓░░░░░░░░░ 46.8% (520/760)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓░░░░░░░░░░░ 35.0% (297/599)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓░░░░░░░░░ 48.8% (543/777)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓▓░░░░░░░░░░ 39.9% (490/776)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 61.5% (650/829)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓░░░░░░░░░ 48.8% (544/779)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 76.8% (766/874)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 53.9% (599/816)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 94.7% (872/898)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 89.4% (837/885)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 98.1% (914/923)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 97.9% (918/928)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.1% (956/981)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.1% (936/947)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.8% (991/992)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (994/994)
+Android Bundled 84867ms node_modules\expo\AppEntry.js (992 modules)
+Android node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.8% (991/992)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (994/994)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (994/994)
+iOS Bundled 93109ms node_modules\expo\AppEntry.js (994 modules)
+iOS node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (994/994)
+
+› Assets (37):
+assets\v2\audio\checkpoint.wav (21.2 kB)
+assets\v2\audio\collision.wav (15.9 kB)
+assets\v2\audio\complete.wav (21.2 kB)
+assets\v2\audio\first_bloom.wav (226 kB)
+assets\v2\audio\golden_bloom.wav (226 kB)
+assets\v2\audio\jump.wav (6.66 kB)
+assets\v2\audio\pause.wav (10.6 kB)
+assets\v2\audio\resume.wav (10.6 kB)
+assets\v2\audio\sakura_garden.wav (226 kB)
+assets\v2\audio\score.wav (6.66 kB)
+assets\v2\audio\ui.wav (3.35 kB)
+assets\v2\audio\unlock.wav (21.2 kB)
+assets\v2\audio\yozakura.wav (296 kB)
+node_modules\@react-navigation\elements\lib\module\assets\back-icon-mask.png (653 B)
+node_modules\@react-navigation\elements\lib\module\assets\back-icon.png (8 variations | 359 B)
+node_modules\@react-navigation\elements\lib\module\assets\clear-icon.png (4 variations | 425 B)
+node_modules\@react-navigation\elements\lib\module\assets\close-icon.png (4 variations | 235 B)
+node_modules\@react-navigation\elements\lib\module\assets\search-icon.png (7 variations | 592 B)
+
+› android bundles (1):
+_expo/static/js/android/AppEntry-ecc2733e6921cf907ec0862397b0a53b.hbc (2.74 MB)
+
+› ios bundles (1):
+_expo/static/js/ios/AppEntry-639a76f592f092263c2d980ba68eb6d5.hbc (2.73 MB)
+
+› Files (1):
+metadata.json (4.34 kB)
+
+Exported: dist-native-v2

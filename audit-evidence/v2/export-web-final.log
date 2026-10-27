@@ -1,0 +1,43 @@
+
+> cherry-bloom@2.0.0 build:web
+> expo export --platform web --output-dir dist && node scripts/prepare-pwa.mjs
+
+env: load .env.local
+env: export VERCEL_OIDC_TOKEN
+Starting Metro Bundler
+Web node_modules\expo\AppEntry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Web node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.6% (558/559)
+| (node:37272) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+Web Bundled 4551ms node_modules\expo\AppEntry.js (560 modules)
+
+› Assets (24):
+assets\v2\audio\checkpoint.824790aa24b769a97b9ab57176a42058.wav (21.2 kB)
+assets\v2\audio\collision.ba8bd45542fa2a8b6453728e450e7748.wav (15.9 kB)
+assets\v2\audio\complete.ec55d18d774d25cf34ea46949bc0a9aa.wav (21.2 kB)
+assets\v2\audio\first_bloom.32ab0f5ebbce653146e66e6e76c68097.wav (226 kB)
+assets\v2\audio\golden_bloom.7413b01b73fd9c44377e2c24ba9bef82.wav (226 kB)
+assets\v2\audio\jump.ce905fba11653239ceccec4c12598682.wav (6.66 kB)
+assets\v2\audio\pause.1f4ee6599fc2b6083268e44fe3804202.wav (10.6 kB)
+assets\v2\audio\resume.49eb3920cff2a265799d5cca7b27543a.wav (10.6 kB)
+assets\v2\audio\sakura_garden.be6e3a72aef2a24fb517973983574d94.wav (226 kB)
+assets\v2\audio\score.1eccee53b7693a91ed2d7d17aa5b4544.wav (6.66 kB)
+assets\v2\audio\ui.78438f48ba3706e9ef6d0a968da16fc8.wav (3.35 kB)
+assets\v2\audio\unlock.3812638a61b3e1198c1d6557825a90ac.wav (21.2 kB)
+assets\v2\audio\yozakura.65628d59344265df9d235fbe79072bed.wav (296 kB)
+node_modules\@react-navigation\elements\lib\module\assets\back-icon-mask.0a328cd9c1afd0afe8e3b1ec5165b1b4.png (653 B)
+node_modules\@react-navigation\elements\lib\module\assets\back-icon.35ba0eaec5a4f5ed12ca16fabeae451d.png (207 B)
+node_modules\@react-navigation\elements\lib\module\assets\clear-icon.c94f6478e7ae0cdd9f15de1fcb9e5e55.png (4 variations | 425 B)
+node_modules\@react-navigation\elements\lib\module\assets\close-icon.808e1b1b9b53114ec2838071a7e6daa7.png (4 variations | 235 B)
+node_modules\@react-navigation\elements\lib\module\assets\search-icon.286d67d3f74808a60a78d3ebf1a5fb57.png (928 B)
+
+› web bundles (1):
+_expo/static/js/web/AppEntry-679e5516b213e15bc378976232bf7342.js (1.14 MB)
+
+› Files (3):
+favicon.ico (14.5 kB)
+index.html (1.26 kB)
+metadata.json (49 B)
+
+Exported: dist
+[prepare-pwa] PWA manifest, iOS meta tags, and Service Worker injected into dist/index.html.

@@ -1,0 +1,929 @@
+{
+  "before": {
+    "width": 844,
+    "height": 354,
+    "levelId": 1,
+    "endless": false,
+    "biome": "first_bloom",
+    "params": {
+      "gapSize": 127.44,
+      "speed": 295.4,
+      "spacing": 540.16,
+      "maxDelta": 42.48,
+      "topMargin": 42.48,
+      "bottomMargin": 42.48,
+      "width": 68,
+      "poolSize": 4,
+      "prewarmPairs": 3,
+      "targetScore": 8
+    },
+    "status": "READY",
+    "score": 0,
+    "elapsed": 0,
+    "distance": 0,
+    "collision": null,
+    "player": {
+      "x": 219,
+      "y": 153,
+      "velocity": 0
+    },
+    "pairs": [
+      {
+        "worldX": 928.4000000000001,
+        "x": 928.4000000000001,
+        "center": 177,
+        "previousCenter": 177,
+        "gapY": 113.28,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 3,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793075980865,
+        "id": "pair-0",
+        "epoch": 0
+      },
+      {
+        "worldX": 1468.56,
+        "x": 1468.56,
+        "center": 177.10075577935703,
+        "previousCenter": 177,
+        "gapY": 113.38075577935703,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 0,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793075980866,
+        "id": "pair-1",
+        "epoch": 0
+      },
+      {
+        "worldX": 2008.7199999999998,
+        "x": 2008.7199999999998,
+        "center": 213.3199836328269,
+        "previousCenter": 177.10075577935703,
+        "gapY": 149.5999836328269,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 5,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793075980866,
+        "id": "pair-2",
+        "epoch": 0
+      },
+      {
+        "worldX": 2548.8799999999997,
+        "x": 2548.8799999999997,
+        "center": 179.18878226311676,
+        "previousCenter": 213.3199836328269,
+        "gapY": 115.46878226311676,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 3,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793075980866,
+        "id": "pair-3",
+        "epoch": 0
+      }
+    ],
+    "future": [
+      {
+        "worldX": 3089.0399999999995,
+        "x": 3089.0399999999995,
+        "center": 212.24727371479383,
+        "previousCenter": 179.18878226311676,
+        "gapY": 148.52727371479384,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 0,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793075980866
+      },
+      {
+        "worldX": 3629.1999999999994,
+        "x": 3629.1999999999994,
+        "center": 237.1546328628746,
+        "previousCenter": 212.24727371479383,
+        "gapY": 173.4346328628746,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 2,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793075980866
+      },
+      {
+        "worldX": 4169.36,
+        "x": 4169.36,
+        "center": 208.1566500075012,
+        "previousCenter": 237.1546328628746,
+        "gapY": 144.4366500075012,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 5,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793075980866
+      }
+    ],
+    "events": [],
+    "metrics": [
+      {
+        "type": "pair_prepared",
+        "at": 1793075980866,
+        "worldX": 928.4000000000001,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075980866,
+        "worldX": 1468.56,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075980866,
+        "worldX": 2008.7199999999998,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075980866,
+        "worldX": 2548.8799999999997,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075980866,
+        "worldX": 3089.0399999999995,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075980866,
+        "worldX": 3629.1999999999994,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075980866,
+        "worldX": 4169.36,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793075982395,
+        "id": "pair-0"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793075982395,
+        "id": "pair-0",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793075982395,
+        "id": "pair-1"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793075982395,
+        "id": "pair-1",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793075982395,
+        "id": "pair-2"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793075982395,
+        "id": "pair-2",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793075982395,
+        "id": "pair-3"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793075982395,
+        "id": "pair-3",
+        "epoch": 0
+      },
+      {
+        "type": "renderer_ready",
+        "at": 1793075982397,
+        "mountedPairs": 4,
+        "futurePrepared": 3
+      }
+    ],
+    "lastCenter": 208.1566500075012,
+    "nextWorldX": 4709.5199999999995,
+    "ramp": 0,
+    "rafActive": false,
+    "diagnostics": {
+      "frames": 0,
+      "rootRenders": 4,
+      "pairRenders": 8,
+      "pairMounts": 4,
+      "actorRenders": 2,
+      "longFrames": 0,
+      "maxFrameMs": 0,
+      "inputCount": 0
+    },
+    "vectorStats": null
+  },
+  "after": {
+    "width": 844,
+    "height": 354,
+    "levelId": 1,
+    "endless": false,
+    "biome": "first_bloom",
+    "params": {
+      "gapSize": 127.44,
+      "speed": 295.4,
+      "spacing": 540.16,
+      "maxDelta": 42.48,
+      "topMargin": 42.48,
+      "bottomMargin": 42.48,
+      "width": 68,
+      "poolSize": 4,
+      "prewarmPairs": 3,
+      "targetScore": 8
+    },
+    "status": "PLAYING",
+    "score": 0,
+    "elapsed": 0.04989999999999964,
+    "distance": 14.740459999999892,
+    "collision": null,
+    "player": {
+      "x": 219,
+      "y": 134.84625525000013,
+      "velocity": -337.60500000000036
+    },
+    "pairs": [
+      {
+        "worldX": 928.4000000000001,
+        "x": 913.6595400000002,
+        "center": 177,
+        "previousCenter": 177,
+        "gapY": 113.28,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 3,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793075980865,
+        "id": "pair-0",
+        "epoch": 0
+      },
+      {
+        "worldX": 1468.56,
+        "x": 1453.81954,
+        "center": 177.10075577935703,
+        "previousCenter": 177,
+        "gapY": 113.38075577935703,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 0,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793075980866,
+        "id": "pair-1",
+        "epoch": 0
+      },
+      {
+        "worldX": 2008.7199999999998,
+        "x": 1993.9795399999998,
+        "center": 213.3199836328269,
+        "previousCenter": 177.10075577935703,
+        "gapY": 149.5999836328269,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 5,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793075980866,
+        "id": "pair-2",
+        "epoch": 0
+      },
+      {
+        "worldX": 2548.8799999999997,
+        "x": 2534.1395399999997,
+        "center": 179.18878226311676,
+        "previousCenter": 213.3199836328269,
+        "gapY": 115.46878226311676,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 3,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793075980866,
+        "id": "pair-3",
+        "epoch": 0
+      }
+    ],
+    "future": [
+      {
+        "worldX": 3089.0399999999995,
+        "x": 3074.2995399999995,
+        "center": 212.24727371479383,
+        "previousCenter": 179.18878226311676,
+        "gapY": 148.52727371479384,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 0,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793075980866
+      },
+      {
+        "worldX": 3629.1999999999994,
+        "x": 3614.4595399999994,
+        "center": 237.1546328628746,
+        "previousCenter": 212.24727371479383,
+        "gapY": 173.4346328628746,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 2,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793075980866
+      },
+      {
+        "worldX": 4169.36,
+        "x": 4154.61954,
+        "center": 208.1566500075012,
+        "previousCenter": 237.1546328628746,
+        "gapY": 144.4366500075012,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 5,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793075980866
+      }
+    ],
+    "events": [],
+    "metrics": [
+      {
+        "type": "pair_prepared",
+        "at": 1793075980866,
+        "worldX": 928.4000000000001,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075980866,
+        "worldX": 1468.56,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075980866,
+        "worldX": 2008.7199999999998,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075980866,
+        "worldX": 2548.8799999999997,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075980866,
+        "worldX": 3089.0399999999995,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075980866,
+        "worldX": 3629.1999999999994,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075980866,
+        "worldX": 4169.36,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793075982395,
+        "id": "pair-0"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793075982395,
+        "id": "pair-0",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793075982395,
+        "id": "pair-1"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793075982395,
+        "id": "pair-1",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793075982395,
+        "id": "pair-2"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793075982395,
+        "id": "pair-2",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793075982395,
+        "id": "pair-3"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793075982395,
+        "id": "pair-3",
+        "epoch": 0
+      },
+      {
+        "type": "renderer_ready",
+        "at": 1793075982397,
+        "mountedPairs": 4,
+        "futurePrepared": 3
+      }
+    ],
+    "lastCenter": 208.1566500075012,
+    "nextWorldX": 4709.5199999999995,
+    "ramp": 0,
+    "rafActive": true,
+    "diagnostics": {
+      "frames": 4,
+      "rootRenders": 5,
+      "pairRenders": 8,
+      "pairMounts": 4,
+      "actorRenders": 3,
+      "longFrames": 0,
+      "maxFrameMs": 16.700000000000728,
+      "inputCount": 1
+    },
+    "vectorStats": null
+  },
+  "end": {
+    "width": 844,
+    "height": 354,
+    "levelId": 1,
+    "endless": false,
+    "biome": "first_bloom",
+    "params": {
+      "gapSize": 127.44,
+      "speed": 295.4,
+      "spacing": 540.16,
+      "maxDelta": 42.48,
+      "topMargin": 42.48,
+      "bottomMargin": 42.48,
+      "width": 68,
+      "poolSize": 4,
+      "prewarmPairs": 3,
+      "targetScore": 8
+    },
+    "status": "LEVEL_COMPLETE",
+    "score": 8,
+    "elapsed": 15.414600000000002,
+    "distance": 4553.4728399999885,
+    "collision": null,
+    "player": {
+      "x": 219,
+      "y": 171.66373200000106,
+      "velocity": 12.675000000000022
+    },
+    "pairs": [
+      {
+        "worldX": 5249.679999999999,
+        "x": 696.2071600000108,
+        "center": 204.19268673004854,
+        "previousCenter": 234.8862335392248,
+        "gapY": 140.47268673004854,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 0,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": true,
+        "preparedAt": 1793075988172,
+        "id": "pair-0",
+        "epoch": 2
+      },
+      {
+        "worldX": 5789.839999999999,
+        "x": 1236.3671600000107,
+        "center": 170.95347740221646,
+        "previousCenter": 204.19268673004854,
+        "gapY": 107.23347740221647,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 0,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793075990018,
+        "id": "pair-1",
+        "epoch": 2
+      },
+      {
+        "worldX": 6329.999999999999,
+        "x": 1776.5271600000106,
+        "center": 206.41311995846365,
+        "previousCenter": 170.95347740221646,
+        "gapY": 142.69311995846365,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 2,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793075991847,
+        "id": "pair-2",
+        "epoch": 2
+      },
+      {
+        "worldX": 4709.5199999999995,
+        "x": 156.047160000011,
+        "center": 234.8862335392248,
+        "previousCenter": 208.1566500075012,
+        "gapY": 171.1662335392248,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 1,
+        "biome": "first_bloom",
+        "scored": true,
+        "visible": true,
+        "preparedAt": 1793075986331,
+        "id": "pair-3",
+        "epoch": 1
+      }
+    ],
+    "future": [
+      {
+        "worldX": 6870.159999999999,
+        "x": 2316.6871600000104,
+        "center": 228.02808272534742,
+        "previousCenter": 206.41311995846365,
+        "gapY": 164.30808272534742,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 3,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793075993682
+      },
+      {
+        "worldX": 7410.319999999999,
+        "x": 2856.8471600000103,
+        "center": 214.33709564038324,
+        "previousCenter": 228.02808272534742,
+        "gapY": 150.61709564038324,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 1,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793075995508
+      },
+      {
+        "worldX": 7950.479999999999,
+        "x": 3397.00716000001,
+        "center": 187.12822351613127,
+        "previousCenter": 214.33709564038324,
+        "gapY": 123.40822351613127,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 0,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793075997345
+      }
+    ],
+    "events": [
+      {
+        "type": "score",
+        "score": 8
+      },
+      {
+        "type": "complete",
+        "levelId": 1,
+        "score": 8
+      }
+    ],
+    "metrics": [
+      {
+        "type": "pair_prepared",
+        "at": 1793075980866,
+        "worldX": 928.4000000000001,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075980866,
+        "worldX": 1468.56,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075980866,
+        "worldX": 2008.7199999999998,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075980866,
+        "worldX": 2548.8799999999997,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075980866,
+        "worldX": 3089.0399999999995,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075980866,
+        "worldX": 3629.1999999999994,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075980866,
+        "worldX": 4169.36,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793075982395,
+        "id": "pair-0"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793075982395,
+        "id": "pair-0",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793075982395,
+        "id": "pair-1"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793075982395,
+        "id": "pair-1",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793075982395,
+        "id": "pair-2"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793075982395,
+        "id": "pair-2",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793075982395,
+        "id": "pair-3"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793075982395,
+        "id": "pair-3",
+        "epoch": 0
+      },
+      {
+        "type": "renderer_ready",
+        "at": 1793075982397,
+        "mountedPairs": 4,
+        "futurePrepared": 3
+      },
+      {
+        "type": "pair_visible",
+        "at": 1793075982966,
+        "id": "pair-0",
+        "epoch": 0,
+        "preparedAt": 1793075980865
+      },
+      {
+        "type": "pair_visible",
+        "at": 1793075984985,
+        "id": "pair-1",
+        "epoch": 0,
+        "preparedAt": 1793075980866
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075986331,
+        "worldX": 4709.5199999999995,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793075986344,
+        "id": "pair-0",
+        "epoch": 1
+      },
+      {
+        "type": "pair_visible",
+        "at": 1793075986832,
+        "id": "pair-2",
+        "epoch": 0,
+        "preparedAt": 1793075980866
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075988172,
+        "worldX": 5249.679999999999,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793075988182,
+        "id": "pair-1",
+        "epoch": 1
+      },
+      {
+        "type": "pair_visible",
+        "at": 1793075988658,
+        "id": "pair-3",
+        "epoch": 0,
+        "preparedAt": 1793075980866
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075990018,
+        "worldX": 5789.839999999999,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793075990027,
+        "id": "pair-2",
+        "epoch": 1
+      },
+      {
+        "type": "pair_visible",
+        "at": 1793075990533,
+        "id": "pair-0",
+        "epoch": 1,
+        "preparedAt": 1793075980866
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075991847,
+        "worldX": 6329.999999999999,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793075991857,
+        "id": "pair-3",
+        "epoch": 1
+      },
+      {
+        "type": "pair_visible",
+        "at": 1793075992335,
+        "id": "pair-1",
+        "epoch": 1,
+        "preparedAt": 1793075980866
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075993682,
+        "worldX": 6870.159999999999,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793075993692,
+        "id": "pair-0",
+        "epoch": 2
+      },
+      {
+        "type": "pair_visible",
+        "at": 1793075994171,
+        "id": "pair-2",
+        "epoch": 1,
+        "preparedAt": 1793075980866
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075995508,
+        "worldX": 7410.319999999999,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793075995521,
+        "id": "pair-1",
+        "epoch": 2
+      },
+      {
+        "type": "pair_visible",
+        "at": 1793075996002,
+        "id": "pair-3",
+        "epoch": 1,
+        "preparedAt": 1793075986331
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793075997345,
+        "worldX": 7950.479999999999,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793075997360,
+        "id": "pair-2",
+        "epoch": 2
+      },
+      {
+        "type": "pair_visible",
+        "at": 1793075997829,
+        "id": "pair-0",
+        "epoch": 2,
+        "preparedAt": 1793075988172
+      }
+    ],
+    "lastCenter": 187.12822351613127,
+    "nextWorldX": 8490.64,
+    "ramp": 0,
+    "rafActive": false,
+    "diagnostics": {
+      "frames": 654,
+      "rootRenders": 29,
+      "pairRenders": 15,
+      "pairMounts": 4,
+      "actorRenders": 44,
+      "longFrames": 4,
+      "maxFrameMs": 150.10000000000036,
+      "inputCount": 21
+    },
+    "vectorStats": null
+  },
+  "preparedBeforeVisible": true,
+  "errors": [],
+  "editorErrors": [
+    {
+      "message": "p",
+      "stack": ""
+    },
+    {
+      "message": "p",
+      "stack": ""
+    },
+    {
+      "message": "p",
+      "stack": ""
+    }
+  ],
+  "attempts": [
+    {
+      "status": "LEVEL_COMPLETE",
+      "score": 8,
+      "collision": null
+    }
+  ]
+}

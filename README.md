@@ -1,116 +1,97 @@
-# Cherry Bloom — Fly Through the Blossom
+# Cherry Bloom V2 — Fly Through the Blossom
 
-Projeto acadêmico mobile e Web/PWA desenvolvido em **React Native + Expo + React Navigation** para a disciplina de **Programação para Dispositivos Móveis II** (5º Semestre — Desenvolvimento de Software Multiplataforma — FATEC Itaquera "Prof. Miguel Reale").
+Projeto acadêmico em React Native, Expo e React Navigation. Jogo **horizontal**, com a personagem **Cherry**.
 
----
+## Identificação acadêmica
 
-## 1. Identificação Acadêmica
+- Aluno: Wellington Siqueira Porto.
+- Instituição: FATEC Itaquera — Prof. Miguel Reale.
+- Curso: Desenvolvimento de Software Multiplataforma, 5º Semestre.
+- Disciplina: Programação para Dispositivos Móveis II.
+- Professor: Prof. Jeferson de Souza Dias.
+- Atividade Prática 9 — Flappy Bird.
 
-- **Jogo:** Cherry Bloom
-- **Autor / Aluno:** Wellington Siqueira Porto
-- **Instituição:** FATEC Itaquera — Prof. Miguel Reale
-- **Curso:** Desenvolvimento de Software Multiplataforma (DSM — 5º Semestre)
-- **Disciplina:** Programação para Dispositivos Móveis II
-- **Professor:** Prof. Jeferson de Souza Dias
-- **Aviso Acadêmico Obrigatório (exibido integralmente na Tela 4):**
-  > `Este site é um projeto acadêmico da FATEC, criado apenas para fins de estudo. Não utilize as informações aqui para uso real.`
+> Este site é um projeto acadêmico da FATEC, criado apenas para fins de estudo. Não utilize as informações aqui para uso real.
 
----
+## Jogar
 
-## 2. Demonstração e Entrega no Expo Snack (SDK 54)
+- [Snack oficial, SDK54](https://snack.expo.dev/@wellingtonsp.de/cherry-flight).
+- [Web/PWA](https://cherry-flight.vercel.app).
+- [Relatório V2 e evidências](CHERRY_BLOOM_V2_IMPLEMENTATION_REPORT.md).
 
-- **Link Público do Expo Snack (SDK 54):** [Cherry Flight](https://snack.expo.dev/@wellingtonsp.de/cherry-flight).
-- **Web/PWA:** [Cherry Bloom](https://cherry-flight.vercel.app).
-- No editor do Snack, expanda o Web Preview para uma janela horizontal. A prévia estreita em retrato mostra a instrução para girar o dispositivo.
+O relatório identifica a revisão efetivamente publicada e separa validação Web, Snack, exportação nativa e dispositivo físico. Não presume que exportar um bundle comprova execução nativa.
 
-### Importar do GitHub para o Snack
+Toque/clique para iniciar e saltar. Teclado: Espaço, ↑ ou W. P pausa/retoma; R/Enter reinicia no Game Over; Esc/H volta para Home. Retrato no navegador mostra orientação para girar. Resize reinicia a rodada em READY.
 
-No campo **Git URL**, use:
+## Campanha, checkpoints e Endless
+
+| Capítulo | Níveis |
+|---|---|
+| First Bloom | 1–3 |
+| Sakura Garden | 4–6 |
+| Golden Bloom | 7–9 |
+| Yozakura | 10–12 |
+
+Cada nível tem meta, abertura, velocidade, espaçamento e limite de variação definidos em `docs/LEVEL_CONFIG_V2.json`. Gravidade e impulso permanecem constantes. A primeira abertura fica centralizada e começa fora da viewport para permitir preparar o voo.
+
+Atingir a meta completa o nível uma vez e desbloqueia o seguinte. **Continue** retorna ao início do checkpoint; **Level Select** mostra concluídos, disponíveis, checkpoint e bloqueados. **Retry** reinicia posição, velocidade, obstáculos, score e timers. Checkpoint não guarda física parcial.
+
+Completar o Level12 desbloqueia **Endless Bloom**: dificuldade cresce a cada10 pontos, com limites de velocidade/gap, alternância de biomas e recorde separado.
+
+AsyncStorage guarda schema2, resultados, desbloqueios, último nível e preferências. Dados inválidos voltam ao Level1. O recorde V1 é preservado. Falha de gravação aparece na interface; progresso continua somente na sessão.
+
+## Arte, renderer e áudio
+
+`assets/v2/` conserva os SVGs autoritativos e PNGs de referência recebidos. O runtime utiliza sua geometria SVG, com AST previamente interpretada, quatro estados de Cherry, quatro kits de13 peças e cenários em camadas. PNG presente na pasta não é apresentado como imagem efetivamente renderizada.
+
+A simulação usa refs e atualização imperativa de Animated, sem redesenhar a árvore completa a cada frame. Há4 pares montados nos níveis1–6,5 nos demais e3 descritores futuros preparados fora da tela. Slots reciclam identidade e composição modular. Fundos têm parallax, overlays não capturam toque e transições de bioma usam crossfade.
+
+Quatro músicas e nove SFX originais foram compostos localmente por `scripts/compose-audio-v2.py`, pois o handoff não continha áudio. Nenhum serviço pago ou mídia de terceiros foi utilizado. Expo Audio atende o runtime nativo; Web usa HTMLAudio para capturar a Promise de autoplay que o adaptador Web do SDK54 descarta. Music, SFX e vibração têm preferências independentes e persistentes. Áudio falha sem bloquear a física.
+
+## Executar e verificar SDK54
+
+```powershell
+npm ci
+npx expo start
+npm test
+npx expo install --check
+npx expo-doctor@latest
+npm run build:web
+```
+
+Baseline oficial: Expo54, React19.1.0, React Native0.81.5. As quatro telas acadêmicas permanecem em `src/tela1.js`–`src/tela4.js`. Novos serviços/componentes não substituem React Navigation.
+
+```powershell
+node scripts/prepare-v2.mjs --check
+npm run prepare:snack
+node audit-evidence/v2/progression-runtime.cjs
+node audit-evidence/v2/visual-audio-runtime.cjs
+```
+
+Os scripts de navegador exigem o Playwright/Chrome dos caminhos registrados neles e Metro na porta8105. Não são uma dependência do jogo.
+
+## Importar no Snack
+
+Use no campo Git URL:
 
 ```text
 https://github.com/wellingtonspdev/Cherry_Flight/tree/main/snack
 ```
 
-O importador Git do Snack falha ao reenviar assets da raiz do repositório. A pasta `snack/` contém uma exportação SDK54 com App, quatro telas, componentes, física, navegação e tema. Os desenhos do jogo são SVG/Views; PNGs, áudio de referência, PDFs e evidências da auditoria permanecem na raiz completa.
+O importador Git do Snack retorna erro ao reenviar arquivos binários da raiz. `snack/` é gerado com todo o código de runtime, arte SVG em JavaScript e **o mesmo PCM de áudio em data URI**, sem upload binário. Não depende de um servidor de assets externo. `npm test` verifica sincronismo com a entrega SDK54. Não edite essas cópias manualmente.
 
-Na branch `main` (SDK54), atualizar essa exportação com `npm run prepare:snack` antes de publicar mudanças. `npm test` verifica que as cópias continuam idênticas ao runtime e não incluem arquivos que acionam upload de assets.
-- Compatível com execução direta no navegador (Web Preview do Snack) e no aplicativo **Expo Go (SDK 54)** em Android e iOS.
+Expanda o Web Preview para uma janela horizontal. O relatório informa quais plataformas foram executadas; não confunda Web Preview com teste físico de Expo Go.
 
----
+## SDK57 e SDK58
 
-## 3. Controles Mobile & Desktop (Web / PWA)
+`sdk-57-local` mantém manifest/lock próprios e recebe espelho V2 após SDK54/Snack. Dependências nativas devem ser instaladas com o Expo dessa branch. `sdk-58-local` preserva o trabalho anterior; não é autoridade da entrega V2. Nunca reutilize `node_modules` entre essas linhas.
 
-O jogo detecta automaticamente o ambiente e oferece suporte híbrido completo:
+## Vercel/PWA e domínio
 
-- **Mobile (Touch):**
-  - Toque em qualquer lugar da área do jogo para iniciar o voo e fazer a Cherry saltar.
-- **Desktop / Web (Mouse + Teclado):**
-  - `Espaço` (`Space`), `Seta para Cima` (`↑`), `W` ou **Clique do Mouse**: inicia a partida e faz a Cherry saltar.
-  - `R` ou `Enter` (no Game Over): reinicia a partida imediatamente (`PLAY AGAIN`).
-  - `Esc` ou `H`: retorna para a tela inicial (`HOME`).
-  - O jogo funciona em **paisagem (horizontal)**, usando toda a área disponível, sem gabinete vertical de 460 px.
-  - No navegador em retrato, aparece a instrução para girar o dispositivo. A configuração nativa e o manifesto PWA solicitam paisagem.
-  - Alterar o tamanho da área de jogo reinicia a rodada em READY, com limites e obstáculos recalculados.
+`vercel.json` exporta a Web para `dist/`, preserva assets, configura SPA e cache de manifest/Service Worker. O manifesto solicita paisagem. A aplicação pode ser instalada quando o navegador oferecer PWA.
 
----
+Publicação utiliza Vercel CLI no projeto `cherry-flight`. Domínio/subdomínio personalizado continua configurável em Vercel e Cloudflare; nenhum registro DNS é alterado por esta entrega. Funcionamento offline depende dos recursos já visitados/cacheados; áudio opcional nunca impede a partida.
 
-## 4. Suporte PWA Instalável & Deploy na Vercel
+## Fontes e limites
 
-O projeto está configurado para hospedagem estática na **Vercel** com instalação como **PWA (Progressive Web App)** no celular (Android/iOS) e no Desktop (Chrome/Edge):
-
-- [`vercel.json`](file:///d:/Cherry_Flight/vercel.json): Configura `buildCommand: "npm run build:web"`, `outputDirectory: "dist"`, cabeçalhos de cache para Service Worker/Manifest e rewrites de SPA.
-- [`public/manifest.json`](file:///d:/Cherry_Flight/public/manifest.json): Web App Manifest com `display: "standalone"`, `orientation: "portrait"`, cores oficiais (`#D91E36` / `#FFF8F2`) e ícones `192x192` e `512x512` (`any maskable`).
-- [`public/sw.js`](file:///d:/Cherry_Flight/public/sw.js) & [`public/offline.html`](file:///d:/Cherry_Flight/public/offline.html): Service Worker com cache de App Shell e página de fallback offline.
-- [`scripts/prepare-pwa.mjs`](file:///d:/Cherry_Flight/scripts/prepare-pwa.mjs): Injetor pós-build que vincula automaticamente `manifest.json`, meta tags iOS (`apple-mobile-web-app-capable`, `apple-touch-icon`) e registro do `sw.js` no `dist/index.html`.
-- [`src/game/pwa.js`](file:///d:/Cherry_Flight/src/game/pwa.js): Captura o evento `beforeinstallprompt` e exibe o botão **"INSTALAR APP (PWA)"** na Tela 1 quando disponível no navegador, além de instrução nativa para Safari no iOS.
-
----
-
-## 5. Estratégia de Baselines Expo (SDK 54, SDK 57 e SDK 58)
-
-O repositório mantém três branches isoladas, cada uma com seu próprio `package.json` e `package-lock.json` sincronizados e sem contaminação cruzada:
-
-1. **Branch `main` — Baseline A (Autoridade de Entrega Acadêmica — Expo SDK 54):**
-   - `expo`: `~54.0.38` | `react`: `19.1.0` | `react-native`: `0.81.5`
-   - Compatível com **Expo Snack** e **Vercel Web/PWA**.
-2. **Branch `sdk-57-local` — Baseline B (Variante Local SDK 57):**
-   - `expo`: `~57.0.31` | `react`: `19.2.3` | `react-native`: `~0.86.3`
-3. **Branch `sdk-58-local` — Baseline C (Execução Local Mais Recente — Expo SDK 58 + Web/PWA):**
-   - `expo`: `~58.0.19`
-   - Ideal para rodar localmente com a versão mais recente do **Expo Go (SDK 58)** no celular e para gerar o build Web/PWA para a **Vercel**.
-
----
-
-## 6. Como Executar Localmente e Publicar na Vercel
-
-### A) Rodar Localmente no Expo SDK 58 (Celular com Expo Go atual ou Web Desktop)
-```powershell
-git checkout sdk-58-local
-npm ci
-npx expo start
-```
-- Pressione `w` no terminal para abrir no navegador Desktop (com controles de teclado `Espaço` / `↑` / `W`).
-- Ou escaneie o QR Code com o app **Expo Go (SDK 58)** no celular.
-
-### B) Rodar a Versão Principal de Entrega (Expo SDK 54 — `main`)
-```powershell
-git checkout main
-npm ci
-npx expo start
-```
-
-### C) Gerar Build Web/PWA Localmente ou Fazer Deploy na Vercel
-```powershell
-# Gerar a pasta estática dist/ pronta para PWA
-npm run build:web
-
-# Ou publicar diretamente na Vercel (via Vercel CLI ou integração Git)
-npx vercel --prod
-```
-
-### D) Comandos de Validação Técnica
-```powershell
-npm test
-npx expo install --check
-npx expo-doctor@latest
-```
+V2 prevalece sobre V1. Consulte a especificação V2, Design System V2, configuração de níveis, progressão, renderer, áudio e manifesto em `docs/`. Relatórios antigos são históricos, não prova de aceite V2. Evidências sanitizadas ficam em `audit-evidence/v2/`; nenhuma credencial é versionada.

@@ -1,0 +1,52 @@
+✖ Audio reuses players, loops music, respects independent preferences and releases on exit (16.3184ms)
+✖ Audio load/play failures fail open and a new chapter removes previous music (2.4531ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 277.1528
+
+✖ failing tests:
+
+test at tests\audio-v2.test.mjs:4:1
+✖ Audio reuses players, loops music, respects independent preferences and releases on exit (16.3184ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(module)
+  
+      at TestContext.<anonymous> (file:///D:/Cherry_Flight_Release54/tests/audio-v2.test.mjs:5:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\audio-v2.test.mjs:22:1
+✖ Audio load/play failures fail open and a new chapter removes previous music (2.4531ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(module)
+  
+      at TestContext.<anonymous> (file:///D:/Cherry_Flight_Release54/tests/audio-v2.test.mjs:23:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

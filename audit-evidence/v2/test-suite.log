@@ -1,0 +1,63 @@
+
+> cherry-bloom@2.0.0 test
+> node --test tests/*.test.mjs
+
+(node:24160) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/Cherry_Flight_Release54/src/game/audioServiceV2.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\Cherry_Flight_Release54\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Audio reuses players, loops music, respects independent preferences and releases on exit (7.3746ms)
+✔ Audio load/play failures fail open and a new chapter removes previous music (3.2302ms)
+✔ Pending one-shots cannot resume after lifecycle pause (2.932ms)
+(node:25180) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/Cherry_Flight_Release54/src/game/engineV2.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\Cherry_Flight_Release54\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ V2 round starts only on input, then integrates jump and gravity (8.2463ms)
+✔ V2 dt integration is stable and rejects invalid elapsed time (2.2035ms)
+✔ V2 collision wins before scoring and terminal states cannot advance (10.2079ms)
+✔ V2 score is once per pair and completion fires once at the configured target (1.6204ms)
+✔ V2 pool reuses mounted slot identities and has three constrained future descriptors (139.0546ms)
+✔ V2 preserves the supplied configuration and resolves bounded Endless difficulty (3.9309ms)
+✔ Every level starts with a centered, predictable first opening (2.2706ms)
+✔ Obstacle compositions do not repeat consecutively even with repeated random samples (0.7236ms)
+(node:29308) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/Cherry_Flight_Release54/src/game/collision.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\Cherry_Flight_Release54\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Mandatory academic disclaimer and student metadata are exact (AC-009..AC-012) (9.8284ms)
+✔ AABB intersection helper detects overlap and separation accurately (0.835ms)
+✔ Collision detects top branch, bottom branch, ceiling, ground, and safe corridor (AC-108..AC-110) (3.7798ms)
+✔ Scoring increments once per crossed pair and never before crossing (AC-112, AC-113) (0.929ms)
+✔ Obstacle generation and recycling stay within valid bounds (AC-105..AC-107) (2.3777ms)
+✔ Phase progression maps score thresholds accurately (Section 9.1) (0.8085ms)
+✔ Landscape gaps fit short game fields and remain playable when recycled (2.21ms)
+(node:14776) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/Cherry_Flight_Release54/src/game/progressionV2.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\Cherry_Flight_Release54\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Campaign unlocks exactly one next checkpoint and rejects locked or unfinished completion (9.824ms)
+✔ All twelve configured completions unlock Endless and retain per-level best scores (2.9516ms)
+✔ Malformed saves cannot unlock levels and only known schema fields survive (1.3288ms)
+✔ Queued storage writes preserve the latest settings and restore checkpoint after reopening (29.1794ms)
+✔ Corrupt and oversized storage fall back, legacy best is preserved, and write failures recover (4.0612ms)
+✔ SDK54 Snack import package matches runtime and has no asset-upload inputs (340.0836ms)
+(node:36576) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/Cherry_Flight_Release54/src/game/vectorIdsV2.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\Cherry_Flight_Release54\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ V2 SVG gradient IDs are unique per mounted instance, including hidden screens (4.1758ms)
+(node:19876) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/Cherry_Flight_Release54/src/game/vectorCacheV2.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\Cherry_Flight_Release54\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ V2 vectors are cached before visible use, with theme-scoped gradient IDs (944.2617ms)
+✔ Repeated viewport changes keep parsed vectors bounded and the latest chapter preloaded (74.6011ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1630.1066

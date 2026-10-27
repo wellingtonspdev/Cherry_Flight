@@ -31,3 +31,10 @@ For fastest SDK54/Snack integration, use PNG exports first, with SVG retained as
 
 ## Naming
 Official character naming is **Cherry**. V1 `cherri_*` filenames are deprecated.
+
+
+## Implemented runtime inventory — 2026-10-27
+
+The supplied list contains **13**, not12, modules per obstacle kit. Source SVGs and PNG exports remain unchanged. Runtime renders the four character SVGs, twelve structural/decorative obstacle modules per biome, and four layered scenery sources per biome. `accent_particles` is preloaded but unused; composite backgrounds are retained/preparsed fallback references. PNGs remain reference exports, not claimed as displayed assets. Portrait scenery is adapted to landscape, preserving circular celestial bodies and keeping foreground wood at the edges.
+
+The handoff supplied no audio. `assets/v2/audio/` now contains four original synthesized PCM themes and nine original event tones, reproducible with `scripts/compose-audio-v2.py`. Native/main Web uses bundled WAVs; the generated Snack import adapter embeds identical WAV bytes as data URIs.

@@ -1,0 +1,1251 @@
+{
+  "before": {
+    "audio": {
+      "chapter": "first_bloom",
+      "active": false,
+      "failures": 1,
+      "events": [
+        {
+          "event": "ui",
+          "at": 1793076550661
+        }
+      ],
+      "players": 10,
+      "preferences": {
+        "music": true,
+        "sfx": true,
+        "haptics": true
+      },
+      "music": {
+        "loaded": true,
+        "playing": false,
+        "time": 0,
+        "loop": true,
+        "volume": 0.35
+      },
+      "effects": [
+        {
+          "event": "ui",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "jump",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "score",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "collision",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "checkpoint",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "complete",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "unlock",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "pause",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "resume",
+          "loaded": true,
+          "playing": false
+        }
+      ]
+    },
+    "status": "READY",
+    "levelId": 1,
+    "endless": false,
+    "biome": "first_bloom",
+    "score": 0,
+    "elapsed": 0,
+    "player": {
+      "x": 219,
+      "y": 153,
+      "velocity": 0
+    },
+    "pairs": [
+      {
+        "worldX": 928.4000000000001,
+        "x": 928.4000000000001,
+        "center": 177,
+        "previousCenter": 177,
+        "gapY": 113.28,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 0,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793076550871,
+        "id": "pair-0",
+        "epoch": 0
+      },
+      {
+        "worldX": 1468.56,
+        "x": 1468.56,
+        "center": 167.61229741588184,
+        "previousCenter": 177,
+        "gapY": 103.89229741588184,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 0,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793076550871,
+        "id": "pair-1",
+        "epoch": 0
+      },
+      {
+        "worldX": 2008.7199999999998,
+        "x": 2008.7199999999998,
+        "center": 169.5908977619682,
+        "previousCenter": 167.61229741588184,
+        "gapY": 105.8708977619682,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 2,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793076550871,
+        "id": "pair-2",
+        "epoch": 0
+      },
+      {
+        "worldX": 2548.8799999999997,
+        "x": 2548.8799999999997,
+        "center": 210.9035493452024,
+        "previousCenter": 169.5908977619682,
+        "gapY": 147.1835493452024,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 4,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793076550871,
+        "id": "pair-3",
+        "epoch": 0
+      }
+    ],
+    "future": [
+      {
+        "worldX": 3089.0399999999995,
+        "x": 3089.0399999999995,
+        "center": 217.13118764689878,
+        "previousCenter": 210.9035493452024,
+        "gapY": 153.41118764689878,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 2,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793076550871
+      },
+      {
+        "worldX": 3629.1999999999994,
+        "x": 3629.1999999999994,
+        "center": 195.02515835862403,
+        "previousCenter": 217.13118764689878,
+        "gapY": 131.30515835862403,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 3,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793076550871
+      },
+      {
+        "worldX": 4169.36,
+        "x": 4169.36,
+        "center": 206.43540265929607,
+        "previousCenter": 195.02515835862403,
+        "gapY": 142.71540265929607,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 3,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793076550871
+      }
+    ],
+    "params": {
+      "gapSize": 127.44,
+      "speed": 295.4,
+      "spacing": 540.16,
+      "maxDelta": 42.48,
+      "topMargin": 42.48,
+      "bottomMargin": 42.48,
+      "width": 68,
+      "poolSize": 4,
+      "prewarmPairs": 3,
+      "targetScore": 8
+    },
+    "rafActive": false,
+    "diagnostics": {
+      "frames": 0,
+      "rootRenders": 3,
+      "pairRenders": 4,
+      "pairMounts": 4,
+      "actorRenders": 1,
+      "longFrames": 0,
+      "maxFrameMs": 0,
+      "inputCount": 0
+    },
+    "metrics": [
+      {
+        "type": "pair_prepared",
+        "at": 1793076550871,
+        "worldX": 928.4000000000001,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076550871,
+        "worldX": 1468.56,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076550871,
+        "worldX": 2008.7199999999998,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076550871,
+        "worldX": 2548.8799999999997,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076550871,
+        "worldX": 3089.0399999999995,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076550871,
+        "worldX": 3629.1999999999994,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076550871,
+        "worldX": 4169.36,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793076552233,
+        "id": "pair-0"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793076552233,
+        "id": "pair-0",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793076552234,
+        "id": "pair-1"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793076552234,
+        "id": "pair-1",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793076552234,
+        "id": "pair-2"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793076552234,
+        "id": "pair-2",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793076552234,
+        "id": "pair-3"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793076552234,
+        "id": "pair-3",
+        "epoch": 0
+      },
+      {
+        "type": "renderer_ready",
+        "at": 1793076552237,
+        "mountedPairs": 4,
+        "futurePrepared": 3
+      }
+    ],
+    "vectorStats": {
+      "parses": 23,
+      "parsesDuringPlay": 0,
+      "chapters": [
+        {
+          "biome": "first_bloom",
+          "start": 1793076550872,
+          "end": 1793076550981,
+          "width": 844,
+          "height": 390
+        }
+      ]
+    }
+  },
+  "after": {
+    "audio": {
+      "chapter": "first_bloom",
+      "active": true,
+      "failures": 1,
+      "events": [
+        {
+          "event": "ui",
+          "at": 1793076550661
+        },
+        {
+          "event": "jump",
+          "at": 1793076552471
+        }
+      ],
+      "players": 10,
+      "preferences": {
+        "music": true,
+        "sfx": true,
+        "haptics": true
+      },
+      "music": {
+        "loaded": true,
+        "playing": true,
+        "time": 0,
+        "loop": true,
+        "volume": 0.35
+      },
+      "effects": [
+        {
+          "event": "ui",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "jump",
+          "loaded": false,
+          "playing": true
+        },
+        {
+          "event": "score",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "collision",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "checkpoint",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "complete",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "unlock",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "pause",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "resume",
+          "loaded": true,
+          "playing": false
+        }
+      ]
+    },
+    "status": "PLAYING",
+    "levelId": 1,
+    "endless": false,
+    "biome": "first_bloom",
+    "score": 0,
+    "elapsed": 0.2003999999999978,
+    "player": {
+      "x": 219,
+      "y": 95.9280840000004,
+      "velocity": -179.5800000000023
+    },
+    "pairs": [
+      {
+        "worldX": 928.4000000000001,
+        "x": 869.2018400000007,
+        "center": 177,
+        "previousCenter": 177,
+        "gapY": 113.28,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 0,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793076550871,
+        "id": "pair-0",
+        "epoch": 0
+      },
+      {
+        "worldX": 1468.56,
+        "x": 1409.3618400000005,
+        "center": 167.61229741588184,
+        "previousCenter": 177,
+        "gapY": 103.89229741588184,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 0,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793076550871,
+        "id": "pair-1",
+        "epoch": 0
+      },
+      {
+        "worldX": 2008.7199999999998,
+        "x": 1949.5218400000003,
+        "center": 169.5908977619682,
+        "previousCenter": 167.61229741588184,
+        "gapY": 105.8708977619682,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 2,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793076550871,
+        "id": "pair-2",
+        "epoch": 0
+      },
+      {
+        "worldX": 2548.8799999999997,
+        "x": 2489.68184,
+        "center": 210.9035493452024,
+        "previousCenter": 169.5908977619682,
+        "gapY": 147.1835493452024,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 4,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793076550871,
+        "id": "pair-3",
+        "epoch": 0
+      }
+    ],
+    "future": [
+      {
+        "worldX": 3089.0399999999995,
+        "x": 3029.84184,
+        "center": 217.13118764689878,
+        "previousCenter": 210.9035493452024,
+        "gapY": 153.41118764689878,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 2,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793076550871
+      },
+      {
+        "worldX": 3629.1999999999994,
+        "x": 3570.00184,
+        "center": 195.02515835862403,
+        "previousCenter": 217.13118764689878,
+        "gapY": 131.30515835862403,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 3,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793076550871
+      },
+      {
+        "worldX": 4169.36,
+        "x": 4110.161840000001,
+        "center": 206.43540265929607,
+        "previousCenter": 195.02515835862403,
+        "gapY": 142.71540265929607,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 3,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793076550871
+      }
+    ],
+    "params": {
+      "gapSize": 127.44,
+      "speed": 295.4,
+      "spacing": 540.16,
+      "maxDelta": 42.48,
+      "topMargin": 42.48,
+      "bottomMargin": 42.48,
+      "width": 68,
+      "poolSize": 4,
+      "prewarmPairs": 3,
+      "targetScore": 8
+    },
+    "rafActive": true,
+    "diagnostics": {
+      "frames": 11,
+      "rootRenders": 5,
+      "pairRenders": 8,
+      "pairMounts": 4,
+      "actorRenders": 3,
+      "longFrames": 1,
+      "maxFrameMs": 116.5,
+      "inputCount": 1
+    },
+    "metrics": [
+      {
+        "type": "pair_prepared",
+        "at": 1793076550871,
+        "worldX": 928.4000000000001,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076550871,
+        "worldX": 1468.56,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076550871,
+        "worldX": 2008.7199999999998,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076550871,
+        "worldX": 2548.8799999999997,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076550871,
+        "worldX": 3089.0399999999995,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076550871,
+        "worldX": 3629.1999999999994,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076550871,
+        "worldX": 4169.36,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793076552233,
+        "id": "pair-0"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793076552233,
+        "id": "pair-0",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793076552234,
+        "id": "pair-1"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793076552234,
+        "id": "pair-1",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793076552234,
+        "id": "pair-2"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793076552234,
+        "id": "pair-2",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793076552234,
+        "id": "pair-3"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793076552234,
+        "id": "pair-3",
+        "epoch": 0
+      },
+      {
+        "type": "renderer_ready",
+        "at": 1793076552237,
+        "mountedPairs": 4,
+        "futurePrepared": 3
+      }
+    ],
+    "vectorStats": {
+      "parses": 23,
+      "parsesDuringPlay": 0,
+      "chapters": [
+        {
+          "biome": "first_bloom",
+          "start": 1793076550872,
+          "end": 1793076550981,
+          "width": 844,
+          "height": 390
+        }
+      ]
+    }
+  },
+  "end": {
+    "audio": {
+      "chapter": "first_bloom",
+      "active": false,
+      "failures": 1,
+      "events": [
+        {
+          "event": "jump",
+          "at": 1793076552471
+        },
+        {
+          "event": "jump",
+          "at": 1793076553604
+        },
+        {
+          "event": "jump",
+          "at": 1793076554384
+        },
+        {
+          "event": "jump",
+          "at": 1793076555100
+        },
+        {
+          "event": "score",
+          "at": 1793076555393
+        },
+        {
+          "event": "jump",
+          "at": 1793076555809
+        },
+        {
+          "event": "jump",
+          "at": 1793076556550
+        },
+        {
+          "event": "score",
+          "at": 1793076557245
+        },
+        {
+          "event": "jump",
+          "at": 1793076557306
+        },
+        {
+          "event": "jump",
+          "at": 1793076558053
+        },
+        {
+          "event": "jump",
+          "at": 1793076558809
+        },
+        {
+          "event": "score",
+          "at": 1793076559068
+        },
+        {
+          "event": "jump",
+          "at": 1793076559630
+        },
+        {
+          "event": "jump",
+          "at": 1793076560362
+        },
+        {
+          "event": "score",
+          "at": 1793076560895
+        },
+        {
+          "event": "jump",
+          "at": 1793076561125
+        },
+        {
+          "event": "jump",
+          "at": 1793076561880
+        },
+        {
+          "event": "jump",
+          "at": 1793076562625
+        },
+        {
+          "event": "score",
+          "at": 1793076562731
+        },
+        {
+          "event": "jump",
+          "at": 1793076563300
+        },
+        {
+          "event": "jump",
+          "at": 1793076564038
+        },
+        {
+          "event": "score",
+          "at": 1793076564550
+        },
+        {
+          "event": "jump",
+          "at": 1793076564827
+        },
+        {
+          "event": "jump",
+          "at": 1793076565555
+        },
+        {
+          "event": "jump",
+          "at": 1793076566295
+        },
+        {
+          "event": "score",
+          "at": 1793076566397
+        },
+        {
+          "event": "jump",
+          "at": 1793076567021
+        },
+        {
+          "event": "jump",
+          "at": 1793076567768
+        },
+        {
+          "event": "score",
+          "at": 1793076568205
+        },
+        {
+          "event": "complete",
+          "at": 1793076568279
+        },
+        {
+          "event": "checkpoint",
+          "at": 1793076568281
+        },
+        {
+          "event": "unlock",
+          "at": 1793076568281
+        }
+      ],
+      "players": 10,
+      "preferences": {
+        "music": true,
+        "sfx": true,
+        "haptics": true
+      },
+      "music": {
+        "loaded": true,
+        "playing": false,
+        "time": 4.8747,
+        "loop": true,
+        "volume": 0.35
+      },
+      "effects": [
+        {
+          "event": "ui",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "jump",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "score",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "collision",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "checkpoint",
+          "loaded": false,
+          "playing": true
+        },
+        {
+          "event": "complete",
+          "loaded": false,
+          "playing": true
+        },
+        {
+          "event": "unlock",
+          "loaded": false,
+          "playing": true
+        },
+        {
+          "event": "pause",
+          "loaded": true,
+          "playing": false
+        },
+        {
+          "event": "resume",
+          "loaded": true,
+          "playing": false
+        }
+      ]
+    },
+    "status": "LEVEL_COMPLETE",
+    "levelId": 1,
+    "endless": false,
+    "biome": "first_bloom",
+    "score": 8,
+    "elapsed": 15.414600000000013,
+    "player": {
+      "x": 219,
+      "y": 143.575287000002,
+      "velocity": 64.85999999999699
+    },
+    "pairs": [
+      {
+        "worldX": 5249.679999999999,
+        "x": 696.2071600000163,
+        "center": 182.03416835991416,
+        "previousCenter": 201.50389920659165,
+        "gapY": 118.31416835991416,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 4,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": true,
+        "preparedAt": 1793076558096,
+        "id": "pair-0",
+        "epoch": 2
+      },
+      {
+        "worldX": 5789.839999999999,
+        "x": 1236.3671600000162,
+        "center": 198.91242355575892,
+        "previousCenter": 182.03416835991416,
+        "gapY": 135.19242355575892,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 5,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793076559895,
+        "id": "pair-1",
+        "epoch": 2
+      },
+      {
+        "worldX": 6329.999999999999,
+        "x": 1776.527160000016,
+        "center": 165.4567485065084,
+        "previousCenter": 198.91242355575892,
+        "gapY": 101.7367485065084,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 2,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793076561731,
+        "id": "pair-2",
+        "epoch": 2
+      },
+      {
+        "worldX": 4709.5199999999995,
+        "x": 156.04716000001645,
+        "center": 201.50389920659165,
+        "previousCenter": 206.43540265929607,
+        "gapY": 137.78389920659166,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 4,
+        "biome": "first_bloom",
+        "scored": true,
+        "visible": true,
+        "preparedAt": 1793076556248,
+        "id": "pair-3",
+        "epoch": 1
+      }
+    ],
+    "future": [
+      {
+        "worldX": 6870.159999999999,
+        "x": 2316.687160000016,
+        "center": 189.55912830910827,
+        "previousCenter": 165.4567485065084,
+        "gapY": 125.83912830910828,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 4,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793076563568
+      },
+      {
+        "worldX": 7410.319999999999,
+        "x": 2856.8471600000157,
+        "center": 188.4400588099178,
+        "previousCenter": 189.55912830910827,
+        "gapY": 124.72005880991779,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 5,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793076565388
+      },
+      {
+        "worldX": 7950.479999999999,
+        "x": 3397.0071600000156,
+        "center": 212.4145813852901,
+        "previousCenter": 188.4400588099178,
+        "gapY": 148.6945813852901,
+        "gapSize": 127.44,
+        "width": 68,
+        "variant": 2,
+        "biome": "first_bloom",
+        "scored": false,
+        "visible": false,
+        "preparedAt": 1793076567224
+      }
+    ],
+    "params": {
+      "gapSize": 127.44,
+      "speed": 295.4,
+      "spacing": 540.16,
+      "maxDelta": 42.48,
+      "topMargin": 42.48,
+      "bottomMargin": 42.48,
+      "width": 68,
+      "poolSize": 4,
+      "prewarmPairs": 3,
+      "targetScore": 8
+    },
+    "rafActive": false,
+    "diagnostics": {
+      "frames": 676,
+      "rootRenders": 28,
+      "pairRenders": 15,
+      "pairMounts": 4,
+      "actorRenders": 44,
+      "longFrames": 4,
+      "maxFrameMs": 166.59999999999854,
+      "inputCount": 21
+    },
+    "metrics": [
+      {
+        "type": "pair_prepared",
+        "at": 1793076550871,
+        "worldX": 928.4000000000001,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076550871,
+        "worldX": 1468.56,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076550871,
+        "worldX": 2008.7199999999998,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076550871,
+        "worldX": 2548.8799999999997,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076550871,
+        "worldX": 3089.0399999999995,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076550871,
+        "worldX": 3629.1999999999994,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076550871,
+        "worldX": 4169.36,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793076552233,
+        "id": "pair-0"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793076552233,
+        "id": "pair-0",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793076552234,
+        "id": "pair-1"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793076552234,
+        "id": "pair-1",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793076552234,
+        "id": "pair-2"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793076552234,
+        "id": "pair-2",
+        "epoch": 0
+      },
+      {
+        "type": "pair_mounted",
+        "at": 1793076552234,
+        "id": "pair-3"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793076552234,
+        "id": "pair-3",
+        "epoch": 0
+      },
+      {
+        "type": "renderer_ready",
+        "at": 1793076552237,
+        "mountedPairs": 4,
+        "futurePrepared": 3
+      },
+      {
+        "type": "pair_visible",
+        "at": 1793076552842,
+        "id": "pair-0",
+        "epoch": 0,
+        "preparedAt": 1793076550871
+      },
+      {
+        "type": "pair_visible",
+        "at": 1793076554897,
+        "id": "pair-1",
+        "epoch": 0,
+        "preparedAt": 1793076550871
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076556248,
+        "worldX": 4709.5199999999995,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793076556264,
+        "id": "pair-0",
+        "epoch": 1
+      },
+      {
+        "type": "pair_visible",
+        "at": 1793076556735,
+        "id": "pair-2",
+        "epoch": 0,
+        "preparedAt": 1793076550871
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076558096,
+        "worldX": 5249.679999999999,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793076558144,
+        "id": "pair-1",
+        "epoch": 1
+      },
+      {
+        "type": "pair_visible",
+        "at": 1793076558559,
+        "id": "pair-3",
+        "epoch": 0,
+        "preparedAt": 1793076550871
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076559895,
+        "worldX": 5789.839999999999,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793076559928,
+        "id": "pair-2",
+        "epoch": 1
+      },
+      {
+        "type": "pair_visible",
+        "at": 1793076560394,
+        "id": "pair-0",
+        "epoch": 1,
+        "preparedAt": 1793076550871
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076561731,
+        "worldX": 6329.999999999999,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793076561745,
+        "id": "pair-3",
+        "epoch": 1
+      },
+      {
+        "type": "pair_visible",
+        "at": 1793076562213,
+        "id": "pair-1",
+        "epoch": 1,
+        "preparedAt": 1793076550871
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076563568,
+        "worldX": 6870.159999999999,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793076563587,
+        "id": "pair-0",
+        "epoch": 2
+      },
+      {
+        "type": "pair_visible",
+        "at": 1793076564048,
+        "id": "pair-2",
+        "epoch": 1,
+        "preparedAt": 1793076550871
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076565388,
+        "worldX": 7410.319999999999,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793076565407,
+        "id": "pair-1",
+        "epoch": 2
+      },
+      {
+        "type": "pair_visible",
+        "at": 1793076565879,
+        "id": "pair-3",
+        "epoch": 1,
+        "preparedAt": 1793076556248
+      },
+      {
+        "type": "pair_prepared",
+        "at": 1793076567224,
+        "worldX": 7950.479999999999,
+        "biome": "first_bloom"
+      },
+      {
+        "type": "pair_visual_prepared",
+        "at": 1793076567252,
+        "id": "pair-2",
+        "epoch": 2
+      },
+      {
+        "type": "pair_visible",
+        "at": 1793076567700,
+        "id": "pair-0",
+        "epoch": 2,
+        "preparedAt": 1793076558096
+      }
+    ],
+    "vectorStats": {
+      "parses": 23,
+      "parsesDuringPlay": 0,
+      "chapters": [
+        {
+          "biome": "first_bloom",
+          "start": 1793076550872,
+          "end": 1793076550981,
+          "width": 844,
+          "height": 390
+        }
+      ]
+    }
+  },
+  "preparedBeforeVisible": true,
+  "errors": []
+}
