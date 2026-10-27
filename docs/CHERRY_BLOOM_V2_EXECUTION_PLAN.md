@@ -51,4 +51,8 @@ npx skills --help and find searches for React Native/performance, Expo/audio, ga
 - Phase1: PASS on SDK54 Web — trusted10ms input, jump, gravity, directed boundary/branch tests, single score, Level1 target8 and terminal stop. Evidence: engine-green.log and core-renderer-results.json.
 - Phase2: PASS in the measured Web run —678 frames,26 field renders,15 pair renders,4 total pair mounts,0 vector parses during play; every visible generation had a committed visual-prepared event first. Three long frames, worst116.7ms, are recorded, not hidden or promoted to device FPS proof.
 - Phase3: First Bloom integrated and visually inspected; remaining kits use the same source registry but still require individual runtime visual gates. Supplied SVG sources are preserved; an observed SvgAst override API error and cross-screen gradient-ID collision were reproduced and corrected with tests.
-- Phase4–12: NOT EXECUTED. Continue through progression/persistence, Endless, motion/audio, full multi-biome QA, Snack and SDK57; do not promote this Level1 run to full V2 acceptance.
+- Phase4–8: PASS at documented scopes — twelve actual-engine trajectories, progression/persistence/reload, fixture-unlocked Endless entry, motion/lifecycle, actual music loops and nine SFX. Physical audio calibration remains NOT EXECUTED.
+- Phase9: SDK54 Doctor18/18, dependency check,28tests, Web/native export and twelve landscape screenshots pass. No physical native runtime is inferred from export.
+- Phase10: Official Snack SDK54 Web Preview passes completion/checkpoint/Continue/navigation; final visual-anchor republication and post-push Git-import retest remain publication steps.
+- Phase11: Separate SDK57 Doctor21/21,26tests and Web Level1/checkpoint run pass; manifest/lock remain separate.
+- Phase12: Independent review closed its findings and verified final character-anchor math. Final Git/Vercel publication verification and report freeze remain.

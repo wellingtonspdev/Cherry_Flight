@@ -11,6 +11,10 @@ export const GAME = {
   gapSize: 168,           // dp vertical safe corridor
   playerSize: 48,         // dp visual diameter of Cherry
   playerHitboxInset: 6,   // dp forgiving inset so petal/stem edge doesn't feel unfair
+  // Supplied160×150 sprites center the body at78,88; stem/leaf extend beyond the logical body frame.
+  playerSpriteSize: 64,
+  playerSpriteOffsetX: -7.2,
+  playerSpriteOffsetY: -13.2,
   playerXRatio: 0.26,     // horizontal position ratio on screen
   topClearance: 84,       // dp minimum top branch height / HUD clearance
   bottomClearance: 96,    // dp minimum bottom branch height / ground clearance

@@ -6,10 +6,16 @@ env: load .env.local
 env: export VERCEL_OIDC_TOKEN
 Starting Metro Bundler
 Web node_modules\expo\AppEntry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
-Web node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.6% (558/559)
-| (node:37272) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+Web node_modules\expo\AppEntry.js ▓▓▓░░░░░░░░░░░░░ 21.6% ( 87/193)
+Web node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 74.5% (404/468)
+Web node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.3% (558/560)
+| (node:37768) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+Web node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.3% (558/560)
 | (Use `node --trace-warnings ...` to show where the warning was created)
-Web Bundled 4551ms node_modules\expo\AppEntry.js (560 modules)
+| (node:30976) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+Web node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (560/560)
+Web Bundled 26335ms node_modules\expo\AppEntry.js (560 modules)
 
 › Assets (24):
 assets\v2\audio\checkpoint.824790aa24b769a97b9ab57176a42058.wav (21.2 kB)
@@ -32,7 +38,7 @@ node_modules\@react-navigation\elements\lib\module\assets\close-icon.808e1b1b9b5
 node_modules\@react-navigation\elements\lib\module\assets\search-icon.286d67d3f74808a60a78d3ebf1a5fb57.png (928 B)
 
 › web bundles (1):
-_expo/static/js/web/AppEntry-679e5516b213e15bc378976232bf7342.js (1.14 MB)
+_expo/static/js/web/AppEntry-834ffa934a846afcaba0abc69b952e8c.js (1.14 MB)
 
 › Files (3):
 favicon.ico (14.5 kB)

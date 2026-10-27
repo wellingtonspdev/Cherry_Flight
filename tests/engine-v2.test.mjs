@@ -1,7 +1,21 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import fs from 'node:fs';
+import { GAME } from '../src/game/constants.js';
 const engine = await import('../src/game/engineV2.js').catch(() => null);
+
+test('Gameplay sprite centers its red body around the forgiving logical hitbox', () => {
+  const scale = GAME.playerSpriteSize / 160;
+  const letterbox = (GAME.playerSpriteSize - 150 * scale) / 2;
+  for (const pose of ['idle', 'jump', 'fall', 'hit']) {
+    const xml = fs.readFileSync(new URL(`../assets/v2/characters/cherry_${pose}.svg`, import.meta.url), 'utf8');
+    assert.match(xml, /ellipse cx="78" cy="88" rx="55" ry="52"/);
+    assert.ok(Math.abs(GAME.playerSpriteOffsetX + 78 * scale - GAME.playerSize / 2) < 0.001);
+    assert.ok(Math.abs(GAME.playerSpriteOffsetY + letterbox + 88 * scale - GAME.playerSize / 2) < 0.001);
+    assert.ok(55 * 2 * scale > GAME.playerSize - 2 * GAME.playerHitboxInset);
+    assert.ok(52 * 2 * scale > GAME.playerSize - 2 * GAME.playerHitboxInset);
+  }
+});
 
 test('V2 round starts only on input, then integrates jump and gravity', () => {
   assert.ok(engine, 'V2 simulation must exist');

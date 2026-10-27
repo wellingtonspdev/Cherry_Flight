@@ -1,0 +1,43 @@
+(node:13668) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/Cherry_Flight_Release54/src/game/constants.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\Cherry_Flight_Release54\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ Gameplay sprite centers its red body around the forgiving logical hitbox (24.1752ms)
+✔ V2 round starts only on input, then integrates jump and gravity (3.3921ms)
+✔ V2 dt integration is stable and rejects invalid elapsed time (0.8375ms)
+✔ V2 collision wins before scoring and terminal states cannot advance (2.3635ms)
+✔ V2 score is once per pair and completion fires once at the configured target (0.7143ms)
+✔ V2 pool reuses mounted slot identities and has three constrained future descriptors (81.0488ms)
+✔ V2 preserves the supplied configuration and resolves bounded Endless difficulty (3.3131ms)
+✔ Every level starts with a centered, predictable first opening (2.7583ms)
+✔ Obstacle compositions do not repeat consecutively even with repeated random samples (3.4058ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 8
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 412.5509
+
+✖ failing tests:
+
+test at tests\engine-v2.test.mjs:7:1
+✖ Gameplay sprite centers its red body around the forgiving logical hitbox (24.1752ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(Math.abs(GAME.playerSpriteOffsetX + 78 * scale - GAME.playerSize / 2) < 0.001)
+  
+      at TestContext.<anonymous> (file:///D:/Cherry_Flight_Release54/tests/engine-v2.test.mjs:13:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

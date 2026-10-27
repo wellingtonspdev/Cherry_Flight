@@ -51,13 +51,17 @@ Levels1–6 mount4 pairs; Levels7–12/Endless mount5. Stable slot IDs recycle X
 
 The first gate is centered and starts at1.1viewport widths, giving reaction time before narrow advanced openings. Subsequent centers obey margins/configured delta and physical safety bounds. Adjacent visual variants differ even for repeated random samples. Supplied JSON values remain unchanged.
 
-Measured complete browser runs use4 total pair mounts,15 pair renders and0 SVG parses during play. Every visible generation has an earlier committed visual-prepared event. Headless runs under shared CPU load contain long frames, up to166.6ms; they are not represented as locked60FPS or physical-device performance proof. No viewport-entry decode/mount pop-in was observed.
+Measured complete browser runs use4 total pair mounts,15 pair renders and0 SVG parses during play. Every visible generation has an earlier committed visual-prepared event. Headless runs under shared CPU load contain long frames, up to183.4ms; they are not represented as locked60FPS or physical-device performance proof. No viewport-entry decode/mount pop-in was observed.
 
 ## Asset integration
 
 All167 supplied checksums matched; all80 PNGs were visually inspected. Four character states and all4 biomes use authoritative supplied SVG geometry, not approximate replacement drawings. Each obstacle kit contains13 modules, despite the source manifest saying12. Twelve structural/decorative modules render; accent_particles is preloaded but unused. Sixteen layered background sources render; four composites are retained/preparsed reference/fallback resources. PNG exports are preserved reference files, not claimed as displayed runtime images.
 
 Portrait1080×1920 scenery adapts to landscape. Celestial/flower circles are precompensated to remain round; foreground wood stays in edge strips. Midground opacity preserves corridor readability. SvgAst requires its override prop; per-instance scoped gradient IDs prevent hidden navigation screens from making another screen's sky/Cherry transparent. Both observed defects were corrected and tested.
+
+### Character anchor correction
+
+Final visual review measured a36×36 logical hitbox against a roughly33×31 red body when the entire padded160×150 source was rendered at48×48. This could register hits in visually empty upper padding. The gameplay SVG now renders at64×64, offset(-7.2,-13.2) inside a48×48 animation frame. At scale0.4 with2dp vertical letterbox, source body center(78,88) becomes(24,24), and body bounds44×41.6 exceed the hitbox on both axes. Stem/leaf retain their supplied geometry outside the body frame. Physics is unchanged. All four poses share this anchor; RED/GREEN tests and independent review verify the mapping. This remains forgiving AABB collision, not a pixel-mask promise.
 
 ## Progression
 
@@ -124,7 +128,7 @@ PASS rows cite executed checks, not source presence alone. Native physical calib
 | V2-AC07 | Cherry visibly moves every frame while playing. | PASS | endless-lifecycle-runtime.json: actual SVG ancestor transforms change |
 | V2-AC08 | gravity/jump use dt-safe logic. | PASS | engine-v2 tests: invalid dt, capped dt,30/60Hz; browser gravity/jump |
 | V2-AC09 | collisions work top/bottom/obstacles. | PASS | Actual engine ceiling/ground/topBranch/bottomBranch scenarios; browser Game Over |
-| V2-AC10 | score increments once per passed pair. | PASS | 27-test suite,12 engine replay targets and browser score8 |
+| V2-AC10 | score increments once per passed pair. | PASS | 28-test suite,12 engine replay targets and browser score8 |
 | V2-AC11 | retry fully resets level state. | PASS | endless-lifecycle-runtime.json: three full retries; position/velocity/score/time/slots |
 | V2-AC12 | no future trunk pop-in on PC/web preview. | PASS | Every visible generation has committed visual-prepared metric first; no new SVG parse |
 | V2-AC13 | at least 4 pooled pairs exist. | PASS | Runtime4 slots Levels1/4 and5 Levels7/10/Endless; fixed IDs |
@@ -166,6 +170,38 @@ PASS rows cite executed checks, not source presence alone. Native physical calib
 | V2-AC49 | PC/web preview has no trunk decode/render stall. | PASS | Pool metrics and0 vector parses during play; long-frame limitations disclosed |
 | V2-AC50 | independent adversarial review finds no open BLOCKER/CRITICAL. | PASS | INDEPENDENT_REVIEW.md: findings closed; no open BLOCKER/CRITICAL/MAJOR found |
 
+## Planned vs implemented matrix
+
+| Area | Planned | Implemented / executed evidence | State |
+|---|---|---|---|
+| Branding/Cherry | Official name, supplied four poses | Active source naming search, source SVGs, anchor regression | PASS |
+| Home | Play/Continue/Instructions/Credits | Actual local and public Snack navigation | PASS |
+| Instructions | Controls, objective, chapters | Updated campaign text and actual route navigation | PASS |
+| Game/physics/input | Landscape tap, dt jump/gravity | Trusted10ms input, CSS movement, pure collision and browser rounds | PASS |
+| Credits | Academic exact content | String test and public visible disclaimer | PASS |
+| Navigation | React Navigation, no orphan loop | Required routes, retained post-exit snapshot freezes | PASS |
+| Collision/score/retry | AABB, one score, full reset | Engine scenarios, twelve target trajectories, three browser retries | PASS |
+| Backgrounds/phases | Four V2 chapter worlds | Four layered source sets, twelve viewport screenshots | PASS |
+| Obstacles/assets | Modular trunks, caps, organic decoration | Twelve runtime modules per kit, cached source vectors, stable slots | PASS |
+| Motion | Poses, feedback, parallax, FX | Actual live transforms, completion screenshot, lifecycle checks | PASS |
+| Progression/checkpoints |12levels, unlock, Continue, persistence | Actual first unlock/reload plus all12 pure progression completions | PASS |
+| Endless | Unlock12, ramp, biome rotation | Actual fixture-unlocked entry; pure ramp/bounds execution | PASS |
+| Audio/settings | Four themes, SFX, independent mute | Actual two loop wraps, nine events, reload and fail-open | PASS |
+| SDK54 | Official delivery | Doctor18/18, dependency check, Web/native exports, browser runtime | PASS |
+| SDK57 | Separate equivalent mirror | Own deps/lock, Doctor21/21,26tests, Web completion/checkpoint | PASS |
+| Snack | Official SDK54 target and Git import | Official Web Preview passed; final Git import retest follows push | PARTIAL |
+| Physical native device | Execute when available | No local SDK/adb/emulator or physical device available | NOT EXECUTED |
+
+### Root cause and revalidation details
+
+- **V2-REV01/renderer:** symptom: V1 schedules full-tree React updates each frame and keeps only3 pairs. Expected: imperative high-frequency positions and4/5 stable slots with future preparation. Reproduce: inspect baseline frame state setter and slot count, then compare browser mount/render counters. Cause: simulation and complete UI tree share one render tick. Fix: engine refs, isolated actor/slot refs and prepared queue. Risk: medium, frame/lifecycle integration. Revalidation: exact score8, fixed4mounts,0 parse during play and prepared-before-visible metrics.
+- **V2-REV02/progression:** symptom: no campaign/checkpoint/unlock flow. Expected: configured twelve levels, level-granular saves and guarded selection. Reproduce: baseline Home exposes only the V1 endless entry. Cause: implementation predates V2 contracts. Fix: pure progression, sanitized/ordered persistence and UI routes. Risk: medium, persisted state. Revalidation: real first unlock/Continue after reload, locked selection and all12 actual-engine target paths; corruption/quota fail-open.
+- **V2-REV03/art:** symptom: V1 primitives diverge from provided V2 geometry. Expected: supplied Cherry, four modular kits and layered worlds. Reproduce: compare baseline screenshots/source with all supplied assets. Cause: source art was not integrated into the old renderer. Fix: generated lossless vector registry and precompiled modular composition. Risk: medium, SVG/API/anchor differences. Revalidation: four-biome screenshots in three landscape sizes, scoped gradient tests and source checksum/equality checks.
+- **V2-REV04/audio:** symptom: no chapter music/events/preferences. Expected: centralized reusable playback, four themes and nine events. Reproduce: baseline has haptic helpers but no audio players; handoff contains no WAVs. Cause: absent subsystem and absent recordings. Fix: original deterministic PCM plus SDK54-compatible native/Web adapter. Risk: medium, platform playback/lifecycle. Revalidation: two actual loop wraps, nine runtime events, independent switches/reload, deferred seek cancellation and throwing-backend gameplay.
+- **V2-REV05/SVG integration:** symptom: wrong dimensions and transparent gradients during first integration. Expected: explicit runtime bounds and independent definitions across hidden screens. Reproduce: direct width props on SvgAst and shared source IDs with multiple screens mounted. Cause: actual installed SvgAst reads override props, and Web defs IDs share document scope. Fix: override dimensions and scope cloned AST IDs per instance. Risk: low. Revalidation: RED/GREEN SVG tests and corrected runtime screenshots.
+- **V2-REV09/opening gate:** symptom/risk: advanced narrow openings arrive early relative to the mandatory starting jump. Expected: predictable opening and reaction time. Reproduce: finite-horizon controller failures highlighted startup timing; those failures alone were not treated as a mathematical impossibility proof. Cause: first gate at0.72W with a random initial center. Fix: first center at mid-height and first X at1.1W, preserving every level-config value and subsequent constraints. Risk: low, affects opening pacing only. Revalidation: twelve successful input-only engine trajectories, public first-level completion and generation bounds.
+- **V2-REV13/anchor:** symptom: an invisible portion of the padded image is included in the hitbox. Expected: logical body box inside the visible red body's axis bounds. Reproduce: measure source ellipse/frame and render scale. Cause: full padded artwork dimensions were assumed to be body dimensions. Fix: gameplay-only source scale/offset, keeping the48dp pivot and all physics. Risk: low, visual-only. Revalidation: four-pose source assertions, center/extents math, independent review and fresh runtime screenshots.
+
 ## Findings
 
 | ID | Severity/category | Cause and evidence | Fix/revalidation | Status |
@@ -181,6 +217,7 @@ PASS rows cite executed checks, not source presence alone. Native physical calib
 | V2-REV09 | MAJOR / risk | Advanced first gate arrived before comfortable opening-flight adjustment | Centered first gate offscreen1.1W; all12 sampled engine trajectories completed | PASS |
 | V2-REV10 | MINOR / configuration bug | SDK57 rejects newArchEnabled copied from SDK54 | Removed only from57; Doctor21/21 | PASS |
 | V2-REV11 | MINOR / dependency risk |7 SDK54 tooling advisories; no compatible force-fix established | Audit retained; isolate dev tooling/untrusted inputs; no forced SDK downgrade | PARTIAL |
+| V2-REV13 | MAJOR / visual divergence | Padded sprite source made the body smaller than the logical hitbox | Corrected gameplay-only anchor/scale; four-pose RED/GREEN + independent math review + fresh screenshots | PASS |
 | V2-REV12 | MINOR / missing evidence | No physical Android/iOS calibration or native Snack audition | Native bundles pass; actual device/Expo Go still required for platform-specific assurance | NOT EXECUTED |
 
 Historical tap and immobility causes/evidence remain in CHERRY_BLOOM_REVIEW_REPORT.md. Naming search found no deprecated character spelling in active product source; historical quotations remain evidence, not UI copy.

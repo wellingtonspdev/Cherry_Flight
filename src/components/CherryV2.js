@@ -1,5 +1,5 @@
 import React, { forwardRef, memo, useEffect, useImperativeHandle, useRef, useState } from 'react';
-import { Animated, Easing } from 'react-native';
+import { Animated, Easing, View } from 'react-native';
 import VectorAsset from './VectorAssetV2';
 import { GAME } from '../game/constants';
 
@@ -61,7 +61,11 @@ export const PlayerActorV2 = memo(forwardRef(function PlayerActorV2({ round, act
   return (
     <Animated.View pointerEvents="none" style={{ position: 'absolute', top: 0, left: 0, width: GAME.playerSize, height: GAME.playerSize, transform: [{ translateX: x }, { translateY: y }] }}>
       <Animated.View style={{ transform: [{ translateY: bob }, { rotate: tilt.interpolate({ inputRange: [-90, 90], outputRange: ['-90deg', '90deg'] }) }, { rotate: shake.interpolate({ inputRange: [-90, 90], outputRange: ['-90deg', '90deg'] }) }, { scaleX: squashX }, { scaleY: squashY }, { scale: bounce }] }}>
-        <CherryV2 size={GAME.playerSize} state={pose} />
+        <View style={{ width: GAME.playerSize, height: GAME.playerSize }}>
+          <View style={{ position: 'absolute', left: GAME.playerSpriteOffsetX, top: GAME.playerSpriteOffsetY }}>
+            <CherryV2 size={GAME.playerSpriteSize} state={pose} />
+          </View>
+        </View>
       </Animated.View>
     </Animated.View>
   );

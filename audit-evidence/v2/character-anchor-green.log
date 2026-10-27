@@ -1,0 +1,21 @@
+(node:37512) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/Cherry_Flight_Release54/src/game/constants.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\Cherry_Flight_Release54\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Gameplay sprite centers its red body around the forgiving logical hitbox (5.7794ms)
+✔ V2 round starts only on input, then integrates jump and gravity (2.7604ms)
+✔ V2 dt integration is stable and rejects invalid elapsed time (1.2559ms)
+✔ V2 collision wins before scoring and terminal states cannot advance (3.8835ms)
+✔ V2 score is once per pair and completion fires once at the configured target (0.9814ms)
+✔ V2 pool reuses mounted slot identities and has three constrained future descriptors (87.8318ms)
+✔ V2 preserves the supplied configuration and resolves bounded Endless difficulty (4.9287ms)
+✔ Every level starts with a centered, predictable first opening (2.8921ms)
+✔ Obstacle compositions do not repeat consecutively even with repeated random samples (1.1586ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 419.0406
