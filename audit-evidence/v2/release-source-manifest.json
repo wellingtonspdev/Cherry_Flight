@@ -1,5 +1,5 @@
 {
-  "runtimeSourceRevision": "fb0cf90103bfa994faba30e033fbd0ef175fc25b",
+  "runtimeSourceRevision": "48b56e36a705cafda7e58530334948ed209a29c2",
   "sdk54": "54.0.38",
   "sdk57": "57.0.31",
   "sharedRuntimeFiles": [
@@ -33,7 +33,7 @@
     },
     {
       "path": "src/components/GameFieldV2.js",
-      "sha256": "449132b9830216b161b23a7143303192dde89321e6c70a793f7befde5f3ba794"
+      "sha256": "1219b049ea7eae0f23a0a06f8a36287bead1391d39877ac21918ee4c506204e0"
     },
     {
       "path": "src/components/GameOverCard.js",
@@ -843,5 +843,5 @@
     }
   ],
   "hashPolicy": "UTF8 normalized LF for JS, raw asset bytes; manifests/locks intentionally differ",
-  "fingerprint": "545bfdec53c8f5fe849623db2afdc4e13358311b1402066593d8bf3cfbcfd872"
+  "fingerprint": "4ce84c57b7d7379a799835d90b52b08aea2b55c232986b09eda80567ee816e62"
 }

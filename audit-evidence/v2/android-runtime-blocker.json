@@ -1,0 +1,40 @@
+{
+  "state": "NOT EXECUTED",
+  "scope": "Actual Android runtime; native exports succeeded separately",
+  "sdkPath": "D:/Android/Sdk",
+  "adbAvailable": true,
+  "hypervisor": "WHPX installed and usable",
+  "existingAvd": "Pixel_6_API_35_D",
+  "attempts": [
+    {
+      "profile": "existing read-only AVD",
+      "result": "Boot rejected before device registration: insufficient D: space"
+    },
+    {
+      "profile": "temporary isolated C: AVD",
+      "requestedDataMiB": 1536,
+      "effectiveMinimumDataGiB": 6,
+      "availableMiB": 4762.09,
+      "requiredMiB": 7372.8,
+      "result": "Boot rejected before creating userdata; no device registered"
+    }
+  ],
+  "freeGiB": {
+    "C": 4.65,
+    "D": 1.56
+  },
+  "expoGo": {
+    "version": "54.0.8",
+    "bytes": 185689284,
+    "sha256": "d72ed2cec15bf029c942d1cb70c933976ec83048e00d130bbfa6bad8cf22331a",
+    "digestMatchesOfficialRelease": true,
+    "source": "https://expo.dev/go?sdkVersion=54&platform=android&device=false",
+    "apkSource": "https://github.com/expo/expo-go-releases/releases/download/Expo-Go-54.0.8/Expo-Go-54.0.8.apk"
+  },
+  "changes": "No app installed or emulator user data deleted. Global SDK/AVD environment was not changed; scratch profile used process-local environment.",
+  "cleanup": {
+    "downloadedApkRemovedAfterChecksumRecording": true,
+    "scratchAvdRemoved": true,
+    "originalUserDataDeleted": false
+  }
+}

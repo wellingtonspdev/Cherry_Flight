@@ -68,7 +68,7 @@ node audit-evidence/v2/progression-runtime.cjs
 node audit-evidence/v2/visual-audio-runtime.cjs
 ```
 
-Os scripts de navegador exigem o Playwright/Chrome dos caminhos registrados neles e Metro na porta8105. Não são uma dependência do jogo.
+Os scripts de navegador exigem o Playwright/Chrome dos caminhos registrados neles e Metro na porta8105. Não são uma dependência do jogo. Os bots de navegador usam entradas reais e podem perder uma partida; consulte as tentativas/evidências em vez de confundir derrota do bot com falha de input. A suíte de lógica é determinística.
 
 ## Importar no Snack
 

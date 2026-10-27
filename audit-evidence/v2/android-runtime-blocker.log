@@ -1,0 +1,10 @@
+android-emulator.log: INFO         |   Checking: hasCompatibleHypervisor
+android-emulator.log: INFO         |      Ok: Hypervisor compatibility to run avd: `Pixel_6_API_35_D` are met
+android-emulator.log: INFO         |      Ok: System requirements to run avd: `Pixel_6_API_35_D` are met
+android-emulator.log: INFO         |      Error: Your device does not have enough disk space to run avd: `Pixel_6_API_35_D`
+android-emulator.log: FATAL        | Your device does not have enough disk space to run avd: `Pixel_6_API_35_D`.
+android-qa54.log: INFO         |   Checking: hasCompatibleHypervisor
+android-qa54.log: INFO         |      Ok: Hypervisor compatibility to run avd: `cherry-bloom-qa54` are met
+android-qa54.log: INFO         |      Ok: System requirements to run avd: `cherry-bloom-qa54` are met
+android-qa54.log: INFO         |      Ok: Disk space requirements to run avd: `cherry-bloom-qa54` are met
+android-qa54.log: FATAL        | Not enough space to create userdata partition. Available: 4762.09 MB at C:\Users\Wellington\AppData\Local\Temp\CherryBloomQA54\avd\cherry-bloom-qa54.avd, need 7372.80 MB.

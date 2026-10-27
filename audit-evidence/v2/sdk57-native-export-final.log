@@ -1,11 +1,9 @@
 Starting Metro Bundler
 
-| (node:38660) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (node:27288) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 | (Use `node --trace-warnings ...` to show where the warning was created)
-| (node:38660) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
-| (Use `node --trace-warnings ...` to show where the warning was created)
-iOS Bundled 24252ms node_modules\expo\AppEntry.js (1002 modules)
-Android Bundled 41379ms node_modules\expo\AppEntry.js (997 modules)
+iOS Bundled 24043ms node_modules\expo\AppEntry.js (1002 modules)
+Android Bundled 40335ms node_modules\expo\AppEntry.js (997 modules)
 
 › Assets (37):
 assets\v2\audio\checkpoint.wav (21KB)
@@ -28,10 +26,10 @@ node_modules\@react-navigation\elements\lib\module\assets\close-icon.png (4 vari
 node_modules\@react-navigation\elements\lib\module\assets\search-icon.png (7 variations | 592B)
 
 › ios bundles (1):
-_expo/static/js/ios/AppEntry-8922657f33536fa50579e9e1cd43e9dd.hbc (2.4MB)
+_expo/static/js/ios/AppEntry-bd4efdf511339ef0fab620a33f5d509c.hbc (2.4MB)
 
 › android bundles (1):
-_expo/static/js/android/AppEntry-b748d93ebec2a92516eebb3377e2b65c.hbc (2.4MB)
+_expo/static/js/android/AppEntry-7343dfdae5e8564b8e6acc870adf4a3a.hbc (2.4MB)
 
 › Files (1):
 metadata.json (4KB)
