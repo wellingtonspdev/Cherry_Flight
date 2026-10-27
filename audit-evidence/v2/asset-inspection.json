@@ -1,0 +1,642 @@
+[
+  {
+    "path": "assets\\v2\\obstacles\\first_bloom\\accent_particles.png",
+    "size": [
+      320,
+      300
+    ],
+    "bytes": 5924
+  },
+  {
+    "path": "assets\\v2\\obstacles\\first_bloom\\blossom_cluster_a.png",
+    "size": [
+      320,
+      300
+    ],
+    "bytes": 8987
+  },
+  {
+    "path": "assets\\v2\\obstacles\\first_bloom\\blossom_cluster_b.png",
+    "size": [
+      320,
+      300
+    ],
+    "bytes": 8987
+  },
+  {
+    "path": "assets\\v2\\obstacles\\first_bloom\\cap_bottom_a.png",
+    "size": [
+      420,
+      240
+    ],
+    "bytes": 10883
+  },
+  {
+    "path": "assets\\v2\\obstacles\\first_bloom\\cap_bottom_b.png",
+    "size": [
+      420,
+      240
+    ],
+    "bytes": 13692
+  },
+  {
+    "path": "assets\\v2\\obstacles\\first_bloom\\cap_top_a.png",
+    "size": [
+      420,
+      240
+    ],
+    "bytes": 10760
+  },
+  {
+    "path": "assets\\v2\\obstacles\\first_bloom\\cap_top_b.png",
+    "size": [
+      420,
+      240
+    ],
+    "bytes": 13873
+  },
+  {
+    "path": "assets\\v2\\obstacles\\first_bloom\\leaves_cluster.png",
+    "size": [
+      320,
+      300
+    ],
+    "bytes": 7237
+  },
+  {
+    "path": "assets\\v2\\obstacles\\first_bloom\\side_branch_1.png",
+    "size": [
+      480,
+      360
+    ],
+    "bytes": 15220
+  },
+  {
+    "path": "assets\\v2\\obstacles\\first_bloom\\side_branch_2.png",
+    "size": [
+      480,
+      360
+    ],
+    "bytes": 14537
+  },
+  {
+    "path": "assets\\v2\\obstacles\\first_bloom\\side_branch_3.png",
+    "size": [
+      480,
+      360
+    ],
+    "bytes": 16088
+  },
+  {
+    "path": "assets\\v2\\obstacles\\first_bloom\\trunk_body.png",
+    "size": [
+      320,
+      640
+    ],
+    "bytes": 18786
+  },
+  {
+    "path": "assets\\v2\\obstacles\\first_bloom\\trunk_edge_overlay.png",
+    "size": [
+      320,
+      640
+    ],
+    "bytes": 2300
+  },
+  {
+    "path": "assets\\v2\\backgrounds\\first_bloom\\background_base.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 29270
+  },
+  {
+    "path": "assets\\v2\\backgrounds\\first_bloom\\background_composite.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 131740
+  },
+  {
+    "path": "assets\\v2\\backgrounds\\first_bloom\\foreground_frame.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 64632
+  },
+  {
+    "path": "assets\\v2\\backgrounds\\first_bloom\\midground.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 75257
+  },
+  {
+    "path": "assets\\v2\\backgrounds\\first_bloom\\overlay_fx.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 32657
+  },
+  {
+    "path": "assets\\v2\\obstacles\\sakura_garden\\accent_particles.png",
+    "size": [
+      320,
+      300
+    ],
+    "bytes": 5973
+  },
+  {
+    "path": "assets\\v2\\obstacles\\sakura_garden\\blossom_cluster_a.png",
+    "size": [
+      320,
+      300
+    ],
+    "bytes": 9205
+  },
+  {
+    "path": "assets\\v2\\obstacles\\sakura_garden\\blossom_cluster_b.png",
+    "size": [
+      320,
+      300
+    ],
+    "bytes": 9147
+  },
+  {
+    "path": "assets\\v2\\obstacles\\sakura_garden\\cap_bottom_a.png",
+    "size": [
+      420,
+      240
+    ],
+    "bytes": 10890
+  },
+  {
+    "path": "assets\\v2\\obstacles\\sakura_garden\\cap_bottom_b.png",
+    "size": [
+      420,
+      240
+    ],
+    "bytes": 13559
+  },
+  {
+    "path": "assets\\v2\\obstacles\\sakura_garden\\cap_top_a.png",
+    "size": [
+      420,
+      240
+    ],
+    "bytes": 10729
+  },
+  {
+    "path": "assets\\v2\\obstacles\\sakura_garden\\cap_top_b.png",
+    "size": [
+      420,
+      240
+    ],
+    "bytes": 13644
+  },
+  {
+    "path": "assets\\v2\\obstacles\\sakura_garden\\leaves_cluster.png",
+    "size": [
+      320,
+      300
+    ],
+    "bytes": 7153
+  },
+  {
+    "path": "assets\\v2\\obstacles\\sakura_garden\\side_branch_1.png",
+    "size": [
+      480,
+      360
+    ],
+    "bytes": 14955
+  },
+  {
+    "path": "assets\\v2\\obstacles\\sakura_garden\\side_branch_2.png",
+    "size": [
+      480,
+      360
+    ],
+    "bytes": 14332
+  },
+  {
+    "path": "assets\\v2\\obstacles\\sakura_garden\\side_branch_3.png",
+    "size": [
+      480,
+      360
+    ],
+    "bytes": 15905
+  },
+  {
+    "path": "assets\\v2\\obstacles\\sakura_garden\\trunk_body.png",
+    "size": [
+      320,
+      640
+    ],
+    "bytes": 18527
+  },
+  {
+    "path": "assets\\v2\\obstacles\\sakura_garden\\trunk_edge_overlay.png",
+    "size": [
+      320,
+      640
+    ],
+    "bytes": 2303
+  },
+  {
+    "path": "assets\\v2\\backgrounds\\sakura_garden\\background_base.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 30669
+  },
+  {
+    "path": "assets\\v2\\backgrounds\\sakura_garden\\background_composite.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 136281
+  },
+  {
+    "path": "assets\\v2\\backgrounds\\sakura_garden\\foreground_frame.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 64617
+  },
+  {
+    "path": "assets\\v2\\backgrounds\\sakura_garden\\midground.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 75689
+  },
+  {
+    "path": "assets\\v2\\backgrounds\\sakura_garden\\overlay_fx.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 32951
+  },
+  {
+    "path": "assets\\v2\\obstacles\\golden_bloom\\accent_particles.png",
+    "size": [
+      320,
+      300
+    ],
+    "bytes": 5488
+  },
+  {
+    "path": "assets\\v2\\obstacles\\golden_bloom\\blossom_cluster_a.png",
+    "size": [
+      320,
+      300
+    ],
+    "bytes": 9156
+  },
+  {
+    "path": "assets\\v2\\obstacles\\golden_bloom\\blossom_cluster_b.png",
+    "size": [
+      320,
+      300
+    ],
+    "bytes": 9090
+  },
+  {
+    "path": "assets\\v2\\obstacles\\golden_bloom\\cap_bottom_a.png",
+    "size": [
+      420,
+      240
+    ],
+    "bytes": 10809
+  },
+  {
+    "path": "assets\\v2\\obstacles\\golden_bloom\\cap_bottom_b.png",
+    "size": [
+      420,
+      240
+    ],
+    "bytes": 13502
+  },
+  {
+    "path": "assets\\v2\\obstacles\\golden_bloom\\cap_top_a.png",
+    "size": [
+      420,
+      240
+    ],
+    "bytes": 10605
+  },
+  {
+    "path": "assets\\v2\\obstacles\\golden_bloom\\cap_top_b.png",
+    "size": [
+      420,
+      240
+    ],
+    "bytes": 13693
+  },
+  {
+    "path": "assets\\v2\\obstacles\\golden_bloom\\leaves_cluster.png",
+    "size": [
+      320,
+      300
+    ],
+    "bytes": 7274
+  },
+  {
+    "path": "assets\\v2\\obstacles\\golden_bloom\\side_branch_1.png",
+    "size": [
+      480,
+      360
+    ],
+    "bytes": 15056
+  },
+  {
+    "path": "assets\\v2\\obstacles\\golden_bloom\\side_branch_2.png",
+    "size": [
+      480,
+      360
+    ],
+    "bytes": 14509
+  },
+  {
+    "path": "assets\\v2\\obstacles\\golden_bloom\\side_branch_3.png",
+    "size": [
+      480,
+      360
+    ],
+    "bytes": 15998
+  },
+  {
+    "path": "assets\\v2\\obstacles\\golden_bloom\\trunk_body.png",
+    "size": [
+      320,
+      640
+    ],
+    "bytes": 18806
+  },
+  {
+    "path": "assets\\v2\\obstacles\\golden_bloom\\trunk_edge_overlay.png",
+    "size": [
+      320,
+      640
+    ],
+    "bytes": 2302
+  },
+  {
+    "path": "assets\\v2\\backgrounds\\golden_bloom\\background_base.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 31269
+  },
+  {
+    "path": "assets\\v2\\backgrounds\\golden_bloom\\background_composite.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 129516
+  },
+  {
+    "path": "assets\\v2\\backgrounds\\golden_bloom\\foreground_frame.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 64450
+  },
+  {
+    "path": "assets\\v2\\backgrounds\\golden_bloom\\midground.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 75057
+  },
+  {
+    "path": "assets\\v2\\backgrounds\\golden_bloom\\overlay_fx.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 35786
+  },
+  {
+    "path": "assets\\v2\\obstacles\\yozakura\\accent_particles.png",
+    "size": [
+      320,
+      300
+    ],
+    "bytes": 3755
+  },
+  {
+    "path": "assets\\v2\\obstacles\\yozakura\\blossom_cluster_a.png",
+    "size": [
+      320,
+      300
+    ],
+    "bytes": 9325
+  },
+  {
+    "path": "assets\\v2\\obstacles\\yozakura\\blossom_cluster_b.png",
+    "size": [
+      320,
+      300
+    ],
+    "bytes": 9210
+  },
+  {
+    "path": "assets\\v2\\obstacles\\yozakura\\cap_bottom_a.png",
+    "size": [
+      420,
+      240
+    ],
+    "bytes": 10574
+  },
+  {
+    "path": "assets\\v2\\obstacles\\yozakura\\cap_bottom_b.png",
+    "size": [
+      420,
+      240
+    ],
+    "bytes": 13346
+  },
+  {
+    "path": "assets\\v2\\obstacles\\yozakura\\cap_top_a.png",
+    "size": [
+      420,
+      240
+    ],
+    "bytes": 10647
+  },
+  {
+    "path": "assets\\v2\\obstacles\\yozakura\\cap_top_b.png",
+    "size": [
+      420,
+      240
+    ],
+    "bytes": 13563
+  },
+  {
+    "path": "assets\\v2\\obstacles\\yozakura\\leaves_cluster.png",
+    "size": [
+      320,
+      300
+    ],
+    "bytes": 7119
+  },
+  {
+    "path": "assets\\v2\\obstacles\\yozakura\\side_branch_1.png",
+    "size": [
+      480,
+      360
+    ],
+    "bytes": 14862
+  },
+  {
+    "path": "assets\\v2\\obstacles\\yozakura\\side_branch_2.png",
+    "size": [
+      480,
+      360
+    ],
+    "bytes": 14377
+  },
+  {
+    "path": "assets\\v2\\obstacles\\yozakura\\side_branch_3.png",
+    "size": [
+      480,
+      360
+    ],
+    "bytes": 15722
+  },
+  {
+    "path": "assets\\v2\\obstacles\\yozakura\\trunk_body.png",
+    "size": [
+      320,
+      640
+    ],
+    "bytes": 18389
+  },
+  {
+    "path": "assets\\v2\\obstacles\\yozakura\\trunk_edge_overlay.png",
+    "size": [
+      320,
+      640
+    ],
+    "bytes": 2302
+  },
+  {
+    "path": "assets\\v2\\backgrounds\\yozakura\\background_base.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 28740
+  },
+  {
+    "path": "assets\\v2\\backgrounds\\yozakura\\background_composite.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 137665
+  },
+  {
+    "path": "assets\\v2\\backgrounds\\yozakura\\foreground_frame.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 64820
+  },
+  {
+    "path": "assets\\v2\\backgrounds\\yozakura\\midground.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 79827
+  },
+  {
+    "path": "assets\\v2\\backgrounds\\yozakura\\overlay_fx.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 47550
+  },
+  {
+    "path": "assets\\v2\\characters\\cherry_fall.png",
+    "size": [
+      480,
+      450
+    ],
+    "bytes": 44670
+  },
+  {
+    "path": "assets\\v2\\characters\\cherry_hit.png",
+    "size": [
+      480,
+      450
+    ],
+    "bytes": 44011
+  },
+  {
+    "path": "assets\\v2\\characters\\cherry_idle.png",
+    "size": [
+      480,
+      450
+    ],
+    "bytes": 45042
+  },
+  {
+    "path": "assets\\v2\\characters\\cherry_jump.png",
+    "size": [
+      480,
+      450
+    ],
+    "bytes": 46195
+  },
+  {
+    "path": "assets\\v2\\previews\\first_bloom_preview.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 131740
+  },
+  {
+    "path": "assets\\v2\\previews\\golden_bloom_preview.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 129516
+  },
+  {
+    "path": "assets\\v2\\previews\\sakura_garden_preview.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 136281
+  },
+  {
+    "path": "assets\\v2\\previews\\yozakura_preview.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "bytes": 137665
+  }
+]

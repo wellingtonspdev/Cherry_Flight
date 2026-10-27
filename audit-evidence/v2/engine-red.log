@@ -1,0 +1,137 @@
+✖ V2 round starts only on input, then integrates jump and gravity (4.8547ms)
+✖ V2 dt integration is stable and rejects invalid elapsed time (11.7137ms)
+✖ V2 collision wins before scoring and terminal states cannot advance (1.2057ms)
+✖ V2 score is once per pair and completion fires once at the configured target (0.6ms)
+✖ V2 pool reuses mounted slot identities and has three constrained future descriptors (2.0401ms)
+✖ V2 preserves the supplied configuration and resolves bounded Endless difficulty (0.7731ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 0
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 286.442
+
+✖ failing tests:
+
+test at tests\engine-v2.test.mjs:6:1
+✖ V2 round starts only on input, then integrates jump and gravity (4.8547ms)
+  AssertionError [ERR_ASSERTION]: V2 simulation must exist
+      at TestContext.<anonymous> (file:///D:/Cherry_Flight_Release54/tests/engine-v2.test.mjs:7:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\engine-v2.test.mjs:23:1
+✖ V2 dt integration is stable and rejects invalid elapsed time (11.7137ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(engine)
+  
+      at TestContext.<anonymous> (file:///D:/Cherry_Flight_Release54/tests/engine-v2.test.mjs:24:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\engine-v2.test.mjs:36:1
+✖ V2 collision wins before scoring and terminal states cannot advance (1.2057ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(engine)
+  
+      at TestContext.<anonymous> (file:///D:/Cherry_Flight_Release54/tests/engine-v2.test.mjs:37:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\engine-v2.test.mjs:55:1
+✖ V2 score is once per pair and completion fires once at the configured target (0.6ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(engine)
+  
+      at TestContext.<anonymous> (file:///D:/Cherry_Flight_Release54/tests/engine-v2.test.mjs:56:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\engine-v2.test.mjs:71:1
+✖ V2 pool reuses mounted slot identities and has three constrained future descriptors (2.0401ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(engine)
+  
+      at TestContext.<anonymous> (file:///D:/Cherry_Flight_Release54/tests/engine-v2.test.mjs:72:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\engine-v2.test.mjs:95:1
+✖ V2 preserves the supplied configuration and resolves bounded Endless difficulty (0.7731ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(engine)
+  
+      at TestContext.<anonymous> (file:///D:/Cherry_Flight_Release54/tests/engine-v2.test.mjs:96:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

@@ -1,0 +1,118 @@
+✖ Campaign unlocks exactly one next checkpoint and rejects locked or unfinished completion (14.7178ms)
+✖ All twelve configured completions unlock Endless and retain per-level best scores (1.5318ms)
+✖ Malformed saves cannot unlock levels and only known schema fields survive (0.8647ms)
+✖ Queued storage writes preserve the latest settings and restore checkpoint after reopening (0.735ms)
+✖ Corrupt and oversized storage fall back, legacy best is preserved, and write failures recover (0.6131ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 0
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 312.5762
+
+✖ failing tests:
+
+test at tests\progression-v2.test.mjs:6:1
+✖ Campaign unlocks exactly one next checkpoint and rejects locked or unfinished completion (14.7178ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(p)
+  
+      at TestContext.<anonymous> (file:///D:/Cherry_Flight_Release54/tests/progression-v2.test.mjs:7:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\progression-v2.test.mjs:20:1
+✖ All twelve configured completions unlock Endless and retain per-level best scores (1.5318ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(p)
+  
+      at TestContext.<anonymous> (file:///D:/Cherry_Flight_Release54/tests/progression-v2.test.mjs:21:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\progression-v2.test.mjs:35:1
+✖ Malformed saves cannot unlock levels and only known schema fields survive (0.8647ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(p)
+  
+      at TestContext.<anonymous> (file:///D:/Cherry_Flight_Release54/tests/progression-v2.test.mjs:36:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\progression-v2.test.mjs:45:1
+✖ Queued storage writes preserve the latest settings and restore checkpoint after reopening (0.735ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(p)
+  
+      at TestContext.<anonymous> (file:///D:/Cherry_Flight_Release54/tests/progression-v2.test.mjs:46:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\progression-v2.test.mjs:61:1
+✖ Corrupt and oversized storage fall back, legacy best is preserved, and write failures recover (0.6131ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(p)
+  
+      at TestContext.<anonymous> (file:///D:/Cherry_Flight_Release54/tests/progression-v2.test.mjs:62:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

@@ -1,0 +1,15 @@
+
+[38;5;102mInstall with[0m npx skills add <owner/repo@skill>
+
+[38;5;145mmhuxain/react-native-dev@react-native-dev[0m [36m18 installs[0m
+[38;5;102m└ https://skills.sh/mhuxain/react-native-dev/react-native-dev[0m
+
+[38;5;145msuleimanodetoro/skills@engineer-react-native[0m [36m11 installs[0m
+[38;5;102m└ https://skills.sh/suleimanodetoro/skills/engineer-react-native[0m
+
+[38;5;145mdigitalexplorers/agent-skills@react-native-bug-detector[0m [36m1 install[0m
+[38;5;102m└ https://skills.sh/digitalexplorers/agent-skills/react-native-bug-detector[0m
+
+[38;5;145makmalmamurov/front-skills@react-native[0m [36m1 install[0m
+[38;5;102m└ https://skills.sh/akmalmamurov/front-skills/react-native[0m
+

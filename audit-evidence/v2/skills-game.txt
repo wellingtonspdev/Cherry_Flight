@@ -1,0 +1,63 @@
+
+[38;5;102mInstall with[0m npx skills add <owner/repo@skill>
+
+[38;5;145mwshobson/agents@unity-ecs-patterns[0m [36m12.1K installs[0m
+[38;5;102m└ https://skills.sh/wshobson/agents/unity-ecs-patterns[0m
+
+[38;5;145mgamedev-skills/awesome-gamedev-agent-skills@router[0m [36m6.8K installs[0m
+[38;5;102m└ https://skills.sh/gamedev-skills/awesome-gamedev-agent-skills/router[0m
+
+[38;5;145mjeffallan/claude-skills@game-developer[0m [36m6.5K installs[0m
+[38;5;102m└ https://skills.sh/jeffallan/claude-skills/game-developer[0m
+
+[38;5;145mthedivergentai/game-dev-agentic-skills@godot-master[0m [36m4.9K installs[0m
+[38;5;102m└ https://skills.sh/thedivergentai/game-dev-agentic-skills/godot-master[0m
+
+[38;5;145mminimax-ai/minimax-h3@co-op-game-intro-generator[0m [36m3.3K installs[0m
+[38;5;102m└ https://skills.sh/minimax-ai/minimax-h3/co-op-game-intro-generator[0m
+
+[38;5;145mfreshtechbro/claudedesignskills@playcanvas-engine[0m [36m2.3K installs[0m
+[38;5;102m└ https://skills.sh/freshtechbro/claudedesignskills/playcanvas-engine[0m
+
+[38;5;145mgreedychipmunk/agent-skills@roblox-game-development[0m [36m2.2K installs[0m
+[38;5;102m└ https://skills.sh/greedychipmunk/agent-skills/roblox-game-development[0m
+
+[38;5;145mjwynia/agent-skills@godot-best-practices[0m [36m2.1K installs[0m
+[38;5;102m└ https://skills.sh/jwynia/agent-skills/godot-best-practices[0m
+
+[38;5;145mzate/cc-godot@godot-development[0m [36m1.4K installs[0m
+[38;5;102m└ https://skills.sh/zate/cc-godot/godot-development[0m
+
+[38;5;145mplayableintelligence/game-creator@phaser[0m [36m1.4K installs[0m
+[38;5;102m└ https://skills.sh/playableintelligence/game-creator/phaser[0m
+
+[38;5;145mmindrally/skills@lua[0m [36m1.3K installs[0m
+[38;5;102m└ https://skills.sh/mindrally/skills/lua[0m
+
+[38;5;145mplayableintelligence/game-creator@threejs-game[0m [36m1.1K installs[0m
+[38;5;102m└ https://skills.sh/playableintelligence/game-creator/threejs-game[0m
+
+[38;5;145mopenai/skills@develop-web-game[0m [36m1.1K installs[0m
+[38;5;102m└ https://skills.sh/openai/skills/develop-web-game[0m
+
+[38;5;145mmindrally/skills@pixi-js[0m [36m949 installs[0m
+[38;5;102m└ https://skills.sh/mindrally/skills/pixi-js[0m
+
+[38;5;145mmindrally/skills@unity[0m [36m909 installs[0m
+[38;5;102m└ https://skills.sh/mindrally/skills/unity[0m
+
+[38;5;145mplayableintelligence/game-creator@game-deploy[0m [36m908 installs[0m
+[38;5;102m└ https://skills.sh/playableintelligence/game-creator/game-deploy[0m
+
+[38;5;145mmindrally/skills@game-development[0m [36m872 installs[0m
+[38;5;102m└ https://skills.sh/mindrally/skills/game-development[0m
+
+[38;5;145mmindrally/skills@c-sharp[0m [36m762 installs[0m
+[38;5;102m└ https://skills.sh/mindrally/skills/c-sharp[0m
+
+[38;5;145mdylantarre/animation-principles@game-development[0m [36m679 installs[0m
+[38;5;102m└ https://skills.sh/dylantarre/animation-principles/game-development[0m
+
+[38;5;145mmiles990/claude-software-skills@game-development[0m [36m411 installs[0m
+[38;5;102m└ https://skills.sh/miles990/claude-software-skills/game-development[0m
+

@@ -1,0 +1,45 @@
+
+[38;5;102mInstall with[0m npx skills add <owner/repo@skill>
+
+[38;5;145msoftware-mansion-labs/skills@react-native-best-practices[0m [36m5.7K installs[0m
+[38;5;102m└ https://skills.sh/software-mansion-labs/skills/react-native-best-practices[0m
+
+[38;5;145msoftware-mansion-labs/skills@fishjam[0m [36m763 installs[0m
+[38;5;102m└ https://skills.sh/software-mansion-labs/skills/fishjam[0m
+
+[38;5;145mgetstream/agent-skills@stream-react-native[0m [36m707 installs[0m
+[38;5;102m└ https://skills.sh/getstream/agent-skills/stream-react-native[0m
+
+[38;5;145mjchaselubitz/drill-app@expo-audio[0m [36m28 installs[0m
+[38;5;102m└ https://skills.sh/jchaselubitz/drill-app/expo-audio[0m
+
+[38;5;145mcaizongyuan/efficientcc@expo-sdk[0m [36m4 installs[0m
+[38;5;102m└ https://skills.sh/caizongyuan/efficientcc/expo-sdk[0m
+
+[38;5;145msoftware-mansion-labs/skills@fishjam-react-native-client[0m [36m4 installs[0m
+[38;5;102m└ https://skills.sh/software-mansion-labs/skills/fishjam-react-native-client[0m
+
+[38;5;145mplaud-ai/embedded-react-native@setup-plaud-react-native[0m [36m2 installs[0m
+[38;5;102m└ https://skills.sh/plaud-ai/embedded-react-native/setup-plaud-react-native[0m
+
+[38;5;145mtomevault-io/tomes@expo-audio[0m [36m1 install[0m
+[38;5;102m└ https://skills.sh/tomevault-io/tomes/expo-audio[0m
+
+[38;5;145msmithery.ai@expo-audio[0m [36m1 install[0m
+[38;5;102m└ https://skills.sh/smithery.ai/expo-audio[0m
+
+[38;5;145mfutureatoms/claude-skills-backup@livekit-expo[0m [36m1 install[0m
+[38;5;102m└ https://skills.sh/futureatoms/claude-skills-backup/livekit-expo[0m
+
+[38;5;145mtmhsdigital/mobile-app-developer-tools@mobile-ai-features[0m [36m1 install[0m
+[38;5;102m└ https://skills.sh/tmhsdigital/mobile-app-developer-tools/mobile-ai-features[0m
+
+[38;5;145mmarcoantolini/cursor-sync@react-native-expo[0m [36m1 install[0m
+[38;5;102m└ https://skills.sh/marcoantolini/cursor-sync/react-native-expo[0m
+
+[38;5;145mwalthergl66/mis-skills@react-native-best-practices[0m [36m1 install[0m
+[38;5;102m└ https://skills.sh/walthergl66/mis-skills/react-native-best-practices[0m
+
+[38;5;145mgustavo-santos-swe/skills@react-native-best-practices[0m [36m1 install[0m
+[38;5;102m└ https://skills.sh/gustavo-santos-swe/skills/react-native-best-practices[0m
+

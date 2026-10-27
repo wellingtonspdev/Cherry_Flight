@@ -35,7 +35,7 @@ export default function App() {
           <NavigationContainer>
             <StatusBar style="dark" />
             <Stack.Navigator
-              initialRouteName="Welcome"
+              initialRouteName="Home"
               screenOptions={{
                 headerShown: false,
                 animation: 'fade',
@@ -43,7 +43,7 @@ export default function App() {
                 contentStyle: { backgroundColor: '#FFF8F2' },
               }}
             >
-              <Stack.Screen name="Welcome" component={Tela1} />
+              <Stack.Screen name="Home" component={Tela1} />
               <Stack.Screen name="Instructions" component={Tela2} />
               <Stack.Screen name="Game" component={Tela3} />
               <Stack.Screen name="Credits" component={Tela4} />

@@ -1,0 +1,63 @@
+
+[38;5;102mInstall with[0m npx skills add <owner/repo@skill>
+
+[38;5;145mvercel-labs/agent-skills@vercel-react-best-practices[0m [36m841K installs[0m
+[38;5;102m└ https://skills.sh/vercel-labs/agent-skills/vercel-react-best-practices[0m
+
+[38;5;145mcallstackincubator/agent-skills@react-native-best-practices[0m [36m30.3K installs[0m
+[38;5;102m└ https://skills.sh/callstackincubator/agent-skills/react-native-best-practices[0m
+
+[38;5;145msoftware-mansion/argent@argent-react-native-optimization[0m [36m26.8K installs[0m
+[38;5;102m└ https://skills.sh/software-mansion/argent/argent-react-native-optimization[0m
+
+[38;5;145msoftware-mansion/argent@argent-react-native-profiler[0m [36m26.6K installs[0m
+[38;5;102m└ https://skills.sh/software-mansion/argent/argent-react-native-profiler[0m
+
+[38;5;145mjeffallan/claude-skills@react-native-expert[0m [36m4.9K installs[0m
+[38;5;102m└ https://skills.sh/jeffallan/claude-skills/react-native-expert[0m
+
+[38;5;145mappllama/appllama-skills@appllama-app-design-skill[0m [36m4.8K installs[0m
+[38;5;102m└ https://skills.sh/appllama/appllama-skills/appllama-app-design-skill[0m
+
+[38;5;145msickn33/agentic-awesome-skills@mobile-design[0m [36m3.7K installs[0m
+[38;5;102m└ https://skills.sh/sickn33/agentic-awesome-skills/mobile-design[0m
+
+[38;5;145mcallstackincubator/agent-react-devtools@react-devtools[0m [36m2.6K installs[0m
+[38;5;102m└ https://skills.sh/callstackincubator/agent-react-devtools/react-devtools[0m
+
+[38;5;145mcallstackincubator/agent-skills@react-native-tv-best-practices[0m [36m2.3K installs[0m
+[38;5;102m└ https://skills.sh/callstackincubator/agent-skills/react-native-tv-best-practices[0m
+
+[38;5;145mpproenca/dot-skills@expo-react-native-performance[0m [36m1.5K installs[0m
+[38;5;102m└ https://skills.sh/pproenca/dot-skills/expo-react-native-performance[0m
+
+[38;5;145mcallstack/agent-device@react-devtools[0m [36m1.3K installs[0m
+[38;5;102m└ https://skills.sh/callstack/agent-device/react-devtools[0m
+
+[38;5;145mjezweb/claude-skills@react-native[0m [36m1.3K installs[0m
+[38;5;102m└ https://skills.sh/jezweb/claude-skills/react-native[0m
+
+[38;5;145mandreev-danila/skills@reanimated-skia-performance[0m [36m955 installs[0m
+[38;5;102m└ https://skills.sh/andreev-danila/skills/reanimated-skia-performance[0m
+
+[38;5;145mmindrally/skills@expo-react-native-javascript-best-practices[0m [36m781 installs[0m
+[38;5;102m└ https://skills.sh/mindrally/skills/expo-react-native-javascript-best-practices[0m
+
+[38;5;145mmindrally/skills@react-native-cursor-rules[0m [36m673 installs[0m
+[38;5;102m└ https://skills.sh/mindrally/skills/react-native-cursor-rules[0m
+
+[38;5;145mpluginagentmarketplace/custom-plugin-react-native@react-native-animations[0m [36m663 installs[0m
+[38;5;102m└ https://skills.sh/pluginagentmarketplace/custom-plugin-react-native/react-native-animations[0m
+
+[38;5;145m199-biotechnologies/motion-dev-animations-skill@motion-dev-animations[0m [36m603 installs[0m
+[38;5;102m└ https://skills.sh/199-biotechnologies/motion-dev-animations-skill/motion-dev-animations[0m
+
+[38;5;145mpproenca/dot-skills@expo[0m [36m554 installs[0m
+[38;5;102m└ https://skills.sh/pproenca/dot-skills/expo[0m
+
+[38;5;145msecondsky/claude-skills@react-native-skills[0m [36m477 installs[0m
+[38;5;102m└ https://skills.sh/secondsky/claude-skills/react-native-skills[0m
+
+[38;5;145mspencerpauly/awesome-cursor-skills@react-native-patterns[0m [36m401 installs[0m
+[38;5;102m└ https://skills.sh/spencerpauly/awesome-cursor-skills/react-native-patterns[0m
+

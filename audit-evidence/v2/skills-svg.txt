@@ -1,0 +1,63 @@
+
+[38;5;102mInstall with[0m npx skills add <owner/repo@skill>
+
+[38;5;145mpproenca/dot-skills@framer-motion[0m [36m1.1K installs[0m
+[38;5;102m└ https://skills.sh/pproenca/dot-skills/framer-motion[0m
+
+[38;5;145mkv0906/cc-skills@svg-art[0m [36m510 installs[0m
+[38;5;102m└ https://skills.sh/kv0906/cc-skills/svg-art[0m
+
+[38;5;145mtryopendata/skills@svg-design[0m [36m256 installs[0m
+[38;5;102m└ https://skills.sh/tryopendata/skills/svg-design[0m
+
+[38;5;145mnucliweb/webperf-snippets@webperf-media[0m [36m256 installs[0m
+[38;5;102m└ https://skills.sh/nucliweb/webperf-snippets/webperf-media[0m
+
+[38;5;145mpproenca/dot-skills@framer-motion-best-practices[0m [36m187 installs[0m
+[38;5;102m└ https://skills.sh/pproenca/dot-skills/framer-motion-best-practices[0m
+
+[38;5;145momer-metin/skills-for-antigravity@icon-design[0m [36m112 installs[0m
+[38;5;102m└ https://skills.sh/omer-metin/skills-for-antigravity/icon-design[0m
+
+[38;5;145mmodu-ai/moai-adk@moai-tool-svg[0m [36m100 installs[0m
+[38;5;102m└ https://skills.sh/modu-ai/moai-adk/moai-tool-svg[0m
+
+[38;5;145migorvaryvoda/image-optimization-skill@image-optimization[0m [36m64 installs[0m
+[38;5;102m└ https://skills.sh/igorvaryvoda/image-optimization-skill/image-optimization[0m
+
+[38;5;145mflitzrrr/frontend-design-skills@images-media[0m [36m60 installs[0m
+[38;5;102m└ https://skills.sh/flitzrrr/frontend-design-skills/images-media[0m
+
+[38;5;145mjkc66/custom-icons-skill@custom-icons-skill[0m [36m53 installs[0m
+[38;5;102m└ https://skills.sh/jkc66/custom-icons-skill/custom-icons-skill[0m
+
+[38;5;145mphazurlabs/sumi@icon-illustration-systems[0m [36m40 installs[0m
+[38;5;102m└ https://skills.sh/phazurlabs/sumi/icon-illustration-systems[0m
+
+[38;5;145m7spade/black-tortoise@d3-visualization[0m [36m8 installs[0m
+[38;5;102m└ https://skills.sh/7spade/black-tortoise/d3-visualization[0m
+
+[38;5;145mthedaviddias/front-end-checklist@svg-optimization[0m [36m7 installs[0m
+[38;5;102m└ https://skills.sh/thedaviddias/front-end-checklist/svg-optimization[0m
+
+[38;5;145mmodelscope.cn@moai-tool-svg[0m [36m5 installs[0m
+[38;5;102m└ https://skills.sh/modelscope.cn/svg[0m
+
+[38;5;145mven0m0/claude-config@moai-tool-svg[0m [36m5 installs[0m
+[38;5;102m└ https://skills.sh/ven0m0/claude-config/moai-tool-svg[0m
+
+[38;5;145mlitingyes/skills@svg[0m [36m3 installs[0m
+[38;5;102m└ https://skills.sh/litingyes/skills/svg[0m
+
+[38;5;145mven0m0/claude-config@svg[0m [36m2 installs[0m
+[38;5;102m└ https://skills.sh/ven0m0/claude-config/svg[0m
+
+[38;5;145mkaynetik/skills@svg-gen[0m [36m2 installs[0m
+[38;5;102m└ https://skills.sh/kaynetik/skills/svg-gen[0m
+
+[38;5;145magentskillexchange/skills@SVGO SVG Optimization Tool[0m [36m1 install[0m
+[38;5;102m└ https://skills.sh/agentskillexchange/skills/svgo-svg-optimization-tool[0m
+
+[38;5;145mendlessblink/flow-state@svg-icon-craft[0m [36m1 install[0m
+[38;5;102m└ https://skills.sh/endlessblink/flow-state/svg-icon-craft[0m
+

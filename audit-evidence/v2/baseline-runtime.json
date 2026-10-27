@@ -1,0 +1,38 @@
+{
+  "before": {
+    "status": "READY",
+    "y": 156,
+    "velocity": 0,
+    "score": 0,
+    "pool": 3,
+    "raf": null
+  },
+  "after": {
+    "status": "PLAYING",
+    "y": 98.7435315,
+    "velocity": -161.41499999999996,
+    "score": 0,
+    "pool": 3,
+    "raf": 205
+  },
+  "end": {
+    "status": "GAME_OVER",
+    "y": 317.8474380000001,
+    "velocity": 580,
+    "score": 0,
+    "pool": 3,
+    "raf": null
+  },
+  "retry": {
+    "status": "READY",
+    "y": 156,
+    "velocity": 0,
+    "score": 0,
+    "pool": 3,
+    "raf": null
+  },
+  "tap": "PASS",
+  "movement": "PASS",
+  "gravity": "PASS",
+  "retryGate": "PASS"
+}

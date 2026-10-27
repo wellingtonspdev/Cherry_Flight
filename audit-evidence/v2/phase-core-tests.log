@@ -1,0 +1,39 @@
+
+> cherry-bloom@1.0.0 test
+> node --test tests/*.test.mjs
+
+(node:18856) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/Cherry_Flight_Release54/src/game/engineV2.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\Cherry_Flight_Release54\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ V2 round starts only on input, then integrates jump and gravity (9.598ms)
+✔ V2 dt integration is stable and rejects invalid elapsed time (1.5819ms)
+✔ V2 collision wins before scoring and terminal states cannot advance (6.6003ms)
+✔ V2 score is once per pair and completion fires once at the configured target (0.9435ms)
+✔ V2 pool reuses mounted slot identities and has three constrained future descriptors (102.7125ms)
+✔ V2 preserves the supplied configuration and resolves bounded Endless difficulty (5.0304ms)
+(node:20608) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/Cherry_Flight_Release54/src/game/collision.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\Cherry_Flight_Release54\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Mandatory academic disclaimer and student metadata are exact (AC-009..AC-012) (2.3206ms)
+✔ AABB intersection helper detects overlap and separation accurately (1.4903ms)
+✔ Collision detects top branch, bottom branch, ceiling, ground, and safe corridor (AC-108..AC-110) (5.762ms)
+✔ Scoring increments once per crossed pair and never before crossing (AC-112, AC-113) (0.6515ms)
+✔ Obstacle generation and recycling stay within valid bounds (AC-105..AC-107) (1.6599ms)
+✔ Phase progression maps score thresholds accurately (Section 9.1) (0.9431ms)
+✔ Landscape gaps fit short game fields and remain playable when recycled (1.7953ms)
+✔ SDK54 Snack import package matches runtime and has no asset-upload inputs (266.8255ms)
+(node:3180) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/Cherry_Flight_Release54/src/game/vectorCacheV2.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\Cherry_Flight_Release54\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ V2 vectors are cached before visible use, with theme-scoped gradient IDs (52.6489ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 623.4199

@@ -1,0 +1,63 @@
+
+[38;5;102mInstall with[0m npx skills add <owner/repo@skill>
+
+[38;5;145mmattpocock/skills@tdd[0m [36m1.2M installs[0m
+[38;5;102m└ https://skills.sh/mattpocock/skills/tdd[0m
+
+[38;5;145manthropics/skills@webapp-testing[0m [36m188.9K installs[0m
+[38;5;102m└ https://skills.sh/anthropics/skills/webapp-testing[0m
+
+[38;5;145mcurrents-dev/playwright-best-practices-skill@playwright-best-practices[0m [36m98.8K installs[0m
+[38;5;102m└ https://skills.sh/currents-dev/playwright-best-practices-skill/playwright-best-practices[0m
+
+[38;5;145maddyosmani/agent-skills@browser-testing-with-devtools[0m [36m59.1K installs[0m
+[38;5;102m└ https://skills.sh/addyosmani/agent-skills/browser-testing-with-devtools[0m
+
+[38;5;145msamber/cc-skills-golang@golang-testing[0m [36m43.6K installs[0m
+[38;5;102m└ https://skills.sh/samber/cc-skills-golang/golang-testing[0m
+
+[38;5;145msamber/cc-skills-golang@golang-database[0m [36m40.9K installs[0m
+[38;5;102m└ https://skills.sh/samber/cc-skills-golang/golang-database[0m
+
+[38;5;145msamber/cc-skills-golang@golang-grpc[0m [36m39.3K installs[0m
+[38;5;102m└ https://skills.sh/samber/cc-skills-golang/golang-grpc[0m
+
+[38;5;145msamber/cc-skills-golang@golang-how-to[0m [36m36.5K installs[0m
+[38;5;102m└ https://skills.sh/samber/cc-skills-golang/golang-how-to[0m
+
+[38;5;145mwshobson/agents@e2e-testing-patterns[0m [36m24.5K installs[0m
+[38;5;102m└ https://skills.sh/wshobson/agents/e2e-testing-patterns[0m
+
+[38;5;145mgithub/awesome-copilot@webapp-testing[0m [36m12.5K installs[0m
+[38;5;102m└ https://skills.sh/github/awesome-copilot/webapp-testing[0m
+
+[38;5;145mgithub/awesome-copilot@java-junit[0m [36m11.7K installs[0m
+[38;5;102m└ https://skills.sh/github/awesome-copilot/java-junit[0m
+
+[38;5;145mwshobson/agents@temporal-python-testing[0m [36m11K installs[0m
+[38;5;102m└ https://skills.sh/wshobson/agents/temporal-python-testing[0m
+
+[38;5;145mexpo/skills@eas-update[0m [36m10.9K installs[0m
+[38;5;102m└ https://skills.sh/expo/skills/eas-update[0m
+
+[38;5;145maffaan-m/ecc@kotlin-coroutines-flows[0m [36m10.9K installs[0m
+[38;5;102m└ https://skills.sh/affaan-m/ecc/kotlin-coroutines-flows[0m
+
+[38;5;145mwshobson/agents@screen-reader-testing[0m [36m10.8K installs[0m
+[38;5;102m└ https://skills.sh/wshobson/agents/screen-reader-testing[0m
+
+[38;5;145mrivet-dev/skills@rivetkit[0m [36m7.7K installs[0m
+[38;5;102m└ https://skills.sh/rivet-dev/skills/rivetkit[0m
+
+[38;5;145mforcedotcom/sf-skills@platform-apex-test-generate[0m [36m7.1K installs[0m
+[38;5;102m└ https://skills.sh/forcedotcom/sf-skills/platform-apex-test-generate[0m
+
+[38;5;145mkunchenguid/chrome-devtools-axi@chrome-devtools-axi[0m [36m6.9K installs[0m
+[38;5;102m└ https://skills.sh/kunchenguid/chrome-devtools-axi/chrome-devtools-axi[0m
+
+[38;5;145mlobehub/lobehub@testing[0m [36m4.3K installs[0m
+[38;5;102m└ https://skills.sh/lobehub/lobehub/testing[0m
+
+[38;5;145maws/agent-toolkit-for-aws@aws-step-functions[0m [36m3.9K installs[0m
+[38;5;102m└ https://skills.sh/aws/agent-toolkit-for-aws/aws-step-functions[0m
+
