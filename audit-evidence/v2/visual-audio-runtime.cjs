@@ -4,10 +4,11 @@ const config=JSON.parse(fs.readFileSync('docs/LEVEL_CONFIG_V2.json','utf8'));
 (async()=>{const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});const results=[];
 try {for(const size of [{width:667,height:375},{width:844,height:390},{width:1366,height:768}]) {
  const context=await browser.newContext({viewport:size,hasTouch:true});const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
- await page.addInitScript(data=>{localStorage.setItem('@cherry_bloom_progress_v2',JSON.stringify(data));},{schemaVersion:2,lastPlayedLevel:1,levelResults:Object.fromEntries(config.levels.map(l=>[l.id,{bestScore:l.targetScore,completed:true}])),settings:{music:true,sfx:true,haptics:false}});
+ await page.addInitScript(data=>{localStorage.setItem('@cherry_bloom_progress_v2',JSON.stringify(data));},{schemaVersion:2,lastPlayedLevel:12,levelResults:Object.fromEntries(config.levels.map(l=>[l.id,{bestScore:l.targetScore,completed:true}])),settings:{music:true,sfx:true,haptics:false}});
  await page.goto('http://localhost:8105');
  for(const id of [1,4,7,10]) {
   await page.getByRole('button',{name:'LEVEL SELECT',exact:true}).click();
+  if(id===4) assert.equal(await page.getByRole('button',{name:'Level 1. Concluído. Checkpoint atual',exact:true}).count(),1);
   await page.getByRole('button',{name:`Level ${id}. Concluído`,exact:true}).click();
   await page.waitForFunction(()=>window.__CHERRY_BLOOM_V2__?.snapshot()?.status==='READY');
   await page.waitForTimeout(550);

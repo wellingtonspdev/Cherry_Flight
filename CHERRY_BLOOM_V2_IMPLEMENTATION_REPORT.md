@@ -8,7 +8,7 @@ V2 replaces the V1 full-tree frame renderer with a mutable simulation, pooled mo
 
 **Runtime publication passed on the official SDK54 Snack and public Vercel URL.** Final Git import verification and repository synchronization are recorded below before the delivery freeze.
 
-No confirmed open BLOCKER/CRITICAL/MAJOR remains after independent source review. Known tooling advisories and unexecuted physical-device calibration remain disclosed. Browser engine replay, fixture-based entry and native bundle export are distinct kinds of evidence.
+Open confirmed defects: BLOCKER0, CRITICAL0, MAJOR0, COSMETIC0. One MINOR tooling risk remains documented, plus a separate unexecuted physical-platform validation record. No confirmed open BLOCKER/CRITICAL/MAJOR remains after independent source review. Known tooling advisories and unexecuted physical-device calibration remain disclosed. Browser engine replay, fixture-based entry and native bundle export are distinct kinds of evidence.
 
 ## Skills utilizadas
 
@@ -219,6 +219,7 @@ PASS rows cite executed checks, not source presence alone. Native physical calib
 | V2-REV11 | MINOR / dependency risk |7 SDK54 tooling advisories; no compatible force-fix established | Audit retained; isolate dev tooling/untrusted inputs; no forced SDK downgrade | PARTIAL |
 | V2-REV13 | MAJOR / visual divergence | Padded sprite source made the body smaller than the logical hitbox | Corrected gameplay-only anchor/scale; four-pose RED/GREEN + independent math review + fresh screenshots | PASS |
 | V2-REV14 | MINOR / confirmed telemetry bug | Reset reused slot IDs and epoch0, so the old dependency list omitted prepared metrics | Observe the new visual snapshot; browser RED0/5 then GREEN5/5 after resize; active exit verified | PASS |
+| V2-REV15 | MINOR / specification divergence | Completed replay status hid its current checkpoint marker | Current completed level now has a visible and accessible checkpoint marker; browser assertion after replay | PASS |
 | V2-REV12 | MINOR / missing evidence | No physical Android/iOS calibration or native Snack audition | Native bundles pass; actual device/Expo Go still required for platform-specific assurance | NOT EXECUTED |
 
 Historical tap and immobility causes/evidence remain in CHERRY_BLOOM_REVIEW_REPORT.md. Naming search found no deprecated character spelling in active product source; historical quotations remain evidence, not UI copy.

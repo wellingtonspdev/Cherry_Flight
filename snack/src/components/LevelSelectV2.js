@@ -21,9 +21,12 @@ export default function LevelSelectV2({ navigation }) {
       <Text accessibilityRole="header" style={styles.heading}>{LEVEL_CONFIG.levels[chapter * 3].chapterName}</Text>
       <View style={styles.row}>{LEVEL_CONFIG.levels.slice(chapter * 3, chapter * 3 + 3).map(level => {
         const available = loaded && isUnlocked(data, level.id);
+        const completed = data.levelResults[level.id]?.completed;
+        const checkpoint = available && data.lastPlayedLevel === level.id;
         const state = data.levelResults[level.id]?.completed ? 'Concluído' : !available ? 'Bloqueado' : data.lastPlayedLevel === level.id ? 'Checkpoint atual' : 'Disponível';
-        return <Pressable key={level.id} accessibilityRole="button" accessibilityLabel={`Level ${level.id}. ${state}`} accessibilityState={{ disabled: !available }} disabled={!available} onPress={() => open(level.id)} style={[styles.level, !available && styles.locked]}>
+        return <Pressable key={level.id} accessibilityRole="button" accessibilityLabel={`Level ${level.id}. ${state}${completed && checkpoint ? '. Checkpoint atual' : ''}`} accessibilityState={{ disabled: !available }} disabled={!available} onPress={() => open(level.id)} style={[styles.level, !available && styles.locked]}>
           <Text style={styles.heading}>LEVEL {level.id}</Text><Text style={styles.text}>{state}</Text><Text style={styles.text}>{level.targetScore} pontos · Recorde {data.levelResults[level.id]?.bestScore || 0}</Text>
+          {completed && checkpoint && <Text style={styles.text}>● Checkpoint atual</Text>}
         </Pressable>;
       })}</View>
     </View>)}

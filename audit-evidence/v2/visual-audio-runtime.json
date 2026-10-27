@@ -14,7 +14,7 @@
         "events": [
           {
             "event": "ui",
-            "at": 1793101689335
+            "at": 1793103141867
           }
         ],
         "players": 10,
@@ -85,15 +85,15 @@
         "events": [
           {
             "event": "ui",
-            "at": 1793101689335
+            "at": 1793103141867
           },
           {
             "event": "jump",
-            "at": 1793101691741
+            "at": 1793103143785
           },
           {
             "event": "pause",
-            "at": 1793101691975
+            "at": 1793103144022
           }
         ],
         "players": 10,
@@ -105,7 +105,7 @@
         "music": {
           "loaded": true,
           "playing": false,
-          "time": 0.014452,
+          "time": 0.028509,
           "loop": true,
           "volume": 0.35
         },
@@ -164,27 +164,27 @@
         "events": [
           {
             "event": "ui",
-            "at": 1793101689335
+            "at": 1793103141867
           },
           {
             "event": "jump",
-            "at": 1793101691741
+            "at": 1793103143785
           },
           {
             "event": "pause",
-            "at": 1793101691975
+            "at": 1793103144022
           },
           {
             "event": "ui",
-            "at": 1793101692128
+            "at": 1793103144151
           },
           {
             "event": "resume",
-            "at": 1793101692129
+            "at": 1793103144152
           },
           {
             "event": "pause",
-            "at": 1793101692295
+            "at": 1793103144326
           }
         ],
         "players": 10,
@@ -196,7 +196,7 @@
         "music": {
           "loaded": true,
           "playing": false,
-          "time": 0.170808,
+          "time": 0.19528,
           "loop": true,
           "volume": 0.35
         },
@@ -249,13 +249,13 @@
         ]
       },
       "diagnostics": {
-        "frames": 16,
+        "frames": 18,
         "rootRenders": 8,
         "pairRenders": 8,
         "pairMounts": 4,
         "actorRenders": 3,
         "longFrames": 1,
-        "maxFrameMs": 100.10000000000036,
+        "maxFrameMs": 99.90000000000009,
         "inputCount": 1
       }
     },
@@ -272,35 +272,35 @@
         "events": [
           {
             "event": "ui",
-            "at": 1793101689335
+            "at": 1793103141867
           },
           {
             "event": "jump",
-            "at": 1793101691741
+            "at": 1793103143785
           },
           {
             "event": "pause",
-            "at": 1793101691975
+            "at": 1793103144022
           },
           {
             "event": "ui",
-            "at": 1793101692128
+            "at": 1793103144151
           },
           {
             "event": "resume",
-            "at": 1793101692129
+            "at": 1793103144152
           },
           {
             "event": "pause",
-            "at": 1793101692295
+            "at": 1793103144326
           },
           {
             "event": "ui",
-            "at": 1793101692509
+            "at": 1793103144545
           },
           {
             "event": "ui",
-            "at": 1793101692777
+            "at": 1793103144842
           }
         ],
         "players": 10,
@@ -371,43 +371,43 @@
         "events": [
           {
             "event": "ui",
-            "at": 1793101689335
+            "at": 1793103141867
           },
           {
             "event": "jump",
-            "at": 1793101691741
+            "at": 1793103143785
           },
           {
             "event": "pause",
-            "at": 1793101691975
+            "at": 1793103144022
           },
           {
             "event": "ui",
-            "at": 1793101692128
+            "at": 1793103144151
           },
           {
             "event": "resume",
-            "at": 1793101692129
+            "at": 1793103144152
           },
           {
             "event": "pause",
-            "at": 1793101692295
+            "at": 1793103144326
           },
           {
             "event": "ui",
-            "at": 1793101692509
+            "at": 1793103144545
           },
           {
             "event": "ui",
-            "at": 1793101692777
+            "at": 1793103144842
           },
           {
             "event": "jump",
-            "at": 1793101695004
+            "at": 1793103146839
           },
           {
             "event": "pause",
-            "at": 1793101695213
+            "at": 1793103147068
           }
         ],
         "players": 10,
@@ -419,7 +419,7 @@
         "music": {
           "loaded": true,
           "playing": false,
-          "time": 0.011744,
+          "time": 0.034192,
           "loop": true,
           "volume": 0.35
         },
@@ -478,55 +478,55 @@
         "events": [
           {
             "event": "ui",
-            "at": 1793101689335
+            "at": 1793103141867
           },
           {
             "event": "jump",
-            "at": 1793101691741
+            "at": 1793103143785
           },
           {
             "event": "pause",
-            "at": 1793101691975
+            "at": 1793103144022
           },
           {
             "event": "ui",
-            "at": 1793101692128
+            "at": 1793103144151
           },
           {
             "event": "resume",
-            "at": 1793101692129
+            "at": 1793103144152
           },
           {
             "event": "pause",
-            "at": 1793101692295
+            "at": 1793103144326
           },
           {
             "event": "ui",
-            "at": 1793101692509
+            "at": 1793103144545
           },
           {
             "event": "ui",
-            "at": 1793101692777
+            "at": 1793103144842
           },
           {
             "event": "jump",
-            "at": 1793101695004
+            "at": 1793103146839
           },
           {
             "event": "pause",
-            "at": 1793101695213
+            "at": 1793103147068
           },
           {
             "event": "ui",
-            "at": 1793101695358
+            "at": 1793103147181
           },
           {
             "event": "resume",
-            "at": 1793101695358
+            "at": 1793103147182
           },
           {
             "event": "pause",
-            "at": 1793101695539
+            "at": 1793103147349
           }
         ],
         "players": 10,
@@ -538,7 +538,7 @@
         "music": {
           "loaded": true,
           "playing": false,
-          "time": 0.175223,
+          "time": 0.196455,
           "loop": true,
           "volume": 0.35
         },
@@ -595,432 +595,6 @@
         "rootRenders": 8,
         "pairRenders": 8,
         "pairMounts": 4,
-        "actorRenders": 3,
-        "longFrames": 0,
-        "maxFrameMs": 16.900000000001455,
-        "inputCount": 1
-      }
-    },
-    {
-      "size": {
-        "width": 667,
-        "height": 375
-      },
-      "level": 7,
-      "before": {
-        "chapter": "golden_bloom",
-        "active": false,
-        "failures": 3,
-        "events": [
-          {
-            "event": "ui",
-            "at": 1793101689335
-          },
-          {
-            "event": "jump",
-            "at": 1793101691741
-          },
-          {
-            "event": "pause",
-            "at": 1793101691975
-          },
-          {
-            "event": "ui",
-            "at": 1793101692128
-          },
-          {
-            "event": "resume",
-            "at": 1793101692129
-          },
-          {
-            "event": "pause",
-            "at": 1793101692295
-          },
-          {
-            "event": "ui",
-            "at": 1793101692509
-          },
-          {
-            "event": "ui",
-            "at": 1793101692777
-          },
-          {
-            "event": "jump",
-            "at": 1793101695004
-          },
-          {
-            "event": "pause",
-            "at": 1793101695213
-          },
-          {
-            "event": "ui",
-            "at": 1793101695358
-          },
-          {
-            "event": "resume",
-            "at": 1793101695358
-          },
-          {
-            "event": "pause",
-            "at": 1793101695539
-          },
-          {
-            "event": "ui",
-            "at": 1793101695676
-          },
-          {
-            "event": "ui",
-            "at": 1793101695915
-          }
-        ],
-        "players": 10,
-        "preferences": {
-          "music": true,
-          "sfx": true,
-          "haptics": false
-        },
-        "music": {
-          "loaded": true,
-          "playing": false,
-          "time": 0,
-          "loop": true,
-          "volume": 0.35
-        },
-        "effects": [
-          {
-            "event": "ui",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "jump",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "score",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "collision",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "checkpoint",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "complete",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "unlock",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "pause",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "resume",
-            "loaded": true,
-            "playing": false
-          }
-        ]
-      },
-      "paused": {
-        "chapter": "golden_bloom",
-        "active": false,
-        "failures": 3,
-        "events": [
-          {
-            "event": "ui",
-            "at": 1793101689335
-          },
-          {
-            "event": "jump",
-            "at": 1793101691741
-          },
-          {
-            "event": "pause",
-            "at": 1793101691975
-          },
-          {
-            "event": "ui",
-            "at": 1793101692128
-          },
-          {
-            "event": "resume",
-            "at": 1793101692129
-          },
-          {
-            "event": "pause",
-            "at": 1793101692295
-          },
-          {
-            "event": "ui",
-            "at": 1793101692509
-          },
-          {
-            "event": "ui",
-            "at": 1793101692777
-          },
-          {
-            "event": "jump",
-            "at": 1793101695004
-          },
-          {
-            "event": "pause",
-            "at": 1793101695213
-          },
-          {
-            "event": "ui",
-            "at": 1793101695358
-          },
-          {
-            "event": "resume",
-            "at": 1793101695358
-          },
-          {
-            "event": "pause",
-            "at": 1793101695539
-          },
-          {
-            "event": "ui",
-            "at": 1793101695676
-          },
-          {
-            "event": "ui",
-            "at": 1793101695915
-          },
-          {
-            "event": "jump",
-            "at": 1793101698221
-          },
-          {
-            "event": "pause",
-            "at": 1793101698439
-          }
-        ],
-        "players": 10,
-        "preferences": {
-          "music": true,
-          "sfx": true,
-          "haptics": false
-        },
-        "music": {
-          "loaded": true,
-          "playing": false,
-          "time": 0.007842,
-          "loop": true,
-          "volume": 0.35
-        },
-        "effects": [
-          {
-            "event": "ui",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "jump",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "score",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "collision",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "checkpoint",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "complete",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "unlock",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "pause",
-            "loaded": false,
-            "playing": true
-          },
-          {
-            "event": "resume",
-            "loaded": true,
-            "playing": false
-          }
-        ]
-      },
-      "resumed": {
-        "chapter": "golden_bloom",
-        "active": false,
-        "failures": 3,
-        "events": [
-          {
-            "event": "ui",
-            "at": 1793101689335
-          },
-          {
-            "event": "jump",
-            "at": 1793101691741
-          },
-          {
-            "event": "pause",
-            "at": 1793101691975
-          },
-          {
-            "event": "ui",
-            "at": 1793101692128
-          },
-          {
-            "event": "resume",
-            "at": 1793101692129
-          },
-          {
-            "event": "pause",
-            "at": 1793101692295
-          },
-          {
-            "event": "ui",
-            "at": 1793101692509
-          },
-          {
-            "event": "ui",
-            "at": 1793101692777
-          },
-          {
-            "event": "jump",
-            "at": 1793101695004
-          },
-          {
-            "event": "pause",
-            "at": 1793101695213
-          },
-          {
-            "event": "ui",
-            "at": 1793101695358
-          },
-          {
-            "event": "resume",
-            "at": 1793101695358
-          },
-          {
-            "event": "pause",
-            "at": 1793101695539
-          },
-          {
-            "event": "ui",
-            "at": 1793101695676
-          },
-          {
-            "event": "ui",
-            "at": 1793101695915
-          },
-          {
-            "event": "jump",
-            "at": 1793101698221
-          },
-          {
-            "event": "pause",
-            "at": 1793101698439
-          },
-          {
-            "event": "ui",
-            "at": 1793101698535
-          },
-          {
-            "event": "resume",
-            "at": 1793101698536
-          },
-          {
-            "event": "pause",
-            "at": 1793101698710
-          }
-        ],
-        "players": 10,
-        "preferences": {
-          "music": true,
-          "sfx": true,
-          "haptics": false
-        },
-        "music": {
-          "loaded": true,
-          "playing": false,
-          "time": 0.176536,
-          "loop": true,
-          "volume": 0.35
-        },
-        "effects": [
-          {
-            "event": "ui",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "jump",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "score",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "collision",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "checkpoint",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "complete",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "unlock",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "pause",
-            "loaded": false,
-            "playing": true
-          },
-          {
-            "event": "resume",
-            "loaded": true,
-            "playing": false
-          }
-        ]
-      },
-      "diagnostics": {
-        "frames": 23,
-        "rootRenders": 8,
-        "pairRenders": 10,
-        "pairMounts": 5,
         "actorRenders": 3,
         "longFrames": 0,
         "maxFrameMs": 33.399999999999636,
@@ -1032,99 +606,71 @@
         "width": 667,
         "height": 375
       },
-      "level": 10,
+      "level": 7,
       "before": {
-        "chapter": "yozakura",
+        "chapter": "golden_bloom",
         "active": false,
-        "failures": 4,
+        "failures": 3,
         "events": [
           {
             "event": "ui",
-            "at": 1793101689335
+            "at": 1793103141867
           },
           {
             "event": "jump",
-            "at": 1793101691741
+            "at": 1793103143785
           },
           {
             "event": "pause",
-            "at": 1793101691975
+            "at": 1793103144022
           },
           {
             "event": "ui",
-            "at": 1793101692128
+            "at": 1793103144151
           },
           {
             "event": "resume",
-            "at": 1793101692129
+            "at": 1793103144152
           },
           {
             "event": "pause",
-            "at": 1793101692295
+            "at": 1793103144326
           },
           {
             "event": "ui",
-            "at": 1793101692509
+            "at": 1793103144545
           },
           {
             "event": "ui",
-            "at": 1793101692777
+            "at": 1793103144842
           },
           {
             "event": "jump",
-            "at": 1793101695004
+            "at": 1793103146839
           },
           {
             "event": "pause",
-            "at": 1793101695213
+            "at": 1793103147068
           },
           {
             "event": "ui",
-            "at": 1793101695358
+            "at": 1793103147181
           },
           {
             "event": "resume",
-            "at": 1793101695358
+            "at": 1793103147182
           },
           {
             "event": "pause",
-            "at": 1793101695539
+            "at": 1793103147349
           },
           {
             "event": "ui",
-            "at": 1793101695676
+            "at": 1793103147474
           },
           {
             "event": "ui",
-            "at": 1793101695915
-          },
-          {
-            "event": "jump",
-            "at": 1793101698221
-          },
-          {
-            "event": "pause",
-            "at": 1793101698439
-          },
-          {
-            "event": "ui",
-            "at": 1793101698535
-          },
-          {
-            "event": "resume",
-            "at": 1793101698536
-          },
-          {
-            "event": "pause",
-            "at": 1793101698710
-          },
-          {
-            "event": "ui",
-            "at": 1793101698841
-          },
-          {
-            "event": "ui",
-            "at": 1793101699112
+            "at": 1793103147723
           }
         ],
         "players": 10,
@@ -1189,105 +735,77 @@
         ]
       },
       "paused": {
-        "chapter": "yozakura",
+        "chapter": "golden_bloom",
         "active": false,
-        "failures": 4,
+        "failures": 3,
         "events": [
           {
             "event": "ui",
-            "at": 1793101689335
+            "at": 1793103141867
           },
           {
             "event": "jump",
-            "at": 1793101691741
+            "at": 1793103143785
           },
           {
             "event": "pause",
-            "at": 1793101691975
+            "at": 1793103144022
           },
           {
             "event": "ui",
-            "at": 1793101692128
+            "at": 1793103144151
           },
           {
             "event": "resume",
-            "at": 1793101692129
+            "at": 1793103144152
           },
           {
             "event": "pause",
-            "at": 1793101692295
+            "at": 1793103144326
           },
           {
             "event": "ui",
-            "at": 1793101692509
+            "at": 1793103144545
           },
           {
             "event": "ui",
-            "at": 1793101692777
+            "at": 1793103144842
           },
           {
             "event": "jump",
-            "at": 1793101695004
+            "at": 1793103146839
           },
           {
             "event": "pause",
-            "at": 1793101695213
+            "at": 1793103147068
           },
           {
             "event": "ui",
-            "at": 1793101695358
+            "at": 1793103147181
           },
           {
             "event": "resume",
-            "at": 1793101695358
+            "at": 1793103147182
           },
           {
             "event": "pause",
-            "at": 1793101695539
+            "at": 1793103147349
           },
           {
             "event": "ui",
-            "at": 1793101695676
+            "at": 1793103147474
           },
           {
             "event": "ui",
-            "at": 1793101695915
+            "at": 1793103147723
           },
           {
             "event": "jump",
-            "at": 1793101698221
+            "at": 1793103149683
           },
           {
             "event": "pause",
-            "at": 1793101698439
-          },
-          {
-            "event": "ui",
-            "at": 1793101698535
-          },
-          {
-            "event": "resume",
-            "at": 1793101698536
-          },
-          {
-            "event": "pause",
-            "at": 1793101698710
-          },
-          {
-            "event": "ui",
-            "at": 1793101698841
-          },
-          {
-            "event": "ui",
-            "at": 1793101699112
-          },
-          {
-            "event": "jump",
-            "at": 1793101701368
-          },
-          {
-            "event": "pause",
-            "at": 1793101701576
+            "at": 1793103149902
           }
         ],
         "players": 10,
@@ -1299,7 +817,7 @@
         "music": {
           "loaded": true,
           "playing": false,
-          "time": 0.015176,
+          "time": 0.064919,
           "loop": true,
           "volume": 0.35
         },
@@ -1352,117 +870,89 @@
         ]
       },
       "resumed": {
-        "chapter": "yozakura",
+        "chapter": "golden_bloom",
         "active": false,
-        "failures": 4,
+        "failures": 3,
         "events": [
           {
             "event": "ui",
-            "at": 1793101689335
+            "at": 1793103141867
           },
           {
             "event": "jump",
-            "at": 1793101691741
+            "at": 1793103143785
           },
           {
             "event": "pause",
-            "at": 1793101691975
+            "at": 1793103144022
           },
           {
             "event": "ui",
-            "at": 1793101692128
+            "at": 1793103144151
           },
           {
             "event": "resume",
-            "at": 1793101692129
+            "at": 1793103144152
           },
           {
             "event": "pause",
-            "at": 1793101692295
+            "at": 1793103144326
           },
           {
             "event": "ui",
-            "at": 1793101692509
+            "at": 1793103144545
           },
           {
             "event": "ui",
-            "at": 1793101692777
+            "at": 1793103144842
           },
           {
             "event": "jump",
-            "at": 1793101695004
+            "at": 1793103146839
           },
           {
             "event": "pause",
-            "at": 1793101695213
+            "at": 1793103147068
           },
           {
             "event": "ui",
-            "at": 1793101695358
+            "at": 1793103147181
           },
           {
             "event": "resume",
-            "at": 1793101695358
+            "at": 1793103147182
           },
           {
             "event": "pause",
-            "at": 1793101695539
+            "at": 1793103147349
           },
           {
             "event": "ui",
-            "at": 1793101695676
+            "at": 1793103147474
           },
           {
             "event": "ui",
-            "at": 1793101695915
+            "at": 1793103147723
           },
           {
             "event": "jump",
-            "at": 1793101698221
+            "at": 1793103149683
           },
           {
             "event": "pause",
-            "at": 1793101698439
+            "at": 1793103149902
           },
           {
             "event": "ui",
-            "at": 1793101698535
+            "at": 1793103150011
           },
           {
             "event": "resume",
-            "at": 1793101698536
+            "at": 1793103150012
           },
           {
             "event": "pause",
-            "at": 1793101698710
-          },
-          {
-            "event": "ui",
-            "at": 1793101698841
-          },
-          {
-            "event": "ui",
-            "at": 1793101699112
-          },
-          {
-            "event": "jump",
-            "at": 1793101701368
-          },
-          {
-            "event": "pause",
-            "at": 1793101701576
-          },
-          {
-            "event": "ui",
-            "at": 1793101701669
-          },
-          {
-            "event": "resume",
-            "at": 1793101701669
-          },
-          {
-            "event": "pause",
-            "at": 1793101701837
+            "at": 1793103150175
           }
         ],
         "players": 10,
@@ -1474,7 +964,7 @@
         "music": {
           "loaded": true,
           "playing": false,
-          "time": 0.150149,
+          "time": 0.241024,
           "loop": true,
           "volume": 0.35
         },
@@ -1539,1034 +1029,8 @@
     },
     {
       "size": {
-        "width": 844,
-        "height": 390
-      },
-      "level": 1,
-      "before": {
-        "chapter": "first_bloom",
-        "active": false,
-        "failures": 1,
-        "events": [
-          {
-            "event": "ui",
-            "at": 1793101704986
-          }
-        ],
-        "players": 10,
-        "preferences": {
-          "music": true,
-          "sfx": true,
-          "haptics": false
-        },
-        "music": {
-          "loaded": true,
-          "playing": false,
-          "time": 0,
-          "loop": true,
-          "volume": 0.35
-        },
-        "effects": [
-          {
-            "event": "ui",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "jump",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "score",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "collision",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "checkpoint",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "complete",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "unlock",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "pause",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "resume",
-            "loaded": true,
-            "playing": false
-          }
-        ]
-      },
-      "paused": {
-        "chapter": "first_bloom",
-        "active": false,
-        "failures": 1,
-        "events": [
-          {
-            "event": "ui",
-            "at": 1793101704986
-          },
-          {
-            "event": "jump",
-            "at": 1793101706929
-          },
-          {
-            "event": "pause",
-            "at": 1793101707154
-          }
-        ],
-        "players": 10,
-        "preferences": {
-          "music": true,
-          "sfx": true,
-          "haptics": false
-        },
-        "music": {
-          "loaded": true,
-          "playing": false,
-          "time": 0.002872,
-          "loop": true,
-          "volume": 0.35
-        },
-        "effects": [
-          {
-            "event": "ui",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "jump",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "score",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "collision",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "checkpoint",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "complete",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "unlock",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "pause",
-            "loaded": false,
-            "playing": true
-          },
-          {
-            "event": "resume",
-            "loaded": true,
-            "playing": false
-          }
-        ]
-      },
-      "resumed": {
-        "chapter": "first_bloom",
-        "active": false,
-        "failures": 1,
-        "events": [
-          {
-            "event": "ui",
-            "at": 1793101704986
-          },
-          {
-            "event": "jump",
-            "at": 1793101706929
-          },
-          {
-            "event": "pause",
-            "at": 1793101707154
-          },
-          {
-            "event": "ui",
-            "at": 1793101707281
-          },
-          {
-            "event": "resume",
-            "at": 1793101707282
-          },
-          {
-            "event": "pause",
-            "at": 1793101707466
-          }
-        ],
-        "players": 10,
-        "preferences": {
-          "music": true,
-          "sfx": true,
-          "haptics": false
-        },
-        "music": {
-          "loaded": true,
-          "playing": false,
-          "time": 0.194821,
-          "loop": true,
-          "volume": 0.35
-        },
-        "effects": [
-          {
-            "event": "ui",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "jump",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "score",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "collision",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "checkpoint",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "complete",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "unlock",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "pause",
-            "loaded": true,
-            "playing": true
-          },
-          {
-            "event": "resume",
-            "loaded": true,
-            "playing": false
-          }
-        ]
-      },
-      "diagnostics": {
-        "frames": 24,
-        "rootRenders": 8,
-        "pairRenders": 8,
-        "pairMounts": 4,
-        "actorRenders": 4,
-        "longFrames": 0,
-        "maxFrameMs": 32.80000000000018,
-        "inputCount": 1
-      }
-    },
-    {
-      "size": {
-        "width": 844,
-        "height": 390
-      },
-      "level": 4,
-      "before": {
-        "chapter": "sakura_garden",
-        "active": false,
-        "failures": 2,
-        "events": [
-          {
-            "event": "ui",
-            "at": 1793101704986
-          },
-          {
-            "event": "jump",
-            "at": 1793101706929
-          },
-          {
-            "event": "pause",
-            "at": 1793101707154
-          },
-          {
-            "event": "ui",
-            "at": 1793101707281
-          },
-          {
-            "event": "resume",
-            "at": 1793101707282
-          },
-          {
-            "event": "pause",
-            "at": 1793101707466
-          },
-          {
-            "event": "ui",
-            "at": 1793101707609
-          },
-          {
-            "event": "ui",
-            "at": 1793101707895
-          }
-        ],
-        "players": 10,
-        "preferences": {
-          "music": true,
-          "sfx": true,
-          "haptics": false
-        },
-        "music": {
-          "loaded": true,
-          "playing": false,
-          "time": 0,
-          "loop": true,
-          "volume": 0.35
-        },
-        "effects": [
-          {
-            "event": "ui",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "jump",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "score",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "collision",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "checkpoint",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "complete",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "unlock",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "pause",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "resume",
-            "loaded": true,
-            "playing": false
-          }
-        ]
-      },
-      "paused": {
-        "chapter": "sakura_garden",
-        "active": false,
-        "failures": 2,
-        "events": [
-          {
-            "event": "ui",
-            "at": 1793101704986
-          },
-          {
-            "event": "jump",
-            "at": 1793101706929
-          },
-          {
-            "event": "pause",
-            "at": 1793101707154
-          },
-          {
-            "event": "ui",
-            "at": 1793101707281
-          },
-          {
-            "event": "resume",
-            "at": 1793101707282
-          },
-          {
-            "event": "pause",
-            "at": 1793101707466
-          },
-          {
-            "event": "ui",
-            "at": 1793101707609
-          },
-          {
-            "event": "ui",
-            "at": 1793101707895
-          },
-          {
-            "event": "jump",
-            "at": 1793101710220
-          },
-          {
-            "event": "pause",
-            "at": 1793101710442
-          }
-        ],
-        "players": 10,
-        "preferences": {
-          "music": true,
-          "sfx": true,
-          "haptics": false
-        },
-        "music": {
-          "loaded": true,
-          "playing": false,
-          "time": 0.000572,
-          "loop": true,
-          "volume": 0.35
-        },
-        "effects": [
-          {
-            "event": "ui",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "jump",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "score",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "collision",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "checkpoint",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "complete",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "unlock",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "pause",
-            "loaded": false,
-            "playing": true
-          },
-          {
-            "event": "resume",
-            "loaded": true,
-            "playing": false
-          }
-        ]
-      },
-      "resumed": {
-        "chapter": "sakura_garden",
-        "active": false,
-        "failures": 2,
-        "events": [
-          {
-            "event": "ui",
-            "at": 1793101704986
-          },
-          {
-            "event": "jump",
-            "at": 1793101706929
-          },
-          {
-            "event": "pause",
-            "at": 1793101707154
-          },
-          {
-            "event": "ui",
-            "at": 1793101707281
-          },
-          {
-            "event": "resume",
-            "at": 1793101707282
-          },
-          {
-            "event": "pause",
-            "at": 1793101707466
-          },
-          {
-            "event": "ui",
-            "at": 1793101707609
-          },
-          {
-            "event": "ui",
-            "at": 1793101707895
-          },
-          {
-            "event": "jump",
-            "at": 1793101710220
-          },
-          {
-            "event": "pause",
-            "at": 1793101710442
-          },
-          {
-            "event": "ui",
-            "at": 1793101710537
-          },
-          {
-            "event": "resume",
-            "at": 1793101710537
-          },
-          {
-            "event": "pause",
-            "at": 1793101710722
-          }
-        ],
-        "players": 10,
-        "preferences": {
-          "music": true,
-          "sfx": true,
-          "haptics": false
-        },
-        "music": {
-          "loaded": true,
-          "playing": false,
-          "time": 0.182048,
-          "loop": true,
-          "volume": 0.35
-        },
-        "effects": [
-          {
-            "event": "ui",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "jump",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "score",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "collision",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "checkpoint",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "complete",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "unlock",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "pause",
-            "loaded": true,
-            "playing": true
-          },
-          {
-            "event": "resume",
-            "loaded": true,
-            "playing": false
-          }
-        ]
-      },
-      "diagnostics": {
-        "frames": 24,
-        "rootRenders": 8,
-        "pairRenders": 8,
-        "pairMounts": 4,
-        "actorRenders": 3,
-        "longFrames": 0,
-        "maxFrameMs": 33.5,
-        "inputCount": 1
-      }
-    },
-    {
-      "size": {
-        "width": 844,
-        "height": 390
-      },
-      "level": 7,
-      "before": {
-        "chapter": "golden_bloom",
-        "active": false,
-        "failures": 3,
-        "events": [
-          {
-            "event": "ui",
-            "at": 1793101704986
-          },
-          {
-            "event": "jump",
-            "at": 1793101706929
-          },
-          {
-            "event": "pause",
-            "at": 1793101707154
-          },
-          {
-            "event": "ui",
-            "at": 1793101707281
-          },
-          {
-            "event": "resume",
-            "at": 1793101707282
-          },
-          {
-            "event": "pause",
-            "at": 1793101707466
-          },
-          {
-            "event": "ui",
-            "at": 1793101707609
-          },
-          {
-            "event": "ui",
-            "at": 1793101707895
-          },
-          {
-            "event": "jump",
-            "at": 1793101710220
-          },
-          {
-            "event": "pause",
-            "at": 1793101710442
-          },
-          {
-            "event": "ui",
-            "at": 1793101710537
-          },
-          {
-            "event": "resume",
-            "at": 1793101710537
-          },
-          {
-            "event": "pause",
-            "at": 1793101710722
-          },
-          {
-            "event": "ui",
-            "at": 1793101710866
-          },
-          {
-            "event": "ui",
-            "at": 1793101711143
-          }
-        ],
-        "players": 10,
-        "preferences": {
-          "music": true,
-          "sfx": true,
-          "haptics": false
-        },
-        "music": {
-          "loaded": true,
-          "playing": false,
-          "time": 0,
-          "loop": true,
-          "volume": 0.35
-        },
-        "effects": [
-          {
-            "event": "ui",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "jump",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "score",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "collision",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "checkpoint",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "complete",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "unlock",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "pause",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "resume",
-            "loaded": true,
-            "playing": false
-          }
-        ]
-      },
-      "paused": {
-        "chapter": "golden_bloom",
-        "active": false,
-        "failures": 3,
-        "events": [
-          {
-            "event": "ui",
-            "at": 1793101704986
-          },
-          {
-            "event": "jump",
-            "at": 1793101706929
-          },
-          {
-            "event": "pause",
-            "at": 1793101707154
-          },
-          {
-            "event": "ui",
-            "at": 1793101707281
-          },
-          {
-            "event": "resume",
-            "at": 1793101707282
-          },
-          {
-            "event": "pause",
-            "at": 1793101707466
-          },
-          {
-            "event": "ui",
-            "at": 1793101707609
-          },
-          {
-            "event": "ui",
-            "at": 1793101707895
-          },
-          {
-            "event": "jump",
-            "at": 1793101710220
-          },
-          {
-            "event": "pause",
-            "at": 1793101710442
-          },
-          {
-            "event": "ui",
-            "at": 1793101710537
-          },
-          {
-            "event": "resume",
-            "at": 1793101710537
-          },
-          {
-            "event": "pause",
-            "at": 1793101710722
-          },
-          {
-            "event": "ui",
-            "at": 1793101710866
-          },
-          {
-            "event": "ui",
-            "at": 1793101711143
-          },
-          {
-            "event": "jump",
-            "at": 1793101713470
-          },
-          {
-            "event": "pause",
-            "at": 1793101713691
-          }
-        ],
-        "players": 10,
-        "preferences": {
-          "music": true,
-          "sfx": true,
-          "haptics": false
-        },
-        "music": {
-          "loaded": true,
-          "playing": false,
-          "time": 0,
-          "loop": true,
-          "volume": 0.35
-        },
-        "effects": [
-          {
-            "event": "ui",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "jump",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "score",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "collision",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "checkpoint",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "complete",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "unlock",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "pause",
-            "loaded": false,
-            "playing": true
-          },
-          {
-            "event": "resume",
-            "loaded": true,
-            "playing": false
-          }
-        ]
-      },
-      "resumed": {
-        "chapter": "golden_bloom",
-        "active": false,
-        "failures": 3,
-        "events": [
-          {
-            "event": "ui",
-            "at": 1793101704986
-          },
-          {
-            "event": "jump",
-            "at": 1793101706929
-          },
-          {
-            "event": "pause",
-            "at": 1793101707154
-          },
-          {
-            "event": "ui",
-            "at": 1793101707281
-          },
-          {
-            "event": "resume",
-            "at": 1793101707282
-          },
-          {
-            "event": "pause",
-            "at": 1793101707466
-          },
-          {
-            "event": "ui",
-            "at": 1793101707609
-          },
-          {
-            "event": "ui",
-            "at": 1793101707895
-          },
-          {
-            "event": "jump",
-            "at": 1793101710220
-          },
-          {
-            "event": "pause",
-            "at": 1793101710442
-          },
-          {
-            "event": "ui",
-            "at": 1793101710537
-          },
-          {
-            "event": "resume",
-            "at": 1793101710537
-          },
-          {
-            "event": "pause",
-            "at": 1793101710722
-          },
-          {
-            "event": "ui",
-            "at": 1793101710866
-          },
-          {
-            "event": "ui",
-            "at": 1793101711143
-          },
-          {
-            "event": "jump",
-            "at": 1793101713470
-          },
-          {
-            "event": "pause",
-            "at": 1793101713691
-          },
-          {
-            "event": "ui",
-            "at": 1793101713819
-          },
-          {
-            "event": "resume",
-            "at": 1793101713821
-          },
-          {
-            "event": "pause",
-            "at": 1793101713986
-          }
-        ],
-        "players": 10,
-        "preferences": {
-          "music": true,
-          "sfx": true,
-          "haptics": false
-        },
-        "music": {
-          "loaded": true,
-          "playing": false,
-          "time": 0.115144,
-          "loop": true,
-          "volume": 0.35
-        },
-        "effects": [
-          {
-            "event": "ui",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "jump",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "score",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "collision",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "checkpoint",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "complete",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "unlock",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "pause",
-            "loaded": true,
-            "playing": true
-          },
-          {
-            "event": "resume",
-            "loaded": true,
-            "playing": false
-          }
-        ]
-      },
-      "diagnostics": {
-        "frames": 22,
-        "rootRenders": 8,
-        "pairRenders": 10,
-        "pairMounts": 5,
-        "actorRenders": 3,
-        "longFrames": 0,
-        "maxFrameMs": 17,
-        "inputCount": 1
-      }
-    },
-    {
-      "size": {
-        "width": 844,
-        "height": 390
+        "width": 667,
+        "height": 375
       },
       "level": 10,
       "before": {
@@ -2576,91 +1040,91 @@
         "events": [
           {
             "event": "ui",
-            "at": 1793101704986
+            "at": 1793103141867
           },
           {
             "event": "jump",
-            "at": 1793101706929
+            "at": 1793103143785
           },
           {
             "event": "pause",
-            "at": 1793101707154
+            "at": 1793103144022
           },
           {
             "event": "ui",
-            "at": 1793101707281
+            "at": 1793103144151
           },
           {
             "event": "resume",
-            "at": 1793101707282
+            "at": 1793103144152
           },
           {
             "event": "pause",
-            "at": 1793101707466
+            "at": 1793103144326
           },
           {
             "event": "ui",
-            "at": 1793101707609
+            "at": 1793103144545
           },
           {
             "event": "ui",
-            "at": 1793101707895
+            "at": 1793103144842
           },
           {
             "event": "jump",
-            "at": 1793101710220
+            "at": 1793103146839
           },
           {
             "event": "pause",
-            "at": 1793101710442
+            "at": 1793103147068
           },
           {
             "event": "ui",
-            "at": 1793101710537
+            "at": 1793103147181
           },
           {
             "event": "resume",
-            "at": 1793101710537
+            "at": 1793103147182
           },
           {
             "event": "pause",
-            "at": 1793101710722
+            "at": 1793103147349
           },
           {
             "event": "ui",
-            "at": 1793101710866
+            "at": 1793103147474
           },
           {
             "event": "ui",
-            "at": 1793101711143
+            "at": 1793103147723
           },
           {
             "event": "jump",
-            "at": 1793101713470
+            "at": 1793103149683
           },
           {
             "event": "pause",
-            "at": 1793101713691
+            "at": 1793103149902
           },
           {
             "event": "ui",
-            "at": 1793101713819
+            "at": 1793103150011
           },
           {
             "event": "resume",
-            "at": 1793101713821
+            "at": 1793103150012
           },
           {
             "event": "pause",
-            "at": 1793101713986
+            "at": 1793103150175
           },
           {
             "event": "ui",
-            "at": 1793101714098
+            "at": 1793103150280
           },
           {
             "event": "ui",
-            "at": 1793101714378
+            "at": 1793103150547
           }
         ],
         "players": 10,
@@ -2731,99 +1195,99 @@
         "events": [
           {
             "event": "ui",
-            "at": 1793101704986
+            "at": 1793103141867
           },
           {
             "event": "jump",
-            "at": 1793101706929
+            "at": 1793103143785
           },
           {
             "event": "pause",
-            "at": 1793101707154
+            "at": 1793103144022
           },
           {
             "event": "ui",
-            "at": 1793101707281
+            "at": 1793103144151
           },
           {
             "event": "resume",
-            "at": 1793101707282
+            "at": 1793103144152
           },
           {
             "event": "pause",
-            "at": 1793101707466
+            "at": 1793103144326
           },
           {
             "event": "ui",
-            "at": 1793101707609
+            "at": 1793103144545
           },
           {
             "event": "ui",
-            "at": 1793101707895
+            "at": 1793103144842
           },
           {
             "event": "jump",
-            "at": 1793101710220
+            "at": 1793103146839
           },
           {
             "event": "pause",
-            "at": 1793101710442
+            "at": 1793103147068
           },
           {
             "event": "ui",
-            "at": 1793101710537
+            "at": 1793103147181
           },
           {
             "event": "resume",
-            "at": 1793101710537
+            "at": 1793103147182
           },
           {
             "event": "pause",
-            "at": 1793101710722
+            "at": 1793103147349
           },
           {
             "event": "ui",
-            "at": 1793101710866
+            "at": 1793103147474
           },
           {
             "event": "ui",
-            "at": 1793101711143
+            "at": 1793103147723
           },
           {
             "event": "jump",
-            "at": 1793101713470
+            "at": 1793103149683
           },
           {
             "event": "pause",
-            "at": 1793101713691
+            "at": 1793103149902
           },
           {
             "event": "ui",
-            "at": 1793101713819
+            "at": 1793103150011
           },
           {
             "event": "resume",
-            "at": 1793101713821
+            "at": 1793103150012
           },
           {
             "event": "pause",
-            "at": 1793101713986
+            "at": 1793103150175
           },
           {
             "event": "ui",
-            "at": 1793101714098
+            "at": 1793103150280
           },
           {
             "event": "ui",
-            "at": 1793101714378
+            "at": 1793103150547
           },
           {
             "event": "jump",
-            "at": 1793101716608
+            "at": 1793103152472
           },
           {
             "event": "pause",
-            "at": 1793101716831
+            "at": 1793103152686
           }
         ],
         "players": 10,
@@ -2835,7 +1299,7 @@
         "music": {
           "loaded": true,
           "playing": false,
-          "time": 0.019472,
+          "time": 0.046428,
           "loop": true,
           "volume": 0.35
         },
@@ -2894,111 +1358,111 @@
         "events": [
           {
             "event": "ui",
-            "at": 1793101704986
+            "at": 1793103141867
           },
           {
             "event": "jump",
-            "at": 1793101706929
+            "at": 1793103143785
           },
           {
             "event": "pause",
-            "at": 1793101707154
+            "at": 1793103144022
           },
           {
             "event": "ui",
-            "at": 1793101707281
+            "at": 1793103144151
           },
           {
             "event": "resume",
-            "at": 1793101707282
+            "at": 1793103144152
           },
           {
             "event": "pause",
-            "at": 1793101707466
+            "at": 1793103144326
           },
           {
             "event": "ui",
-            "at": 1793101707609
+            "at": 1793103144545
           },
           {
             "event": "ui",
-            "at": 1793101707895
+            "at": 1793103144842
           },
           {
             "event": "jump",
-            "at": 1793101710220
+            "at": 1793103146839
           },
           {
             "event": "pause",
-            "at": 1793101710442
+            "at": 1793103147068
           },
           {
             "event": "ui",
-            "at": 1793101710537
+            "at": 1793103147181
           },
           {
             "event": "resume",
-            "at": 1793101710537
+            "at": 1793103147182
           },
           {
             "event": "pause",
-            "at": 1793101710722
+            "at": 1793103147349
           },
           {
             "event": "ui",
-            "at": 1793101710866
+            "at": 1793103147474
           },
           {
             "event": "ui",
-            "at": 1793101711143
+            "at": 1793103147723
           },
           {
             "event": "jump",
-            "at": 1793101713470
+            "at": 1793103149683
           },
           {
             "event": "pause",
-            "at": 1793101713691
+            "at": 1793103149902
           },
           {
             "event": "ui",
-            "at": 1793101713819
+            "at": 1793103150011
           },
           {
             "event": "resume",
-            "at": 1793101713821
+            "at": 1793103150012
           },
           {
             "event": "pause",
-            "at": 1793101713986
+            "at": 1793103150175
           },
           {
             "event": "ui",
-            "at": 1793101714098
+            "at": 1793103150280
           },
           {
             "event": "ui",
-            "at": 1793101714378
+            "at": 1793103150547
           },
           {
             "event": "jump",
-            "at": 1793101716608
+            "at": 1793103152472
           },
           {
             "event": "pause",
-            "at": 1793101716831
+            "at": 1793103152686
           },
           {
             "event": "ui",
-            "at": 1793101716950
+            "at": 1793103152795
           },
           {
             "event": "resume",
-            "at": 1793101716950
+            "at": 1793103152796
           },
           {
             "event": "pause",
-            "at": 1793101717120
+            "at": 1793103152962
           }
         ],
         "players": 10,
@@ -3010,7 +1474,7 @@
         "music": {
           "loaded": true,
           "playing": false,
-          "time": 0.189627,
+          "time": 0.227892,
           "loop": true,
           "volume": 0.35
         },
@@ -3052,7 +1516,7 @@
           },
           {
             "event": "pause",
-            "loaded": true,
+            "loaded": false,
             "playing": true
           },
           {
@@ -3063,20 +1527,20 @@
         ]
       },
       "diagnostics": {
-        "frames": 24,
+        "frames": 23,
         "rootRenders": 8,
         "pairRenders": 10,
         "pairMounts": 5,
         "actorRenders": 3,
         "longFrames": 0,
-        "maxFrameMs": 16.80000000000109,
+        "maxFrameMs": 17.100000000000364,
         "inputCount": 1
       }
     },
     {
       "size": {
-        "width": 1366,
-        "height": 768
+        "width": 844,
+        "height": 390
       },
       "level": 1,
       "before": {
@@ -3086,7 +1550,7 @@
         "events": [
           {
             "event": "ui",
-            "at": 1793101720324
+            "at": 1793103155912
           }
         ],
         "players": 10,
@@ -3157,15 +1621,15 @@
         "events": [
           {
             "event": "ui",
-            "at": 1793101720324
+            "at": 1793103155912
           },
           {
             "event": "jump",
-            "at": 1793101722367
+            "at": 1793103157727
           },
           {
             "event": "pause",
-            "at": 1793101722588
+            "at": 1793103157941
           }
         ],
         "players": 10,
@@ -3177,7 +1641,7 @@
         "music": {
           "loaded": true,
           "playing": false,
-          "time": 0.006344,
+          "time": 0.027375,
           "loop": true,
           "volume": 0.35
         },
@@ -3219,7 +1683,7 @@
           },
           {
             "event": "pause",
-            "loaded": false,
+            "loaded": true,
             "playing": true
           },
           {
@@ -3236,27 +1700,27 @@
         "events": [
           {
             "event": "ui",
-            "at": 1793101720324
+            "at": 1793103155912
           },
           {
             "event": "jump",
-            "at": 1793101722367
+            "at": 1793103157727
           },
           {
             "event": "pause",
-            "at": 1793101722588
+            "at": 1793103157941
           },
           {
             "event": "ui",
-            "at": 1793101722700
+            "at": 1793103158042
           },
           {
             "event": "resume",
-            "at": 1793101722700
+            "at": 1793103158042
           },
           {
             "event": "pause",
-            "at": 1793101722879
+            "at": 1793103158216
           }
         ],
         "players": 10,
@@ -3268,7 +1732,7 @@
         "music": {
           "loaded": true,
           "playing": false,
-          "time": 0.198849,
+          "time": 0.207474,
           "loop": true,
           "volume": 0.35
         },
@@ -3333,8 +1797,8 @@
     },
     {
       "size": {
-        "width": 1366,
-        "height": 768
+        "width": 844,
+        "height": 390
       },
       "level": 4,
       "before": {
@@ -3344,35 +1808,35 @@
         "events": [
           {
             "event": "ui",
-            "at": 1793101720324
+            "at": 1793103155912
           },
           {
             "event": "jump",
-            "at": 1793101722367
+            "at": 1793103157727
           },
           {
             "event": "pause",
-            "at": 1793101722588
+            "at": 1793103157941
           },
           {
             "event": "ui",
-            "at": 1793101722700
+            "at": 1793103158042
           },
           {
             "event": "resume",
-            "at": 1793101722700
+            "at": 1793103158042
           },
           {
             "event": "pause",
-            "at": 1793101722879
+            "at": 1793103158216
           },
           {
             "event": "ui",
-            "at": 1793101722998
+            "at": 1793103158327
           },
           {
             "event": "ui",
-            "at": 1793101723299
+            "at": 1793103158583
           }
         ],
         "players": 10,
@@ -3443,43 +1907,43 @@
         "events": [
           {
             "event": "ui",
-            "at": 1793101720324
+            "at": 1793103155912
           },
           {
             "event": "jump",
-            "at": 1793101722367
+            "at": 1793103157727
           },
           {
             "event": "pause",
-            "at": 1793101722588
+            "at": 1793103157941
           },
           {
             "event": "ui",
-            "at": 1793101722700
+            "at": 1793103158042
           },
           {
             "event": "resume",
-            "at": 1793101722700
+            "at": 1793103158042
           },
           {
             "event": "pause",
-            "at": 1793101722879
+            "at": 1793103158216
           },
           {
             "event": "ui",
-            "at": 1793101722998
+            "at": 1793103158327
           },
           {
             "event": "ui",
-            "at": 1793101723299
+            "at": 1793103158583
           },
           {
             "event": "jump",
-            "at": 1793101725406
+            "at": 1793103160623
           },
           {
             "event": "pause",
-            "at": 1793101725621
+            "at": 1793103160831
           }
         ],
         "players": 10,
@@ -3491,7 +1955,7 @@
         "music": {
           "loaded": true,
           "playing": false,
-          "time": 0.041225,
+          "time": 0.028111,
           "loop": true,
           "volume": 0.35
         },
@@ -3550,55 +2014,55 @@
         "events": [
           {
             "event": "ui",
-            "at": 1793101720324
+            "at": 1793103155912
           },
           {
             "event": "jump",
-            "at": 1793101722367
+            "at": 1793103157727
           },
           {
             "event": "pause",
-            "at": 1793101722588
+            "at": 1793103157941
           },
           {
             "event": "ui",
-            "at": 1793101722700
+            "at": 1793103158042
           },
           {
             "event": "resume",
-            "at": 1793101722700
+            "at": 1793103158042
           },
           {
             "event": "pause",
-            "at": 1793101722879
+            "at": 1793103158216
           },
           {
             "event": "ui",
-            "at": 1793101722998
+            "at": 1793103158327
           },
           {
             "event": "ui",
-            "at": 1793101723299
+            "at": 1793103158583
           },
           {
             "event": "jump",
-            "at": 1793101725406
+            "at": 1793103160623
           },
           {
             "event": "pause",
-            "at": 1793101725621
+            "at": 1793103160831
           },
           {
             "event": "ui",
-            "at": 1793101725730
+            "at": 1793103160942
           },
           {
             "event": "resume",
-            "at": 1793101725731
+            "at": 1793103160942
           },
           {
             "event": "pause",
-            "at": 1793101725911
+            "at": 1793103161108
           }
         ],
         "players": 10,
@@ -3610,7 +2074,943 @@
         "music": {
           "loaded": true,
           "playing": false,
-          "time": 0.236363,
+          "time": 0.186932,
+          "loop": true,
+          "volume": 0.35
+        },
+        "effects": [
+          {
+            "event": "ui",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "jump",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "score",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "collision",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "checkpoint",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "complete",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "unlock",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "pause",
+            "loaded": true,
+            "playing": true
+          },
+          {
+            "event": "resume",
+            "loaded": true,
+            "playing": false
+          }
+        ]
+      },
+      "diagnostics": {
+        "frames": 23,
+        "rootRenders": 8,
+        "pairRenders": 8,
+        "pairMounts": 4,
+        "actorRenders": 3,
+        "longFrames": 0,
+        "maxFrameMs": 17,
+        "inputCount": 1
+      }
+    },
+    {
+      "size": {
+        "width": 844,
+        "height": 390
+      },
+      "level": 7,
+      "before": {
+        "chapter": "golden_bloom",
+        "active": false,
+        "failures": 3,
+        "events": [
+          {
+            "event": "ui",
+            "at": 1793103155912
+          },
+          {
+            "event": "jump",
+            "at": 1793103157727
+          },
+          {
+            "event": "pause",
+            "at": 1793103157941
+          },
+          {
+            "event": "ui",
+            "at": 1793103158042
+          },
+          {
+            "event": "resume",
+            "at": 1793103158042
+          },
+          {
+            "event": "pause",
+            "at": 1793103158216
+          },
+          {
+            "event": "ui",
+            "at": 1793103158327
+          },
+          {
+            "event": "ui",
+            "at": 1793103158583
+          },
+          {
+            "event": "jump",
+            "at": 1793103160623
+          },
+          {
+            "event": "pause",
+            "at": 1793103160831
+          },
+          {
+            "event": "ui",
+            "at": 1793103160942
+          },
+          {
+            "event": "resume",
+            "at": 1793103160942
+          },
+          {
+            "event": "pause",
+            "at": 1793103161108
+          },
+          {
+            "event": "ui",
+            "at": 1793103161213
+          },
+          {
+            "event": "ui",
+            "at": 1793103161467
+          }
+        ],
+        "players": 10,
+        "preferences": {
+          "music": true,
+          "sfx": true,
+          "haptics": false
+        },
+        "music": {
+          "loaded": true,
+          "playing": false,
+          "time": 0,
+          "loop": true,
+          "volume": 0.35
+        },
+        "effects": [
+          {
+            "event": "ui",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "jump",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "score",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "collision",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "checkpoint",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "complete",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "unlock",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "pause",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "resume",
+            "loaded": true,
+            "playing": false
+          }
+        ]
+      },
+      "paused": {
+        "chapter": "golden_bloom",
+        "active": false,
+        "failures": 3,
+        "events": [
+          {
+            "event": "ui",
+            "at": 1793103155912
+          },
+          {
+            "event": "jump",
+            "at": 1793103157727
+          },
+          {
+            "event": "pause",
+            "at": 1793103157941
+          },
+          {
+            "event": "ui",
+            "at": 1793103158042
+          },
+          {
+            "event": "resume",
+            "at": 1793103158042
+          },
+          {
+            "event": "pause",
+            "at": 1793103158216
+          },
+          {
+            "event": "ui",
+            "at": 1793103158327
+          },
+          {
+            "event": "ui",
+            "at": 1793103158583
+          },
+          {
+            "event": "jump",
+            "at": 1793103160623
+          },
+          {
+            "event": "pause",
+            "at": 1793103160831
+          },
+          {
+            "event": "ui",
+            "at": 1793103160942
+          },
+          {
+            "event": "resume",
+            "at": 1793103160942
+          },
+          {
+            "event": "pause",
+            "at": 1793103161108
+          },
+          {
+            "event": "ui",
+            "at": 1793103161213
+          },
+          {
+            "event": "ui",
+            "at": 1793103161467
+          },
+          {
+            "event": "jump",
+            "at": 1793103163540
+          },
+          {
+            "event": "pause",
+            "at": 1793103163766
+          }
+        ],
+        "players": 10,
+        "preferences": {
+          "music": true,
+          "sfx": true,
+          "haptics": false
+        },
+        "music": {
+          "loaded": true,
+          "playing": false,
+          "time": 0.022585,
+          "loop": true,
+          "volume": 0.35
+        },
+        "effects": [
+          {
+            "event": "ui",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "jump",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "score",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "collision",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "checkpoint",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "complete",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "unlock",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "pause",
+            "loaded": false,
+            "playing": true
+          },
+          {
+            "event": "resume",
+            "loaded": true,
+            "playing": false
+          }
+        ]
+      },
+      "resumed": {
+        "chapter": "golden_bloom",
+        "active": false,
+        "failures": 3,
+        "events": [
+          {
+            "event": "ui",
+            "at": 1793103155912
+          },
+          {
+            "event": "jump",
+            "at": 1793103157727
+          },
+          {
+            "event": "pause",
+            "at": 1793103157941
+          },
+          {
+            "event": "ui",
+            "at": 1793103158042
+          },
+          {
+            "event": "resume",
+            "at": 1793103158042
+          },
+          {
+            "event": "pause",
+            "at": 1793103158216
+          },
+          {
+            "event": "ui",
+            "at": 1793103158327
+          },
+          {
+            "event": "ui",
+            "at": 1793103158583
+          },
+          {
+            "event": "jump",
+            "at": 1793103160623
+          },
+          {
+            "event": "pause",
+            "at": 1793103160831
+          },
+          {
+            "event": "ui",
+            "at": 1793103160942
+          },
+          {
+            "event": "resume",
+            "at": 1793103160942
+          },
+          {
+            "event": "pause",
+            "at": 1793103161108
+          },
+          {
+            "event": "ui",
+            "at": 1793103161213
+          },
+          {
+            "event": "ui",
+            "at": 1793103161467
+          },
+          {
+            "event": "jump",
+            "at": 1793103163540
+          },
+          {
+            "event": "pause",
+            "at": 1793103163766
+          },
+          {
+            "event": "ui",
+            "at": 1793103163859
+          },
+          {
+            "event": "resume",
+            "at": 1793103163860
+          },
+          {
+            "event": "pause",
+            "at": 1793103164025
+          }
+        ],
+        "players": 10,
+        "preferences": {
+          "music": true,
+          "sfx": true,
+          "haptics": false
+        },
+        "music": {
+          "loaded": true,
+          "playing": false,
+          "time": 0.207193,
+          "loop": true,
+          "volume": 0.35
+        },
+        "effects": [
+          {
+            "event": "ui",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "jump",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "score",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "collision",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "checkpoint",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "complete",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "unlock",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "pause",
+            "loaded": true,
+            "playing": true
+          },
+          {
+            "event": "resume",
+            "loaded": true,
+            "playing": false
+          }
+        ]
+      },
+      "diagnostics": {
+        "frames": 24,
+        "rootRenders": 8,
+        "pairRenders": 10,
+        "pairMounts": 5,
+        "actorRenders": 3,
+        "longFrames": 0,
+        "maxFrameMs": 17,
+        "inputCount": 1
+      }
+    },
+    {
+      "size": {
+        "width": 844,
+        "height": 390
+      },
+      "level": 10,
+      "before": {
+        "chapter": "yozakura",
+        "active": false,
+        "failures": 4,
+        "events": [
+          {
+            "event": "ui",
+            "at": 1793103155912
+          },
+          {
+            "event": "jump",
+            "at": 1793103157727
+          },
+          {
+            "event": "pause",
+            "at": 1793103157941
+          },
+          {
+            "event": "ui",
+            "at": 1793103158042
+          },
+          {
+            "event": "resume",
+            "at": 1793103158042
+          },
+          {
+            "event": "pause",
+            "at": 1793103158216
+          },
+          {
+            "event": "ui",
+            "at": 1793103158327
+          },
+          {
+            "event": "ui",
+            "at": 1793103158583
+          },
+          {
+            "event": "jump",
+            "at": 1793103160623
+          },
+          {
+            "event": "pause",
+            "at": 1793103160831
+          },
+          {
+            "event": "ui",
+            "at": 1793103160942
+          },
+          {
+            "event": "resume",
+            "at": 1793103160942
+          },
+          {
+            "event": "pause",
+            "at": 1793103161108
+          },
+          {
+            "event": "ui",
+            "at": 1793103161213
+          },
+          {
+            "event": "ui",
+            "at": 1793103161467
+          },
+          {
+            "event": "jump",
+            "at": 1793103163540
+          },
+          {
+            "event": "pause",
+            "at": 1793103163766
+          },
+          {
+            "event": "ui",
+            "at": 1793103163859
+          },
+          {
+            "event": "resume",
+            "at": 1793103163860
+          },
+          {
+            "event": "pause",
+            "at": 1793103164025
+          },
+          {
+            "event": "ui",
+            "at": 1793103164133
+          },
+          {
+            "event": "ui",
+            "at": 1793103164398
+          }
+        ],
+        "players": 10,
+        "preferences": {
+          "music": true,
+          "sfx": true,
+          "haptics": false
+        },
+        "music": {
+          "loaded": true,
+          "playing": false,
+          "time": 0,
+          "loop": true,
+          "volume": 0.35
+        },
+        "effects": [
+          {
+            "event": "ui",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "jump",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "score",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "collision",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "checkpoint",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "complete",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "unlock",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "pause",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "resume",
+            "loaded": true,
+            "playing": false
+          }
+        ]
+      },
+      "paused": {
+        "chapter": "yozakura",
+        "active": false,
+        "failures": 4,
+        "events": [
+          {
+            "event": "ui",
+            "at": 1793103155912
+          },
+          {
+            "event": "jump",
+            "at": 1793103157727
+          },
+          {
+            "event": "pause",
+            "at": 1793103157941
+          },
+          {
+            "event": "ui",
+            "at": 1793103158042
+          },
+          {
+            "event": "resume",
+            "at": 1793103158042
+          },
+          {
+            "event": "pause",
+            "at": 1793103158216
+          },
+          {
+            "event": "ui",
+            "at": 1793103158327
+          },
+          {
+            "event": "ui",
+            "at": 1793103158583
+          },
+          {
+            "event": "jump",
+            "at": 1793103160623
+          },
+          {
+            "event": "pause",
+            "at": 1793103160831
+          },
+          {
+            "event": "ui",
+            "at": 1793103160942
+          },
+          {
+            "event": "resume",
+            "at": 1793103160942
+          },
+          {
+            "event": "pause",
+            "at": 1793103161108
+          },
+          {
+            "event": "ui",
+            "at": 1793103161213
+          },
+          {
+            "event": "ui",
+            "at": 1793103161467
+          },
+          {
+            "event": "jump",
+            "at": 1793103163540
+          },
+          {
+            "event": "pause",
+            "at": 1793103163766
+          },
+          {
+            "event": "ui",
+            "at": 1793103163859
+          },
+          {
+            "event": "resume",
+            "at": 1793103163860
+          },
+          {
+            "event": "pause",
+            "at": 1793103164025
+          },
+          {
+            "event": "ui",
+            "at": 1793103164133
+          },
+          {
+            "event": "ui",
+            "at": 1793103164398
+          },
+          {
+            "event": "jump",
+            "at": 1793103166520
+          },
+          {
+            "event": "pause",
+            "at": 1793103166736
+          }
+        ],
+        "players": 10,
+        "preferences": {
+          "music": true,
+          "sfx": true,
+          "haptics": false
+        },
+        "music": {
+          "loaded": true,
+          "playing": false,
+          "time": 0.005033,
+          "loop": true,
+          "volume": 0.35
+        },
+        "effects": [
+          {
+            "event": "ui",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "jump",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "score",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "collision",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "checkpoint",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "complete",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "unlock",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "pause",
+            "loaded": false,
+            "playing": true
+          },
+          {
+            "event": "resume",
+            "loaded": true,
+            "playing": false
+          }
+        ]
+      },
+      "resumed": {
+        "chapter": "yozakura",
+        "active": false,
+        "failures": 4,
+        "events": [
+          {
+            "event": "ui",
+            "at": 1793103155912
+          },
+          {
+            "event": "jump",
+            "at": 1793103157727
+          },
+          {
+            "event": "pause",
+            "at": 1793103157941
+          },
+          {
+            "event": "ui",
+            "at": 1793103158042
+          },
+          {
+            "event": "resume",
+            "at": 1793103158042
+          },
+          {
+            "event": "pause",
+            "at": 1793103158216
+          },
+          {
+            "event": "ui",
+            "at": 1793103158327
+          },
+          {
+            "event": "ui",
+            "at": 1793103158583
+          },
+          {
+            "event": "jump",
+            "at": 1793103160623
+          },
+          {
+            "event": "pause",
+            "at": 1793103160831
+          },
+          {
+            "event": "ui",
+            "at": 1793103160942
+          },
+          {
+            "event": "resume",
+            "at": 1793103160942
+          },
+          {
+            "event": "pause",
+            "at": 1793103161108
+          },
+          {
+            "event": "ui",
+            "at": 1793103161213
+          },
+          {
+            "event": "ui",
+            "at": 1793103161467
+          },
+          {
+            "event": "jump",
+            "at": 1793103163540
+          },
+          {
+            "event": "pause",
+            "at": 1793103163766
+          },
+          {
+            "event": "ui",
+            "at": 1793103163859
+          },
+          {
+            "event": "resume",
+            "at": 1793103163860
+          },
+          {
+            "event": "pause",
+            "at": 1793103164025
+          },
+          {
+            "event": "ui",
+            "at": 1793103164133
+          },
+          {
+            "event": "ui",
+            "at": 1793103164398
+          },
+          {
+            "event": "jump",
+            "at": 1793103166520
+          },
+          {
+            "event": "pause",
+            "at": 1793103166736
+          },
+          {
+            "event": "ui",
+            "at": 1793103166829
+          },
+          {
+            "event": "resume",
+            "at": 1793103166830
+          },
+          {
+            "event": "pause",
+            "at": 1793103167003
+          }
+        ],
+        "players": 10,
+        "preferences": {
+          "music": true,
+          "sfx": true,
+          "haptics": false
+        },
+        "music": {
+          "loaded": true,
+          "playing": false,
+          "time": 0.191447,
           "loop": true,
           "volume": 0.35
         },
@@ -3665,11 +3065,611 @@
       "diagnostics": {
         "frames": 24,
         "rootRenders": 8,
+        "pairRenders": 10,
+        "pairMounts": 5,
+        "actorRenders": 3,
+        "longFrames": 0,
+        "maxFrameMs": 16.900000000001455,
+        "inputCount": 1
+      }
+    },
+    {
+      "size": {
+        "width": 1366,
+        "height": 768
+      },
+      "level": 1,
+      "before": {
+        "chapter": "first_bloom",
+        "active": false,
+        "failures": 1,
+        "events": [
+          {
+            "event": "ui",
+            "at": 1793103169984
+          }
+        ],
+        "players": 10,
+        "preferences": {
+          "music": true,
+          "sfx": true,
+          "haptics": false
+        },
+        "music": {
+          "loaded": true,
+          "playing": false,
+          "time": 0,
+          "loop": true,
+          "volume": 0.35
+        },
+        "effects": [
+          {
+            "event": "ui",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "jump",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "score",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "collision",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "checkpoint",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "complete",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "unlock",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "pause",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "resume",
+            "loaded": true,
+            "playing": false
+          }
+        ]
+      },
+      "paused": {
+        "chapter": "first_bloom",
+        "active": false,
+        "failures": 1,
+        "events": [
+          {
+            "event": "ui",
+            "at": 1793103169984
+          },
+          {
+            "event": "jump",
+            "at": 1793103172024
+          },
+          {
+            "event": "pause",
+            "at": 1793103172245
+          }
+        ],
+        "players": 10,
+        "preferences": {
+          "music": true,
+          "sfx": true,
+          "haptics": false
+        },
+        "music": {
+          "loaded": true,
+          "playing": false,
+          "time": 0.031154,
+          "loop": true,
+          "volume": 0.35
+        },
+        "effects": [
+          {
+            "event": "ui",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "jump",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "score",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "collision",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "checkpoint",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "complete",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "unlock",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "pause",
+            "loaded": true,
+            "playing": true
+          },
+          {
+            "event": "resume",
+            "loaded": true,
+            "playing": false
+          }
+        ]
+      },
+      "resumed": {
+        "chapter": "first_bloom",
+        "active": false,
+        "failures": 1,
+        "events": [
+          {
+            "event": "ui",
+            "at": 1793103169984
+          },
+          {
+            "event": "jump",
+            "at": 1793103172024
+          },
+          {
+            "event": "pause",
+            "at": 1793103172245
+          },
+          {
+            "event": "ui",
+            "at": 1793103172360
+          },
+          {
+            "event": "resume",
+            "at": 1793103172361
+          },
+          {
+            "event": "pause",
+            "at": 1793103172532
+          }
+        ],
+        "players": 10,
+        "preferences": {
+          "music": true,
+          "sfx": true,
+          "haptics": false
+        },
+        "music": {
+          "loaded": true,
+          "playing": false,
+          "time": 0.204676,
+          "loop": true,
+          "volume": 0.35
+        },
+        "effects": [
+          {
+            "event": "ui",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "jump",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "score",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "collision",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "checkpoint",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "complete",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "unlock",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "pause",
+            "loaded": true,
+            "playing": true
+          },
+          {
+            "event": "resume",
+            "loaded": true,
+            "playing": false
+          }
+        ]
+      },
+      "diagnostics": {
+        "frames": 24,
+        "rootRenders": 8,
         "pairRenders": 8,
         "pairMounts": 4,
         "actorRenders": 3,
         "longFrames": 0,
-        "maxFrameMs": 17.300000000000182,
+        "maxFrameMs": 17,
+        "inputCount": 1
+      }
+    },
+    {
+      "size": {
+        "width": 1366,
+        "height": 768
+      },
+      "level": 4,
+      "before": {
+        "chapter": "sakura_garden",
+        "active": false,
+        "failures": 2,
+        "events": [
+          {
+            "event": "ui",
+            "at": 1793103169984
+          },
+          {
+            "event": "jump",
+            "at": 1793103172024
+          },
+          {
+            "event": "pause",
+            "at": 1793103172245
+          },
+          {
+            "event": "ui",
+            "at": 1793103172360
+          },
+          {
+            "event": "resume",
+            "at": 1793103172361
+          },
+          {
+            "event": "pause",
+            "at": 1793103172532
+          },
+          {
+            "event": "ui",
+            "at": 1793103172634
+          },
+          {
+            "event": "ui",
+            "at": 1793103172903
+          }
+        ],
+        "players": 10,
+        "preferences": {
+          "music": true,
+          "sfx": true,
+          "haptics": false
+        },
+        "music": {
+          "loaded": true,
+          "playing": false,
+          "time": 0,
+          "loop": true,
+          "volume": 0.35
+        },
+        "effects": [
+          {
+            "event": "ui",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "jump",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "score",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "collision",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "checkpoint",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "complete",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "unlock",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "pause",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "resume",
+            "loaded": true,
+            "playing": false
+          }
+        ]
+      },
+      "paused": {
+        "chapter": "sakura_garden",
+        "active": false,
+        "failures": 2,
+        "events": [
+          {
+            "event": "ui",
+            "at": 1793103169984
+          },
+          {
+            "event": "jump",
+            "at": 1793103172024
+          },
+          {
+            "event": "pause",
+            "at": 1793103172245
+          },
+          {
+            "event": "ui",
+            "at": 1793103172360
+          },
+          {
+            "event": "resume",
+            "at": 1793103172361
+          },
+          {
+            "event": "pause",
+            "at": 1793103172532
+          },
+          {
+            "event": "ui",
+            "at": 1793103172634
+          },
+          {
+            "event": "ui",
+            "at": 1793103172903
+          },
+          {
+            "event": "jump",
+            "at": 1793103175084
+          },
+          {
+            "event": "pause",
+            "at": 1793103175312
+          }
+        ],
+        "players": 10,
+        "preferences": {
+          "music": true,
+          "sfx": true,
+          "haptics": false
+        },
+        "music": {
+          "loaded": true,
+          "playing": false,
+          "time": 0.075435,
+          "loop": true,
+          "volume": 0.35
+        },
+        "effects": [
+          {
+            "event": "ui",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "jump",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "score",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "collision",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "checkpoint",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "complete",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "unlock",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "pause",
+            "loaded": false,
+            "playing": true
+          },
+          {
+            "event": "resume",
+            "loaded": true,
+            "playing": false
+          }
+        ]
+      },
+      "resumed": {
+        "chapter": "sakura_garden",
+        "active": false,
+        "failures": 2,
+        "events": [
+          {
+            "event": "ui",
+            "at": 1793103169984
+          },
+          {
+            "event": "jump",
+            "at": 1793103172024
+          },
+          {
+            "event": "pause",
+            "at": 1793103172245
+          },
+          {
+            "event": "ui",
+            "at": 1793103172360
+          },
+          {
+            "event": "resume",
+            "at": 1793103172361
+          },
+          {
+            "event": "pause",
+            "at": 1793103172532
+          },
+          {
+            "event": "ui",
+            "at": 1793103172634
+          },
+          {
+            "event": "ui",
+            "at": 1793103172903
+          },
+          {
+            "event": "jump",
+            "at": 1793103175084
+          },
+          {
+            "event": "pause",
+            "at": 1793103175312
+          },
+          {
+            "event": "ui",
+            "at": 1793103175405
+          },
+          {
+            "event": "resume",
+            "at": 1793103175406
+          },
+          {
+            "event": "pause",
+            "at": 1793103175570
+          }
+        ],
+        "players": 10,
+        "preferences": {
+          "music": true,
+          "sfx": true,
+          "haptics": false
+        },
+        "music": {
+          "loaded": true,
+          "playing": false,
+          "time": 0.235741,
+          "loop": true,
+          "volume": 0.35
+        },
+        "effects": [
+          {
+            "event": "ui",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "jump",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "score",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "collision",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "checkpoint",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "complete",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "unlock",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "pause",
+            "loaded": true,
+            "playing": true
+          },
+          {
+            "event": "resume",
+            "loaded": true,
+            "playing": false
+          }
+        ]
+      },
+      "diagnostics": {
+        "frames": 23,
+        "rootRenders": 8,
+        "pairRenders": 8,
+        "pairMounts": 4,
+        "actorRenders": 3,
+        "longFrames": 0,
+        "maxFrameMs": 16.900000000000546,
         "inputCount": 1
       }
     },
@@ -3686,63 +3686,63 @@
         "events": [
           {
             "event": "ui",
-            "at": 1793101720324
+            "at": 1793103169984
           },
           {
             "event": "jump",
-            "at": 1793101722367
+            "at": 1793103172024
           },
           {
             "event": "pause",
-            "at": 1793101722588
+            "at": 1793103172245
           },
           {
             "event": "ui",
-            "at": 1793101722700
+            "at": 1793103172360
           },
           {
             "event": "resume",
-            "at": 1793101722700
+            "at": 1793103172361
           },
           {
             "event": "pause",
-            "at": 1793101722879
+            "at": 1793103172532
           },
           {
             "event": "ui",
-            "at": 1793101722998
+            "at": 1793103172634
           },
           {
             "event": "ui",
-            "at": 1793101723299
+            "at": 1793103172903
           },
           {
             "event": "jump",
-            "at": 1793101725406
+            "at": 1793103175084
           },
           {
             "event": "pause",
-            "at": 1793101725621
+            "at": 1793103175312
           },
           {
             "event": "ui",
-            "at": 1793101725730
+            "at": 1793103175405
           },
           {
             "event": "resume",
-            "at": 1793101725731
+            "at": 1793103175406
           },
           {
             "event": "pause",
-            "at": 1793101725911
+            "at": 1793103175570
           },
           {
             "event": "ui",
-            "at": 1793101726041
+            "at": 1793103175680
           },
           {
             "event": "ui",
-            "at": 1793101726312
+            "at": 1793103175932
           }
         ],
         "players": 10,
@@ -3813,71 +3813,71 @@
         "events": [
           {
             "event": "ui",
-            "at": 1793101720324
+            "at": 1793103169984
           },
           {
             "event": "jump",
-            "at": 1793101722367
+            "at": 1793103172024
           },
           {
             "event": "pause",
-            "at": 1793101722588
+            "at": 1793103172245
           },
           {
             "event": "ui",
-            "at": 1793101722700
+            "at": 1793103172360
           },
           {
             "event": "resume",
-            "at": 1793101722700
+            "at": 1793103172361
           },
           {
             "event": "pause",
-            "at": 1793101722879
+            "at": 1793103172532
           },
           {
             "event": "ui",
-            "at": 1793101722998
+            "at": 1793103172634
           },
           {
             "event": "ui",
-            "at": 1793101723299
+            "at": 1793103172903
           },
           {
             "event": "jump",
-            "at": 1793101725406
+            "at": 1793103175084
           },
           {
             "event": "pause",
-            "at": 1793101725621
+            "at": 1793103175312
           },
           {
             "event": "ui",
-            "at": 1793101725730
+            "at": 1793103175405
           },
           {
             "event": "resume",
-            "at": 1793101725731
+            "at": 1793103175406
           },
           {
             "event": "pause",
-            "at": 1793101725911
+            "at": 1793103175570
           },
           {
             "event": "ui",
-            "at": 1793101726041
+            "at": 1793103175680
           },
           {
             "event": "ui",
-            "at": 1793101726312
+            "at": 1793103175932
           },
           {
             "event": "jump",
-            "at": 1793101728855
+            "at": 1793103178036
           },
           {
             "event": "pause",
-            "at": 1793101729073
+            "at": 1793103178245
           }
         ],
         "players": 10,
@@ -3889,7 +3889,7 @@
         "music": {
           "loaded": true,
           "playing": false,
-          "time": 0.020256,
+          "time": 0.031951,
           "loop": true,
           "volume": 0.35
         },
@@ -3948,83 +3948,83 @@
         "events": [
           {
             "event": "ui",
-            "at": 1793101720324
+            "at": 1793103169984
           },
           {
             "event": "jump",
-            "at": 1793101722367
+            "at": 1793103172024
           },
           {
             "event": "pause",
-            "at": 1793101722588
+            "at": 1793103172245
           },
           {
             "event": "ui",
-            "at": 1793101722700
+            "at": 1793103172360
           },
           {
             "event": "resume",
-            "at": 1793101722700
+            "at": 1793103172361
           },
           {
             "event": "pause",
-            "at": 1793101722879
+            "at": 1793103172532
           },
           {
             "event": "ui",
-            "at": 1793101722998
+            "at": 1793103172634
           },
           {
             "event": "ui",
-            "at": 1793101723299
+            "at": 1793103172903
           },
           {
             "event": "jump",
-            "at": 1793101725406
+            "at": 1793103175084
           },
           {
             "event": "pause",
-            "at": 1793101725621
+            "at": 1793103175312
           },
           {
             "event": "ui",
-            "at": 1793101725730
+            "at": 1793103175405
           },
           {
             "event": "resume",
-            "at": 1793101725731
+            "at": 1793103175406
           },
           {
             "event": "pause",
-            "at": 1793101725911
+            "at": 1793103175570
           },
           {
             "event": "ui",
-            "at": 1793101726041
+            "at": 1793103175680
           },
           {
             "event": "ui",
-            "at": 1793101726312
+            "at": 1793103175932
           },
           {
             "event": "jump",
-            "at": 1793101728855
+            "at": 1793103178036
           },
           {
             "event": "pause",
-            "at": 1793101729073
+            "at": 1793103178245
           },
           {
             "event": "ui",
-            "at": 1793101729197
+            "at": 1793103178341
           },
           {
             "event": "resume",
-            "at": 1793101729198
+            "at": 1793103178342
           },
           {
             "event": "pause",
-            "at": 1793101729384
+            "at": 1793103178506
           }
         ],
         "players": 10,
@@ -4036,7 +4036,517 @@
         "music": {
           "loaded": true,
           "playing": false,
-          "time": 0.216702,
+          "time": 0.19523,
+          "loop": true,
+          "volume": 0.35
+        },
+        "effects": [
+          {
+            "event": "ui",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "jump",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "score",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "collision",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "checkpoint",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "complete",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "unlock",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "pause",
+            "loaded": true,
+            "playing": true
+          },
+          {
+            "event": "resume",
+            "loaded": true,
+            "playing": false
+          }
+        ]
+      },
+      "diagnostics": {
+        "frames": 22,
+        "rootRenders": 8,
+        "pairRenders": 10,
+        "pairMounts": 5,
+        "actorRenders": 3,
+        "longFrames": 0,
+        "maxFrameMs": 33.20000000000073,
+        "inputCount": 1
+      }
+    },
+    {
+      "size": {
+        "width": 1366,
+        "height": 768
+      },
+      "level": 10,
+      "before": {
+        "chapter": "yozakura",
+        "active": false,
+        "failures": 4,
+        "events": [
+          {
+            "event": "ui",
+            "at": 1793103169984
+          },
+          {
+            "event": "jump",
+            "at": 1793103172024
+          },
+          {
+            "event": "pause",
+            "at": 1793103172245
+          },
+          {
+            "event": "ui",
+            "at": 1793103172360
+          },
+          {
+            "event": "resume",
+            "at": 1793103172361
+          },
+          {
+            "event": "pause",
+            "at": 1793103172532
+          },
+          {
+            "event": "ui",
+            "at": 1793103172634
+          },
+          {
+            "event": "ui",
+            "at": 1793103172903
+          },
+          {
+            "event": "jump",
+            "at": 1793103175084
+          },
+          {
+            "event": "pause",
+            "at": 1793103175312
+          },
+          {
+            "event": "ui",
+            "at": 1793103175405
+          },
+          {
+            "event": "resume",
+            "at": 1793103175406
+          },
+          {
+            "event": "pause",
+            "at": 1793103175570
+          },
+          {
+            "event": "ui",
+            "at": 1793103175680
+          },
+          {
+            "event": "ui",
+            "at": 1793103175932
+          },
+          {
+            "event": "jump",
+            "at": 1793103178036
+          },
+          {
+            "event": "pause",
+            "at": 1793103178245
+          },
+          {
+            "event": "ui",
+            "at": 1793103178341
+          },
+          {
+            "event": "resume",
+            "at": 1793103178342
+          },
+          {
+            "event": "pause",
+            "at": 1793103178506
+          },
+          {
+            "event": "ui",
+            "at": 1793103178609
+          },
+          {
+            "event": "ui",
+            "at": 1793103178861
+          }
+        ],
+        "players": 10,
+        "preferences": {
+          "music": true,
+          "sfx": true,
+          "haptics": false
+        },
+        "music": {
+          "loaded": true,
+          "playing": false,
+          "time": 0,
+          "loop": true,
+          "volume": 0.35
+        },
+        "effects": [
+          {
+            "event": "ui",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "jump",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "score",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "collision",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "checkpoint",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "complete",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "unlock",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "pause",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "resume",
+            "loaded": true,
+            "playing": false
+          }
+        ]
+      },
+      "paused": {
+        "chapter": "yozakura",
+        "active": false,
+        "failures": 4,
+        "events": [
+          {
+            "event": "ui",
+            "at": 1793103169984
+          },
+          {
+            "event": "jump",
+            "at": 1793103172024
+          },
+          {
+            "event": "pause",
+            "at": 1793103172245
+          },
+          {
+            "event": "ui",
+            "at": 1793103172360
+          },
+          {
+            "event": "resume",
+            "at": 1793103172361
+          },
+          {
+            "event": "pause",
+            "at": 1793103172532
+          },
+          {
+            "event": "ui",
+            "at": 1793103172634
+          },
+          {
+            "event": "ui",
+            "at": 1793103172903
+          },
+          {
+            "event": "jump",
+            "at": 1793103175084
+          },
+          {
+            "event": "pause",
+            "at": 1793103175312
+          },
+          {
+            "event": "ui",
+            "at": 1793103175405
+          },
+          {
+            "event": "resume",
+            "at": 1793103175406
+          },
+          {
+            "event": "pause",
+            "at": 1793103175570
+          },
+          {
+            "event": "ui",
+            "at": 1793103175680
+          },
+          {
+            "event": "ui",
+            "at": 1793103175932
+          },
+          {
+            "event": "jump",
+            "at": 1793103178036
+          },
+          {
+            "event": "pause",
+            "at": 1793103178245
+          },
+          {
+            "event": "ui",
+            "at": 1793103178341
+          },
+          {
+            "event": "resume",
+            "at": 1793103178342
+          },
+          {
+            "event": "pause",
+            "at": 1793103178506
+          },
+          {
+            "event": "ui",
+            "at": 1793103178609
+          },
+          {
+            "event": "ui",
+            "at": 1793103178861
+          },
+          {
+            "event": "jump",
+            "at": 1793103180967
+          },
+          {
+            "event": "pause",
+            "at": 1793103181177
+          }
+        ],
+        "players": 10,
+        "preferences": {
+          "music": true,
+          "sfx": true,
+          "haptics": false
+        },
+        "music": {
+          "loaded": true,
+          "playing": false,
+          "time": 0.04698,
+          "loop": true,
+          "volume": 0.35
+        },
+        "effects": [
+          {
+            "event": "ui",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "jump",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "score",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "collision",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "checkpoint",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "complete",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "unlock",
+            "loaded": true,
+            "playing": false
+          },
+          {
+            "event": "pause",
+            "loaded": false,
+            "playing": true
+          },
+          {
+            "event": "resume",
+            "loaded": true,
+            "playing": false
+          }
+        ]
+      },
+      "resumed": {
+        "chapter": "yozakura",
+        "active": false,
+        "failures": 4,
+        "events": [
+          {
+            "event": "ui",
+            "at": 1793103169984
+          },
+          {
+            "event": "jump",
+            "at": 1793103172024
+          },
+          {
+            "event": "pause",
+            "at": 1793103172245
+          },
+          {
+            "event": "ui",
+            "at": 1793103172360
+          },
+          {
+            "event": "resume",
+            "at": 1793103172361
+          },
+          {
+            "event": "pause",
+            "at": 1793103172532
+          },
+          {
+            "event": "ui",
+            "at": 1793103172634
+          },
+          {
+            "event": "ui",
+            "at": 1793103172903
+          },
+          {
+            "event": "jump",
+            "at": 1793103175084
+          },
+          {
+            "event": "pause",
+            "at": 1793103175312
+          },
+          {
+            "event": "ui",
+            "at": 1793103175405
+          },
+          {
+            "event": "resume",
+            "at": 1793103175406
+          },
+          {
+            "event": "pause",
+            "at": 1793103175570
+          },
+          {
+            "event": "ui",
+            "at": 1793103175680
+          },
+          {
+            "event": "ui",
+            "at": 1793103175932
+          },
+          {
+            "event": "jump",
+            "at": 1793103178036
+          },
+          {
+            "event": "pause",
+            "at": 1793103178245
+          },
+          {
+            "event": "ui",
+            "at": 1793103178341
+          },
+          {
+            "event": "resume",
+            "at": 1793103178342
+          },
+          {
+            "event": "pause",
+            "at": 1793103178506
+          },
+          {
+            "event": "ui",
+            "at": 1793103178609
+          },
+          {
+            "event": "ui",
+            "at": 1793103178861
+          },
+          {
+            "event": "jump",
+            "at": 1793103180967
+          },
+          {
+            "event": "pause",
+            "at": 1793103181177
+          },
+          {
+            "event": "ui",
+            "at": 1793103181277
+          },
+          {
+            "event": "resume",
+            "at": 1793103181278
+          },
+          {
+            "event": "pause",
+            "at": 1793103181447
+          }
+        ],
+        "players": 10,
+        "preferences": {
+          "music": true,
+          "sfx": true,
+          "haptics": false
+        },
+        "music": {
+          "loaded": true,
+          "playing": false,
+          "time": 0.219448,
           "loop": true,
           "volume": 0.35
         },
@@ -4095,517 +4605,7 @@
         "pairMounts": 5,
         "actorRenders": 3,
         "longFrames": 0,
-        "maxFrameMs": 33.600000000000364,
-        "inputCount": 1
-      }
-    },
-    {
-      "size": {
-        "width": 1366,
-        "height": 768
-      },
-      "level": 10,
-      "before": {
-        "chapter": "yozakura",
-        "active": false,
-        "failures": 4,
-        "events": [
-          {
-            "event": "ui",
-            "at": 1793101720324
-          },
-          {
-            "event": "jump",
-            "at": 1793101722367
-          },
-          {
-            "event": "pause",
-            "at": 1793101722588
-          },
-          {
-            "event": "ui",
-            "at": 1793101722700
-          },
-          {
-            "event": "resume",
-            "at": 1793101722700
-          },
-          {
-            "event": "pause",
-            "at": 1793101722879
-          },
-          {
-            "event": "ui",
-            "at": 1793101722998
-          },
-          {
-            "event": "ui",
-            "at": 1793101723299
-          },
-          {
-            "event": "jump",
-            "at": 1793101725406
-          },
-          {
-            "event": "pause",
-            "at": 1793101725621
-          },
-          {
-            "event": "ui",
-            "at": 1793101725730
-          },
-          {
-            "event": "resume",
-            "at": 1793101725731
-          },
-          {
-            "event": "pause",
-            "at": 1793101725911
-          },
-          {
-            "event": "ui",
-            "at": 1793101726041
-          },
-          {
-            "event": "ui",
-            "at": 1793101726312
-          },
-          {
-            "event": "jump",
-            "at": 1793101728855
-          },
-          {
-            "event": "pause",
-            "at": 1793101729073
-          },
-          {
-            "event": "ui",
-            "at": 1793101729197
-          },
-          {
-            "event": "resume",
-            "at": 1793101729198
-          },
-          {
-            "event": "pause",
-            "at": 1793101729384
-          },
-          {
-            "event": "ui",
-            "at": 1793101729510
-          },
-          {
-            "event": "ui",
-            "at": 1793101729795
-          }
-        ],
-        "players": 10,
-        "preferences": {
-          "music": true,
-          "sfx": true,
-          "haptics": false
-        },
-        "music": {
-          "loaded": true,
-          "playing": false,
-          "time": 0,
-          "loop": true,
-          "volume": 0.35
-        },
-        "effects": [
-          {
-            "event": "ui",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "jump",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "score",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "collision",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "checkpoint",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "complete",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "unlock",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "pause",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "resume",
-            "loaded": true,
-            "playing": false
-          }
-        ]
-      },
-      "paused": {
-        "chapter": "yozakura",
-        "active": false,
-        "failures": 4,
-        "events": [
-          {
-            "event": "ui",
-            "at": 1793101720324
-          },
-          {
-            "event": "jump",
-            "at": 1793101722367
-          },
-          {
-            "event": "pause",
-            "at": 1793101722588
-          },
-          {
-            "event": "ui",
-            "at": 1793101722700
-          },
-          {
-            "event": "resume",
-            "at": 1793101722700
-          },
-          {
-            "event": "pause",
-            "at": 1793101722879
-          },
-          {
-            "event": "ui",
-            "at": 1793101722998
-          },
-          {
-            "event": "ui",
-            "at": 1793101723299
-          },
-          {
-            "event": "jump",
-            "at": 1793101725406
-          },
-          {
-            "event": "pause",
-            "at": 1793101725621
-          },
-          {
-            "event": "ui",
-            "at": 1793101725730
-          },
-          {
-            "event": "resume",
-            "at": 1793101725731
-          },
-          {
-            "event": "pause",
-            "at": 1793101725911
-          },
-          {
-            "event": "ui",
-            "at": 1793101726041
-          },
-          {
-            "event": "ui",
-            "at": 1793101726312
-          },
-          {
-            "event": "jump",
-            "at": 1793101728855
-          },
-          {
-            "event": "pause",
-            "at": 1793101729073
-          },
-          {
-            "event": "ui",
-            "at": 1793101729197
-          },
-          {
-            "event": "resume",
-            "at": 1793101729198
-          },
-          {
-            "event": "pause",
-            "at": 1793101729384
-          },
-          {
-            "event": "ui",
-            "at": 1793101729510
-          },
-          {
-            "event": "ui",
-            "at": 1793101729795
-          },
-          {
-            "event": "jump",
-            "at": 1793101732028
-          },
-          {
-            "event": "pause",
-            "at": 1793101732241
-          }
-        ],
-        "players": 10,
-        "preferences": {
-          "music": true,
-          "sfx": true,
-          "haptics": false
-        },
-        "music": {
-          "loaded": true,
-          "playing": false,
-          "time": 0.005745,
-          "loop": true,
-          "volume": 0.35
-        },
-        "effects": [
-          {
-            "event": "ui",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "jump",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "score",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "collision",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "checkpoint",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "complete",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "unlock",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "pause",
-            "loaded": false,
-            "playing": true
-          },
-          {
-            "event": "resume",
-            "loaded": true,
-            "playing": false
-          }
-        ]
-      },
-      "resumed": {
-        "chapter": "yozakura",
-        "active": false,
-        "failures": 4,
-        "events": [
-          {
-            "event": "ui",
-            "at": 1793101720324
-          },
-          {
-            "event": "jump",
-            "at": 1793101722367
-          },
-          {
-            "event": "pause",
-            "at": 1793101722588
-          },
-          {
-            "event": "ui",
-            "at": 1793101722700
-          },
-          {
-            "event": "resume",
-            "at": 1793101722700
-          },
-          {
-            "event": "pause",
-            "at": 1793101722879
-          },
-          {
-            "event": "ui",
-            "at": 1793101722998
-          },
-          {
-            "event": "ui",
-            "at": 1793101723299
-          },
-          {
-            "event": "jump",
-            "at": 1793101725406
-          },
-          {
-            "event": "pause",
-            "at": 1793101725621
-          },
-          {
-            "event": "ui",
-            "at": 1793101725730
-          },
-          {
-            "event": "resume",
-            "at": 1793101725731
-          },
-          {
-            "event": "pause",
-            "at": 1793101725911
-          },
-          {
-            "event": "ui",
-            "at": 1793101726041
-          },
-          {
-            "event": "ui",
-            "at": 1793101726312
-          },
-          {
-            "event": "jump",
-            "at": 1793101728855
-          },
-          {
-            "event": "pause",
-            "at": 1793101729073
-          },
-          {
-            "event": "ui",
-            "at": 1793101729197
-          },
-          {
-            "event": "resume",
-            "at": 1793101729198
-          },
-          {
-            "event": "pause",
-            "at": 1793101729384
-          },
-          {
-            "event": "ui",
-            "at": 1793101729510
-          },
-          {
-            "event": "ui",
-            "at": 1793101729795
-          },
-          {
-            "event": "jump",
-            "at": 1793101732028
-          },
-          {
-            "event": "pause",
-            "at": 1793101732241
-          },
-          {
-            "event": "ui",
-            "at": 1793101732348
-          },
-          {
-            "event": "resume",
-            "at": 1793101732348
-          },
-          {
-            "event": "pause",
-            "at": 1793101732525
-          }
-        ],
-        "players": 10,
-        "preferences": {
-          "music": true,
-          "sfx": true,
-          "haptics": false
-        },
-        "music": {
-          "loaded": true,
-          "playing": false,
-          "time": 0.136475,
-          "loop": true,
-          "volume": 0.35
-        },
-        "effects": [
-          {
-            "event": "ui",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "jump",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "score",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "collision",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "checkpoint",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "complete",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "unlock",
-            "loaded": true,
-            "playing": false
-          },
-          {
-            "event": "pause",
-            "loaded": false,
-            "playing": true
-          },
-          {
-            "event": "resume",
-            "loaded": true,
-            "playing": false
-          }
-        ]
-      },
-      "diagnostics": {
-        "frames": 21,
-        "rootRenders": 8,
-        "pairRenders": 10,
-        "pairMounts": 5,
-        "actorRenders": 3,
-        "longFrames": 0,
-        "maxFrameMs": 33.399999999999636,
+        "maxFrameMs": 33.30000000000109,
         "inputCount": 1
       }
     }
