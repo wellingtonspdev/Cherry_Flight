@@ -6,9 +6,9 @@ Date: 2026-10-27. Delivery authority: Expo SDK54. Character: Cherry. Orientation
 
 V2 replaces the V1 full-tree frame renderer with a mutable simulation, pooled modular vectors and imperative Animated positions. Campaign, twelve levels, checkpoints, Continue, Level Select, Endless, settings, four visual kits and original audio are implemented. Required academic screen files and React Navigation remain.
 
-**Runtime publication passed on the official SDK54 Snack and public Vercel URL.** Final Git import verification and repository synchronization are recorded below before the delivery freeze.
+**Runtime publication passed on the official SDK54 Snack and public Vercel URL.** GitHub synchronization and actual Git-imported Snack runtime have also passed.
 
-Open confirmed defects: BLOCKER0, CRITICAL0, MAJOR0, COSMETIC0. One MINOR tooling risk remains documented, plus a separate unexecuted physical-platform validation record. No confirmed open BLOCKER/CRITICAL/MAJOR remains after independent source review. Known tooling advisories and unexecuted physical-device calibration remain disclosed. Browser engine replay, fixture-based entry and native bundle export are distinct kinds of evidence.
+Open confirmed defects: BLOCKER0, CRITICAL0, MAJOR0, COSMETIC0. One MINOR tooling risk remains documented, plus a separate PARTIAL platform-validation record: Android cloud smoke passed, while physical/iOS and deeper native coverage remain unexecuted. No confirmed open BLOCKER/CRITICAL/MAJOR remains after independent source review. Known tooling advisories and unexecuted physical-device calibration remain disclosed. Browser engine replay, fixture-based entry and native bundle export are distinct kinds of evidence.
 
 ## Skills utilizadas
 
@@ -63,6 +63,21 @@ Portrait1080×1920 scenery adapts to landscape. Celestial/flower circles are pre
 
 Final visual review measured a36×36 logical hitbox against a roughly33×31 red body when the entire padded160×150 source was rendered at48×48. This could register hits in visually empty upper padding. The gameplay SVG now renders at64×64, offset(-7.2,-13.2) inside a48×48 animation frame. At scale0.4 with2dp vertical letterbox, source body center(78,88) becomes(24,24), and body bounds44×41.6 exceed the hitbox on both axes. Stem/leaf retain their supplied geometry outside the body frame. Physics is unchanged. All four poses share this anchor; RED/GREEN tests and independent review verify the mapping. This remains forgiving AABB collision, not a pixel-mask promise.
 
+### Asset audit matrix
+
+| Planned asset group | Exists | Runtime use | Fidelity / limitation |
+|---|---|---|---|
+| Cherry idle/jump/fall/hit |4 SVGs + PNG exports | All4 supplied vectors | Source geometry retained; gameplay body anchor corrected and tested |
+| Trunk body/edge | Four biome kits | Both structural modules per kit | Preparsed, fixed slots, inset hitboxes |
+| Caps | Four caps per biome | Top/bottom A/B variants | Source pieces selected per stable variant |
+| Side branches | Three per biome | All three across variants | Clipped to trunk bounds, no misleading gap decoration |
+| Leaves/blossoms | Leaf + two blossom clusters per biome | All cluster variants | Source colors and organic shapes retained |
+| Accent particles | Four biome sources | Preloaded, not rendered | Intentional unused decoration; no false usage claim |
+| Layered scenery | Base/midground/foreground/overlay per biome | All16 layered sources | Portrait geometry adapted to landscape; round celestial bodies, edge-only foreground |
+| Composite scenery | Four source/export pairs | Retained/preparsed references | Not the displayed layered renderer; no automatic-fallback claim |
+| PNG exports/reference boards | All80 supplied PNGs | Reference inspection, not critical runtime decode | No viewport-entry PNG loading; original exports preserved |
+| Music/SFX |13 new original WAVs | Bundled main/native; identical inline PCM in Snack | Actual Web looping/events validated; native audition not claimed |
+
 ## Progression
 
 First Bloom1–3, Sakura Garden4–6, Golden Bloom7–9, Yozakura10–12. Config controls targets, gap, speed, spacing, safe variation, kit and pool. Completing a valid unlocked level updates result, next unlock and next-level checkpoint. Locked selection is disabled and independently rejected by logic/route guard. Actual browser completion of Level1 unlocks Level2; the public Snack reproduces this.
@@ -93,13 +108,21 @@ Idle bob, jump squash/stretch, fall tilt, collision pose/shake, score feedback, 
 
 ## SDK54
 
-Expo Doctor18/18; expo install --check passes. Web production export and Android/iOS Hermes exports pass. Bundle export is compilation evidence, not native runtime evidence. Actual browser runs cover667×375,844×390 and1366×768. Environment enumeration found SDK/adb/emulator in D:/Android/Sdk and usable WHPX. The existing AVD failed before boot for insufficient D: space. A separate temporary C: AVD also failed: emulator37.1.11 raises the data minimum to6GiB and requires7372.80MiB free, versus4762.09MiB available. No device registered and no app was installed. Native Android runtime remains NOT EXECUTED for this measured external resource limit; physical Android/iOS execution is also NOT EXECUTED. Evidence: android-runtime-blocker.json/log. The official Expo Go54.0.8 APK SHA256 matched the official release digest; it was not installed.
+Expo Doctor18/18; expo install --check passes. Web production export and Android/iOS Hermes exports pass. Bundle export is compilation evidence, not native runtime evidence. Actual browser runs cover667×375,844×390 and1366×768. Environment enumeration found SDK/adb/emulator in D:/Android/Sdk and usable WHPX. The existing AVD failed before boot for insufficient D: space. A separate temporary C: AVD also failed: emulator37.1.11 raises the data minimum to6GiB and requires7372.80MiB free, versus4762.09MiB available. No local device registered and no local app was installed. Local Android runtime remains NOT EXECUTED for this measured external resource limit. A subsequent official Snack Android cloud emulator smoke test passed; physical Android/iOS execution remains NOT EXECUTED. Evidence: android-runtime-blocker.json/log. The official Expo Go54.0.8 APK SHA256 matched the official release digest; it was not installed.
+
+### Android SDK54 cloud runtime
+
+A separate actual Android cloud emulator was launched from the official Snack. Expo Go displayed SDK54.0.0/runtime exposdk54.0.0. After dismissing the Expo Go tutorial and developer menu, the native Home opened, PLAY entered landscape gameplay, an actual remote-device tap moved Cherry upward, gravity reached Game Over, and RETRY returned to READY at the original position. No game state or physics values were modified.
+
+The raw video-frame red-body centroid changed from467.24 to604.56 pixels on the rotated stream axis; retry returned465.22, within2.02 pixels of the initial position. Visual inspection confirmed the visible jump, supplied art, hit pose, Game Over and Retry. The preview skin/stream remained portrait while the gameplay UI was landscape; captures retain the raw stream orientation. Evidence: android-cloud-runtime.json and android-cloud-ready/jump/game-over/retry.png. Earlier cloud probes failed in the Expo Go menu or used the wrong Home layout assumption; they were not classified as product tap failures.
+
+Scope is a native smoke test, not a claim of native score, all-chapter progression, long-session performance or audible output. Those broader scenarios were validated on SDK54 Web/Snack Web where stated.
 
 ## Snack
 
 Official target remains `@wellingtonsp.de/cherry-flight`, accountSnackId a2744c77-4223-45d4-9139-9ae5ff59d0b2, SDK54. QA used a separate alias first. Public Web Preview validated all required routes/credits, trusted10ms input, movement, score8, completion, NextLevel2, locked Level3, reload and Continue. Evidence: snack-final-runtime-results.json and snack-final-checkpoint-restored.json.
 
-The Git import backend rejects binary uploads; generated `snack/` contains43 text files with complete runtime, inline supplied SVGs and identical original WAV bytes as data URIs. This removes that binary-upload path rather than asking the user to import a malformed root. Source/asset repository remains complete. Actual Git reimport of the final main revision is checked separately after push. Snack editor emitted minified p errors; its runtime popup had zero page errors, recorded separately. Native Snack/Expo Go is NOT EXECUTED.
+The Git import backend rejects binary uploads; generated `snack/` contains43 text files with complete runtime, inline supplied SVGs and identical original WAV bytes as data URIs. This removes that binary-upload path rather than asking the user to import a malformed root. Source/asset repository remains complete. Actual Git reimport of main passed after push. All42 emitted code files match the source; package.json is normally consumed into manifest dependencies. The imported project itself completed Level1 and restored the Level2 checkpoint/Continue. Snack editor emitted minified p errors; its runtime popup had zero page errors, recorded separately. Native Android Snack/Expo Go smoke is PASS for the specific boot/tap/movement/Game Over/retry scope above; native campaign/score/audio audition remains NOT EXECUTED.
 
 ## SDK57
 
@@ -126,12 +149,12 @@ PASS rows cite executed checks, not source presence alone. Native physical calib
 | V2-AC03 | `tela1.js`–`tela4.js` remain present/functional. | PASS | Four academic wrappers remain; browser navigation and academic test |
 | V2-AC04 | Credits content and mandatory disclaimer are exact. | PASS | Academic exact-string test and visible Snack disclaimer |
 | V2-AC05 | Snack import/runtime validated. | PASS | snack-final-runtime-results.json; official account alias, SDK54; public Web Preview |
-| V2-AC06 | tap starts/impulses Cherry reliably. | PASS | Trusted Chromium touchStart/touchEnd10ms; READY to PLAYING |
-| V2-AC07 | Cherry visibly moves every frame while playing. | PASS | endless-lifecycle-runtime.json: actual SVG ancestor transforms change |
+| V2-AC06 | tap starts/impulses Cherry reliably. | PASS | Trusted Chromium10ms touch plus actual Android-cloud tap and visible jump |
+| V2-AC07 | Cherry visibly moves every frame while playing. | PASS | Web outer transform y153 to129.355; Android-cloud body centroid467.24 to604.56 |
 | V2-AC08 | gravity/jump use dt-safe logic. | PASS | engine-v2 tests: invalid dt, capped dt,30/60Hz; browser gravity/jump |
-| V2-AC09 | collisions work top/bottom/obstacles. | PASS | Actual engine ceiling/ground/topBranch/bottomBranch scenarios; browser Game Over |
+| V2-AC09 | collisions work top/bottom/obstacles. | PASS | Actual-engine four collision scenarios, browser Game Over and native cloud fall/Game Over |
 | V2-AC10 | score increments once per passed pair. | PASS | 28-test suite,12 engine replay targets and browser score8 |
-| V2-AC11 | retry fully resets level state. | PASS | endless-lifecycle-runtime.json: three full retries; position/velocity/score/time/slots |
+| V2-AC11 | retry fully resets level state. | PASS | Three full Web retries plus actual native-cloud READY position reset |
 | V2-AC12 | no future trunk pop-in on PC/web preview. | PASS | Every visible generation has committed visual-prepared metric first; no new SVG parse |
 | V2-AC13 | at least 4 pooled pairs exist. | PASS | Runtime4 slots Levels1/4 and5 Levels7/10/Endless; fixed IDs |
 | V2-AC14 | at least 3 future pairs are prepared offscreen. | PASS | Runtime future queue3, all x beyond viewport; queue semantics explained below |
@@ -191,8 +214,8 @@ PASS rows cite executed checks, not source presence alone. Native physical calib
 | Audio/settings | Four themes, SFX, independent mute | Actual two loop wraps, nine events, reload and fail-open | PASS |
 | SDK54 | Official delivery | Doctor18/18, dependency check, Web/native exports, browser runtime | PASS |
 | SDK57 | Separate equivalent mirror | Own deps/lock, Doctor21/21,26tests, Web completion/checkpoint | PASS |
-| Snack | Official SDK54 target and Git import | Official Web Preview passed; final Git import retest follows push | PARTIAL |
-| Physical native device | Execute when available | SDK/WHPX present; both boot attempts rejected for measured storage shortage; no physical device | NOT EXECUTED |
+| Snack | Official SDK54 target and Git import | Official target and actual Git-imported project both completed Level1 and restored Continue after reload | PASS |
+| Physical native device | Execute when available | Local boot rejected for storage shortage; Android cloud smoke passed, physical/iOS and deeper native scenarios unexecuted | PARTIAL |
 
 ### Root cause and revalidation details
 
@@ -223,7 +246,7 @@ PASS rows cite executed checks, not source presence alone. Native physical calib
 | V2-REV14 | MINOR / confirmed telemetry bug | Reset reused slot IDs and epoch0, so the old dependency list omitted prepared metrics | Observe the new visual snapshot; browser RED0/5 then GREEN5/5 after resize; active exit verified | PASS |
 | V2-REV15 | MINOR / specification divergence | Completed replay status hid its current checkpoint marker | Current completed level now has a visible and accessible checkpoint marker; browser assertion after replay | PASS |
 | V2-REV16 | MAJOR / confirmed checkpoint bug | Instructions/Credits PLAY bypassed caller-specific begin and retained an older lastPlayedLevel | Shared Game entry now persists a changed campaign checkpoint, excludes Endless, preserves locked/cancel guards; both-entry browser RED/GREEN and Continue | PASS |
-| V2-REV12 | MINOR / missing evidence | No physical Android/iOS calibration or native Snack audition | Native bundles pass; actual device/Expo Go still required for platform-specific assurance | NOT EXECUTED |
+| V2-REV12 | MINOR / missing evidence | No physical/iOS calibration or native audio/full-campaign proof | Native Android cloud smoke and exports pass; broader native validation remains separate | PARTIAL |
 
 Historical tap and immobility causes/evidence remain in CHERRY_BLOOM_REVIEW_REPORT.md. Naming search found no deprecated character spelling in active product source; historical quotations remain evidence, not UI copy.
 
@@ -239,15 +262,36 @@ Runtime source revision: `48b56e36a705cafda7e58530334948ed209a29c2`. SDK54/SDK57
 
 Official Snack source ID: `95acf9e3-079c-4c92-9466-53727567bd93`, SDK54.0.0,43 runtime text files. The publisher read back and compared every file after saving.
 
-Vercel production deployment: `dpl_3DEFsmACDhbv9brFJNBH7ach4tyy`, READY, public alias `https://cherry-flight.vercel.app`. Git main synchronization and Git-import verification follow before freeze. DNS/Cloudflare records remain for later domain configuration.
+Vercel production deployment: `dpl_3DEFsmACDhbv9brFJNBH7ach4tyy`, READY, public alias `https://cherry-flight.vercel.app`. GitHub main and the separate SDK57 branch were pushed successfully. The initial transient connection failure was resolved by a per-command IPv4/HTTP1.1 retry; no global Git configuration changed. The Git importer returned200, consumed package.json into dependency metadata, and produced42 code files matching all43 source inputs including the consumed manifest. Its actual Web Preview completed Level1, opened Level2 and restored Continue after reload. Evidence: git-import-verification.json, git-import-runtime-results.json and git-import-checkpoint-restored.json. DNS/Cloudflare records remain for later domain configuration.
 
 ### Evidence correction during final QA
 
 An earlier lifecycle snapshot exited a freshly resized READY round, so it did not prove active-loop cleanup. The corrected test waits for visible TAP TO FLY, uses a trusted touch, verifies PLAYING with elapsed>0, then navigates Home. Final evidence shows elapsed frozen, RAF absent and audio inactive. The same test confirms five newly prepared slot snapshots after resize. Earlier intermittent keyboard probes are not claimed as a confirmed product keyboard defect; readiness must include the visible renderer, not only the mutable round's status.
 
+### Finding locations
+
+| Finding | Files/components |
+|---|---|
+| V2-REV01 | audit-evidence/v2/tela3-v1-baseline.js; src/components/GameFieldV2.js; src/game/engineV2.js |
+| V2-REV02 | src/game/progressionV2.js; saveServiceV2.js; ProgressProviderV2.js; components/LevelSelectV2.js |
+| V2-REV03 | src/components/WorldV2.js; CherryV2.js; BloomBranchV2.js; src/game/vectorDataV2.js |
+| V2-REV04 | src/game/AudioManagerV2.js; audioServiceV2.js; audioSourcesV2.js; scripts/compose-audio-v2.py |
+| V2-REV05 | src/components/VectorAssetV2.js; src/game/vectorIdsV2.js |
+| V2-REV06 | src/game/audioServiceV2.js |
+| V2-REV07 | src/game/vectorCacheV2.js |
+| V2-REV08 | src/components/GameFieldV2.js retryLevel/load lifecycle |
+| V2-REV09 | src/game/engineV2.js createRound/prepareFuture |
+| V2-REV10 | SDK57 app.json only |
+| V2-REV11 | package-lock.json; audit-evidence/v2/npm-audit.json |
+| V2-REV12 | audit-evidence/v2/android-runtime-blocker.json/log |
+| V2-REV13 | src/game/constants.js; src/components/CherryV2.js |
+| V2-REV14 | src/components/BloomBranchV2.js onPrepared effect |
+| V2-REV15 | src/components/LevelSelectV2.js |
+| V2-REV16 | src/components/GameFieldV2.js shared entry effect; academic Instructions/Credits callers |
+
 ## Remaining limitations
 
-- No real Android/iOS or native Expo Go execution. Android SDK/WHPX exists, but both AVD boot attempts failed for insufficient storage; exported bundles do not substitute for execution.
+- No physical Android/iOS or native iOS execution. Local Android AVDs could not boot for insufficient storage. Android cloud smoke passed; native campaign/score/audio audition and device calibration remain unexecuted.
 - Twelve successful deterministic engine layouts do not mathematically prove all random sequences or human difficulty calibration.
 - Web long frames occurred under shared CPU load; no locked-FPS, battery or native-memory claim.
 - Native Snack data-URI audio and physical audibility remain unexecuted.
@@ -256,5 +300,10 @@ An earlier lifecycle snapshot exited a freshly resized READY round, so it did no
 
 ## Final audit
 
-FINAL AUDIT: PARTIAL — final publication verification pending.
-READY FOR DELIVERY: NO — freeze follows the final publication gate.
+Scope: official SDK54/validated Snack delivery, public Web/PWA and the documented Android cloud smoke. Physical/iOS and deeper native limitations remain explicit above.
+
+FINAL AUDIT: PASS
+READY FOR DELIVERY: YES
+FROZEN FOR DELIVERY
+
+Freeze recorded at 2026-10-27T14:32:49.415914+00:00. Runtime source remains48b56e36a705cafda7e58530334948ed209a29c2; subsequent release commits contain documentation/evidence only.
