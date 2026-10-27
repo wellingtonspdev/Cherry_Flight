@@ -19,7 +19,7 @@ Projeto acadêmico em React Native, Expo e React Navigation. Jogo **horizontal**
 - [Web/PWA](https://cherry-flight.vercel.app).
 - [Relatório V2 e evidências](CHERRY_BLOOM_V2_IMPLEMENTATION_REPORT.md).
 
-O relatório identifica a revisão efetivamente publicada e separa validação Web, Snack, exportação nativa e dispositivo físico. Não presume que exportar um bundle comprova execução nativa.
+Validação:28 testes, Expo Doctor54(18/18) e57(21/21), runtime Web/Snack e smoke Android em nuvem com toque/salto/Game Over/Retry. O relatório identifica a revisão efetivamente publicada e separa validação Web, Snack, exportação nativa e dispositivo físico. Não presume que exportar um bundle comprova execução nativa.
 
 Toque/clique para iniciar e saltar. Teclado: Espaço, ↑ ou W. P pausa/retoma; R/Enter reinicia no Game Over; Esc/H volta para Home. Retrato no navegador mostra orientação para girar. Resize reinicia a rodada em READY.
 

@@ -1,0 +1,13 @@
+{
+  "gitUrl": "https://github.com/wellingtonspdev/Cherry_Flight/tree/main/snack",
+  "alias": "@git/github.com/wellingtonspdev/Cherry_Flight:snack",
+  "sdkVersion": "54.0.0",
+  "sourceFiles": 43,
+  "files": 42,
+  "packageConsumedAsManifest": true,
+  "manifestDependenciesMatch": true,
+  "allFilesMatch": true,
+  "onlyTextFiles": true,
+  "id": "eec59f62-63ae-4055-822a-d0a437698240",
+  "url": "https://snack.expo.dev/@git/github.com/wellingtonspdev/Cherry_Flight:snack"
+}
