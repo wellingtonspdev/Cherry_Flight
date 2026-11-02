@@ -2,15 +2,19 @@
 // Source of Truth: CHERRY_BLOOM_SPECIFICATION_AND_ACCEPTANCE.md
 
 export const GAME = {
-  gravity: 1050,          // dp/s^2
-  jumpVelocity: -390,     // dp/s (upward impulse)
+  gravity: 980,           // dp/s^2 (softened for mobile touch responsiveness)
+  jumpVelocity: -370,     // dp/s (upward impulse softened for responsive touch control)
   maxFallVelocity: 580,   // dp/s cap so falling remains fair
   obstacleSpeed: 155,     // dp/s horizontal velocity
   obstacleWidth: 68,      // dp width of Bloom Branch trunk
   obstacleSpacing: 260,   // dp horizontal distance between obstacle pairs
   gapSize: 168,           // dp vertical safe corridor
   playerSize: 48,         // dp visual diameter of Cherry
-  playerHitboxInset: 6,   // dp forgiving inset so petal/stem edge doesn't feel unfair
+  playerHitboxInset: 8,   // dp forgiving inset so petal/stem edge doesn't feel unfair against branch caps
+  // Supplied160×150 sprites center the body at78,88; stem/leaf extend beyond the logical body frame.
+  playerSpriteSize: 64,
+  playerSpriteOffsetX: -7.2,
+  playerSpriteOffsetY: -13.2,
   playerXRatio: 0.26,     // horizontal position ratio on screen
   topClearance: 84,       // dp minimum top branch height / HUD clearance
   bottomClearance: 96,    // dp minimum bottom branch height / ground clearance
