@@ -75,6 +75,8 @@ export const radius = {
 
 // Typography Scale (Section 5.4)
 export const typography = {
+  fontFamily: fonts,
+  fonts,
   displayXl: { fontFamily: fonts.display, fontSize: 48, fontWeight: '900' },
   displayLg: { fontFamily: fonts.display, fontSize: 38, fontWeight: '900' },
   headingLg: { fontFamily: fonts.display, fontSize: 28, fontWeight: '800' },
