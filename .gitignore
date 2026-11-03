@@ -22,6 +22,7 @@ audit-evidence/*.b64
 .vercel
 .env*
 Cherry_Bloom_V2_Handoff/
+.superpowers/
 
 .vercel
 .env*
