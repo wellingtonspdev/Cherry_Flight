@@ -37,7 +37,7 @@ export default memo(function WorldV2({ biome, phaseConfig, screenWidth = 844, sc
   function panorama(base, name, speed, part = '') {
     const offset = Animated.multiply(Animated.modulo(Animated.multiply(movement, speed), width), -1);
     return (
-      <Animated.View style={{ position: 'absolute', left: 0, top: 0, width: width * 2, height, opacity: name === 'midground' ? 0.88 : 1, flexDirection: 'row', transform: [{ translateX: offset }] }}>
+      <Animated.View style={{ position: 'absolute', left: 0, top: 0, width: width * 2, height, opacity: name === 'midground' ? 0.94 : 1, flexDirection: 'row', transform: [{ translateX: offset }] }}>
         {[0, 1].map(i => <VectorAsset key={i} assetKey={base + name} width={width} height={height} viewportWidth={width} viewportHeight={height} part={part} stretch />)}
       </Animated.View>
     );
@@ -45,14 +45,21 @@ export default memo(function WorldV2({ biome, phaseConfig, screenWidth = 844, sc
   const edgeWidth = height * 540 / 1920;
   function renderScene(theme, current) {
     const base = `backgrounds/${theme}/`;
+    const groundPalette = {
+      yozakura: { top: '#818CF8', highlight: '#C084FC', bg: '#0B0F19' },
+      golden_bloom: { top: '#D97706', highlight: '#FBBF24', bg: '#451A03' },
+      sakura_garden: { top: '#52B788', highlight: '#95D5B2', bg: '#1B4332' },
+      first_bloom: { top: '#40916C', highlight: '#74C69D', bg: '#1B4332' },
+    }[theme] || { top: '#40916C', highlight: '#74C69D', bg: '#1B4332' };
+
     return (
-    <Animated.View key={theme} pointerEvents="none" style={[StyleSheet.absoluteFill, { opacity: current ? reveal : 1, backgroundColor: theme === 'yozakura' ? '#292847' : '#FFF8F2' }]}>
+    <Animated.View key={theme} pointerEvents="none" style={[StyleSheet.absoluteFill, { opacity: current ? reveal : 1, backgroundColor: theme === 'yozakura' ? '#0B0F19' : '#FFF8F2' }]}>
       <VectorAsset assetKey={base + 'background_base'} width={width} height={height} viewportWidth={width} viewportHeight={height} part="sky" stretch />
       {panorama(base, 'background_base', 0.05, 'terrain')}
       {panorama(base, 'midground', 0.12)}
-      <View style={{ position: 'absolute', left: 0, top: 0, opacity: 0.72 }}><VectorAsset assetKey={base + 'foreground_frame'} width={edgeWidth} height={height} viewBox="0 0 540 1920" stretch /></View>
-      <View style={{ position: 'absolute', right: 0, top: 0, opacity: 0.72 }}><VectorAsset assetKey={base + 'foreground_frame'} width={edgeWidth} height={height} viewBox="540 0 540 1920" stretch /></View>
-      <Animated.View style={{ position: 'absolute', top: -height, left: 0, width, height: height * 2, opacity: 0.75, transform: [{ translateY: drift.interpolate({ inputRange: [0, 1], outputRange: [0, height] }) }] }}>
+      <View style={{ position: 'absolute', left: 0, top: 0, opacity: 0.85 }}><VectorAsset assetKey={base + 'foreground_frame'} width={edgeWidth} height={height} viewBox="0 0 540 1920" stretch /></View>
+      <View style={{ position: 'absolute', right: 0, top: 0, opacity: 0.85 }}><VectorAsset assetKey={base + 'foreground_frame'} width={edgeWidth} height={height} viewBox="540 0 540 1920" stretch /></View>
+      <Animated.View style={{ position: 'absolute', top: -height, left: 0, width, height: height * 2, opacity: 0.78, transform: [{ translateY: drift.interpolate({ inputRange: [0, 1], outputRange: [0, height] }) }] }}>
         {[0, 1].map(i => <VectorAsset key={i} assetKey={base + 'overlay_fx'} width={width} height={height} viewportWidth={width} viewportHeight={height} stretch />)}
       </Animated.View>
       {showGround && (
@@ -64,8 +71,8 @@ export default memo(function WorldV2({ biome, phaseConfig, screenWidth = 844, sc
             right: 0,
             height: GAME.groundHeight,
             borderTopWidth: 4,
-            borderTopColor: theme === 'yozakura' ? '#818CF8' : '#74C69D',
-            backgroundColor: theme === 'yozakura' ? '#0F172A' : '#1B4332',
+            borderTopColor: groundPalette.top,
+            backgroundColor: groundPalette.bg,
           }}
         >
           <View
@@ -74,9 +81,9 @@ export default memo(function WorldV2({ biome, phaseConfig, screenWidth = 844, sc
               top: 0,
               left: 0,
               right: 0,
-              height: 3,
-              backgroundColor: theme === 'yozakura' ? '#A5B4FC' : '#95D5B2',
-              opacity: 0.85,
+              height: 4,
+              backgroundColor: groundPalette.highlight,
+              opacity: 0.88,
             }}
           />
         </View>

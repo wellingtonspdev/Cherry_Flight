@@ -28,33 +28,71 @@ export default memo(forwardRef(function BloomBranchV2({ pair, playableHeight, on
       }
     },
   }), [x]);
+
   const base = `obstacles/${visual.biome}/`;
   const variant = visual.variant;
   const topHeight = visual.gapY;
   const bottomY = visual.gapY + visual.gapSize;
   const bottomHeight = Math.max(0, playableHeight - bottomY);
+
   function trunk(isTop, height) {
+    if (height <= 0) return null;
     const cap = `cap_${isTop ? 'bottom' : 'top'}_${variant % 2 ? 'b' : 'a'}`;
+    const showBranch = height > 78;
+    const branchVariant = (Math.floor(variant / 2) % 3) + 1;
+    const branchLeft = variant % 2 === 0 ? -12 : -2;
+
     return (
       <View style={[styles.trunk, { top: isTop ? 0 : bottomY, height, width: visual.width }]}>
+        {/* Core cel-shaded wooden pillar */}
         <VectorAsset assetKey={base + 'trunk_body'} width={visual.width} height={height} viewBox="18 0 124 320" stretch />
         <View style={StyleSheet.absoluteFill}>
-          <VectorAsset assetKey={base + 'trunk_edge_overlay'} width={visual.width} height={height} viewBox="18 0 124 320" stretch opacity={0.45} />
+          <VectorAsset assetKey={base + 'trunk_edge_overlay'} width={visual.width} height={height} viewBox="18 0 124 320" stretch opacity={0.65} />
         </View>
-        <View style={{ position: 'absolute', left: 0, top: isTop ? Math.max(0, height - 75) : 34, width: visual.width, height: 42 }}>
-          <VectorAsset assetKey={base + `side_branch_${Math.floor(variant / 2) % 3 + 1}`} width={visual.width} height={42} />
-          <View style={StyleSheet.absoluteFill}><VectorAsset assetKey={base + 'leaves_cluster'} width={visual.width} height={36} opacity={0.9} /></View>
-        </View>
-        <View style={{ position: 'absolute', left: 0, top: isTop ? Math.max(0, height - 29) : 0 }}>
-          <VectorAsset assetKey={base + cap} width={visual.width} height={29} stretch />
-          <View style={{ position: 'absolute', left: 5, top: isTop ? -9 : 7 }}><VectorAsset assetKey={base + `blossom_cluster_${variant % 2 ? 'b' : 'a'}`} width={visual.width - 10} height={22} /></View>
+
+        {/* Natural side branches extending beyond trunk */}
+        {showBranch && (
+          <View
+            style={{
+              position: 'absolute',
+              left: branchLeft,
+              top: isTop ? Math.max(12, height - 76) : 32,
+              width: visual.width + 14,
+              height: 44,
+              zIndex: 3,
+            }}
+          >
+            <VectorAsset assetKey={base + `side_branch_${branchVariant}`} width={visual.width + 14} height={44} stretch />
+            <View style={StyleSheet.absoluteFill}>
+              <VectorAsset assetKey={base + 'leaves_cluster'} width={visual.width + 14} height={40} stretch opacity={0.92} />
+            </View>
+          </View>
+        )}
+
+        {/* Arcade Crown at gap opening (wooden cap + rich blossom cluster) */}
+        <View
+          style={{
+            position: 'absolute',
+            left: -6,
+            top: isTop ? Math.max(0, height - 32) : 0,
+            width: visual.width + 12,
+            height: 32,
+            zIndex: 4,
+          }}
+        >
+          <VectorAsset assetKey={base + cap} width={visual.width + 12} height={32} stretch />
+          <View style={{ position: 'absolute', left: 4, top: isTop ? -8 : 7 }}>
+            <VectorAsset assetKey={base + `blossom_cluster_${variant % 2 ? 'b' : 'a'}`} width={visual.width + 4} height={24} stretch />
+          </View>
         </View>
       </View>
     );
   }
+
   return (
     <Animated.View pointerEvents="none" style={{ position: 'absolute', top: 0, left: 0, width: visual.width, height: playableHeight, transform: [{ translateX: x }] }}>
-      {trunk(true, topHeight)}{trunk(false, bottomHeight)}
+      {trunk(true, topHeight)}
+      {trunk(false, bottomHeight)}
       {visual.bobux && !visual.bobux.collected ? (
         <View style={[styles.bobux, { top: visual.bobux.y, left: visual.bobux.relativeX, width: visual.bobux.size, height: visual.bobux.size }]}>
           <VectorAsset assetKey="collectibles/bobux_coin" width={visual.bobux.size} height={visual.bobux.size} />
@@ -65,6 +103,6 @@ export default memo(forwardRef(function BloomBranchV2({ pair, playableHeight, on
 }));
 
 const styles = StyleSheet.create({
-  trunk: { position: 'absolute', overflow: 'hidden' },
+  trunk: { position: 'absolute', overflow: 'visible' },
   bobux: { position: 'absolute', alignItems: 'center', justifyContent: 'center' },
 });

@@ -1,10 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
-    <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#79D2F1"/><stop offset="1" stop-color="#EAFBFF"/></linearGradient></defs>
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#A0D8F1"/>
+        <stop offset="100%" stop-color="#FCE7F3"/>
+      </linearGradient>
+    </defs>
     <rect width="1080" height="1920" fill="url(#sky)"/>
-    <circle cx="820" cy="320" r="110" fill="#FFF2C2" opacity=".92"/>
-    <path d="M260 1270 L400 1010 Q440 950 480 950 Q520 950 560 1010 L700 1270 Z" fill="#95B8B2" opacity=".55"/>
-    <path d="M400 1010 Q440 950 480 950 Q520 950 560 1010 L535 1055 Q510 1040 480 1050 Q450 1040 425 1055 Z" fill="#FFFFFF" opacity=".75"/>
-    <path d="M0 1250 Q180 1120 320 1225 Q480 1020 650 1230 Q820 1110 1080 1260 V1920 H0 Z" fill="#86A6A2" opacity=".72"/>
-    <path d="M0 1370 Q220 1200 430 1370 Q610 1185 820 1370 Q930 1280 1080 1360 V1920 H0 Z" fill="#628A83" opacity=".83"/>
-    <path d="M0 1460 Q290 1420 540 1460 Q790 1418 1080 1460 V1920 H0 Z" fill="#8FD8E3" opacity=".58"/>
+    <circle cx="820" cy="320" r="110" fill="#FEF08A" opacity=".92"/>
+    <!-- Distant Mount Fuji (tall & narrow in SVG so it stretches to majestic proportions) -->
+    <path d="M410 1350 L470 940 Q485 910 500 910 Q515 910 530 940 L590 1350 Z" fill="#91A4BE" opacity=".55"/>
+    <path d="M470 940 Q485 910 500 910 Q515 910 530 940 L522 985 Q512 970 500 980 Q488 970 478 985 Z" fill="#FFFFFF" opacity=".8"/>
+    <!-- Distant 5-Story Pagoda Silhouette on hill -->
+    <path d="M720 1280 L736 1280 L736 1250 L742 1250 L732 1238 L724 1250 L730 1250 L730 1215 L738 1215 L728 1205 L718 1215 L724 1215 L724 1180 L734 1180 L726 1170 L716 1180 L722 1180 L722 1150 L728 1130 L726 1150 L720 1280 Z" fill="#562534" opacity=".45"/>
+    <!-- Rolling Far Hills (scaled down to y=1920 to eliminate gaps) -->
+    <path d="M0 1240 Q180 1100 340 1220 Q520 1020 700 1230 Q880 1110 1080 1250 V1920 H0 Z" fill="#7E9BB8" opacity=".72"/>
+    <!-- Near Mist Hills anchored to bottom -->
+    <path d="M0 1370 Q220 1190 440 1370 Q640 1175 860 1370 Q960 1270 1080 1360 V1920 H0 Z" fill="#547D9E" opacity=".85"/>
 </svg>

@@ -1,21 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
-  <path d="M70 1560 Q40 1340 85 1160 Q105 1060 145 960" stroke="#54382A" stroke-width="26" fill="none" stroke-linecap="round"/>
-  <path d="M85 1200 Q130 1120 180 1140" stroke="#54382A" stroke-width="14" fill="none" stroke-linecap="round"/>
-  <path d="M20 1080 C0 1040 0 980 35 940 C45 880 115 870 150 910 C190 890 230 920 235 970 C265 1010 245 1070 205 1090 C200 1140 140 1160 100 1140 C60 1160 25 1130 20 1080 Z" fill="#FBBF24" opacity=".95"/>
-  <path d="M45 1050 C30 1020 30 970 60 945 C75 900 130 890 155 925 C185 910 215 930 218 970 C238 1000 220 1045 190 1060 C185 1095 135 1110 105 1095 C75 1110 50 1085 45 1050 Z" fill="#FEF08A" opacity=".7"/>
+    <!-- Tree 1 (Left): trunk grounded to y=1920 -->
+    <path d="M85 1920 L85 1400 Q80 1180 98 1020" stroke="#5C3417" stroke-width="12" fill="none" stroke-linecap="round"/>
+    <path d="M90 1220 Q110 1150 125 1160" stroke="#5C3417" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <!-- Tree 1 Canopies (narrow in SVG for round arcade stretch) -->
+    <path d="M60 1100 C45 1030 50 940 85 890 C110 840 145 880 145 950 C155 1010 130 1100 95 1120 C75 1125 65 1115 60 1100 Z" fill="#B45309" opacity=".92"/>
+    <path d="M68 1080 C55 1020 60 950 88 910 C108 870 135 900 135 960 C142 1010 122 1080 95 1095 C80 1100 72 1092 68 1080 Z" fill="#F59E0B" opacity=".95"/>
+    <path d="M75 1050 C68 1010 72 960 90 930 C104 900 122 920 122 965 C126 1000 112 1050 94 1065 C84 1070 78 1060 75 1050 Z" fill="#FEF08A" opacity=".8"/>
 
-  <path d="M220 1560 Q190 1360 230 1190 Q245 1100 275 1010" stroke="#54382A" stroke-width="20" fill="none" stroke-linecap="round"/>
-  <path d="M160 1100 C140 1060 145 1010 180 975 C195 925 250 920 280 955 C310 940 345 965 348 1005 C370 1040 355 1090 320 1110 C310 1150 260 1165 225 1150 C190 1165 165 1140 160 1100 Z" fill="#F59E0B" opacity=".92"/>
+    <!-- Tree 2 (Mid-Left): trunk grounded to y=1920 -->
+    <path d="M210 1920 L210 1420 Q205 1240 220 1080" stroke="#5C3417" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <!-- Tree 2 Canopies -->
+    <path d="M190 1140 C175 1080 180 1000 210 960 C232 920 258 950 258 1010 C265 1060 245 1130 218 1150 C202 1155 194 1148 190 1140 Z" fill="#B45309" opacity=".88"/>
+    <path d="M196 1120 C184 1070 188 1010 212 975 C230 940 250 965 250 1015 C255 1055 238 1115 218 1130 C206 1135 200 1128 196 1120 Z" fill="#F59E0B" opacity=".92"/>
 
-  <path d="M880 1560 Q840 1350 890 1170 Q910 1070 945 970" stroke="#54382A" stroke-width="24" fill="none" stroke-linecap="round"/>
-  <path d="M890 1210 Q940 1130 990 1150" stroke="#54382A" stroke-width="12" fill="none" stroke-linecap="round"/>
-  <path d="M825 1080 C805 1040 810 980 845 940 C860 880 925 870 960 910 C1000 890 1035 920 1040 970 C1065 1010 1050 1070 1015 1090 C1010 1140 950 1160 910 1140 C870 1160 835 1130 825 1080 Z" fill="#FBBF24" opacity=".95"/>
-  <path d="M850 1050 C835 1020 840 970 870 945 C885 900 935 890 965 925 C995 910 1025 930 1028 970 C1045 1000 1030 1045 1000 1060 C995 1095 945 1110 915 1095 C885 1110 860 1085 850 1050 Z" fill="#FEF08A" opacity=".7"/>
+    <!-- Tree 3 (Right): trunk grounded to y=1920 -->
+    <path d="M890 1920 L890 1390 Q895 1190 875 1030" stroke="#5C3417" stroke-width="12" fill="none" stroke-linecap="round"/>
+    <path d="M885 1230 Q865 1160 850 1170" stroke="#5C3417" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <!-- Tree 3 Canopies -->
+    <path d="M840 1110 C825 1040 830 950 865 900 C890 850 925 890 925 960 C935 1020 910 1110 875 1130 C855 1135 845 1125 840 1110 Z" fill="#B45309" opacity=".92"/>
+    <path d="M848 1090 C835 1030 840 960 868 920 C888 880 915 910 915 970 C922 1020 902 1090 875 1105 C860 1110 852 1102 848 1090 Z" fill="#F59E0B" opacity=".95"/>
+    <path d="M855 1060 C848 1020 852 970 870 940 C884 910 902 930 902 975 C906 1010 892 1060 874 1075 C864 1080 858 1070 855 1060 Z" fill="#FEF08A" opacity=".8"/>
 
-  <path d="M370 1560 V1490 M450 1560 V1445 M540 1560 V1425 M630 1560 V1445 M710 1560 V1490" stroke="#431407" stroke-width="10" stroke-linecap="round"/>
-  <path d="M300 1550 Q540 1370 780 1550" stroke="#C2410C" stroke-width="26" fill="none" stroke-linecap="round"/>
-  <path d="M305 1545 Q540 1375 775 1545" stroke="#FB923C" stroke-width="8" fill="none" stroke-linecap="round"/>
-  <path d="M320 1515 Q540 1335 760 1515" stroke="#7C2D12" stroke-width="8" fill="none" stroke-linecap="round"/>
-  <path d="M340 1530 V1480 M410 1495 V1440 M480 1465 V1410 M540 1455 V1398 M600 1465 V1410 M670 1495 V1440 M740 1530 V1480" stroke="#7C2D12" stroke-width="6" stroke-linecap="round"/>
-  <path d="M340 1480 A 4 4 0 1 1 339.9 1480 M540 1398 A 5 5 0 1 1 539.9 1398 M740 1480 A 4 4 0 1 1 739.9 1480" stroke="#FEF08A" stroke-width="7" fill="none"/>
+    <!-- Traditional Taiko-bashi Arched Bridge (width ~110px in SVG -> ~420px on screen) -->
+    <!-- Pillars anchored to y=1920 -->
+    <path d="M495 1920 L495 1570 M520 1920 L520 1545 M545 1920 L545 1530 M570 1920 L570 1545 M595 1920 L595 1570" stroke="#451A03" stroke-width="6" stroke-linecap="round"/>
+    <!-- Vermillion Lacquer Arched Beam -->
+    <path d="M475 1630 Q545 1490 615 1630" stroke="#9A3412" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <path d="M478 1626 Q545 1494 612 1626" stroke="#C2410C" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <!-- Upper Railing -->
+    <path d="M482 1595 Q545 1460 608 1595" stroke="#7C2D12" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <!-- Railing Vertical Posts -->
+    <path d="M492 1615 L492 1580 M512 1590 L512 1550 M532 1575 L532 1532 M545 1568 L545 1526 M558 1575 L558 1532 M578 1590 L578 1550 M598 1615 L598 1580" stroke="#7C2D12" stroke-width="4" stroke-linecap="round"/>
+    <!-- Golden Finials (Giboshi) atop the posts -->
+    <circle cx="492" cy="1578" r="3.5" fill="#FBBF24"/>
+    <circle cx="512" cy="1548" r="3.5" fill="#FBBF24"/>
+    <circle cx="532" cy="1530" r="3.8" fill="#FBBF24"/>
+    <circle cx="545" cy="1524" r="4.2" fill="#FBBF24"/>
+    <circle cx="558" cy="1530" r="3.8" fill="#FBBF24"/>
+    <circle cx="578" cy="1548" r="3.5" fill="#FBBF24"/>
+    <circle cx="598" cy="1578" r="3.5" fill="#FBBF24"/>
+    <!-- Stone Lantern with Warm Glowing Core near bridge -->
+    <path d="M455 1920 L455 1630 L450 1625 L460 1625 Z" fill="#5C3417"/>
+    <rect x="450" y="1612" width="10" height="12" rx="2" fill="#FEF9C3" opacity=".9"/>
+    <path d="M447 1612 L463 1612 L455 1604 Z" fill="#5C3417"/>
 </svg>
