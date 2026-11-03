@@ -139,7 +139,7 @@ export default function Tela1({ navigation }) {
           <View style={styles.heroCenter}>
             <View style={[styles.mascotHalo, isLandscape && styles.landscapeHalo]}>
               <Animated.View style={{ transform: [{ translateY: bobAnim }] }}>
-                <CherryPlayer size={isLandscape ? 64 : isCompact ? 76 : 92} state="idle" />
+                <CherryPlayer size={isLandscape ? 64 : isCompact ? 76 : 92} state="idle" skin={progress.data.equippedSkin || 'classic'} />
               </Animated.View>
             </View>
             <View style={styles.lorePill}>
@@ -165,6 +165,7 @@ export default function Tela1({ navigation }) {
             </Animated.View>
 
             <View style={styles.btnWrap}><CherryButton title="LEVEL SELECT" variant="secondary" disabled={!progress.loaded} onPress={() => navigation.navigate('LevelSelect')} style={styles.fullWidthBtn} /></View>
+            <View style={styles.btnWrap}><CherryButton title={`BOBUX SHOP (🪙 ${progress.data.bobux || 0})`} variant="secondary" disabled={!progress.loaded} accessibilityLabel={`Abrir loja de skins Bobux. Saldo atual: ${progress.data.bobux || 0} Bobux`} onPress={() => navigation.navigate('SkinShop')} style={styles.fullWidthBtn} /></View>
             <View style={styles.btnWrap}><CherryButton title="SETTINGS" variant="ghost" onPress={() => navigation.navigate('Settings')} style={styles.fullWidthBtn} /></View>
             {!!progress.warning && <Text style={styles.loreText}>{progress.warning}</Text>}
 
