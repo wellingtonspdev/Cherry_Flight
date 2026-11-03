@@ -183,7 +183,7 @@ export default function Tela1({ navigation }) {
               <CherryButton
                 title="CREDITS"
                 variant="ghost"
-                accessibilityLabel="Ver créditos acadêmicos da FATEC"
+                accessibilityLabel="Ver créditos do jogo"
                 onPress={() => navigation.navigate('Credits')}
                 style={styles.fullWidthBtn}
               />

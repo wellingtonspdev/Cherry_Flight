@@ -1,5 +1,4 @@
-// Cherry Bloom — Tela 4: Academic Credits / Créditos
-// Source of Truth: CHERRY_BLOOM_SPECIFICATION_AND_ACCEPTANCE.md (Section 4 & 10.4)
+// Cherry Bloom — Tela 4: Credits / Créditos
 // Mandatory file name: src/tela4.js
 
 import React from 'react';
@@ -15,7 +14,6 @@ import CherryButton from './components/CherryButton';
 import CherryPlayer from './components/CherryV2';
 import LogoLockup from './components/LogoLockup';
 import PhaseBackground from './components/WorldV2';
-import { ACADEMIC_INFO } from './game/constants';
 import { PHASES } from './game/phase';
 import { colors, radius, shadows, spacing } from './theme/theme';
 
@@ -48,51 +46,15 @@ export default function Tela4({ navigation }) {
             </View>
 
             <Text style={styles.sectionHeader} accessibilityRole="header">
-              CRÉDITOS ACADÊMICOS
+              CRÉDITOS
             </Text>
 
-            {/* Student & Institution Metadata */}
+            {/* Developer Metadata */}
             <View style={styles.infoPanel}>
               <View style={styles.infoBlock}>
-                <Text style={styles.infoLabel}>ALUNO / AUTOR</Text>
-                <Text style={styles.infoValuePrimary}>
-                  {ACADEMIC_INFO.studentName}
-                </Text>
+                <Text style={styles.infoLabel}>DESENVOLVEDOR</Text>
+                <Text style={styles.infoValuePrimary}>wSp99x</Text>
               </View>
-
-              <View style={styles.divider} />
-
-              <View style={styles.infoBlock}>
-                <Text style={styles.infoLabel}>INSTITUIÇÃO</Text>
-                <Text style={styles.infoValue}>{ACADEMIC_INFO.institution}</Text>
-              </View>
-
-              <View style={styles.divider} />
-
-              <View style={styles.infoBlock}>
-                <Text style={styles.infoLabel}>CURSO</Text>
-                <Text style={styles.infoValue}>{ACADEMIC_INFO.course}</Text>
-              </View>
-
-              <View style={styles.divider} />
-
-              <View style={styles.infoBlock}>
-                <Text style={styles.infoLabel}>DISCIPLINA & PROFESSOR</Text>
-                <Text style={styles.infoValue}>{ACADEMIC_INFO.discipline}</Text>
-                <Text style={styles.infoSubvalue}>
-                  {ACADEMIC_INFO.professor} • {ACADEMIC_INFO.semester}
-                </Text>
-              </View>
-            </View>
-
-            {/* Mandatory Verbatim Academic Disclaimer (Spec Section 4) */}
-            <View
-              style={styles.disclaimerBox}
-              accessibilityLabel={ACADEMIC_INFO.mandatoryDisclaimer}
-            >
-              <Text style={styles.disclaimerText}>
-                {ACADEMIC_INFO.mandatoryDisclaimer}
-              </Text>
             </View>
 
             {/* Navigation Actions */}
@@ -161,59 +123,24 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: colors.blossom100,
     padding: spacing.md,
-    marginBottom: spacing.md,
+    marginBottom: spacing.lg,
   },
   infoBlock: {
     alignItems: 'center',
-    paddingVertical: 4,
+    paddingVertical: 6,
   },
   infoLabel: {
-    fontSize: 11,
+    fontSize: 12,
     fontWeight: '800',
     color: colors.cherry500,
     letterSpacing: 1,
-    marginBottom: 2,
+    marginBottom: 4,
   },
   infoValuePrimary: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: '900',
     color: colors.ink900,
     textAlign: 'center',
-  },
-  infoValue: {
-    fontSize: 15,
-    fontWeight: '700',
-    color: colors.ink900,
-    textAlign: 'center',
-  },
-  infoSubvalue: {
-    fontSize: 13,
-    fontWeight: '500',
-    color: colors.bark600,
-    textAlign: 'center',
-    marginTop: 2,
-  },
-  divider: {
-    width: '100%',
-    height: 1.5,
-    backgroundColor: colors.blossom100,
-    marginVertical: spacing.sm,
-  },
-  disclaimerBox: {
-    width: '100%',
-    backgroundColor: colors.blossom100,
-    borderRadius: radius.md,
-    borderWidth: 2,
-    borderColor: colors.cherry500,
-    padding: spacing.md,
-    marginBottom: spacing.lg,
-  },
-  disclaimerText: {
-    fontSize: 14,
-    fontWeight: '700',
-    color: colors.ink900,
-    textAlign: 'center',
-    lineHeight: 20,
   },
   actions: {
     width: '100%',
