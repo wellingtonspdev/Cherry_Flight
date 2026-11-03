@@ -56,6 +56,14 @@ test('Skin catalog and shop transactions work end-to-end', () => {
   assert.equal(unchanged.equippedSkin, 'classic');
 });
 
+test('SkinShop component correctly checks unlock success boolean', () => {
+  const shopSource = fs.readFileSync(path.join(rootDir, 'src', 'components', 'SkinShopV2.js'), 'utf8');
+  assert.ok(
+    shopSource.includes('success === true || success?.success'),
+    'SkinShopV2 must accept both boolean and object success contracts'
+  );
+});
+
 test('App navigation and screens register SkinShop', () => {
   const appContent = fs.readFileSync(path.join(rootDir, 'App.js'), 'utf8');
   assert.ok(appContent.includes('name="SkinShop"'), 'App.js must register SkinShop screen');

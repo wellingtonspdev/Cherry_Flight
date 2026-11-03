@@ -26,12 +26,12 @@ export default function SkinShopV2({ navigation }) {
       setActionMessage(`Bobux insuficientes! Você precisa de ${skin.price} Bobux.`);
       return;
     }
-    const result = await unlockSkin(skin.id);
-    if (result.success) {
+    const success = await unlockSkin(skin.id);
+    if (success === true || success?.success) {
       audioManager.effect('unlock');
       setActionMessage(`Desbloqueado com sucesso: ${skin.name}!`);
     } else {
-      setActionMessage(result.error || 'Não foi possível desbloquear esta skin.');
+      setActionMessage('Não foi possível desbloquear esta skin.');
     }
   };
 
