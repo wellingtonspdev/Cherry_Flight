@@ -19,7 +19,7 @@ import LogoLockup from './components/LogoLockup';
 import PhaseBackground from './components/WorldV2';
 import { PHASES } from './game/phase';
 import { usePwaInstall } from './game/pwa';
-import { colors, radius, shadows, spacing } from './theme/theme';
+import { colors, fonts, radius, shadows, spacing } from './theme/theme';
 import { useProgress } from './game/ProgressProviderV2';
 import { useIsFocused } from '@react-navigation/native';
 import { audioManager } from './game/AudioManagerV2';
@@ -42,7 +42,6 @@ export default function Tela1({ navigation }) {
   const bobAnim = useRef(new Animated.Value(0)).current;
   const btn1Anim = useRef(new Animated.Value(0)).current;
   const btn2Anim = useRef(new Animated.Value(0)).current;
-  const btn3Anim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
     if (!focused) return undefined;
@@ -53,18 +52,13 @@ export default function Tela1({ navigation }) {
         easing: Easing.out(Easing.back(1.2)),
         useNativeDriver: true,
       }),
-      Animated.stagger(60, [
+      Animated.stagger(80, [
         Animated.timing(btn1Anim, {
           toValue: 1,
           duration: 240,
           useNativeDriver: true,
         }),
         Animated.timing(btn2Anim, {
-          toValue: 1,
-          duration: 240,
-          useNativeDriver: true,
-        }),
-        Animated.timing(btn3Anim, {
           toValue: 1,
           duration: 240,
           useNativeDriver: true,
@@ -93,7 +87,7 @@ export default function Tela1({ navigation }) {
     return () => {
       bobLoop.stop();
     };
-  }, [logoAnim, bobAnim, btn1Anim, btn2Anim, btn3Anim, focused]);
+  }, [logoAnim, bobAnim, btn1Anim, btn2Anim, focused]);
 
   return (
     <View style={styles.root}>
@@ -114,48 +108,46 @@ export default function Tela1({ navigation }) {
           ]}
           showsVerticalScrollIndicator={false}
         >
-          {/* 1. Logo Lockup */}
+          {/* 1. Logo Lockup & Mascot Showcase */}
           <View style={isLandscape && styles.brandColumn}>
-          <Animated.View
-            style={[
-              styles.logoSection,
-              {
-                opacity: logoAnim,
-                transform: [
-                  {
-                    scale: logoAnim.interpolate({
-                      inputRange: [0, 1],
-                      outputRange: [0.88, 1],
-                    }),
-                  },
-                ],
-              },
-            ]}
-          >
-            <LogoLockup compact={isCompact} />
-          </Animated.View>
+            <Animated.View
+              style={[
+                styles.logoSection,
+                {
+                  opacity: logoAnim,
+                  transform: [
+                    {
+                      scale: logoAnim.interpolate({
+                        inputRange: [0, 1],
+                        outputRange: [0.88, 1],
+                      }),
+                    },
+                  ],
+                },
+              ]}
+            >
+              <LogoLockup compact={isCompact} />
+            </Animated.View>
 
-          {/* 2. Cherry Idle Mascot Showcase */}
-          <View style={styles.heroCenter}>
-            <View style={[styles.mascotHalo, isLandscape && styles.landscapeHalo]}>
-              <Animated.View style={{ transform: [{ translateY: bobAnim }] }}>
-                <CherryPlayer size={isLandscape ? 64 : isCompact ? 76 : 92} state="idle" skin={progress.data.equippedSkin || 'classic'} />
-              </Animated.View>
-            </View>
-            <View style={styles.lorePill}>
-              <Text style={styles.loreText}>
-                Ajude a Cherry a cruzar o Bloom Garden!
-              </Text>
+            <View style={styles.heroCenter}>
+              <View style={[styles.mascotHalo, isLandscape && styles.landscapeHalo]}>
+                <Animated.View style={{ transform: [{ translateY: bobAnim }] }}>
+                  <CherryPlayer size={isLandscape ? 64 : isCompact ? 76 : 92} state="idle" skin={progress.data.equippedSkin || 'classic'} />
+                </Animated.View>
+              </View>
+              <View style={styles.lorePill}>
+                <Text style={styles.loreText}>
+                  Ajude a Cherry a cruzar o Bloom Garden!
+                </Text>
+              </View>
             </View>
           </View>
 
-          </View>
-
-          {/* 3. Navigation Actions (Play, How to Play, Credits) */}
+          {/* 2. Navigation Actions (Tactile 3D Hierarchy) */}
           <View style={[styles.menuCard, isLandscape && styles.landscapeMenu]}>
             <Animated.View style={[styles.btnWrap, { opacity: btn1Anim }]}>
               <CherryButton
-                title={progress.hasSave ? 'CONTINUE' : 'PLAY'}
+                title={progress.hasSave ? 'CONTINUAR' : 'JOGAR'}
                 variant="primary"
                 accessibilityLabel="Iniciar o jogo Cherry Bloom"
                 disabled={!progress.loaded}
@@ -164,36 +156,60 @@ export default function Tela1({ navigation }) {
               />
             </Animated.View>
 
-            <View style={styles.btnWrap}><CherryButton title="LEVEL SELECT" variant="secondary" disabled={!progress.loaded} onPress={() => navigation.navigate('LevelSelect')} style={styles.fullWidthBtn} /></View>
-            <View style={styles.btnWrap}><CherryButton title={`BOBUX SHOP (🪙 ${progress.data.bobux || 0})`} variant="secondary" disabled={!progress.loaded} accessibilityLabel={`Abrir loja de skins Bobux. Saldo atual: ${progress.data.bobux || 0} Bobux`} onPress={() => navigation.navigate('SkinShop')} style={styles.fullWidthBtn} /></View>
-            <View style={styles.btnWrap}><CherryButton title="SETTINGS" variant="ghost" onPress={() => navigation.navigate('Settings')} style={styles.fullWidthBtn} /></View>
-            {!!progress.warning && <Text style={styles.loreText}>{progress.warning}</Text>}
-
-            <Animated.View style={[styles.btnWrap, { opacity: btn2Anim }]}>
+            <Animated.View style={[styles.midRow, { opacity: btn2Anim }]}>
               <CherryButton
-                title="HOW TO PLAY"
+                title="FASES"
                 variant="secondary"
+                disabled={!progress.loaded}
+                accessibilityLabel="Abrir seleção de fases"
+                onPress={() => navigation.navigate('LevelSelect')}
+                style={styles.flexBtn}
+              />
+              <CherryButton
+                title={`LOJA 🪙 ${progress.data.bobux || 0}`}
+                variant="gold"
+                disabled={!progress.loaded}
+                accessibilityLabel={`Abrir loja de skins. Saldo atual: ${progress.data.bobux || 0} Bobux`}
+                onPress={() => navigation.navigate('SkinShop')}
+                style={styles.flexBtn}
+              />
+            </Animated.View>
+
+            <View style={styles.utilityRow}>
+              <CherryButton
+                title="AJUSTES"
+                variant="ghost"
+                compact
+                accessibilityLabel="Abrir configurações"
+                onPress={() => navigation.navigate('Settings')}
+                style={styles.flexBtn}
+              />
+              <CherryButton
+                title="AJUDA"
+                variant="ghost"
+                compact
                 accessibilityLabel="Ver instruções de como jogar"
                 onPress={() => navigation.navigate('Instructions')}
-                style={styles.fullWidthBtn}
+                style={styles.flexBtn}
               />
-            </Animated.View>
-
-            <Animated.View style={[styles.btnWrapLast, { opacity: btn3Anim }]}>
               <CherryButton
-                title="CREDITS"
+                title="CRÉDITOS"
                 variant="ghost"
-                accessibilityLabel="Ver créditos do jogo"
+                compact
+                accessibilityLabel="Ver créditos do desenvolvedor"
                 onPress={() => navigation.navigate('Credits')}
-                style={styles.fullWidthBtn}
+                style={styles.flexBtn}
               />
-            </Animated.View>
+            </View>
+
+            {!!progress.warning && <Text style={styles.loreText}>{progress.warning}</Text>}
 
             {canInstall && (
               <View style={styles.pwaWrap}>
                 <CherryButton
                   title="INSTALAR APP (PWA)"
                   variant="secondary"
+                  compact
                   accessibilityLabel="Instalar Cherry Bloom como aplicativo no dispositivo"
                   onPress={promptInstall}
                   style={styles.fullWidthBtn}
@@ -225,44 +241,43 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     flexGrow: 1,
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
-    paddingTop: spacing.md,
-    paddingBottom: spacing.xl + 16,
+    paddingVertical: spacing.md,
   },
   logoSection: {
     width: '100%',
     alignItems: 'center',
-    marginTop: spacing.xs,
   },
   landscapeContent: {
     flexDirection: 'row',
     justifyContent: 'center',
-    paddingBottom: spacing.md,
+    alignItems: 'center',
     gap: spacing.lg,
   },
   brandColumn: {
     flex: 1,
-    maxWidth: 380,
+    maxWidth: 360,
     alignItems: 'center',
   },
   landscapeMenu: {
     flex: 1,
+    maxWidth: 380,
   },
   landscapeHalo: {
-    width: 88,
-    height: 88,
-    borderRadius: 44,
+    width: 80,
+    height: 80,
+    borderRadius: 40,
   },
   heroCenter: {
     alignItems: 'center',
-    marginVertical: spacing.md,
+    marginTop: spacing.xs,
   },
   mascotHalo: {
-    width: 128,
-    height: 128,
-    borderRadius: 64,
-    backgroundColor: 'rgba(255, 248, 242, 0.72)',
+    width: 110,
+    height: 110,
+    borderRadius: 55,
+    backgroundColor: 'rgba(255, 248, 242, 0.78)',
     borderWidth: 3,
     borderColor: colors.blossom300,
     alignItems: 'center',
@@ -270,58 +285,70 @@ const styles = StyleSheet.create({
     ...shadows.warmCard,
   },
   lorePill: {
-    marginTop: spacing.sm,
-    backgroundColor: 'rgba(255, 248, 242, 0.92)',
+    marginTop: spacing.xs,
+    backgroundColor: 'rgba(255, 248, 242, 0.94)',
     paddingHorizontal: spacing.md,
-    paddingVertical: 6,
+    paddingVertical: 4,
     borderRadius: radius.pill,
     borderWidth: 1.5,
     borderColor: colors.blossom300,
   },
   loreText: {
+    fontFamily: fonts.body,
     color: colors.ink900,
-    fontSize: 13,
+    fontSize: 12,
     fontWeight: '700',
     textAlign: 'center',
   },
   menuCard: {
     width: '100%',
     maxWidth: 380,
-    backgroundColor: 'rgba(255, 248, 242, 0.92)',
+    backgroundColor: 'rgba(255, 248, 242, 0.94)',
     borderRadius: radius.xl,
     borderWidth: 2.5,
     borderColor: colors.blossom300,
-    padding: spacing.lg,
+    padding: spacing.md,
     alignItems: 'center',
+    gap: 8,
     ...shadows.warmCard,
   },
   btnWrap: {
     width: '100%',
-    marginBottom: spacing.sm + 4,
   },
-  btnWrapLast: {
+  midRow: {
     width: '100%',
+    flexDirection: 'row',
+    gap: 8,
+  },
+  utilityRow: {
+    width: '100%',
+    flexDirection: 'row',
+    gap: 6,
+    justifyContent: 'space-between',
+  },
+  flexBtn: {
+    flex: 1,
   },
   pwaWrap: {
     width: '100%',
-    marginTop: spacing.sm + 4,
+    marginTop: 4,
   },
   iosPwaHint: {
     width: '100%',
-    marginTop: spacing.sm,
+    marginTop: 4,
     backgroundColor: '#FFFFFF',
     borderRadius: radius.md,
     borderWidth: 1.5,
     borderColor: colors.blossom300,
-    paddingHorizontal: spacing.sm + 4,
-    paddingVertical: spacing.xs + 4,
+    paddingHorizontal: spacing.sm,
+    paddingVertical: spacing.xs,
   },
   iosPwaHintText: {
-    fontSize: 12,
+    fontSize: 11,
     fontWeight: '600',
     color: colors.bark600,
     textAlign: 'center',
-    lineHeight: 16,
+    lineHeight: 14,
   },
   fullWidthBtn: {
     width: '100%',

@@ -28,6 +28,20 @@ export const colors = {
   surfaceElevated: '#FFFFFF',
   textPrimary: '#251A20',
   textOnCherry: '#FFF8F2',
+
+  // 3D Tactile Button Lip Colors
+  cherryLip: '#6E0B20',
+  goldLip: '#B45309',
+  creamLip: '#E5C5D0',
+  leafLip: '#1B3B28',
+  darkLip: '#171014',
+  utilityLip: '#E297AA',
+};
+
+// Typography Font Stacks
+export const fonts = {
+  display: 'Fredoka, system-ui, -apple-system, sans-serif',
+  body: 'Nunito, system-ui, -apple-system, sans-serif',
 };
 
 // 4-point Spacing Scale (Section 6.1)
@@ -61,15 +75,15 @@ export const radius = {
 
 // Typography Scale (Section 5.4)
 export const typography = {
-  displayXl: { fontSize: 48, fontWeight: '900' },
-  displayLg: { fontSize: 38, fontWeight: '900' },
-  headingLg: { fontSize: 28, fontWeight: '800' },
-  headingMd: { fontSize: 22, fontWeight: '800' },
-  bodyLg: { fontSize: 18, fontWeight: '600' },
-  bodyMd: { fontSize: 16, fontWeight: '500' },
-  bodySm: { fontSize: 14, fontWeight: '500' },
-  caption: { fontSize: 12, fontWeight: '600' },
-  score: { fontSize: 54, fontWeight: '900' },
+  displayXl: { fontFamily: fonts.display, fontSize: 48, fontWeight: '900' },
+  displayLg: { fontFamily: fonts.display, fontSize: 38, fontWeight: '900' },
+  headingLg: { fontFamily: fonts.display, fontSize: 28, fontWeight: '800' },
+  headingMd: { fontFamily: fonts.display, fontSize: 22, fontWeight: '800' },
+  bodyLg: { fontFamily: fonts.body, fontSize: 18, fontWeight: '700' },
+  bodyMd: { fontFamily: fonts.body, fontSize: 16, fontWeight: '600' },
+  bodySm: { fontFamily: fonts.body, fontSize: 14, fontWeight: '600' },
+  caption: { fontFamily: fonts.body, fontSize: 12, fontWeight: '700' },
+  score: { fontFamily: fonts.display, fontSize: 54, fontWeight: '900' },
 };
 
 // Motion Durations in ms (Section 14.2)
@@ -87,14 +101,14 @@ export const shadows = {
   warmCard: {
     shadowColor: '#541021',
     shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.14,
+    shadowOpacity: 0.16,
     shadowRadius: 12,
     elevation: 5,
   },
   buttonPrimary: {
     shadowColor: '#541021',
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.25,
+    shadowOpacity: 0.28,
     shadowRadius: 6,
     elevation: 4,
   },

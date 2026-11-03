@@ -15,7 +15,7 @@ import CherryButton from './components/CherryButton';
 import CherryPlayer from './components/CherryV2';
 import PhaseBackground from './components/WorldV2';
 import { PHASES } from './game/phase';
-import { colors, radius, shadows, spacing } from './theme/theme';
+import { colors, radius, shadows, spacing, typography } from './theme/theme';
 
 export default function Tela2({ navigation }) {
   const { width, height } = useWindowDimensions();
@@ -123,14 +123,14 @@ export default function Tela2({ navigation }) {
                 variant="primary"
                 accessibilityLabel="Começar a jogar agora"
                 onPress={() => navigation.navigate('Game', { levelId: 1, mode: 'campaign' })}
-                style={styles.btnSpacing}
+                style={styles.actionBtn}
               />
               <CherryButton
                 title="HOME"
                 variant="secondary"
                 accessibilityLabel="Voltar para a tela inicial"
                 onPress={() => navigation.popToTop()}
-                style={styles.btnSpacing}
+                style={styles.actionBtn}
               />
             </View>
           </View>
@@ -152,35 +152,39 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: spacing.lg,
+    paddingVertical: spacing.md,
   },
   card: {
     width: '100%',
-    maxWidth: 400,
+    maxWidth: 440,
     backgroundColor: colors.cream50,
-    borderRadius: radius.xl,
+    borderRadius: radius.xxl,
     borderWidth: 3,
     borderColor: colors.blossom300,
-    padding: spacing.lg,
+    borderBottomWidth: 6,
+    borderBottomColor: colors.cherryLip,
+    padding: spacing.md,
     alignItems: 'center',
     ...shadows.warmCard,
   },
   headerTitle: {
-    fontSize: 26,
+    fontSize: 24,
     fontWeight: '900',
+    fontFamily: typography.fontFamily.display,
     color: colors.cherry700,
-    letterSpacing: 1,
+    letterSpacing: 0.8,
   },
   headerSubtitle: {
-    fontSize: 13,
-    fontWeight: '600',
+    fontSize: 12,
+    fontWeight: '700',
+    fontFamily: typography.fontFamily.body,
     color: colors.bark600,
     marginTop: 2,
-    marginBottom: spacing.md,
+    marginBottom: spacing.sm,
   },
   diagramBox: {
     width: '100%',
-    height: 112,
+    height: 90,
     backgroundColor: colors.skyDay,
     borderRadius: radius.lg,
     borderWidth: 2,
@@ -188,14 +192,14 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: spacing.md,
+    marginBottom: spacing.sm,
   },
   miniBranchTop: {
     position: 'absolute',
     right: 36,
     top: 0,
     width: 28,
-    height: 34,
+    height: 28,
     backgroundColor: colors.bark600,
     borderBottomLeftRadius: 8,
     borderBottomRightRadius: 8,
@@ -205,7 +209,7 @@ const styles = StyleSheet.create({
     right: 36,
     bottom: 0,
     width: 28,
-    height: 34,
+    height: 28,
     backgroundColor: colors.bark600,
     borderTopLeftRadius: 8,
     borderTopRightRadius: 8,
@@ -214,86 +218,92 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   tapBadge: {
-    marginTop: 4,
+    marginTop: 2,
     backgroundColor: colors.cherry500,
-    paddingHorizontal: 10,
+    paddingHorizontal: 8,
     paddingVertical: 2,
     borderRadius: radius.pill,
   },
   tapBadgeText: {
     color: colors.cream50,
-    fontSize: 11,
-    fontWeight: '800',
+    fontSize: 10,
+    fontWeight: '900',
+    fontFamily: typography.fontFamily.display,
   },
   rulesList: {
     width: '100%',
-    marginBottom: spacing.md,
+    marginBottom: spacing.sm,
   },
   ruleItem: {
     flexDirection: 'row',
     alignItems: 'flex-start',
     backgroundColor: '#FFFFFF',
     borderRadius: radius.md,
-    padding: spacing.sm + 4,
-    marginBottom: spacing.sm,
+    padding: spacing.sm,
+    marginBottom: 6,
     borderWidth: 1.5,
     borderColor: colors.blossom100,
   },
   ruleNumberBadge: {
-    width: 28,
-    height: 28,
-    borderRadius: 14,
+    width: 24,
+    height: 24,
+    borderRadius: 12,
     backgroundColor: colors.cherry500,
     alignItems: 'center',
     justifyContent: 'center',
-    marginRight: spacing.sm + 2,
+    marginRight: spacing.sm,
     marginTop: 2,
   },
   ruleNumberText: {
     color: colors.cream50,
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: '900',
+    fontFamily: typography.fontFamily.display,
   },
   ruleTextGroup: {
     flex: 1,
   },
   ruleTitle: {
-    fontSize: 15,
-    fontWeight: '800',
+    fontSize: 13,
+    fontWeight: '900',
+    fontFamily: typography.fontFamily.display,
     color: colors.ink900,
-    marginBottom: 2,
+    marginBottom: 1,
   },
   ruleDesc: {
-    fontSize: 13,
-    fontWeight: '500',
+    fontSize: 11,
+    fontFamily: typography.fontFamily.body,
+    fontWeight: '600',
     color: colors.bark600,
-    lineHeight: 18,
+    lineHeight: 15,
   },
   phasesRow: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    marginBottom: spacing.md,
+    marginBottom: spacing.sm,
+    gap: 4,
   },
   phasePill: {
-    paddingHorizontal: 10,
-    paddingVertical: 4,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
     borderRadius: radius.pill,
-    marginHorizontal: 3,
-    marginVertical: 3,
     borderWidth: 1,
     borderColor: 'rgba(86, 56, 63, 0.2)',
   },
   phasePillText: {
-    fontSize: 11,
+    fontSize: 10,
     fontWeight: '800',
+    fontFamily: typography.fontFamily.display,
     color: colors.ink900,
   },
   actions: {
     width: '100%',
+    flexDirection: 'row',
+    gap: 10,
+    justifyContent: 'center',
   },
-  btnSpacing: {
-    width: '100%',
-    marginBottom: spacing.sm,
+  actionBtn: {
+    flex: 1,
   },
 });

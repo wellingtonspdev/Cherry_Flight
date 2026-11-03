@@ -12,7 +12,7 @@ import World from './WorldV2';
 import ScoreHUD from './ScoreHUD';
 import GameResult from './GameResultV2';
 import BloomBurst from './BloomBurstV2';
-import { colors, radius, spacing } from '../theme/theme';
+import { colors, radius, spacing, typography } from '../theme/theme';
 import { useProgress } from '../game/ProgressProviderV2';
 import { isUnlocked } from '../game/progressionV2';
 import { audioManager } from '../game/AudioManagerV2';
@@ -208,12 +208,12 @@ export default function GameFieldV2({ navigation, route }) {
         </View>}
         {status === 'READY' && <View pointerEvents="none" style={styles.prompt}><View style={styles.banner}><Text style={styles.readyTitle}>TAP TO FLY</Text><Text style={styles.hint}>{endless ? 'Endless Bloom' : `LEVEL ${level.id} · ${level.targetScore} pontos`} · Toque ou use ESPAÇO</Text></View></View>}
       </Pressable>
-      <ScoreHUD score={score} bobuxCount={bobuxCount} phaseConfig={phaseConfig} topInset={insets.top} />
+      <ScoreHUD score={score} bobuxCount={bobuxCount} phaseConfig={phaseConfig} targetScore={endless ? null : level.targetScore} topInset={insets.top} />
       <View pointerEvents="box-none" style={[styles.topBar, { top: Math.max(8, insets.top + 4), paddingLeft: Math.max(12, insets.left + 8), paddingRight: Math.max(12, insets.right + 8) }]}>
         <Pressable accessibilityRole="button" accessibilityLabel="Voltar para a tela inicial" onPress={goHome} style={styles.pill}><Text style={styles.pillText}>← HOME</Text></Pressable>
         <View style={styles.rightBar}>
           <View pointerEvents="none" style={styles.time}><Text style={styles.timeText}>{endless ? '∞' : `L${level.id}`} · {seconds}s</Text></View>
-          <Pressable accessibilityRole="button" accessibilityLabel={status === 'PAUSED' ? 'Retomar partida' : 'Pausar partida'} onPress={togglePause} style={styles.pill}><Text style={styles.pillText}>{status === 'PAUSED' ? '▶' : 'Ⅱ'}</Text></Pressable>
+          <Pressable accessibilityRole="button" accessibilityLabel={status === 'PAUSED' ? 'Retomar partida' : 'Pausar partida'} onPress={togglePause} style={[styles.pill, styles.pauseBtn]}><Text style={styles.pillText}>{status === 'PAUSED' ? '▶' : 'Ⅱ'}</Text></Pressable>
         </View>
       </View>
       {(status === 'LOADING' || !allowed) && <View style={styles.loading} accessibilityLiveRegion="polite"><Text style={styles.readyTitle}>{!allowed && progress.loaded ? 'Nível bloqueado. Complete o capítulo anterior.' : error || 'Preparando o jardim…'}</Text><Text style={styles.hint}>Assets e obstáculos ficam prontos antes do voo.</Text>{(!!error || !allowed) && <Pressable onPress={goHome} style={styles.pill}><Text style={styles.pillText}>HOME</Text></Pressable>}</View>}
@@ -235,13 +235,85 @@ const styles = StyleSheet.create({
   field: { flex: 1 },
   topBar: { position: 'absolute', left: 0, right: 0, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', zIndex: 50 },
   rightBar: { flexDirection: 'row', gap: 8, alignItems: 'center' },
-  pill: { minWidth: 44, minHeight: 44, paddingHorizontal: 12, borderRadius: radius.pill, backgroundColor: colors.cream50, borderWidth: 2, borderColor: colors.cherry700, alignItems: 'center', justifyContent: 'center' },
-  pillText: { color: colors.cherry700, fontWeight: '800', fontSize: 13 },
-  time: { borderRadius: radius.pill, backgroundColor: 'rgba(37,26,32,.6)', padding: 10 },
-  timeText: { color: colors.cream50, fontWeight: '800', fontSize: 12 },
+  pill: {
+    minHeight: 38,
+    paddingHorizontal: 14,
+    borderRadius: radius.pill,
+    backgroundColor: colors.cream50,
+    borderWidth: 2,
+    borderColor: colors.cherry700,
+    borderBottomWidth: 4,
+    borderBottomColor: colors.cherryLip,
+    alignItems: 'center',
+    justifyContent: 'center',
+    shadowColor: '#000000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.15,
+    shadowRadius: 3,
+    elevation: 3,
+  },
+  pauseBtn: {
+    minWidth: 38,
+    paddingHorizontal: 12,
+  },
+  pillText: {
+    color: colors.cherry700,
+    fontWeight: '900',
+    fontFamily: typography.fontFamily.display,
+    fontSize: 13,
+    letterSpacing: 0.5,
+  },
+  time: {
+    borderRadius: radius.pill,
+    backgroundColor: 'rgba(37, 26, 32, 0.75)',
+    borderWidth: 1.5,
+    borderColor: 'rgba(255, 248, 242, 0.35)',
+    paddingHorizontal: 12,
+    paddingVertical: 7,
+    shadowColor: '#000000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+  },
+  timeText: {
+    color: colors.cream50,
+    fontWeight: '900',
+    fontFamily: typography.fontFamily.display,
+    fontSize: 12,
+    letterSpacing: 0.5,
+  },
   prompt: { ...StyleSheet.absoluteFillObject, alignItems: 'center', justifyContent: 'center', paddingTop: 80, paddingHorizontal: 16 },
-  banner: { backgroundColor: 'rgba(255,248,242,.95)', borderRadius: radius.lg, borderWidth: 2, borderColor: colors.cherry700, padding: spacing.md, alignItems: 'center' },
-  readyTitle: { fontSize: 22, fontWeight: '900', color: colors.cherry700, textAlign: 'center' },
-  hint: { fontSize: 13, color: colors.ink900, textAlign: 'center', marginTop: 4 },
+  banner: {
+    backgroundColor: 'rgba(255, 248, 242, 0.96)',
+    borderRadius: radius.xl,
+    borderWidth: 3,
+    borderColor: colors.blossom300,
+    borderBottomWidth: 5,
+    borderBottomColor: colors.cherryLip,
+    paddingVertical: spacing.md,
+    paddingHorizontal: spacing.lg,
+    alignItems: 'center',
+    shadowColor: '#000000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 6,
+    elevation: 6,
+  },
+  readyTitle: {
+    fontSize: 24,
+    fontWeight: '900',
+    fontFamily: typography.fontFamily.display,
+    color: colors.cherry700,
+    textAlign: 'center',
+    letterSpacing: 0.8,
+  },
+  hint: {
+    fontSize: 13,
+    fontFamily: typography.fontFamily.body,
+    fontWeight: '700',
+    color: colors.ink900,
+    textAlign: 'center',
+    marginTop: 4,
+  },
   loading: { ...StyleSheet.absoluteFillObject, backgroundColor: colors.cream50, alignItems: 'center', justifyContent: 'center', padding: 24, gap: 12, zIndex: 70 },
 });

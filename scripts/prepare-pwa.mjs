@@ -1,5 +1,5 @@
 // Cherry Bloom — Post-Export PWA Injector for Expo Web / Vercel
-// Ensures dist/index.html links /manifest.json, iOS PWA meta tags, and registers /sw.js.
+// Ensures dist/index.html links /manifest.json, iOS PWA meta tags, Google Fonts, and registers /sw.js.
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -15,7 +15,7 @@ if (!fs.existsSync(indexHtmlPath)) {
 let html = fs.readFileSync(indexHtmlPath, 'utf8');
 
 const pwaHeadTags = `
-    <!-- Cherry Bloom PWA Meta & Manifest -->
+    <!-- Cherry Bloom PWA Meta & Fonts -->
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#D91E36" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -23,6 +23,9 @@ const pwaHeadTags = `
     <meta name="apple-mobile-web-app-title" content="Cherry Bloom" />
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700;800;900&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
     <style>
       html, body, #root {
         height: 100%;
@@ -32,6 +35,7 @@ const pwaHeadTags = `
         user-select: none;
         -webkit-user-select: none;
         overscroll-behavior: none;
+        font-family: 'Nunito', system-ui, -apple-system, sans-serif;
       }
     </style>`;
 
@@ -53,4 +57,4 @@ if (!html.includes("serviceWorker.register('/sw.js')")) {
 }
 
 fs.writeFileSync(indexHtmlPath, html, 'utf8');
-console.log('[prepare-pwa] PWA manifest, iOS meta tags, and Service Worker injected into dist/index.html.');
+console.log('[prepare-pwa] PWA manifest, Google Fonts, and Service Worker injected into dist/index.html.');

@@ -15,7 +15,7 @@ import CherryPlayer from './components/CherryV2';
 import LogoLockup from './components/LogoLockup';
 import PhaseBackground from './components/WorldV2';
 import { PHASES } from './game/phase';
-import { colors, radius, shadows, spacing } from './theme/theme';
+import { colors, radius, shadows, spacing, typography } from './theme/theme';
 
 export default function Tela4({ navigation }) {
   const { width, height } = useWindowDimensions();
@@ -64,14 +64,14 @@ export default function Tela4({ navigation }) {
                 variant="primary"
                 accessibilityLabel="Jogar Cherry Bloom"
                 onPress={() => navigation.navigate('Game')}
-                style={styles.btnSpacing}
+                style={styles.actionBtn}
               />
               <CherryButton
                 title="HOME"
                 variant="secondary"
                 accessibilityLabel="Voltar para a tela inicial"
                 onPress={() => navigation.popToTop()}
-                style={styles.btnSpacing}
+                style={styles.actionBtn}
               />
             </View>
           </View>
@@ -93,16 +93,18 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: spacing.lg,
+    paddingVertical: spacing.md,
   },
   card: {
     width: '100%',
     maxWidth: 400,
     backgroundColor: colors.cream50,
-    borderRadius: radius.xl,
+    borderRadius: radius.xxl,
     borderWidth: 3,
     borderColor: colors.blossom300,
-    padding: spacing.lg,
+    borderBottomWidth: 6,
+    borderBottomColor: colors.cherryLip,
+    padding: spacing.md,
     alignItems: 'center',
     ...shadows.warmCard,
   },
@@ -110,11 +112,12 @@ const styles = StyleSheet.create({
     marginVertical: spacing.xs,
   },
   sectionHeader: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: '900',
+    fontFamily: typography.fontFamily.display,
     color: colors.cherry700,
     letterSpacing: 1,
-    marginBottom: spacing.md,
+    marginBottom: spacing.sm,
   },
   infoPanel: {
     width: '100%',
@@ -122,8 +125,8 @@ const styles = StyleSheet.create({
     borderRadius: radius.lg,
     borderWidth: 2,
     borderColor: colors.blossom100,
-    padding: spacing.md,
-    marginBottom: spacing.lg,
+    padding: spacing.sm,
+    marginBottom: spacing.md,
   },
   infoBlock: {
     alignItems: 'center',
@@ -131,22 +134,26 @@ const styles = StyleSheet.create({
   },
   infoLabel: {
     fontSize: 12,
-    fontWeight: '800',
+    fontWeight: '900',
+    fontFamily: typography.fontFamily.display,
     color: colors.cherry500,
     letterSpacing: 1,
     marginBottom: 4,
   },
   infoValuePrimary: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: '900',
+    fontFamily: typography.fontFamily.display,
     color: colors.ink900,
     textAlign: 'center',
   },
   actions: {
     width: '100%',
+    flexDirection: 'row',
+    gap: 10,
+    justifyContent: 'center',
   },
-  btnSpacing: {
-    width: '100%',
-    marginBottom: spacing.sm,
+  actionBtn: {
+    flex: 1,
   },
 });
