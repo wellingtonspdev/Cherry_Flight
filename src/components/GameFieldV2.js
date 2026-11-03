@@ -33,6 +33,7 @@ export default function GameFieldV2({ navigation, route }) {
   const [scene, setScene] = useState(null);
   const [status, setStatus] = useState('LOADING');
   const [score, setScore] = useState(0);
+  const [bobuxCount, setBobuxCount] = useState(0);
   const [seconds, setSeconds] = useState(0);
   const [biome, setBiome] = useState('first_bloom');
   const [retry, setRetry] = useState(0);
@@ -78,7 +79,7 @@ export default function GameFieldV2({ navigation, route }) {
         await audioManager.prepare(next.biome);
         if (cancelled) return;
         roundRef.current = next;
-        setScore(0); setSeconds(0); shownSeconds.current = 0; setBiome(next.biome); distance.setValue(0);
+        setScore(0); setBobuxCount(0); setSeconds(0); shownSeconds.current = 0; setBiome(next.biome); distance.setValue(0);
         setScene(next);
       } catch (failure) {
         if (!cancelled) setError(failure.message === 'Game field is too small for safe obstacle geometry' ? 'Aumente a altura da janela para jogar com segurança.' : 'Não foi possível preparar este nível. Volte e tente novamente.');
@@ -98,7 +99,7 @@ export default function GameFieldV2({ navigation, route }) {
     setSaving(true);
     audioManager.pause();
     audioManager.effect(status === 'LEVEL_COMPLETE' ? 'complete' : 'collision');
-    const save = status === 'LEVEL_COMPLETE' ? progress.complete(round.levelId, round.score) : progress.attempt(round.endless ? 'endless' : round.levelId, round.score);
+    const save = status === 'LEVEL_COMPLETE' ? progress.complete(round.levelId, round.score, round.bobuxCount) : progress.attempt(round.endless ? 'endless' : round.levelId, round.score, round.bobuxCount);
     save.then(saved => { if (active) { setCheckpointSaved(saved); setSaving(false); if (saved && status === 'LEVEL_COMPLETE') { audioManager.effect('checkpoint'); audioManager.effect('unlock'); } } });
     return () => { active = false; };
   }, [focused, status, progress.complete, progress.attempt]);
@@ -127,6 +128,7 @@ export default function GameFieldV2({ navigation, route }) {
     if (shownSeconds.current !== wholeSeconds) { shownSeconds.current = wholeSeconds; setSeconds(wholeSeconds); }
     for (const event of round.events) {
       if (event.type === 'score') { setScore(round.score); actor.current?.score(); triggerScoreFeedback(!settingsRef.current.haptics); audioManager.effect('score'); }
+      if (event.type === 'bobux') { setBobuxCount(event.count); triggerScoreFeedback(!settingsRef.current.haptics); audioManager.effect('score'); }
       if (event.type === 'collision') { actor.current?.hit(); triggerCollisionFeedback(!settingsRef.current.haptics); }
       if (event.type === 'biome') { setBiome(event.biome); audioManager.prepare(event.biome); }
     }
@@ -202,11 +204,11 @@ export default function GameFieldV2({ navigation, route }) {
       <Pressable accessibilityRole="button" accessibilityLabel="Área do jogo Cherry Bloom. Toque para fazer a Cherry saltar." onPressIn={jump} delayPressIn={0} disabled={status === 'LOADING'} style={styles.field}>
         {scene && <View pointerEvents="none" style={[StyleSheet.absoluteFill, { opacity: status === 'LOADING' ? 0 : 1 }]}>
           {scene.pairs.map((pair, index) => <BloomBranch key={pair.id} ref={slots[index]} pair={pair} playableHeight={scene.height} onMount={onMount} onPrepared={onPrepared} onRender={onPairRender} />)}
-          <PlayerActorV2 ref={actor} round={scene} active={focused && status === 'READY'} onRender={onActorRender} />
+          <PlayerActorV2 ref={actor} round={scene} active={focused && status === 'READY'} skin={progress.data.equippedSkin || 'classic'} onRender={onActorRender} />
         </View>}
         {status === 'READY' && <View pointerEvents="none" style={styles.prompt}><View style={styles.banner}><Text style={styles.readyTitle}>TAP TO FLY</Text><Text style={styles.hint}>{endless ? 'Endless Bloom' : `LEVEL ${level.id} · ${level.targetScore} pontos`} · Toque ou use ESPAÇO</Text></View></View>}
       </Pressable>
-      <ScoreHUD score={score} phaseConfig={phaseConfig} topInset={insets.top} />
+      <ScoreHUD score={score} bobuxCount={bobuxCount} phaseConfig={phaseConfig} topInset={insets.top} />
       <View pointerEvents="box-none" style={[styles.topBar, { top: Math.max(8, insets.top + 4), paddingLeft: Math.max(12, insets.left + 8), paddingRight: Math.max(12, insets.right + 8) }]}>
         <Pressable accessibilityRole="button" accessibilityLabel="Voltar para a tela inicial" onPress={goHome} style={styles.pill}><Text style={styles.pillText}>← HOME</Text></Pressable>
         <View style={styles.rightBar}>
@@ -218,7 +220,7 @@ export default function GameFieldV2({ navigation, route }) {
       {status === 'PAUSED' && <GameResult status="PAUSED" score={score} level={level} onRetry={togglePause} onHome={goHome} />}
       {['GAME_OVER', 'LEVEL_COMPLETE'].includes(status) && <>
         {status === 'LEVEL_COMPLETE' && <BloomBurst biome={biome} />}
-        <GameResult status={status} score={score} level={level} checkpointSaved={checkpointSaved} saving={saving} warning={progress.warning} onRetry={retryLevel} onHome={goHome} onNext={async () => {
+        <GameResult status={status} score={score} bobuxCollected={bobuxCount} level={level} checkpointSaved={checkpointSaved} saving={saving} warning={progress.warning} onRetry={retryLevel} onHome={goHome} onShop={() => { stop(); audioManager.release(); navigation.navigate('SkinShop'); }} onNext={async () => {
           if (saving) return;
           if (levelId === 12 && progress.data.endlessUnlocked) navigation.setParams({ levelId: 10, mode: 'endless' });
           else if (isUnlocked(progress.data, levelId + 1)) { await progress.begin(levelId + 1); navigation.setParams({ levelId: levelId + 1, mode: 'campaign' }); }

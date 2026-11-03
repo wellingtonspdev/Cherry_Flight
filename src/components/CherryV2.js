@@ -3,13 +3,14 @@ import { Animated, Easing, View } from 'react-native';
 import VectorAsset from './VectorAssetV2';
 import { GAME } from '../game/constants';
 
-const CherryV2 = memo(function CherryV2({ size = 48, state = 'idle' }) {
+const CherryV2 = memo(function CherryV2({ size = 48, state = 'idle', skin = 'classic' }) {
   const pose = state === 'celebrate' ? 'jump' : state;
-  return <VectorAsset assetKey={`characters/cherry_${pose}`} width={size} height={size} />;
+  const assetKey = `characters/${skin}_${pose}`;
+  return <VectorAsset assetKey={assetKey} width={size} height={size} />;
 });
 export default CherryV2;
 
-export const PlayerActorV2 = memo(forwardRef(function PlayerActorV2({ round, active, onRender }, ref) {
+export const PlayerActorV2 = memo(forwardRef(function PlayerActorV2({ round, active, skin = 'classic', onRender }, ref) {
   const [pose, setPose] = useState('idle');
   const poseRef = useRef('idle');
   const x = useRef(new Animated.Value(round.player.x)).current;
@@ -63,7 +64,7 @@ export const PlayerActorV2 = memo(forwardRef(function PlayerActorV2({ round, act
       <Animated.View style={{ transform: [{ translateY: bob }, { rotate: tilt.interpolate({ inputRange: [-90, 90], outputRange: ['-90deg', '90deg'] }) }, { rotate: shake.interpolate({ inputRange: [-90, 90], outputRange: ['-90deg', '90deg'] }) }, { scaleX: squashX }, { scaleY: squashY }, { scale: bounce }] }}>
         <View style={{ width: GAME.playerSize, height: GAME.playerSize }}>
           <View style={{ position: 'absolute', left: GAME.playerSpriteOffsetX, top: GAME.playerSpriteOffsetY }}>
-            <CherryV2 size={GAME.playerSpriteSize} state={pose} />
+            <CherryV2 size={GAME.playerSpriteSize} state={pose} skin={skin} />
           </View>
         </View>
       </Animated.View>

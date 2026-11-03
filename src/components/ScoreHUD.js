@@ -5,8 +5,9 @@ import React, { useEffect, useRef } from 'react';
 import { Animated, StyleSheet, Text, View } from 'react-native';
 import { colors, radius, spacing } from '../theme/theme';
 
-export default function ScoreHUD({ score, phaseConfig, topInset = 12 }) {
+export default function ScoreHUD({ score, bobuxCount = 0, phaseConfig, topInset = 12 }) {
   const pulseAnim = useRef(new Animated.Value(1)).current;
+  const bobuxPulseAnim = useRef(new Animated.Value(1)).current;
   const badgeOpacity = useRef(new Animated.Value(0)).current;
   const prevPhaseId = useRef(phaseConfig?.id);
 
@@ -27,6 +28,24 @@ export default function ScoreHUD({ score, phaseConfig, topInset = 12 }) {
       ]).start();
     }
   }, [score, pulseAnim]);
+
+  // Micro-bounce on bobux collected
+  useEffect(() => {
+    if (bobuxCount > 0) {
+      Animated.sequence([
+        Animated.timing(bobuxPulseAnim, {
+          toValue: 1.18,
+          duration: 80,
+          useNativeDriver: true,
+        }),
+        Animated.timing(bobuxPulseAnim, {
+          toValue: 1,
+          duration: 100,
+          useNativeDriver: true,
+        }),
+      ]).start();
+    }
+  }, [bobuxCount, bobuxPulseAnim]);
 
   // 1-second phase transition banner when phase changes (Design System 12.4)
   useEffect(() => {
@@ -70,6 +89,21 @@ export default function ScoreHUD({ score, phaseConfig, topInset = 12 }) {
         </Text>
       </Animated.View>
 
+      {bobuxCount > 0 && (
+        <Animated.View
+          style={[
+            styles.bobuxBadge,
+            {
+              transform: [{ scale: bobuxPulseAnim }],
+            },
+          ]}
+        >
+          <Text style={styles.bobuxText} accessibilityLabel={`${bobuxCount} Bobux coletados`}>
+            🪙 {bobuxCount}
+          </Text>
+        </Animated.View>
+      )}
+
       <Animated.View style={[styles.phaseBadge, { opacity: badgeOpacity }]}>
         <Text style={styles.phaseBadgeText}>{phaseConfig?.label}</Text>
       </Animated.View>
@@ -103,6 +137,23 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(37, 26, 32, 0.75)',
     textShadowOffset: { width: 0, height: 2 },
     textShadowRadius: 4,
+  },
+  bobuxBadge: {
+    marginTop: 4,
+    backgroundColor: 'rgba(217, 119, 6, 0.92)',
+    paddingHorizontal: 10,
+    paddingVertical: 2,
+    borderRadius: radius.pill,
+    borderWidth: 1.5,
+    borderColor: '#FEF3C7',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  bobuxText: {
+    color: '#FFFBEB',
+    fontSize: 13,
+    fontWeight: '900',
+    letterSpacing: 0.8,
   },
   phaseBadge: {
     marginTop: spacing.xs,

@@ -6,15 +6,26 @@ export default memo(forwardRef(function BloomBranchV2({ pair, playableHeight, on
   const [visual, setVisual] = useState(() => ({ ...pair }));
   const x = useRef(new Animated.Value(pair.x)).current;
   const epoch = useRef(pair.epoch);
+  const lastBobuxCollected = useRef(pair.bobux?.collected);
   const onMountRef = useRef(onMount);
   onRender?.();
   useEffect(() => { onMountRef.current?.(pair.id); }, [pair.id]);
   useEffect(() => { onPrepared?.(visual.id, visual.epoch); }, [visual, onPrepared]);
   useImperativeHandle(ref, () => ({
-    prepare(next) { epoch.current = next.epoch; setVisual({ ...next }); x.setValue(next.x); },
+    prepare(next) {
+      epoch.current = next.epoch;
+      lastBobuxCollected.current = next.bobux?.collected;
+      setVisual({ ...next });
+      x.setValue(next.x);
+    },
     update(next) {
       x.setValue(next.x);
-      if (epoch.current !== next.epoch) { epoch.current = next.epoch; setVisual({ ...next }); }
+      const bobuxChanged = lastBobuxCollected.current !== next.bobux?.collected;
+      if (epoch.current !== next.epoch || bobuxChanged) {
+        epoch.current = next.epoch;
+        lastBobuxCollected.current = next.bobux?.collected;
+        setVisual({ ...next });
+      }
     },
   }), [x]);
   const base = `obstacles/${visual.biome}/`;
@@ -44,8 +55,16 @@ export default memo(forwardRef(function BloomBranchV2({ pair, playableHeight, on
   return (
     <Animated.View pointerEvents="none" style={{ position: 'absolute', top: 0, left: 0, width: visual.width, height: playableHeight, transform: [{ translateX: x }] }}>
       {trunk(true, topHeight)}{trunk(false, bottomHeight)}
+      {visual.bobux && !visual.bobux.collected ? (
+        <View style={[styles.bobux, { top: visual.bobux.y, left: visual.bobux.relativeX, width: visual.bobux.size, height: visual.bobux.size }]}>
+          <VectorAsset assetKey="collectibles/bobux_coin" width={visual.bobux.size} height={visual.bobux.size} />
+        </View>
+      ) : null}
     </Animated.View>
   );
 }));
 
-const styles = StyleSheet.create({ trunk: { position: 'absolute', overflow: 'hidden' } });
+const styles = StyleSheet.create({
+  trunk: { position: 'absolute', overflow: 'hidden' },
+  bobux: { position: 'absolute', alignItems: 'center', justifyContent: 'center' },
+});

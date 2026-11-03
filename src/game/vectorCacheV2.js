@@ -31,7 +31,7 @@ export function createVectorCache(compile) {
   function preload(biome, width, height) {
     const start = Date.now();
     for (const key of Object.keys(VECTORS)) {
-      if (key.startsWith('characters/') || key.startsWith(`obstacles/${biome}/`)) get(key);
+      if (key.startsWith('characters/') || key.startsWith(`obstacles/${biome}/`) || key.startsWith('collectibles/')) get(key);
     }
     const base = `backgrounds/${biome}/`;
     get(base + 'background_base', width, height, 'sky');
