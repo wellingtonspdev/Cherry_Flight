@@ -21,7 +21,7 @@ function walk(directory) {
 walk(path.join(root, 'assets/v2'));
 
 assert.ok(vectors['collectibles/bobux_coin'], 'bobux_coin must be present');
-assert.equal(Object.keys(vectors).length, 97);
+assert.equal(Object.keys(vectors).length, 127);
 
 const outputs = {
   'src/game/levelConfigV2.js': '// Generated losslessly from docs/LEVEL_CONFIG_V2.json; run node scripts/prepare-v2.mjs.\nexport const LEVEL_CONFIG = ' + JSON.stringify(config, null, 2) + ';\n',

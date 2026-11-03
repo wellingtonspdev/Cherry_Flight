@@ -12,7 +12,7 @@ export const SKINS = {
     id: 'sakura',
     name: 'Sakura Spirit',
     price: 15,
-    description: 'Rosa pastel com pétala reluzente',
+    description: 'Rosa pastel com flor de cerejeira',
   },
   noob: {
     id: 'noob',
@@ -20,16 +20,34 @@ export const SKINS = {
     price: 30,
     description: 'Homenagem ao clássico visual Noob',
   },
+  matcha: {
+    id: 'matcha',
+    name: 'Ninja Matcha',
+    price: 45,
+    description: 'Verde-matcha com bandana ninja de combate',
+  },
   golden: {
     id: 'golden',
     name: 'Golden Bobux',
     price: 50,
-    description: 'Cereja dourada com insígnia hexagonal',
+    description: 'Cereja dourada com coroa real e insígnia',
   },
   yozakura: {
     id: 'yozakura',
     name: 'Cyber Yozakura',
     price: 80,
-    description: 'Estética neon noturna futurista',
+    description: 'Estética neon noturna com visor cyber',
+  },
+  kitsune: {
+    id: 'kitsune',
+    name: 'Kitsune Mística',
+    price: 110,
+    description: 'Espírito sagrado com orelhas e marcas Kitsune',
+  },
+  unicorn: {
+    id: 'unicorn',
+    name: 'Unicórnio Celestial',
+    price: 150,
+    description: 'Lendária: Chifre dourado, crina arco-íris e asas mágicas',
   },
 };

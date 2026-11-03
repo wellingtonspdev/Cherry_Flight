@@ -6,7 +6,7 @@ const cache = await import('../src/game/vectorCacheV2.js').catch(() => null);
 test('V2 vectors are cached before visible use, with theme-scoped gradient IDs', async () => {
   assert.ok(cache, 'The vector preloader must exist');
   const { VECTORS } = await import('../src/game/vectorDataV2.js');
-  assert.equal(Object.keys(VECTORS).length, 97);
+  assert.equal(Object.keys(VECTORS).length, 127);
   for (const [key, xml] of Object.entries(VECTORS)) assert.equal(xml, fs.readFileSync(new URL('../assets/v2/' + key + '.svg', import.meta.url), 'utf8').replace(/\r\n/g, '\n'));
   const registry = cache.createVectorCache(xml => ({ xml }));
   registry.preload('first_bloom', 844, 390);

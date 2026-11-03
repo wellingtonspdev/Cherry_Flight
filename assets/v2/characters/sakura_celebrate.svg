@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="150" viewBox="0 0 160 150">
+  <defs>
+    <radialGradient id="cherry_grad" cx="35%" cy="28%">
+      <stop offset="0%" stop-color="#FFF1F5"/>
+      <stop offset="42%" stop-color="#F472B6"/>
+      <stop offset="100%" stop-color="#9D174D"/>
+    </radialGradient>
+  </defs>
+  <!-- Invariant Hitbox Body: ellipse cx="78" cy="88" rx="55" ry="52" -->
+  <ellipse cx="78" cy="88" rx="55" ry="52" fill="url(#cherry_grad)" stroke="#500724" stroke-width="4.5"/>
+  <!-- Primary Glossy Jelly Highlight -->
+  <ellipse cx="54" cy="58" rx="14" ry="9" fill="#FFFFFF" opacity=".78" transform="rotate(-30 54 58)"/>
+  <ellipse cx="44" cy="74" rx="7" ry="5" fill="#FFFFFF" opacity=".5" transform="rotate(-20 44 74)"/>
+  <!-- Bottom Rim Light -->
+  <path d="M42 110 Q78 134 114 110" stroke="#FBCFE8" stroke-width="3" fill="none" opacity=".35" stroke-linecap="round"/>
+  <!-- Stem & Leaf Secondary Motion -->
+  
+    <!-- Calyx Dimple (covinha superior de cereja) -->
+    <path d="M64 47 Q78 54 92 47" stroke="#500724" stroke-width="3" fill="none" opacity=".55" stroke-linecap="round"/>
+    <!-- Organic Stem -->
+    <path d="M78 50 C90 32 112 18 135 6" fill="none" stroke="#4A2430" stroke-width="8" stroke-linecap="round"/>
+    <path d="M78 50 C90 32 112 18 135 6" fill="none" stroke="#831843" stroke-width="2.5" opacity=".6" stroke-linecap="round"/>
+    <!-- Leaf with outline & two-tone cel-shading -->
+    <g transform="rotate(-42 130 26)">
+      <path d="M 110 26 Q 130 6 153 26 Q 130 43 110 26 Z" fill="#86EFAC" stroke="#500724" stroke-width="2"/>
+      <path d="M 110 26 Q 130 43 153 26 Z" fill="#22C55E" opacity=".7"/>
+      <line x1="114" y1="26" x2="148" y2="26" stroke="#166534" stroke-width="2" stroke-linecap="round"/>
+      <line x1="126" y1="26" x2="132" y2="20" stroke="#166534" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="136" y1="26" x2="142" y2="21" stroke="#166534" stroke-width="1.2" stroke-linecap="round"/>
+    </g>
+  
+  <!-- Skin Exclusive Accessories -->
+  
+      <!-- Sakura Flower accessory on stem -->
+      <g transform="translate(90, 36) scale(0.65)">
+        <ellipse cx="0" cy="-14" rx="6" ry="10" fill="#FFCCD7" stroke="#9D174D" stroke-width="1.2"/>
+        <ellipse cx="13" cy="-4" rx="6" ry="10" fill="#FFCCD7" stroke="#9D174D" stroke-width="1.2" transform="rotate(72 13 -4)"/>
+        <ellipse cx="8" cy="11" rx="6" ry="10" fill="#FFCCD7" stroke="#9D174D" stroke-width="1.2" transform="rotate(144 8 11)"/>
+        <ellipse cx="-8" cy="11" rx="6" ry="10" fill="#FFCCD7" stroke="#9D174D" stroke-width="1.2" transform="rotate(216 -8 11)"/>
+        <ellipse cx="-13" cy="-4" rx="6" ry="10" fill="#FFCCD7" stroke="#9D174D" stroke-width="1.2" transform="rotate(288 -13 -4)"/>
+        <circle cx="0" cy="0" r="4.5" fill="#E11D48"/>
+        <circle cx="0" cy="0" r="2" fill="#FBBF24"/>
+      </g>
+    
+  <!-- Arcade Eyes & Face Expression -->
+  
+    
+      <!-- Starry Victory Eyes -->
+      <polygon points="56,66 58,72 64,74 59,77 60,83 56,79 52,83 53,77 48,74 54,72" fill="#FBBF24" stroke="#78350F" stroke-width="1.5"/>
+      <polygon points="100,66 102,72 108,74 103,77 104,83 100,79 96,83 97,77 92,74 98,72" fill="#FBBF24" stroke="#78350F" stroke-width="1.5"/>
+    
+    
+      <path d="M68 81 Q78 98 88 81 Z" fill="#D81B43" stroke="#1A1218" stroke-width="2.8"/>
+      <path d="M71 89 Q78 98 85 89 Z" fill="#FFAEC0"/>
+    
+    
+      <!-- Confetti Sparkles -->
+      <circle cx="28" cy="48" r="3.2" fill="#FBBF24"/>
+      <circle cx="132" cy="54" r="3.2" fill="#EC4899"/>
+      <circle cx="34" cy="118" r="2.8" fill="#38BDF8"/>
+      <polygon points="128,110 130,113 133,114 130,115 128,118 126,115 123,114 126,113" fill="#F59E0B"/>
+    
+    <!-- Soft Cheeks -->
+    <ellipse cx="42" cy="89" rx="7.5" ry="5.5" fill="#F43F5E" opacity=".65"/>
+    <ellipse cx="114" cy="89" rx="7.5" ry="5.5" fill="#F43F5E" opacity=".65"/>
+  
+</svg>

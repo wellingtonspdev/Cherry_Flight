@@ -1,14 +1,62 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="160" height="150" viewBox="0 0 160 150">
-
-
-    <defs><radialGradient id="g" cx="35%" cy="28%"><stop offset="0" stop-color="#FFE3EA"/><stop offset=".45" stop-color="#F5AFC1"/><stop offset="1" stop-color="#C75C80"/></radialGradient></defs>
-    <ellipse cx="78" cy="88" rx="55" ry="52" fill="url(#g)" stroke="#8A2E4C" stroke-width="4"/>
-    <ellipse cx="57" cy="61" rx="12" ry="8" fill="#FFF8F2" opacity=".88" transform="rotate(-28 57 61)"/>
-    <path d="M98 56 C120 36 134 18 135 7" fill="none" stroke="#56383F" stroke-width="9" stroke-linecap="round"/>
-    <path d="M 108.84 31 Q 129 10.84 152.04 31 Q 129 48.28 108.84 31 Z" fill="#86BF82" transform="rotate(-18 129 31)"/><path d="M 113.16 31 L 147.0 31" stroke="#28533A" stroke-width="2.16" opacity=".65" transform="rotate(-18 129 31)"/>
-    <path d="M54 71 a4 6 0 1 0 0 .1" stroke="#251A20" stroke-width="5" fill="none" stroke-linecap="round"/>
-    <path d="M92 71 a4 6 0 1 0 0 .1" stroke="#251A20" stroke-width="5" fill="none" stroke-linecap="round"/>
-    <path d="M70 85 q8 9 16 0" stroke="#251A20" stroke-width="5" fill="none" stroke-linecap="round"/>
-    <circle cx="42" cy="88" r="7" fill="#FFAFC0" opacity=".65"/><circle cx="108" cy="88" r="7" fill="#FFAFC0" opacity=".65"/>
+  <defs>
+    <radialGradient id="cherry_grad" cx="35%" cy="28%">
+      <stop offset="0%" stop-color="#FFF1F5"/>
+      <stop offset="42%" stop-color="#F472B6"/>
+      <stop offset="100%" stop-color="#9D174D"/>
+    </radialGradient>
+  </defs>
+  <!-- Invariant Hitbox Body: ellipse cx="78" cy="88" rx="55" ry="52" -->
+  <ellipse cx="78" cy="88" rx="55" ry="52" fill="url(#cherry_grad)" stroke="#500724" stroke-width="4.5"/>
+  <!-- Primary Glossy Jelly Highlight -->
+  <ellipse cx="54" cy="58" rx="14" ry="9" fill="#FFFFFF" opacity=".78" transform="rotate(-30 54 58)"/>
+  <ellipse cx="44" cy="74" rx="7" ry="5" fill="#FFFFFF" opacity=".5" transform="rotate(-20 44 74)"/>
+  <!-- Bottom Rim Light -->
+  <path d="M42 110 Q78 134 114 110" stroke="#FBCFE8" stroke-width="3" fill="none" opacity=".35" stroke-linecap="round"/>
+  <!-- Stem & Leaf Secondary Motion -->
+  
+    <!-- Calyx Dimple (covinha superior de cereja) -->
+    <path d="M64 47 Q78 54 92 47" stroke="#500724" stroke-width="3" fill="none" opacity=".55" stroke-linecap="round"/>
+    <!-- Organic Stem -->
+    <path d="M78 50 C88 34 110 22 132 8" fill="none" stroke="#4A2430" stroke-width="8" stroke-linecap="round"/>
+    <path d="M78 50 C88 34 110 22 132 8" fill="none" stroke="#831843" stroke-width="2.5" opacity=".6" stroke-linecap="round"/>
+    <!-- Leaf with outline & two-tone cel-shading -->
+    <g transform="rotate(-18 129 31)">
+      <path d="M 109 31 Q 129 11 152 31 Q 129 48 109 31 Z" fill="#86EFAC" stroke="#500724" stroke-width="2"/>
+      <path d="M 109 31 Q 129 48 152 31 Z" fill="#22C55E" opacity=".7"/>
+      <line x1="113" y1="31" x2="147" y2="31" stroke="#166534" stroke-width="2" stroke-linecap="round"/>
+      <line x1="125" y1="31" x2="131" y2="25" stroke="#166534" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="135" y1="31" x2="141" y2="26" stroke="#166534" stroke-width="1.2" stroke-linecap="round"/>
+    </g>
+  
+  <!-- Skin Exclusive Accessories -->
+  
+      <!-- Sakura Flower accessory on stem -->
+      <g transform="translate(90, 36) scale(0.65)">
+        <ellipse cx="0" cy="-14" rx="6" ry="10" fill="#FFCCD7" stroke="#9D174D" stroke-width="1.2"/>
+        <ellipse cx="13" cy="-4" rx="6" ry="10" fill="#FFCCD7" stroke="#9D174D" stroke-width="1.2" transform="rotate(72 13 -4)"/>
+        <ellipse cx="8" cy="11" rx="6" ry="10" fill="#FFCCD7" stroke="#9D174D" stroke-width="1.2" transform="rotate(144 8 11)"/>
+        <ellipse cx="-8" cy="11" rx="6" ry="10" fill="#FFCCD7" stroke="#9D174D" stroke-width="1.2" transform="rotate(216 -8 11)"/>
+        <ellipse cx="-13" cy="-4" rx="6" ry="10" fill="#FFCCD7" stroke="#9D174D" stroke-width="1.2" transform="rotate(288 -13 -4)"/>
+        <circle cx="0" cy="0" r="4.5" fill="#E11D48"/>
+        <circle cx="0" cy="0" r="2" fill="#FBBF24"/>
+      </g>
     
+  <!-- Arcade Eyes & Face Expression -->
+  
+    
+      <!-- Solid Arcade Eyes with Dual Catchlights -->
+      <ellipse cx="56" cy="74" rx="5.5" ry="7.5" fill="#1A1218"/>
+      <circle cx="54" cy="71" r="2.4" fill="#FFFFFF"/>
+      <circle cx="58" cy="77" r="1.2" fill="#FFFFFF"/>
+      <ellipse cx="100" cy="74" rx="5.5" ry="7.5" fill="#1A1218"/>
+      <circle cx="98" cy="71" r="2.4" fill="#FFFFFF"/>
+      <circle cx="102" cy="77" r="1.2" fill="#FFFFFF"/>
+    
+    <path d="M71 85 Q78 92 85 85" stroke="#1A1218" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    
+    <!-- Soft Cheeks -->
+    <ellipse cx="42" cy="89" rx="7.5" ry="5.5" fill="#F43F5E" opacity=".65"/>
+    <ellipse cx="114" cy="89" rx="7.5" ry="5.5" fill="#F43F5E" opacity=".65"/>
+  
 </svg>

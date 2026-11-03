@@ -1,14 +1,54 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="160" height="150" viewBox="0 0 160 150">
-
-
-    <defs><radialGradient id="g" cx="35%" cy="28%"><stop offset="0" stop-color="#EAA6DF"/><stop offset=".45" stop-color="#9B3A8B"/><stop offset="1" stop-color="#461240"/></radialGradient></defs>
-    <ellipse cx="78" cy="88" rx="55" ry="52" fill="url(#g)" stroke="#240721" stroke-width="4"/>
-    <ellipse cx="57" cy="61" rx="12" ry="8" fill="#FFF8F2" opacity=".88" transform="rotate(-28 57 61)"/>
-    <path d="M100 58 C120 42 136 29 140 18" fill="none" stroke="#56383F" stroke-width="9" stroke-linecap="round"/>
-    <path d="M 108.84 31 Q 129 10.84 152.04 31 Q 129 48.28 108.84 31 Z" fill="#38E1FF" transform="rotate(-18 129 31)"/><path d="M 113.16 31 L 147.0 31" stroke="#28533A" stroke-width="2.16" opacity=".65" transform="rotate(-18 129 31)"/>
-    <path d="M50 71 l10 10 M60 71 l-10 10" stroke="#251A20" stroke-width="5" fill="none" stroke-linecap="round"/>
-    <path d="M92 71 l10 10 M102 71 l-10 10" stroke="#251A20" stroke-width="5" fill="none" stroke-linecap="round"/>
-    <path d="M66 93 q11 -12 22 0" stroke="#251A20" stroke-width="5" fill="none" stroke-linecap="round"/>
-    <circle cx="42" cy="88" r="7" fill="#FF269A" opacity=".65"/><circle cx="108" cy="88" r="7" fill="#FF269A" opacity=".65"/>
+  <defs>
+    <radialGradient id="cherry_grad" cx="35%" cy="28%">
+      <stop offset="0%" stop-color="#E9D5FF"/>
+      <stop offset="42%" stop-color="#9333EA"/>
+      <stop offset="100%" stop-color="#3B0764"/>
+    </radialGradient>
+  </defs>
+  <!-- Invariant Hitbox Body: ellipse cx="78" cy="88" rx="55" ry="52" -->
+  <ellipse cx="78" cy="88" rx="55" ry="52" fill="url(#cherry_grad)" stroke="#1E0533" stroke-width="4.5"/>
+  <!-- Primary Glossy Jelly Highlight -->
+  <ellipse cx="54" cy="58" rx="14" ry="9" fill="#FFFFFF" opacity=".78" transform="rotate(-30 54 58)"/>
+  <ellipse cx="44" cy="74" rx="7" ry="5" fill="#FFFFFF" opacity=".5" transform="rotate(-20 44 74)"/>
+  <!-- Bottom Rim Light -->
+  <path d="M42 110 Q78 134 114 110" stroke="#F0ABFC" stroke-width="3" fill="none" opacity=".35" stroke-linecap="round"/>
+  <!-- Stem & Leaf Secondary Motion -->
+  
+    <!-- Calyx Dimple (covinha superior de cereja) -->
+    <path d="M64 47 Q78 54 92 47" stroke="#1E0533" stroke-width="3" fill="none" opacity=".55" stroke-linecap="round"/>
+    <!-- Organic Stem -->
+    <path d="M78 50 C80 35 115 30 134 12" fill="none" stroke="#1E1B4B" stroke-width="8" stroke-linecap="round"/>
+    <path d="M78 50 C80 35 115 30 134 12" fill="none" stroke="#4338CA" stroke-width="2.5" opacity=".6" stroke-linecap="round"/>
+    <!-- Leaf with outline & two-tone cel-shading -->
+    <g transform="rotate(28 128 32)">
+      <path d="M 108 32 Q 128 12 151 32 Q 128 49 108 32 Z" fill="#22D3EE" stroke="#1E0533" stroke-width="2"/>
+      <path d="M 108 32 Q 128 49 151 32 Z" fill="#0891B2" opacity=".7"/>
+      <line x1="112" y1="32" x2="146" y2="32" stroke="#164E63" stroke-width="2" stroke-linecap="round"/>
+      <line x1="124" y1="32" x2="130" y2="26" stroke="#164E63" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="134" y1="32" x2="140" y2="27" stroke="#164E63" stroke-width="1.2" stroke-linecap="round"/>
+    </g>
+  
+  <!-- Skin Exclusive Accessories -->
+  
+      <!-- Translucent Cyber Visor -->
+      <path d="M40 66 Q78 76 116 66 L114 80 Q78 89 42 80 Z" fill="#06B6D4" opacity=".5" stroke="#22D3EE" stroke-width="2"/>
+      <line x1="48" y1="73" x2="108" y2="73" stroke="#67E8F9" stroke-width="1.5" stroke-dasharray="6,3" opacity=".8"/>
     
+  <!-- Arcade Eyes & Face Expression -->
+  
+    
+      <!-- Anime > < Collision Eyes -->
+      <path d="M51 69 L61 74 L51 79" stroke="#1A1218" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M105 69 L95 74 L105 79" stroke="#1A1218" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <path d="M69 90 L73 87 L77 90 L81 87 L85 90" stroke="#1A1218" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+      <!-- Comic Impact Spark -->
+      <path d="M124 44 L126 50 L132 51 L127 55 L129 61 L124 57 L119 60 L121 54 L117 51 L122 49 Z" fill="#FBBF24" stroke="#92400E" stroke-width="1.2"/>
+    
+    <!-- Soft Cheeks -->
+    <ellipse cx="42" cy="89" rx="7.5" ry="5.5" fill="#EC4899" opacity=".65"/>
+    <ellipse cx="114" cy="89" rx="7.5" ry="5.5" fill="#EC4899" opacity=".65"/>
+  
 </svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="150" viewBox="0 0 160 150">
+  <defs>
+    <radialGradient id="cherry_grad" cx="35%" cy="28%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="42%" stop-color="#FCE7F3"/>
+      <stop offset="100%" stop-color="#BE123C"/>
+    </radialGradient>
+  </defs>
+  <!-- Invariant Hitbox Body: ellipse cx="78" cy="88" rx="55" ry="52" -->
+  <ellipse cx="78" cy="88" rx="55" ry="52" fill="url(#cherry_grad)" stroke="#4C0519" stroke-width="4.5"/>
+  <!-- Primary Glossy Jelly Highlight -->
+  <ellipse cx="54" cy="58" rx="14" ry="9" fill="#FFFFFF" opacity=".78" transform="rotate(-30 54 58)"/>
+  <ellipse cx="44" cy="74" rx="7" ry="5" fill="#FFFFFF" opacity=".5" transform="rotate(-20 44 74)"/>
+  <!-- Bottom Rim Light -->
+  <path d="M42 110 Q78 134 114 110" stroke="#FDA4AF" stroke-width="3" fill="none" opacity=".35" stroke-linecap="round"/>
+  <!-- Stem & Leaf Secondary Motion -->
+  
+    <!-- Calyx Dimple (covinha superior de cereja) -->
+    <path d="M64 47 Q78 54 92 47" stroke="#4C0519" stroke-width="3" fill="none" opacity=".55" stroke-linecap="round"/>
+    <!-- Organic Stem -->
+    <path d="M78 50 C84 30 96 16 120 4" fill="none" stroke="#4A2810" stroke-width="8" stroke-linecap="round"/>
+    <path d="M78 50 C84 30 96 16 120 4" fill="none" stroke="#78350F" stroke-width="2.5" opacity=".6" stroke-linecap="round"/>
+    <!-- Leaf with outline & two-tone cel-shading -->
+    <g transform="rotate(5 122 24)">
+      <path d="M 102 24 Q 122 4 145 24 Q 122 41 102 24 Z" fill="#EF4444" stroke="#4C0519" stroke-width="2"/>
+      <path d="M 102 24 Q 122 41 145 24 Z" fill="#B91C1C" opacity=".7"/>
+      <line x1="106" y1="24" x2="140" y2="24" stroke="#7F1D1D" stroke-width="2" stroke-linecap="round"/>
+      <line x1="118" y1="24" x2="124" y2="18" stroke="#7F1D1D" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="128" y1="24" x2="134" y2="19" stroke="#7F1D1D" stroke-width="1.2" stroke-linecap="round"/>
+    </g>
+  
+  <!-- Skin Exclusive Accessories -->
+  
+      <!-- Kitsune Fox Ears with Torii Red Tips -->
+      <path d="M46 50 L34 20 L60 38 Z" fill="#FFFFFF" stroke="#7F1D1D" stroke-width="2.2"/>
+      <path d="M42 38 L36 24 L52 35 Z" fill="#DC2626"/>
+      <path d="M110 50 L122 20 L96 38 Z" fill="#FFFFFF" stroke="#7F1D1D" stroke-width="2.2"/>
+      <path d="M114 38 L120 24 L104 35 Z" fill="#DC2626"/>
+      <!-- Shrine Markings on Cheeks -->
+      <path d="M28 84 Q38 86 34 94" stroke="#DC2626" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <path d="M128 84 Q118 86 122 94" stroke="#DC2626" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    
+  <!-- Arcade Eyes & Face Expression -->
+  
+    
+      <!-- Focused Downward Looking Eyes -->
+      <ellipse cx="56" cy="75" rx="6" ry="8" fill="#1A1218"/>
+      <circle cx="55" cy="76" r="2.6" fill="#FFFFFF"/>
+      <circle cx="58" cy="72" r="1.2" fill="#FFFFFF"/>
+      <ellipse cx="100" cy="75" rx="6" ry="8" fill="#1A1218"/>
+      <circle cx="99" cy="76" r="2.6" fill="#FFFFFF"/>
+      <circle cx="102" cy="72" r="1.2" fill="#FFFFFF"/>
+    
+    <ellipse cx="78" cy="88" rx="4.5" ry="6" fill="#1A1218"/>
+    
+    <!-- Soft Cheeks -->
+    <ellipse cx="42" cy="89" rx="7.5" ry="5.5" fill="#E11D48" opacity=".65"/>
+    <ellipse cx="114" cy="89" rx="7.5" ry="5.5" fill="#E11D48" opacity=".65"/>
+  
+</svg>

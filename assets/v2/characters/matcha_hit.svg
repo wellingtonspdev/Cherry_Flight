@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="150" viewBox="0 0 160 150">
+  <defs>
+    <radialGradient id="cherry_grad" cx="35%" cy="28%">
+      <stop offset="0%" stop-color="#BBF7D0"/>
+      <stop offset="42%" stop-color="#4ADE80"/>
+      <stop offset="100%" stop-color="#15803D"/>
+    </radialGradient>
+  </defs>
+  <!-- Invariant Hitbox Body: ellipse cx="78" cy="88" rx="55" ry="52" -->
+  <ellipse cx="78" cy="88" rx="55" ry="52" fill="url(#cherry_grad)" stroke="#052E16" stroke-width="4.5"/>
+  <!-- Primary Glossy Jelly Highlight -->
+  <ellipse cx="54" cy="58" rx="14" ry="9" fill="#FFFFFF" opacity=".78" transform="rotate(-30 54 58)"/>
+  <ellipse cx="44" cy="74" rx="7" ry="5" fill="#FFFFFF" opacity=".5" transform="rotate(-20 44 74)"/>
+  <!-- Bottom Rim Light -->
+  <path d="M42 110 Q78 134 114 110" stroke="#DCFCE7" stroke-width="3" fill="none" opacity=".35" stroke-linecap="round"/>
+  <!-- Stem & Leaf Secondary Motion -->
+  
+    <!-- Calyx Dimple (covinha superior de cereja) -->
+    <path d="M64 47 Q78 54 92 47" stroke="#052E16" stroke-width="3" fill="none" opacity=".55" stroke-linecap="round"/>
+    <!-- Organic Stem -->
+    <path d="M78 50 C80 35 115 30 134 12" fill="none" stroke="#272018" stroke-width="8" stroke-linecap="round"/>
+    <path d="M78 50 C80 35 115 30 134 12" fill="none" stroke="#57412A" stroke-width="2.5" opacity=".6" stroke-linecap="round"/>
+    <!-- Leaf with outline & two-tone cel-shading -->
+    <g transform="rotate(28 128 32)">
+      <path d="M 108 32 Q 128 12 151 32 Q 128 49 108 32 Z" fill="#86EFAC" stroke="#052E16" stroke-width="2"/>
+      <path d="M 108 32 Q 128 49 151 32 Z" fill="#16A34A" opacity=".7"/>
+      <line x1="112" y1="32" x2="146" y2="32" stroke="#14532D" stroke-width="2" stroke-linecap="round"/>
+      <line x1="124" y1="32" x2="130" y2="26" stroke="#14532D" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="134" y1="32" x2="140" y2="27" stroke="#14532D" stroke-width="1.2" stroke-linecap="round"/>
+    </g>
+  
+  <!-- Skin Exclusive Accessories -->
+  
+      <!-- Ninja Hachimaki Headband -->
+      <path d="M30 63 Q78 73 126 63 L127 71 Q78 81 29 71 Z" fill="#DC2626" stroke="#7F1D1D" stroke-width="2"/>
+      <rect x="67" y="65" width="22" height="9" rx="2" fill="#F1F5F9" stroke="#475569" stroke-width="1.2"/>
+      <circle cx="78" cy="69.5" r="2.5" fill="#DC2626"/>
+      <!-- Headband Flying Tails -->
+      <path d="M125 64 Q142 58 152 68 Q140 68 126 70 Z" fill="#DC2626" stroke="#7F1D1D" stroke-width="1"/>
+      <path d="M125 68 Q140 76 150 84 Q138 78 126 72 Z" fill="#B91C1C" stroke="#7F1D1D" stroke-width="1"/>
+    
+  <!-- Arcade Eyes & Face Expression -->
+  
+    
+      <!-- Anime > < Collision Eyes -->
+      <path d="M51 69 L61 74 L51 79" stroke="#1A1218" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M105 69 L95 74 L105 79" stroke="#1A1218" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <path d="M69 90 L73 87 L77 90 L81 87 L85 90" stroke="#1A1218" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+      <!-- Comic Impact Spark -->
+      <path d="M124 44 L126 50 L132 51 L127 55 L129 61 L124 57 L119 60 L121 54 L117 51 L122 49 Z" fill="#FBBF24" stroke="#92400E" stroke-width="1.2"/>
+    
+    <!-- Soft Cheeks -->
+    <ellipse cx="42" cy="89" rx="7.5" ry="5.5" fill="#F87171" opacity=".65"/>
+    <ellipse cx="114" cy="89" rx="7.5" ry="5.5" fill="#F87171" opacity=".65"/>
+  
+</svg>
