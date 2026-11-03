@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
-    <path d="M80 90 Q87 72 110 70 Q103 88 80 90 Z" fill="#2DD4BF" stroke="#131128" stroke-width="1.2"/><line x1="80" y1="90" x2="110" y2="70" stroke="#0F766E" stroke-width="1"/>
-    <path d="M115 80 Q122 62 145 60 Q138 78 115 80 Z" fill="#2DD4BF" stroke="#131128" stroke-width="1.2"/><line x1="115" y1="80" x2="145" y2="60" stroke="#0F766E" stroke-width="1"/>
-    <path d="M140 90 Q147 74.5 170 75 Q163 90.5 140 90 Z" fill="#2DD4BF" stroke="#131128" stroke-width="1.2"/><line x1="140" y1="90" x2="170" y2="75" stroke="#0F766E" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="120" viewBox="0 0 180 120">
+  <path d="M50 60 Q69.7 61 75 42 Q55.3 41 50 60 Z" fill="#0D9488" stroke="#0E0B20" stroke-width="1.5"/><path d="M50 60 Q66.1 56 75 42 Z" fill="#2DD4BF" opacity=".4"/><line x1="50" y1="60" x2="75" y2="42" stroke="#115E59" stroke-width="1.2"/>
+  <path d="M80 52 Q98.9 54 105 36 Q86.1 34 80 52 Z" fill="#0D9488" stroke="#0E0B20" stroke-width="1.5"/><path d="M80 52 Q95.7 49 105 36 Z" fill="#2DD4BF" opacity=".4"/><line x1="80" y1="52" x2="105" y2="36" stroke="#115E59" stroke-width="1.2"/>
+  <path d="M100 62 Q118.1 65 125 48 Q106.9 45 100 62 Z" fill="#0D9488" stroke="#0E0B20" stroke-width="1.5"/><path d="M100 62 Q115.3 60 125 48 Z" fill="#2DD4BF" opacity=".4"/><line x1="100" y1="62" x2="125" y2="48" stroke="#115E59" stroke-width="1.2"/>
 </svg>

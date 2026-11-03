@@ -38,9 +38,10 @@ export default memo(forwardRef(function BloomBranchV2({ pair, playableHeight, on
   function trunk(isTop, height) {
     if (height <= 0) return null;
     const cap = `cap_${isTop ? 'bottom' : 'top'}_${variant % 2 ? 'b' : 'a'}`;
-    const showBranch = height > 78;
+    const showBranch = height > 80;
     const branchVariant = (Math.floor(variant / 2) % 3) + 1;
-    const branchLeft = variant % 2 === 0 ? -12 : -2;
+    const branchLeft = variant % 2 === 0 ? -16 : 0;
+    const capHeight = 40;
 
     return (
       <View style={[styles.trunk, { top: isTop ? 0 : bottomY, height, width: visual.width }]}>
@@ -56,34 +57,31 @@ export default memo(forwardRef(function BloomBranchV2({ pair, playableHeight, on
             style={{
               position: 'absolute',
               left: branchLeft,
-              top: isTop ? Math.max(12, height - 76) : 32,
-              width: visual.width + 14,
-              height: 44,
+              top: isTop ? Math.max(12, height - 88) : 38,
+              width: visual.width + 18,
+              height: 48,
               zIndex: 3,
             }}
           >
-            <VectorAsset assetKey={base + `side_branch_${branchVariant}`} width={visual.width + 14} height={44} stretch />
+            <VectorAsset assetKey={base + `side_branch_${branchVariant}`} width={visual.width + 18} height={48} stretch />
             <View style={StyleSheet.absoluteFill}>
-              <VectorAsset assetKey={base + 'leaves_cluster'} width={visual.width + 14} height={40} stretch opacity={0.92} />
+              <VectorAsset assetKey={base + 'leaves_cluster'} width={visual.width + 18} height={44} stretch opacity={0.92} />
             </View>
           </View>
         )}
 
-        {/* Arcade Crown at gap opening (wooden cap + rich blossom cluster) */}
+        {/* Arcade Crown at gap opening (chunky wooden cap collar with brass studs and draping blossoms) */}
         <View
           style={{
             position: 'absolute',
-            left: -6,
-            top: isTop ? Math.max(0, height - 32) : 0,
-            width: visual.width + 12,
-            height: 32,
+            left: -8,
+            top: isTop ? Math.max(0, height - capHeight) : 0,
+            width: visual.width + 16,
+            height: capHeight,
             zIndex: 4,
           }}
         >
-          <VectorAsset assetKey={base + cap} width={visual.width + 12} height={32} stretch />
-          <View style={{ position: 'absolute', left: 4, top: isTop ? -8 : 7 }}>
-            <VectorAsset assetKey={base + `blossom_cluster_${variant % 2 ? 'b' : 'a'}`} width={visual.width + 4} height={24} stretch />
-          </View>
+          <VectorAsset assetKey={base + cap} width={visual.width + 16} height={capHeight} stretch />
         </View>
       </View>
     );

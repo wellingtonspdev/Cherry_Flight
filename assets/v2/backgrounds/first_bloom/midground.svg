@@ -1,55 +1,108 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
-    <!-- Tree 1 (Left Fore-Midground): Gnarled trunk rising from ground line -->
-    <path d="M110 1720 Q100 1560 125 1460" stroke="#55342F" stroke-width="18" fill="none" stroke-linecap="round"/>
-    <path d="M125 1460 Q90 1400 70 1350" stroke="#55342F" stroke-width="12" fill="none" stroke-linecap="round"/>
-    <path d="M125 1460 Q155 1395 180 1350" stroke="#55342F" stroke-width="11" fill="none" stroke-linecap="round"/>
-    <path d="M108 1420 Q80 1435 60 1445" stroke="#55342F" stroke-width="7" fill="none" stroke-linecap="round"/>
-    <!-- Tree 1 Multi-Cloud Fluffy Sakura Canopy -->
-    <!-- Lower shadow volume -->
-    <path d="M45 1440 C25 1380 30 1290 65 1240 C90 1190 140 1200 165 1250 C195 1240 220 1280 215 1350 C210 1420 170 1470 120 1475 C80 1480 55 1470 45 1440 Z" fill="#D87A93" opacity=".92"/>
-    <!-- Midtone blossom cloud -->
-    <path d="M55 1420 C38 1365 42 1295 72 1250 C95 1205 138 1215 160 1260 C185 1250 208 1290 202 1350 C198 1410 162 1455 118 1460 C82 1465 62 1450 55 1420 Z" fill="#F8A5BA" opacity=".96"/>
-    <!-- Top highlight petals cloud -->
-    <path d="M68 1390 C55 1340 60 1285 85 1250 C105 1220 138 1230 152 1270 C175 1265 190 1300 188 1345 C185 1390 155 1425 120 1430 C90 1435 74 1420 68 1390 Z" fill="#FFD6E3" opacity=".85"/>
+    <!-- Tree 1 (Left Fore-Midground) -->
+    
+    <!-- Tree Trunk rooted firmly at y=1720 -->
+    <path d="M140 1720 Q134 1560 144 1470" stroke="#4E2D27" stroke-width="15" fill="none" stroke-linecap="round"/>
+    <path d="M144 1470 Q124 1420 116 1380" stroke="#4E2D27" stroke-width="11" fill="none" stroke-linecap="round"/>
+    <path d="M144 1470 Q160 1420 168 1380" stroke="#4E2D27" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <!-- Multi-lobed billowing sakura clouds (tall in SVG -> round on screen) -->
+    <!-- Base shadow volume -->
+    <ellipse cx="122" cy="1400" rx="37.5" ry="132.29999999999998" fill="#D87A93" opacity=".92"/>
+    <ellipse cx="160" cy="1402" rx="36" ry="128.52" fill="#D87A93" opacity=".92"/>
+    <ellipse cx="140" cy="1350" rx="50" ry="160.65" fill="#D87A93" opacity=".94"/>
+    <!-- Midtone vibrant bloom volume -->
+    <ellipse cx="124" cy="1392" rx="34" ry="122.85000000000001" fill="#F8A5BA" opacity=".95"/>
+    <ellipse cx="158" cy="1394" rx="32.5" ry="117.17999999999999" fill="#F8A5BA" opacity=".95"/>
+    <ellipse cx="140" cy="1342" rx="46" ry="151.20000000000002" fill="#F8A5BA" opacity=".96"/>
+    <!-- Top highlight petals volume -->
+    <ellipse cx="128" cy="1382" rx="27.500000000000004" ry="94.5" fill="#FFE3EC" opacity=".88"/>
+    <ellipse cx="154" cy="1384" rx="26" ry="90.72" fill="#FFE3EC" opacity=".88"/>
+    <ellipse cx="140" cy="1332" rx="37.5" ry="122.85000000000001" fill="#FFE3EC" opacity=".92"/>
+  
 
     <!-- Tree 2 (Mid-Left Distant Tree) -->
-    <path d="M260 1720 Q255 1580 270 1490" stroke="#55342F" stroke-width="12" fill="none" stroke-linecap="round"/>
-    <path d="M270 1490 Q245 1430 230 1390" stroke="#55342F" stroke-width="8" fill="none" stroke-linecap="round"/>
-    <path d="M270 1490 Q295 1430 315 1390" stroke="#55342F" stroke-width="8" fill="none" stroke-linecap="round"/>
-    <!-- Tree 2 Canopy -->
-    <path d="M220 1450 C205 1395 210 1320 240 1280 C265 1240 300 1250 315 1295 C335 1290 350 1330 345 1380 C340 1430 310 1470 275 1475 C245 1480 228 1470 220 1450 Z" fill="#D87A93" opacity=".88"/>
-    <path d="M228 1435 C215 1385 220 1325 245 1290 C268 1255 298 1262 310 1302 C328 1298 340 1332 336 1378 C332 1420 305 1455 275 1460 C248 1465 235 1452 228 1435 Z" fill="#F8A5BA" opacity=".92"/>
+    
+    <!-- Tree Trunk rooted firmly at y=1720 -->
+    <path d="M340 1720 Q334 1600 344 1510" stroke="#4E2D27" stroke-width="11" fill="none" stroke-linecap="round"/>
+    <path d="M344 1510 Q324 1460 316 1420" stroke="#4E2D27" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M344 1510 Q360 1460 368 1420" stroke="#4E2D27" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <!-- Multi-lobed billowing sakura clouds (tall in SVG -> round on screen) -->
+    <!-- Base shadow volume -->
+    <ellipse cx="322" cy="1440" rx="27" ry="94.5" fill="#D87A93" opacity=".92"/>
+    <ellipse cx="360" cy="1442" rx="25.919999999999998" ry="91.80000000000001" fill="#D87A93" opacity=".92"/>
+    <ellipse cx="340" cy="1390" rx="36" ry="114.75" fill="#D87A93" opacity=".94"/>
+    <!-- Midtone vibrant bloom volume -->
+    <ellipse cx="324" cy="1432" rx="24.48" ry="87.75" fill="#F8A5BA" opacity=".95"/>
+    <ellipse cx="358" cy="1434" rx="23.400000000000002" ry="83.7" fill="#F8A5BA" opacity=".95"/>
+    <ellipse cx="340" cy="1382" rx="33.120000000000005" ry="108" fill="#F8A5BA" opacity=".96"/>
+    <!-- Top highlight petals volume -->
+    <ellipse cx="328" cy="1422" rx="19.8" ry="67.5" fill="#FFE3EC" opacity=".88"/>
+    <ellipse cx="354" cy="1424" rx="18.72" ry="64.8" fill="#FFE3EC" opacity=".88"/>
+    <ellipse cx="340" cy="1372" rx="27" ry="87.75" fill="#FFE3EC" opacity=".92"/>
+  
+
+    <!-- Traditional Taiko-bashi Arched Bridge (centered, steep traditional arch) -->
+    <!-- Pillars descending deep into ground/water level -->
+    <path d="M508 1720 L508 1630 M524 1720 L524 1585 M540 1720 L540 1565 M556 1720 L556 1585 M572 1720 L572 1630" stroke="#3B1A17" stroke-width="6" stroke-linecap="round"/>
+    <!-- Vermillion Lacquer Arched Deck Beam -->
+    <path d="M495 1665 Q540 1530 585 1665" stroke="#B91C1C" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <path d="M497 1660 Q540 1535 583 1660" stroke="#DC2626" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <!-- Railing Arc -->
+    <path d="M500 1630 Q540 1500 580 1630" stroke="#991B1B" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <!-- Railing Vertical Posts -->
+    <path d="M508 1645 L508 1608 M520 1625 L520 1572 M532 1610 L532 1548 M540 1605 L540 1540 M548 1610 L548 1548 M560 1625 L560 1572 M572 1645 L572 1608" stroke="#991B1B" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Golden Finials (Giboshi) atop the bridge posts -->
+    <circle cx="508" cy="1606" r="3.2" fill="#F59E0B"/>
+    <circle cx="520" cy="1570" r="3.4" fill="#F59E0B"/>
+    <circle cx="532" cy="1546" r="3.6" fill="#F59E0B"/>
+    <circle cx="540" cy="1538" r="4.0" fill="#F59E0B"/>
+    <circle cx="548" cy="1546" r="3.6" fill="#F59E0B"/>
+    <circle cx="560" cy="1570" r="3.4" fill="#F59E0B"/>
+    <circle cx="572" cy="1606" r="3.2" fill="#F59E0B"/>
+    <!-- Little Stone Lantern (Tōrō) on ground next to bridge -->
+    <path d="M480 1720 L480 1655 L475 1650 L485 1650 Z" fill="#4E2D27"/>
+    <rect x="476" y="1638" width="8" height="12" rx="2" fill="#FEF08A" opacity=".9"/>
+    <path d="M473 1638 L487 1638 L480 1630 Z" fill="#4E2D27"/>
 
     <!-- Tree 3 (Right Midground Tree) -->
-    <path d="M880 1720 Q890 1560 865 1460" stroke="#55342F" stroke-width="18" fill="none" stroke-linecap="round"/>
-    <path d="M865 1460 Q830 1400 810 1350" stroke="#55342F" stroke-width="12" fill="none" stroke-linecap="round"/>
-    <path d="M865 1460 Q895 1395 920 1350" stroke="#55342F" stroke-width="11" fill="none" stroke-linecap="round"/>
-    <path d="M875 1420 Q900 1435 925 1445" stroke="#55342F" stroke-width="7" fill="none" stroke-linecap="round"/>
-    <!-- Tree 3 Multi-Cloud Fluffy Sakura Canopy -->
-    <path d="M785 1440 C765 1380 770 1290 805 1240 C830 1190 880 1200 905 1250 C935 1240 960 1280 955 1350 C950 1420 910 1470 860 1475 C820 1480 795 1470 785 1440 Z" fill="#D87A93" opacity=".92"/>
-    <path d="M795 1420 C778 1365 782 1295 812 1250 C835 1205 878 1215 900 1260 C925 1250 948 1290 942 1350 C938 1410 902 1455 858 1460 C822 1465 802 1450 795 1420 Z" fill="#F8A5BA" opacity=".96"/>
-    <path d="M808 1390 C795 1340 800 1285 825 1250 C845 1220 878 1230 892 1270 C915 1265 930 1300 928 1345 C925 1390 895 1425 860 1430 C830 1435 814 1420 808 1390 Z" fill="#FFD6E3" opacity=".85"/>
+    
+    <!-- Tree Trunk rooted firmly at y=1720 -->
+    <path d="M780 1720 Q774 1580 784 1490" stroke="#4E2D27" stroke-width="13" fill="none" stroke-linecap="round"/>
+    <path d="M784 1490 Q764 1440 756 1400" stroke="#4E2D27" stroke-width="9" fill="none" stroke-linecap="round"/>
+    <path d="M784 1490 Q800 1440 808 1400" stroke="#4E2D27" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <!-- Multi-lobed billowing sakura clouds (tall in SVG -> round on screen) -->
+    <!-- Base shadow volume -->
+    <ellipse cx="762" cy="1420" rx="34.5" ry="119.69999999999999" fill="#D87A93" opacity=".92"/>
+    <ellipse cx="800" cy="1422" rx="33.12" ry="116.28000000000002" fill="#D87A93" opacity=".92"/>
+    <ellipse cx="780" cy="1370" rx="46" ry="145.35" fill="#D87A93" opacity=".94"/>
+    <!-- Midtone vibrant bloom volume -->
+    <ellipse cx="764" cy="1412" rx="31.28" ry="111.15" fill="#F8A5BA" opacity=".95"/>
+    <ellipse cx="798" cy="1414" rx="29.900000000000002" ry="106.02" fill="#F8A5BA" opacity=".95"/>
+    <ellipse cx="780" cy="1362" rx="42.32" ry="136.8" fill="#F8A5BA" opacity=".96"/>
+    <!-- Top highlight petals volume -->
+    <ellipse cx="768" cy="1402" rx="25.3" ry="85.5" fill="#FFE3EC" opacity=".88"/>
+    <ellipse cx="794" cy="1404" rx="23.92" ry="82.08" fill="#FFE3EC" opacity=".88"/>
+    <ellipse cx="780" cy="1352" rx="34.5" ry="111.15" fill="#FFE3EC" opacity=".92"/>
+  
 
-    <!-- Traditional Taiko-bashi Arched Bridge (grounded firmly at y ~1654) -->
-    <!-- Sturdy Wooden Posts descending into water/ground -->
-    <path d="M485 1720 L485 1635 M512 1720 L512 1608 M540 1720 L540 1595 M568 1720 L568 1608 M595 1720 L595 1635" stroke="#4E2A27" stroke-width="7" stroke-linecap="round"/>
-    <!-- Vermillion Lacquer Arched Deck Beam -->
-    <path d="M465 1665 Q540 1565 615 1665" stroke="#B91C1C" stroke-width="16" fill="none" stroke-linecap="round"/>
-    <path d="M468 1660 Q540 1570 612 1660" stroke="#DC2626" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <!-- Upper Railing -->
-    <path d="M472 1632 Q540 1538 608 1632" stroke="#991B1B" stroke-width="5" fill="none" stroke-linecap="round"/>
-    <!-- Railing Vertical Posts -->
-    <path d="M482 1650 L482 1618 M502 1632 L502 1595 M522 1618 L522 1578 M540 1612 L540 1572 M558 1618 L558 1578 M578 1632 L578 1595 M598 1650 L598 1618" stroke="#991B1B" stroke-width="4" stroke-linecap="round"/>
-    <!-- Golden Finials (Giboshi) atop the bridge posts -->
-    <circle cx="482" cy="1616" r="3.5" fill="#F59E0B"/>
-    <circle cx="502" cy="1593" r="3.5" fill="#F59E0B"/>
-    <circle cx="522" cy="1576" r="3.8" fill="#F59E0B"/>
-    <circle cx="540" cy="1570" r="4.2" fill="#F59E0B"/>
-    <circle cx="558" cy="1576" r="3.8" fill="#F59E0B"/>
-    <circle cx="578" cy="1593" r="3.5" fill="#F59E0B"/>
-    <circle cx="598" cy="1616" r="3.5" fill="#F59E0B"/>
-    <!-- Little Stone Lantern (Tōrō) on ground mound next to bridge -->
-    <path d="M440 1720 L440 1655 L435 1650 L445 1650 Z" fill="#55342F"/>
-    <rect x="435" y="1638" width="10" height="12" rx="2" fill="#FEF08A" opacity=".9"/>
-    <path d="M432 1638 L448 1638 L440 1630 Z" fill="#55342F"/>
+    <!-- Tree 4 (Far Right Small Tree) -->
+    
+    <!-- Tree Trunk rooted firmly at y=1720 -->
+    <path d="M960 1720 Q954 1610 964 1520" stroke="#4E2D27" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <path d="M964 1520 Q944 1470 936 1430" stroke="#4E2D27" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M964 1520 Q980 1470 988 1430" stroke="#4E2D27" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <!-- Multi-lobed billowing sakura clouds (tall in SVG -> round on screen) -->
+    <!-- Base shadow volume -->
+    <ellipse cx="942" cy="1450" rx="25.5" ry="88.19999999999999" fill="#D87A93" opacity=".92"/>
+    <ellipse cx="980" cy="1452" rx="24.48" ry="85.68" fill="#D87A93" opacity=".92"/>
+    <ellipse cx="960" cy="1400" rx="34" ry="107.1" fill="#D87A93" opacity=".94"/>
+    <!-- Midtone vibrant bloom volume -->
+    <ellipse cx="944" cy="1442" rx="23.12" ry="81.9" fill="#F8A5BA" opacity=".95"/>
+    <ellipse cx="978" cy="1444" rx="22.1" ry="78.12" fill="#F8A5BA" opacity=".95"/>
+    <ellipse cx="960" cy="1392" rx="31.28" ry="100.80000000000001" fill="#F8A5BA" opacity=".96"/>
+    <!-- Top highlight petals volume -->
+    <ellipse cx="948" cy="1432" rx="18.700000000000003" ry="63" fill="#FFE3EC" opacity=".88"/>
+    <ellipse cx="974" cy="1434" rx="17.68" ry="60.48" fill="#FFE3EC" opacity=".88"/>
+    <ellipse cx="960" cy="1382" rx="25.5" ry="81.9" fill="#FFE3EC" opacity=".92"/>
+  
 </svg>

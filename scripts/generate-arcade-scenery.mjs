@@ -1,5 +1,5 @@
 // Generates high-fidelity Arcade Scenery SVGs for all 4 biomes
-// Mathematically compensated for landscape aspect-ratio stretch (3.85x)
+// Mathematically compensated for landscape aspect-ratio stretch (3.85x horizontal)
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -13,20 +13,20 @@ const BIOMES = {
     hillFar: '#8EAEA5',
     hillNear: '#628E83',
     pagoda: '#4A2F35',
-    treeBark: '#55342F',
+    treeBark: '#4E2D27',
     foliageShadow: '#D87A93',
     foliageMid: '#F8A5BA',
-    foliageLight: '#FFD6E3',
+    foliageLight: '#FFE3EC',
     bridgeRail: '#991B1B',
     bridgeBase: '#DC2626',
     bridgeFloor: '#B91C1C',
-    bridgePillars: '#4E2A27',
+    bridgePillars: '#3B1A17',
     goldTrim: '#F59E0B',
     lanternGlow: '#FEF08A',
     petalColor: '#F7C5D2',
     petalCore: '#E63750',
-    leafBase: '#4F8A5B',
-    leafVein: '#28533A',
+    leafBase: '#3F7A4B',
+    leafVein: '#20482E',
   },
   sakura_garden: {
     skyTop: '#A0D8F1',
@@ -37,20 +37,20 @@ const BIOMES = {
     hillFar: '#7E9BB8',
     hillNear: '#547D9E',
     pagoda: '#562534',
-    treeBark: '#5A313C',
+    treeBark: '#542E3B',
     foliageShadow: '#DB2777',
     foliageMid: '#F472B6',
-    foliageLight: '#FBCFE8',
+    foliageLight: '#FCE7F3',
     bridgeRail: '#9F1239',
     bridgeBase: '#E11D48',
     bridgeFloor: '#BE123C',
-    bridgePillars: '#4C2430',
+    bridgePillars: '#3D1B25',
     goldTrim: '#FBBF24',
     lanternGlow: '#FFFBEB',
     petalColor: '#FFCCD7',
     petalCore: '#FF6B8B',
-    leafBase: '#5C946E',
-    leafVein: '#2D593E',
+    leafBase: '#4D8A5E',
+    leafVein: '#254E34',
   },
   golden_bloom: {
     skyTop: '#EA580C',
@@ -61,14 +61,14 @@ const BIOMES = {
     hillFar: '#8B4B62',
     hillNear: '#5E2F45',
     pagoda: '#4A2012',
-    treeBark: '#5C3417',
+    treeBark: '#4A250E',
     foliageShadow: '#B45309',
     foliageMid: '#F59E0B',
     foliageLight: '#FEF08A',
     bridgeRail: '#7C2D12',
     bridgeBase: '#C2410C',
     bridgeFloor: '#9A3412',
-    bridgePillars: '#451A03',
+    bridgePillars: '#331201',
     goldTrim: '#FBBF24',
     lanternGlow: '#FEF9C3',
     petalColor: '#FED7AA',
@@ -85,20 +85,20 @@ const BIOMES = {
     hillFar: '#1E1942',
     hillNear: '#141030',
     pagoda: '#110D26',
-    treeBark: '#211C3D',
+    treeBark: '#171233',
     foliageShadow: '#6B21A8',
     foliageMid: '#A855F7',
-    foliageLight: '#E879F9',
+    foliageLight: '#F0ABFC',
     bridgeRail: '#831843',
     bridgeBase: '#BE185D',
     bridgeFloor: '#9D174D',
-    bridgePillars: '#18122B',
+    bridgePillars: '#120D21',
     goldTrim: '#38BDF8',
     lanternGlow: '#FDE047',
     petalColor: '#E879F9',
     petalCore: '#C084FC',
-    leafBase: '#2DD4BF',
-    leafVein: '#0F766E',
+    leafBase: '#0F766E',
+    leafVein: '#042F2C',
   },
 };
 
@@ -115,8 +115,8 @@ function generateBackgroundBase(palette) {
     <rect width="1080" height="1920" fill="url(#sky)"/>
     <circle cx="820" cy="320" r="110" fill="${palette.sunColor}" opacity=".92"/>
     <!-- Distant Mount Fuji (tall & narrow in SVG so 3.85x horizontal stretch creates majestic mountain silhouette) -->
-    <path d="M420 1350 L475 920 Q485 890 500 890 Q515 890 525 920 L580 1350 Z" fill="${palette.fujiBase}" opacity=".55"/>
-    <path d="M475 920 Q485 890 500 890 Q515 890 525 920 L520 965 Q512 950 500 960 Q488 950 480 965 Z" fill="${palette.fujiSnow}" opacity=".85"/>
+    <path d="M440 1350 L480 940 Q490 910 500 910 Q510 910 520 940 L560 1350 Z" fill="${palette.fujiBase}" opacity=".55"/>
+    <path d="M480 940 Q490 910 500 910 Q510 910 520 940 L516 975 Q509 962 500 970 Q491 962 484 975 Z" fill="${palette.fujiSnow}" opacity=".85"/>
     <!-- Distant 5-Story Pagoda Silhouette on hill -->
     <path d="M720 1280 L736 1280 L736 1250 L742 1250 L732 1238 L724 1250 L730 1250 L730 1215 L738 1215 L728 1205 L718 1215 L724 1215 L724 1180 L734 1180 L726 1170 L716 1180 L722 1180 L722 1150 L728 1130 L726 1150 L720 1280 Z" fill="${palette.pagoda}" opacity=".45"/>
     <!-- Rolling Far Hills (scaled down to y=1920 to eliminate gaps) -->
@@ -126,63 +126,73 @@ function generateBackgroundBase(palette) {
 </svg>`;
 }
 
+function renderTree(trunkX, canopyY, scale, palette) {
+  // Generates an organic gnarled cherry tree with tall billowing cloud lobes
+  // Tall in SVG so 3.85x horizontal stretch creates natural round/fluffy sakura canopies
+  const tw = Math.round(14 * scale);
+  const cx = trunkX;
+  const cy = canopyY;
+  const rw = Math.round(48 * scale);
+  const rh = Math.round(180 * scale);
+
+  return `
+    <!-- Tree Trunk rooted firmly at y=1720 -->
+    <path d="M${cx} 1720 Q${cx - 6} ${cy + 180} ${cx + 4} ${cy + 90}" stroke="${palette.treeBark}" stroke-width="${tw}" fill="none" stroke-linecap="round"/>
+    <path d="M${cx + 4} ${cy + 90} Q${cx - 16} ${cy + 40} ${cx - 24} ${cy}" stroke="${palette.treeBark}" stroke-width="${Math.round(tw * 0.7)}" fill="none" stroke-linecap="round"/>
+    <path d="M${cx + 4} ${cy + 90} Q${cx + 20} ${cy + 40} ${cx + 28} ${cy}" stroke="${palette.treeBark}" stroke-width="${Math.round(tw * 0.65)}" fill="none" stroke-linecap="round"/>
+    <!-- Multi-lobed billowing sakura clouds (tall in SVG -> round on screen) -->
+    <!-- Base shadow volume -->
+    <ellipse cx="${cx - 18}" cy="${cy + 20}" rx="${rw * 0.75}" ry="${rh * 0.7}" fill="${palette.foliageShadow}" opacity=".92"/>
+    <ellipse cx="${cx + 20}" cy="${cy + 22}" rx="${rw * 0.72}" ry="${rh * 0.68}" fill="${palette.foliageShadow}" opacity=".92"/>
+    <ellipse cx="${cx}" cy="${cy - 30}" rx="${rw}" ry="${rh * 0.85}" fill="${palette.foliageShadow}" opacity=".94"/>
+    <!-- Midtone vibrant bloom volume -->
+    <ellipse cx="${cx - 16}" cy="${cy + 12}" rx="${rw * 0.68}" ry="${rh * 0.65}" fill="${palette.foliageMid}" opacity=".95"/>
+    <ellipse cx="${cx + 18}" cy="${cy + 14}" rx="${rw * 0.65}" ry="${rh * 0.62}" fill="${palette.foliageMid}" opacity=".95"/>
+    <ellipse cx="${cx}" cy="${cy - 38}" rx="${rw * 0.92}" ry="${rh * 0.8}" fill="${palette.foliageMid}" opacity=".96"/>
+    <!-- Top highlight petals volume -->
+    <ellipse cx="${cx - 12}" cy="${cy + 2}" rx="${rw * 0.55}" ry="${rh * 0.5}" fill="${palette.foliageLight}" opacity=".88"/>
+    <ellipse cx="${cx + 14}" cy="${cy + 4}" rx="${rw * 0.52}" ry="${rh * 0.48}" fill="${palette.foliageLight}" opacity=".88"/>
+    <ellipse cx="${cx}" cy="${cy - 48}" rx="${rw * 0.75}" ry="${rh * 0.65}" fill="${palette.foliageLight}" opacity=".92"/>
+  `;
+}
+
 function generateMidground(palette) {
   // Trees and bridge anchored at ground level (y ~1654 in SVG is screen ground line)
-  // Gnarled organic Japanese cherry tree trunks branching into clouds of blossoms
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
-    <!-- Tree 1 (Left Fore-Midground): Gnarled trunk rising from ground line -->
-    <path d="M110 1720 Q100 1560 125 1460" stroke="${palette.treeBark}" stroke-width="18" fill="none" stroke-linecap="round"/>
-    <path d="M125 1460 Q90 1400 70 1350" stroke="${palette.treeBark}" stroke-width="12" fill="none" stroke-linecap="round"/>
-    <path d="M125 1460 Q155 1395 180 1350" stroke="${palette.treeBark}" stroke-width="11" fill="none" stroke-linecap="round"/>
-    <path d="M108 1420 Q80 1435 60 1445" stroke="${palette.treeBark}" stroke-width="7" fill="none" stroke-linecap="round"/>
-    <!-- Tree 1 Multi-Cloud Fluffy Sakura Canopy -->
-    <!-- Lower shadow volume -->
-    <path d="M45 1440 C25 1380 30 1290 65 1240 C90 1190 140 1200 165 1250 C195 1240 220 1280 215 1350 C210 1420 170 1470 120 1475 C80 1480 55 1470 45 1440 Z" fill="${palette.foliageShadow}" opacity=".92"/>
-    <!-- Midtone blossom cloud -->
-    <path d="M55 1420 C38 1365 42 1295 72 1250 C95 1205 138 1215 160 1260 C185 1250 208 1290 202 1350 C198 1410 162 1455 118 1460 C82 1465 62 1450 55 1420 Z" fill="${palette.foliageMid}" opacity=".96"/>
-    <!-- Top highlight petals cloud -->
-    <path d="M68 1390 C55 1340 60 1285 85 1250 C105 1220 138 1230 152 1270 C175 1265 190 1300 188 1345 C185 1390 155 1425 120 1430 C90 1435 74 1420 68 1390 Z" fill="${palette.foliageLight}" opacity=".85"/>
+    <!-- Tree 1 (Left Fore-Midground) -->
+    ${renderTree(140, 1380, 1.05, palette)}
 
     <!-- Tree 2 (Mid-Left Distant Tree) -->
-    <path d="M260 1720 Q255 1580 270 1490" stroke="${palette.treeBark}" stroke-width="12" fill="none" stroke-linecap="round"/>
-    <path d="M270 1490 Q245 1430 230 1390" stroke="${palette.treeBark}" stroke-width="8" fill="none" stroke-linecap="round"/>
-    <path d="M270 1490 Q295 1430 315 1390" stroke="${palette.treeBark}" stroke-width="8" fill="none" stroke-linecap="round"/>
-    <!-- Tree 2 Canopy -->
-    <path d="M220 1450 C205 1395 210 1320 240 1280 C265 1240 300 1250 315 1295 C335 1290 350 1330 345 1380 C340 1430 310 1470 275 1475 C245 1480 228 1470 220 1450 Z" fill="${palette.foliageShadow}" opacity=".88"/>
-    <path d="M228 1435 C215 1385 220 1325 245 1290 C268 1255 298 1262 310 1302 C328 1298 340 1332 336 1378 C332 1420 305 1455 275 1460 C248 1465 235 1452 228 1435 Z" fill="${palette.foliageMid}" opacity=".92"/>
+    ${renderTree(340, 1420, 0.75, palette)}
+
+    <!-- Traditional Taiko-bashi Arched Bridge (centered, steep traditional arch) -->
+    <!-- Pillars descending deep into ground/water level -->
+    <path d="M508 1720 L508 1630 M524 1720 L524 1585 M540 1720 L540 1565 M556 1720 L556 1585 M572 1720 L572 1630" stroke="${palette.bridgePillars}" stroke-width="6" stroke-linecap="round"/>
+    <!-- Vermillion Lacquer Arched Deck Beam -->
+    <path d="M495 1665 Q540 1530 585 1665" stroke="${palette.bridgeFloor}" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <path d="M497 1660 Q540 1535 583 1660" stroke="${palette.bridgeBase}" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <!-- Railing Arc -->
+    <path d="M500 1630 Q540 1500 580 1630" stroke="${palette.bridgeRail}" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <!-- Railing Vertical Posts -->
+    <path d="M508 1645 L508 1608 M520 1625 L520 1572 M532 1610 L532 1548 M540 1605 L540 1540 M548 1610 L548 1548 M560 1625 L560 1572 M572 1645 L572 1608" stroke="${palette.bridgeRail}" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Golden Finials (Giboshi) atop the bridge posts -->
+    <circle cx="508" cy="1606" r="3.2" fill="${palette.goldTrim}"/>
+    <circle cx="520" cy="1570" r="3.4" fill="${palette.goldTrim}"/>
+    <circle cx="532" cy="1546" r="3.6" fill="${palette.goldTrim}"/>
+    <circle cx="540" cy="1538" r="4.0" fill="${palette.goldTrim}"/>
+    <circle cx="548" cy="1546" r="3.6" fill="${palette.goldTrim}"/>
+    <circle cx="560" cy="1570" r="3.4" fill="${palette.goldTrim}"/>
+    <circle cx="572" cy="1606" r="3.2" fill="${palette.goldTrim}"/>
+    <!-- Little Stone Lantern (Tōrō) on ground next to bridge -->
+    <path d="M480 1720 L480 1655 L475 1650 L485 1650 Z" fill="${palette.treeBark}"/>
+    <rect x="476" y="1638" width="8" height="12" rx="2" fill="${palette.lanternGlow}" opacity=".9"/>
+    <path d="M473 1638 L487 1638 L480 1630 Z" fill="${palette.treeBark}"/>
 
     <!-- Tree 3 (Right Midground Tree) -->
-    <path d="M880 1720 Q890 1560 865 1460" stroke="${palette.treeBark}" stroke-width="18" fill="none" stroke-linecap="round"/>
-    <path d="M865 1460 Q830 1400 810 1350" stroke="${palette.treeBark}" stroke-width="12" fill="none" stroke-linecap="round"/>
-    <path d="M865 1460 Q895 1395 920 1350" stroke="${palette.treeBark}" stroke-width="11" fill="none" stroke-linecap="round"/>
-    <path d="M875 1420 Q900 1435 925 1445" stroke="${palette.treeBark}" stroke-width="7" fill="none" stroke-linecap="round"/>
-    <!-- Tree 3 Multi-Cloud Fluffy Sakura Canopy -->
-    <path d="M785 1440 C765 1380 770 1290 805 1240 C830 1190 880 1200 905 1250 C935 1240 960 1280 955 1350 C950 1420 910 1470 860 1475 C820 1480 795 1470 785 1440 Z" fill="${palette.foliageShadow}" opacity=".92"/>
-    <path d="M795 1420 C778 1365 782 1295 812 1250 C835 1205 878 1215 900 1260 C925 1250 948 1290 942 1350 C938 1410 902 1455 858 1460 C822 1465 802 1450 795 1420 Z" fill="${palette.foliageMid}" opacity=".96"/>
-    <path d="M808 1390 C795 1340 800 1285 825 1250 C845 1220 878 1230 892 1270 C915 1265 930 1300 928 1345 C925 1390 895 1425 860 1430 C830 1435 814 1420 808 1390 Z" fill="${palette.foliageLight}" opacity=".85"/>
+    ${renderTree(780, 1400, 0.95, palette)}
 
-    <!-- Traditional Taiko-bashi Arched Bridge (grounded firmly at y ~1654) -->
-    <!-- Sturdy Wooden Posts descending into water/ground -->
-    <path d="M485 1720 L485 1635 M512 1720 L512 1608 M540 1720 L540 1595 M568 1720 L568 1608 M595 1720 L595 1635" stroke="${palette.bridgePillars}" stroke-width="7" stroke-linecap="round"/>
-    <!-- Vermillion Lacquer Arched Deck Beam -->
-    <path d="M465 1665 Q540 1565 615 1665" stroke="${palette.bridgeFloor}" stroke-width="16" fill="none" stroke-linecap="round"/>
-    <path d="M468 1660 Q540 1570 612 1660" stroke="${palette.bridgeBase}" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <!-- Upper Railing -->
-    <path d="M472 1632 Q540 1538 608 1632" stroke="${palette.bridgeRail}" stroke-width="5" fill="none" stroke-linecap="round"/>
-    <!-- Railing Vertical Posts -->
-    <path d="M482 1650 L482 1618 M502 1632 L502 1595 M522 1618 L522 1578 M540 1612 L540 1572 M558 1618 L558 1578 M578 1632 L578 1595 M598 1650 L598 1618" stroke="${palette.bridgeRail}" stroke-width="4" stroke-linecap="round"/>
-    <!-- Golden Finials (Giboshi) atop the bridge posts -->
-    <circle cx="482" cy="1616" r="3.5" fill="${palette.goldTrim}"/>
-    <circle cx="502" cy="1593" r="3.5" fill="${palette.goldTrim}"/>
-    <circle cx="522" cy="1576" r="3.8" fill="${palette.goldTrim}"/>
-    <circle cx="540" cy="1570" r="4.2" fill="${palette.goldTrim}"/>
-    <circle cx="558" cy="1576" r="3.8" fill="${palette.goldTrim}"/>
-    <circle cx="578" cy="1593" r="3.5" fill="${palette.goldTrim}"/>
-    <circle cx="598" cy="1616" r="3.5" fill="${palette.goldTrim}"/>
-    <!-- Little Stone Lantern (Tōrō) on ground mound next to bridge -->
-    <path d="M440 1720 L440 1655 L435 1650 L445 1650 Z" fill="${palette.treeBark}"/>
-    <rect x="435" y="1638" width="10" height="12" rx="2" fill="${palette.lanternGlow}" opacity=".9"/>
-    <path d="M432 1638 L448 1638 L440 1630 Z" fill="${palette.treeBark}"/>
+    <!-- Tree 4 (Far Right Small Tree) -->
+    ${renderTree(960, 1430, 0.7, palette)}
 </svg>`;
 }
 

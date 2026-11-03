@@ -8,8 +8,8 @@
     <rect width="1080" height="1920" fill="url(#sky)"/>
     <circle cx="820" cy="320" r="110" fill="#FFF0B5" opacity=".92"/>
     <!-- Distant Mount Fuji (tall & narrow in SVG so 3.85x horizontal stretch creates majestic mountain silhouette) -->
-    <path d="M420 1350 L475 920 Q485 890 500 890 Q515 890 525 920 L580 1350 Z" fill="#8AAEA5" opacity=".55"/>
-    <path d="M475 920 Q485 890 500 890 Q515 890 525 920 L520 965 Q512 950 500 960 Q488 950 480 965 Z" fill="#FFFFFF" opacity=".85"/>
+    <path d="M440 1350 L480 940 Q490 910 500 910 Q510 910 520 940 L560 1350 Z" fill="#8AAEA5" opacity=".55"/>
+    <path d="M480 940 Q490 910 500 910 Q510 910 520 940 L516 975 Q509 962 500 970 Q491 962 484 975 Z" fill="#FFFFFF" opacity=".85"/>
     <!-- Distant 5-Story Pagoda Silhouette on hill -->
     <path d="M720 1280 L736 1280 L736 1250 L742 1250 L732 1238 L724 1250 L730 1250 L730 1215 L738 1215 L728 1205 L718 1215 L724 1215 L724 1180 L734 1180 L726 1170 L716 1180 L722 1180 L722 1150 L728 1130 L726 1150 L720 1280 Z" fill="#4A2F35" opacity=".45"/>
     <!-- Rolling Far Hills (scaled down to y=1920 to eliminate gaps) -->
