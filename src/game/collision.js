@@ -103,3 +103,21 @@ export function checkPairScored(playerX, pair) {
   const pairRightEdge = pair.x + pair.width;
   return playerX > pairRightEdge;
 }
+
+/**
+ * Checks if Cherry collects a BOBUX coin attached to an obstacle pair.
+ * Uses a slightly expanded hitbox (+4dp margin) for responsive touch collecting.
+ */
+export function checkBobuxCollection(playerBox, pair) {
+  if (!pair || !pair.bobux || pair.bobux.collected) return false;
+  const coin = pair.bobux;
+  const margin = 4;
+  const currentX = coin.x !== undefined ? coin.x : (pair.x + (coin.relativeX || 0));
+  const coinBox = {
+    x: currentX - margin,
+    y: coin.y - margin,
+    width: coin.size + margin * 2,
+    height: coin.size + margin * 2,
+  };
+  return intersects(playerBox, coinBox);
+}

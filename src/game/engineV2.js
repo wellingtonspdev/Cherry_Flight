@@ -1,5 +1,5 @@
 import { GAME } from './constants.js';
-import { checkCollision, checkPairScored, getPlayerHitbox } from './collision.js';
+import { checkCollision, checkPairScored, checkBobuxCollection, getPlayerHitbox } from './collision.js';
 import { LEVEL_CONFIG } from './levelConfigV2.js';
 
 export const CHAPTERS = LEVEL_CONFIG.chapters;
@@ -55,10 +55,21 @@ function prepareFuture(round, random) {
   const candidateVariant = Math.floor(clamp(random(), 0, 0.999999) * 6);
   const variant = candidateVariant === round.lastVariant ? (candidateVariant + 1) % 6 : candidateVariant;
   round.lastVariant = variant;
+  const bobuxSize = 28;
+  const bobuxRelativeX = (p.width - bobuxSize) / 2;
+  // Spawn bobux on ~65% of obstacles after the opening gate
+  const hasBobux = round.nextWorldX > round.width * 1.3 && clamp(random(), 0, 1) < 0.65;
+  const bobux = hasBobux ? {
+    x: round.nextWorldX - round.distance + bobuxRelativeX,
+    relativeX: bobuxRelativeX,
+    y: center - bobuxSize / 2,
+    size: bobuxSize,
+    collected: false,
+  } : null;
   const pair = {
     worldX: round.nextWorldX, x: round.nextWorldX - round.distance,
     center, previousCenter, gapY: center - p.gapSize / 2, gapSize: p.gapSize,
-    width: p.width, variant,
+    width: p.width, variant, bobux,
     biome: round.biome, scored: false, visible: false, preparedAt: Date.now(),
   };
   round.nextWorldX += p.spacing;
@@ -73,7 +84,7 @@ export function createRound({ width, height, levelId = 1, endless = false }, ran
   const params = resolveDifficulty(levelId, width, height, 0, endless);
   const round = {
     width, height, levelId: level.id, endless, biome: level.assetKit, params,
-    status: 'READY', score: 0, elapsed: 0, distance: 0, collision: null,
+    status: 'READY', score: 0, bobuxCount: 0, elapsed: 0, distance: 0, collision: null,
     player: { x: Math.round(width * GAME.playerXRatio), y: height * 0.5 - GAME.playerSize / 2, velocity: 0 },
     pairs: [], future: [], events: [], metrics: [],
     lastCenter: height / 2, nextWorldX: width * 1.1, ramp: 0,
@@ -94,10 +105,17 @@ export function advancePairs(round, dt, random = Math.random) {
   round.distance += round.params.speed * dt;
   for (const pair of round.pairs) {
     pair.x = pair.worldX - round.distance;
+    if (pair.bobux) {
+      pair.bobux.x = pair.x + pair.bobux.relativeX;
+    }
     if (pair.x + pair.width < -24) {
       const id = pair.id, epoch = pair.epoch + 1;
       Object.assign(pair, round.future.shift(), { id, epoch });
       pair.x = pair.worldX - round.distance;
+      if (pair.bobux) {
+        pair.bobux.collected = false;
+        pair.bobux.x = pair.x + pair.bobux.relativeX;
+      }
       round.future.push(prepareFuture(round, random));
       round.events.push({ type: 'recycle', pair });
     }
@@ -125,6 +143,11 @@ export function stepRound(round, rawDt, random = Math.random) {
     return round;
   }
   for (const pair of round.pairs) {
+    if (checkBobuxCollection(box, pair)) {
+      pair.bobux.collected = true;
+      round.bobuxCount = (round.bobuxCount || 0) + 1;
+      round.events.push({ type: 'bobux', count: round.bobuxCount, pairId: pair.id });
+    }
     if (checkPairScored(box.x, pair)) {
       pair.scored = true; round.score++;
       round.events.push({ type: 'score', score: round.score });
