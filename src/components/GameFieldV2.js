@@ -76,7 +76,7 @@ export default function GameFieldV2({ navigation, route }) {
         if (cancelled) return;
         await preloadChapter(next.biome, width, height, endless);
         if (cancelled) return;
-        await audioManager.prepare(next.biome);
+        await audioManager.prepare(next.audioTheme || next.biome);
         if (cancelled) return;
         roundRef.current = next;
         setScore(0); setBobuxCount(0); setSeconds(0); shownSeconds.current = 0; setBiome(next.biome); distance.setValue(0);

@@ -56,9 +56,14 @@ test('Bobux collection SFX is configured and playable with dedicated volume', as
   assert.equal(service.snapshot().events.at(-1)?.event, 'bobux');
 });
 
-test('Audio assets contain 5 extended multi-track themes and 10 arcade kawaii SFX as valid WAV files', () => {
+test('Audio assets contain 12 unique extended level themes and 10 arcade kawaii SFX as valid WAV files', async () => {
   const rootAudio = path.resolve('assets/v2/audio');
-  const expectedMusic = ['first_bloom', 'sakura_garden', 'golden_bloom', 'yozakura', 'lofi_garden'];
+  const expectedMusic = [
+    'first_bloom', 'ye_flashing_lights', 'ye_ghost_town',
+    'sakura_garden', 'ye_stronger', 'eots_we_are_the_people',
+    'golden_bloom', 'ye_father_stretch', 'ye_heartless',
+    'yozakura', 'lofi_garden', 'ye_runaway',
+  ];
   const expectedSfx = ['ui', 'jump', 'bobux', 'score', 'collision', 'checkpoint', 'complete', 'unlock', 'pause', 'resume'];
 
   for (const name of expectedMusic) {
@@ -78,5 +83,12 @@ test('Audio assets contain 5 extended multi-track themes and 10 arcade kawaii SF
 
   const sourcesContent = fs.readFileSync(path.resolve('src/game/audioSourcesV2.js'), 'utf8');
   assert.ok(sourcesContent.includes("bobux: require('../../assets/v2/audio/sfx_bobux.wav')"), 'bobux SFX must be declared in audioSourcesV2.js');
-  assert.ok(sourcesContent.includes("lofi_garden: require('../../assets/v2/audio/lofi_garden.wav')"), 'lofi_garden BGM must be declared in audioSourcesV2.js');
+  for (const name of expectedMusic) {
+    assert.ok(sourcesContent.includes(`${name}: require('../../assets/v2/audio/${name}.wav')`), `${name} must be declared in audioSourcesV2.js`);
+  }
+
+  const configModule = await import('../src/game/levelConfigV2.js');
+  const levelThemes = configModule.LEVEL_CONFIG.levels.map(l => l.audioTheme);
+  assert.equal(levelThemes.length, 12, '12 levels must be configured');
+  assert.equal(new Set(levelThemes).size, 12, 'All 12 levels must have unique non-repeated soundtracks');
 });

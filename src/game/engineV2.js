@@ -83,7 +83,7 @@ export function createRound({ width, height, levelId = 1, endless = false }, ran
   const level = LEVELS.find(l => l.id === Number(levelId));
   const params = resolveDifficulty(levelId, width, height, 0, endless);
   const round = {
-    width, height, levelId: level.id, endless, biome: level.assetKit, params,
+    width, height, levelId: level.id, endless, biome: level.assetKit, audioTheme: level.audioTheme || level.assetKit, params,
     status: 'READY', score: 0, bobuxCount: 0, elapsed: 0, distance: 0, collision: null,
     player: { x: Math.round(width * GAME.playerXRatio), y: height * 0.5 - GAME.playerSize / 2, velocity: 0 },
     pairs: [], future: [], events: [], metrics: [],

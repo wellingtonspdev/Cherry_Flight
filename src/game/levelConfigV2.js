@@ -74,7 +74,7 @@ export const LEVEL_CONFIG = {
       },
       "obstaclePoolSize": 4,
       "prewarmPairs": 3,
-      "audioTheme": "first_bloom",
+      "audioTheme": "ye_flashing_lights",
       "assetKit": "first_bloom",
       "checkpointOnComplete": true
     },
@@ -93,7 +93,7 @@ export const LEVEL_CONFIG = {
       },
       "obstaclePoolSize": 4,
       "prewarmPairs": 3,
-      "audioTheme": "first_bloom",
+      "audioTheme": "ye_ghost_town",
       "assetKit": "first_bloom",
       "checkpointOnComplete": true
     },
@@ -131,7 +131,7 @@ export const LEVEL_CONFIG = {
       },
       "obstaclePoolSize": 4,
       "prewarmPairs": 3,
-      "audioTheme": "sakura_garden",
+      "audioTheme": "ye_stronger",
       "assetKit": "sakura_garden",
       "checkpointOnComplete": true
     },
@@ -150,7 +150,7 @@ export const LEVEL_CONFIG = {
       },
       "obstaclePoolSize": 4,
       "prewarmPairs": 3,
-      "audioTheme": "sakura_garden",
+      "audioTheme": "eots_we_are_the_people",
       "assetKit": "sakura_garden",
       "checkpointOnComplete": true
     },
@@ -188,7 +188,7 @@ export const LEVEL_CONFIG = {
       },
       "obstaclePoolSize": 5,
       "prewarmPairs": 3,
-      "audioTheme": "golden_bloom",
+      "audioTheme": "ye_father_stretch",
       "assetKit": "golden_bloom",
       "checkpointOnComplete": true
     },
@@ -207,7 +207,7 @@ export const LEVEL_CONFIG = {
       },
       "obstaclePoolSize": 5,
       "prewarmPairs": 3,
-      "audioTheme": "golden_bloom",
+      "audioTheme": "ye_heartless",
       "assetKit": "golden_bloom",
       "checkpointOnComplete": true
     },
@@ -245,7 +245,7 @@ export const LEVEL_CONFIG = {
       },
       "obstaclePoolSize": 5,
       "prewarmPairs": 3,
-      "audioTheme": "yozakura",
+      "audioTheme": "lofi_garden",
       "assetKit": "yozakura",
       "checkpointOnComplete": true
     },
@@ -264,7 +264,7 @@ export const LEVEL_CONFIG = {
       },
       "obstaclePoolSize": 5,
       "prewarmPairs": 3,
-      "audioTheme": "yozakura",
+      "audioTheme": "ye_runaway",
       "assetKit": "yozakura",
       "checkpointOnComplete": true
     }
