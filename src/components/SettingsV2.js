@@ -28,8 +28,8 @@ export default function SettingsV2({ navigation }) {
 
           <View style={styles.settingsList}>
             {[
-              ['music', 'Música', 'Trilha sonora relaxante'],
-              ['sfx', 'Efeitos Sonoros (SFX)', 'Sons de salto e colisão'],
+              ['music', 'Música do Jogo', 'Desligue para ouvir seu Spotify / app de música'],
+              ['sfx', 'Efeitos Sonoros (SFX)', 'Sons táteis (tocam junto do seu app de música)'],
               ['haptics', 'Vibração Tátil', 'Feedback nos saltos'],
             ].map(([key, label, desc]) => (
               <View key={key} style={styles.row}>
@@ -47,6 +47,12 @@ export default function SettingsV2({ navigation }) {
                 />
               </View>
             ))}
+          </View>
+
+          <View style={styles.tipBox}>
+            <Text style={styles.tipText}>
+              🎧 <Text style={styles.tipBold}>Dica:</Text> Desligue a "Música do Jogo" para curtir suas playlists no Spotify ou YouTube Music enquanto joga. Seus pulos e moedas continuam soando normalmente!
+            </Text>
           </View>
 
           {!!warning && <Text style={styles.warningText}>{warning}</Text>}
@@ -141,6 +147,24 @@ const styles = StyleSheet.create({
     fontFamily: typography.fontFamily.body,
     color: colors.cherry700,
     textAlign: 'center',
+  },
+  tipBox: {
+    backgroundColor: '#F3EFEA',
+    borderRadius: radius.md,
+    padding: 10,
+    borderWidth: 1,
+    borderColor: '#E2D7CC',
+  },
+  tipText: {
+    fontSize: 11,
+    lineHeight: 15,
+    fontFamily: typography.fontFamily.body,
+    color: colors.ink700,
+    textAlign: 'center',
+  },
+  tipBold: {
+    fontWeight: '800',
+    color: colors.cherry700,
   },
   homeBtn: {
     width: '100%',

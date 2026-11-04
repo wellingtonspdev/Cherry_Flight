@@ -56,16 +56,16 @@ test('Bobux collection SFX is configured and playable with dedicated volume', as
   assert.equal(service.snapshot().events.at(-1)?.event, 'bobux');
 });
 
-test('Audio assets contain 4 multi-track themes and 10 arcade kawaii SFX as valid WAV files', () => {
+test('Audio assets contain 5 extended multi-track themes and 10 arcade kawaii SFX as valid WAV files', () => {
   const rootAudio = path.resolve('assets/v2/audio');
-  const expectedMusic = ['first_bloom', 'sakura_garden', 'golden_bloom', 'yozakura'];
+  const expectedMusic = ['first_bloom', 'sakura_garden', 'golden_bloom', 'yozakura', 'lofi_garden'];
   const expectedSfx = ['ui', 'jump', 'bobux', 'score', 'collision', 'checkpoint', 'complete', 'unlock', 'pause', 'resume'];
 
   for (const name of expectedMusic) {
     const filePath = path.join(rootAudio, `${name}.wav`);
     assert.ok(fs.existsSync(filePath), `Missing music file: ${name}.wav`);
     const stats = fs.statSync(filePath);
-    assert.ok(stats.size > 200000, `BGM ${name}.wav should be a multi-track loop (>200KB), got ${stats.size} bytes`);
+    assert.ok(stats.size > 1500000, `BGM ${name}.wav should be an extended loop (>1.5MB), got ${stats.size} bytes`);
   }
 
   for (const name of expectedSfx) {
@@ -78,4 +78,5 @@ test('Audio assets contain 4 multi-track themes and 10 arcade kawaii SFX as vali
 
   const sourcesContent = fs.readFileSync(path.resolve('src/game/audioSourcesV2.js'), 'utf8');
   assert.ok(sourcesContent.includes("bobux: require('../../assets/v2/audio/sfx_bobux.wav')"), 'bobux SFX must be declared in audioSourcesV2.js');
+  assert.ok(sourcesContent.includes("lofi_garden: require('../../assets/v2/audio/lofi_garden.wav')"), 'lofi_garden BGM must be declared in audioSourcesV2.js');
 });

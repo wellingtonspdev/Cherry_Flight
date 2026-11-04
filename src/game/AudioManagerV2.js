@@ -1,8 +1,20 @@
-import { createAudioPlayer } from 'expo-audio';
+import { createAudioPlayer, setAudioModeAsync } from 'expo-audio';
 import { Asset } from 'expo-asset';
 import { Platform } from 'react-native';
 import { createAudioService } from './audioServiceV2';
 import { AUDIO_SOURCES } from './audioSourcesV2';
+
+// Enable non-exclusive background mixing so external music (Spotify, Apple Music) is NEVER interrupted
+if (Platform.OS !== 'web' && typeof setAudioModeAsync === 'function') {
+  try {
+    setAudioModeAsync({
+      playsInSilentMode: true,
+      interruptionMode: 'mixWithOthers',
+    }).catch(() => {});
+  } catch {
+    // fail open
+  }
+}
 
 function createPlayer(source) {
   if (Platform.OS !== 'web') return createAudioPlayer(source, { updateInterval: 250 });

@@ -4,6 +4,7 @@ export const AUDIO_SOURCES = {
     sakura_garden: require('../../assets/v2/audio/sakura_garden.wav'),
     golden_bloom: require('../../assets/v2/audio/golden_bloom.wav'),
     yozakura: require('../../assets/v2/audio/yozakura.wav'),
+    lofi_garden: require('../../assets/v2/audio/lofi_garden.wav'),
   },
   sfx: {
     ui: require('../../assets/v2/audio/ui.wav'), jump: require('../../assets/v2/audio/jump.wav'),
