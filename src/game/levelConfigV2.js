@@ -253,12 +253,12 @@ export const LEVEL_CONFIG = {
       "id": 12,
       "chapter": "yozakura",
       "chapterName": "Yozakura",
-      "targetScore": 22,
+      "targetScore": 60,
       "difficulty": {
-        "gapRatio": 0.28,
-        "speedWidthPerSecond": 0.5,
-        "spacingWidthRatio": 0.51,
-        "maxGapCenterDeltaRatio": 0.17,
+        "gapRatio": 0.31,
+        "speedWidthPerSecond": 0.46,
+        "spacingWidthRatio": 0.56,
+        "maxGapCenterDeltaRatio": 0.15,
         "minTopMarginRatio": 0.12,
         "minBottomMarginRatio": 0.12
       },

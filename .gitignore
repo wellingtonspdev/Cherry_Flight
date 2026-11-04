@@ -23,6 +23,8 @@ audit-evidence/*.b64
 .env*
 Cherry_Bloom_V2_Handoff/
 .superpowers/
+__pycache__/
+*.pyc
 
 .vercel
 .env*

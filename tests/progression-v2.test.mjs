@@ -28,7 +28,7 @@ test('All twelve configured completions unlock Endless and retain per-level best
   }
   assert.equal(data.highestUnlockedLevel, 12);
   assert.equal(Object.values(data.levelResults).filter(v => v.completed).length, 12);
-  data = p.recordAttempt(data, 12, 3); assert.equal(data.levelResults[12].bestScore, 22);
+  data = p.recordAttempt(data, 12, 3); assert.equal(data.levelResults[12].bestScore, LEVEL_CONFIG.levels.find(l => l.id === 12).targetScore);
   data = p.recordAttempt(data, 'endless', 47); assert.equal(data.levelResults.endless.bestScore, 47);
 });
 

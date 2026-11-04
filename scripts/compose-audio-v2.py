@@ -1038,38 +1038,68 @@ def render_lofi_garden():
                     out[hn + i] += sample_hihat(i / RATE, NOISE_TABLE) * 0.16
     write_wav(ROOT / 'lofi_garden.wav', out)
 
-# Level 12 (Grand Finale): "Runaway" (Kanye West feat. Pusha T) - 85 BPM (~45.2s)
+def synth_vocoder_guitar(freq, t, dur, glide_f=None):
+    """Distorted singing vocoder / electric guitar lead (Runaway Climax Solo)."""
+    if t < 0 or t >= dur:
+        return 0.0
+    env = min(1.0, t / 0.02) * max(0.0, 1.0 - t / dur) ** 0.55
+    cur_f = freq
+    if glide_f is not None:
+        p = min(1.0, t / (dur * 0.35))
+        cur_f = freq * (1.0 - p) + glide_f * p
+    vib = 1.0 + 0.012 * math.sin(2 * math.pi * 5.2 * t) if t > 0.09 else 1.0
+    f = cur_f * vib
+    # Saturated vocal-synthesizer / tube guitar waveform
+    tone = math.sin(2 * math.pi * f * t) + 0.62 * math.sin(4 * math.pi * f * t) + 0.42 * math.sin(6 * math.pi * f * t)
+    fuzz = soft_clip(tone * 2.6)
+    throat = 0.25 * math.sin(2 * math.pi * 1280.0 * t) * math.exp(-2.2 * t / dur)
+    return env * (fuzz * 0.72 + throat) * 0.42
+
+# Level 12 (Grand Finale): "Runaway" (Kanye West feat. Pusha T) - 85 BPM (~90.4s)
 def render_ye_runaway():
     bpm = 85.0
     beat = 60.0 / bpm
-    total_beats = 64
+    total_beats = 128  # 32 Full Bars - Complete Masterpiece Progression
     total_dur = total_beats * beat
     num_samples = round(total_dur * RATE)
     out = [0.0] * num_samples
 
-    # The Immortal Single E6 High Piano Note (MIDI 88) opening, stepping down
-    runaway_piano = [
-        # Bar 1-4: The iconic single note hammer
+    # 1. The Immortal High Piano Note (E6 = MIDI 88) & Melodic Motif
+    # Bars 1-4 (Solo hammer), Bars 5-8 (Descent), Bars 9-16 (With Strings),
+    # Bars 17-24 (With Drums/808), Bars 25-32 (With Vocoder Guitar Solo)
+    piano_pattern = [
+        # Bars 1-4: The iconic solitary single E6 note
         (0.0, 88, 0.8), (1.0, 88, 0.8), (2.0, 88, 0.8), (3.0, 88, 0.8),
         (4.0, 88, 0.8), (5.0, 88, 0.8), (6.0, 88, 0.8), (7.0, 88, 0.8),
         (8.0, 88, 0.8), (9.0, 88, 0.8), (10.0, 88, 0.8), (11.0, 88, 0.8),
-        (12.0, 88, 0.8), (13.0, 88, 0.8), (14.0, 88, 0.8), (15.0, 88, 0.8),
-        # Bar 5-8: Progression kicks in (E -> C#m -> A -> B)
+        (12.0, 88, 0.8), (13.0, 88, 0.8), (14.0, 88, 0.8),
+        # Bars 5-8: The stepping down phrase (E -> C#m -> A -> B)
         (16.0, 88, 0.8), (17.0, 88, 0.8), (18.0, 85, 0.8), (19.0, 83, 0.8),
         (20.0, 81, 0.8), (21.0, 80, 0.8), (22.0, 76, 0.8), (23.0, 73, 0.8),
         (24.0, 88, 0.8), (25.0, 88, 0.8), (26.0, 85, 0.8), (27.0, 83, 0.8),
         (28.0, 81, 0.8), (29.0, 80, 0.8), (30.0, 76, 0.8), (31.0, 75, 0.8),
-        # Bar 9-16: Full majestic climax
-        (32.0, 88, 0.8), (33.0, 88, 0.8), (34.0, 88, 0.8), (35.0, 88, 0.8),
-        (36.0, 88, 0.8), (37.0, 88, 0.8), (38.0, 85, 0.8), (39.0, 83, 0.8),
-        (40.0, 81, 0.8), (41.0, 80, 0.8), (42.0, 76, 0.8), (43.0, 73, 0.8),
-        (44.0, 88, 0.8), (45.0, 88, 0.8), (46.0, 85, 0.8), (47.0, 83, 0.8),
-        (48.0, 88, 0.8), (49.0, 88, 0.8), (50.0, 88, 0.8), (51.0, 88, 0.8),
-        (52.0, 88, 0.8), (53.0, 88, 0.8), (54.0, 85, 0.8), (55.0, 83, 0.8),
-        (56.0, 81, 0.8), (57.0, 80, 0.8), (58.0, 76, 0.8), (59.0, 73, 0.8),
-        (60.0, 88, 0.8), (61.0, 88, 0.8), (62.0, 85, 0.8), (63.0, 83, 0.8),
     ]
-    for p_beat, note, dur_b in runaway_piano:
+    # Bars 9-16 & Bars 17-24 & Bars 25-32: Full descending motif with octave reinforcements
+    for cycle in range(3):
+        cycle_offset = 32.0 + cycle * 32.0
+        pattern_descent = [
+            (0.0, 88, 0.8), (1.0, 88, 0.8), (2.0, 85, 0.8), (3.0, 83, 0.8),
+            (4.0, 81, 0.8), (5.0, 80, 0.8), (6.0, 76, 0.8), (7.0, 73, 0.8),
+            (8.0, 88, 0.8), (9.0, 88, 0.8), (10.0, 85, 0.8), (11.0, 83, 0.8),
+            (12.0, 81, 0.8), (13.0, 80, 0.8), (14.0, 76, 0.8), (15.0, 75, 0.8),
+            (16.0, 88, 0.8), (17.0, 88, 0.8), (18.0, 85, 0.8), (19.0, 83, 0.8),
+            (20.0, 81, 0.8), (21.0, 80, 0.8), (22.0, 76, 0.8), (23.0, 73, 0.8),
+            (24.0, 88, 0.8), (25.0, 88, 0.8), (26.0, 85, 0.8), (27.0, 83, 0.8),
+            (28.0, 81, 0.8), (29.0, 80, 0.8), (30.0, 76, 0.8), (31.0, 75, 0.8),
+        ]
+        for p_beat, note, dur_b in pattern_descent:
+            if cycle_offset + p_beat < total_beats:
+                piano_pattern.append((cycle_offset + p_beat, note, dur_b))
+                # Add lower octave for depth in heavy sections
+                if cycle >= 1:
+                    piano_pattern.append((cycle_offset + p_beat, note - 12, dur_b))
+
+    for p_beat, note, dur_b in piano_pattern:
         start_t = p_beat * beat
         freq = midi_to_freq(note)
         dur = dur_b * beat
@@ -1077,54 +1107,99 @@ def render_ye_runaway():
         n_len = round(dur * RATE)
         for i in range(n_len):
             if n_start + i < num_samples:
-                out[n_start + i] += synth_piano(freq, i / RATE, dur) * 0.38
+                out[n_start + i] += synth_piano(freq, i / RATE, dur) * 0.35
 
-    # Majestic Cello / String Chords (E -> C#m -> A -> B) from Bar 5 onwards
-    runaway_strings = [
-        (16.0, [52, 59, 64, 68]), (20.0, [49, 56, 61, 64]),
-        (24.0, [45, 52, 57, 61]), (28.0, [47, 51, 54, 59]),
-        (32.0, [52, 59, 64, 68]), (36.0, [49, 56, 61, 64]),
-        (40.0, [45, 52, 57, 61]), (44.0, [47, 51, 54, 59]),
-        (48.0, [52, 59, 64, 68]), (52.0, [49, 56, 61, 64]),
-        (56.0, [45, 52, 57, 61]), (60.0, [47, 51, 54, 59]),
+    # 2. Majestic Orchestral Chamber Strings & Cello (From Bar 9 / Beat 32 onwards)
+    # E -> C#m -> A -> B
+    strings_chords = [
+        (32.0, [40, 47, 52, 56, 59]), (36.0, [37, 44, 49, 52, 56]),
+        (40.0, [33, 40, 45, 49, 52]), (44.0, [35, 42, 47, 51, 54]),
+        (48.0, [40, 47, 52, 56, 59]), (52.0, [37, 44, 49, 52, 56]),
+        (56.0, [33, 40, 45, 49, 52]), (60.0, [35, 42, 47, 51, 54]),
+        # Bars 17-24 (With Beat)
+        (64.0, [40, 47, 52, 56, 59]), (68.0, [37, 44, 49, 52, 56]),
+        (72.0, [33, 40, 45, 49, 52]), (76.0, [35, 42, 47, 51, 54]),
+        (80.0, [40, 47, 52, 56, 59]), (84.0, [37, 44, 49, 52, 56]),
+        (88.0, [33, 40, 45, 49, 52]), (92.0, [35, 42, 47, 51, 54]),
+        # Bars 25-32 (Climax)
+        (96.0, [40, 47, 52, 56, 59, 64]), (100.0, [37, 44, 49, 52, 56, 61]),
+        (104.0, [33, 40, 45, 49, 52, 57]), (108.0, [35, 42, 47, 51, 54, 59]),
+        (112.0, [40, 47, 52, 56, 59, 64]), (116.0, [37, 44, 49, 52, 56, 61]),
+        (120.0, [33, 40, 45, 49, 52, 57]), (124.0, [35, 42, 47, 51, 54, 59]),
     ]
-    for start_beat, notes in runaway_strings:
+    for start_beat, notes in strings_chords:
         start_t = start_beat * beat
-        dur = beat * 3.9
+        dur = beat * 3.92
         for note in notes:
             freq = midi_to_freq(note)
             n_start = round(start_t * RATE)
             n_len = round(dur * RATE)
             for i in range(n_len):
                 if n_start + i < num_samples:
-                    out[n_start + i] += synth_strings(freq, i / RATE, dur) * 0.26
+                    out[n_start + i] += synth_strings(freq, i / RATE, dur) * 0.24
 
-    # Heavy Distorted Boom-Bap Drums & Bass (Bars 9-16)
-    for bar in range(8, 16):
+    # 3. Rick Rubin Boom-Bap Drums & Heavy 808 Sub-Bass (Bars 17-32 / Beats 64 to 128)
+    for bar in range(16, 32):
         bb = bar * 4
-        # Heavy distorted kick
+        # Heavy distorted kick on 0.0 and 2.5
         for ko in [0.0, 2.5]:
             kn = round((bb + ko) * beat * RATE)
             for i in range(round(0.24 * RATE)):
                 if kn + i < num_samples:
-                    out[kn + i] += sample_kick(i / RATE) * 0.48
-            roots = [40, 37, 33, 35]
-            freq = midi_to_freq(roots[bar % 4])
-            for i in range(round(beat * 1.5 * RATE)):
+                    out[kn + i] += sample_kick(i / RATE) * 0.50
+            # 808 sub bass rumbling on root notes [E, C#, A, B]
+            roots = [28, 25, 21, 23]
+            root = roots[bar % 4]
+            freq = midi_to_freq(root + 12)  # E1, C#1, A0, B0 pitched for audible punch
+            for i in range(round(beat * 1.6 * RATE)):
                 if kn + i < num_samples:
-                    out[kn + i] += synth_bass(freq, i / RATE, beat * 1.5) * 0.38
-        # Snare
+                    out[kn + i] += synth_sub808(freq, i / RATE, beat * 1.6) * 0.44
+
+        # Iconic explosive boom-bap snare on 1.0 and 3.0
         for so in [1.0, 3.0]:
             sn = round((bb + so) * beat * RATE)
-            for i in range(round(0.18 * RATE)):
+            for i in range(round(0.20 * RATE)):
                 if sn + i < num_samples:
-                    out[sn + i] += sample_snare(i / RATE, NOISE_TABLE) * 0.42
-        # Hi-hats
+                    out[sn + i] += sample_snare(i / RATE, NOISE_TABLE) * 0.44
+
+        # Rolling 8th hi-hats with swing and open hat on 3.5
         for hs in range(8):
+            open_h = (hs == 7)
             hn = round((bb + hs * 0.5) * beat * RATE)
-            for i in range(round(0.045 * RATE)):
+            for i in range(round((0.12 if open_h else 0.045) * RATE)):
                 if hn + i < num_samples:
-                    out[hn + i] += sample_hihat(i / RATE, NOISE_TABLE) * 0.22
+                    out[hn + i] += sample_hihat(i / RATE, NOISE_TABLE, open_hat=open_h) * (0.22 if open_h else 0.16)
+
+    # 4. The Legendary Distorted Vocoder Guitar Solo (Bars 25-32 / Beats 96 to 128)
+    # Kanye's soaring singing melody ("Baby, I got a plan... Run away as fast as you can")
+    runaway_solo = [
+        # Bar 25
+        (96.0, 71, 1.0), (97.0, 68, 1.0), (98.0, 64, 1.5), (99.5, 66, 0.5),
+        # Bar 26
+        (100.0, 68, 1.5), (101.5, 66, 0.5), (102.0, 64, 1.0), (103.0, 61, 1.0),
+        # Bar 27
+        (104.0, 64, 1.0), (105.0, 66, 1.0), (106.0, 68, 1.0), (107.0, 71, 0.8), (107.8, 73, 1.2),
+        # Bar 28
+        (108.0, 71, 1.5), (109.5, 68, 0.5), (110.0, 66, 1.0), (111.0, 64, 2.0),
+        # Bar 29
+        (112.0, 71, 1.0), (113.0, 68, 1.0), (114.0, 64, 1.5), (115.5, 66, 0.5),
+        # Bar 30
+        (116.0, 68, 1.5), (117.5, 66, 0.5), (118.0, 64, 1.0), (119.0, 61, 1.0),
+        # Bar 31
+        (120.0, 64, 1.0), (121.0, 66, 1.0), (122.0, 68, 1.0), (123.0, 71, 0.8), (123.8, 73, 1.2),
+        # Bar 32: Sustained soaring high E5 (76) with vibrato decaying right into beat 127.8
+        (124.0, 76, 3.4),
+    ]
+    for s_beat, note, dur_b in runaway_solo:
+        start_t = s_beat * beat
+        freq = midi_to_freq(note)
+        dur = dur_b * beat
+        n_start = round(start_t * RATE)
+        n_len = round(dur * RATE)
+        for i in range(n_len):
+            if n_start + i < num_samples:
+                out[n_start + i] += synth_vocoder_guitar(freq, i / RATE, dur) * 0.36
+
     write_wav(ROOT / 'ye_runaway.wav', out)
 
 # ==========================================
