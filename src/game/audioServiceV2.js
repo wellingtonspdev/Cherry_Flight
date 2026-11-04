@@ -1,4 +1,4 @@
-const VOLUMES = { jump: 0.45, score: 0.55, collision: 0.7, checkpoint: 0.7, ui: 0.45 };
+const VOLUMES = { jump: 0.45, bobux: 0.6, score: 0.55, collision: 0.7, checkpoint: 0.7, ui: 0.45 };
 export function createAudioService(createPlayer, sources) {
   let music = null, chapter = '', active = false, failures = 0, generation = 0;
   let effectRevision = 0;

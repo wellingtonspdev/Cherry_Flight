@@ -7,6 +7,7 @@ export const AUDIO_SOURCES = {
   },
   sfx: {
     ui: require('../../assets/v2/audio/ui.wav'), jump: require('../../assets/v2/audio/jump.wav'),
+    bobux: require('../../assets/v2/audio/sfx_bobux.wav'),
     score: require('../../assets/v2/audio/score.wav'), collision: require('../../assets/v2/audio/collision.wav'),
     checkpoint: require('../../assets/v2/audio/checkpoint.wav'), complete: require('../../assets/v2/audio/complete.wav'),
     unlock: require('../../assets/v2/audio/unlock.wav'), pause: require('../../assets/v2/audio/pause.wav'), resume: require('../../assets/v2/audio/resume.wav'),

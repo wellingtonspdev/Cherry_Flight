@@ -127,8 +127,8 @@ export default function GameFieldV2({ navigation, route }) {
     const wholeSeconds = Math.floor(round.elapsed);
     if (shownSeconds.current !== wholeSeconds) { shownSeconds.current = wholeSeconds; setSeconds(wholeSeconds); }
     for (const event of round.events) {
-      if (event.type === 'score') { setScore(round.score); actor.current?.score(); triggerScoreFeedback(!settingsRef.current.haptics); audioManager.effect('score'); }
-      if (event.type === 'bobux') { setBobuxCount(event.count); triggerScoreFeedback(!settingsRef.current.haptics); audioManager.effect('score'); }
+      if (event.type === 'score') { setScore(round.score); actor.current?.score(); triggerScoreFeedback(!settingsRef.current.haptics); }
+      if (event.type === 'bobux') { setBobuxCount(event.count); triggerScoreFeedback(!settingsRef.current.haptics); audioManager.effect('bobux'); }
       if (event.type === 'collision') { actor.current?.hit(); triggerCollisionFeedback(!settingsRef.current.haptics); }
       if (event.type === 'biome') { setBiome(event.biome); audioManager.prepare(event.biome); }
     }
