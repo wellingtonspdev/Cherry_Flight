@@ -47,7 +47,7 @@ export function ProgressProvider({ children }) {
   }, [update]);
   const equip = useCallback(skinId => update(value => equipSkin(value, skinId)), [update]);
   const selectMusic = useCallback(trackId => update(value => setSelectedMusic(value, trackId)), [update]);
-  const setSetting = useCallback((key, enabled) => update(value => Object.hasOwn(value.settings, key) && typeof enabled === 'boolean' ? { ...value, settings: { ...value.settings, [key]: enabled } } : null), [update]);
+  const setSetting = useCallback((key, val) => update(value => Object.hasOwn(value.settings, key) && (typeof val === 'boolean' || (typeof val === 'number' && Number.isFinite(val))) ? sanitizeProgress({ ...value, settings: { ...value.settings, [key]: val } }) : null), [update]);
 
   const value = useMemo(() => ({
     data, loaded, hasSave, warning,
