@@ -27,7 +27,7 @@ export const AUDIO_SOURCES = {
 
 export const MUSIC_TRACKS = [
   { id: 'auto', title: 'Automático (Por Fase)', artist: 'Trilha sonora padrão de cada nível' },
-  { id: 'luolei_yuexinmiao', title: '落泪 (我真的特别爱你)', artist: '月薪喵 (DJ VA Remix)' },
+  { id: 'luolei_yuexinmiao', title: '落泪(我真的特别爱你) (片段版)', artist: '月薪喵' },
   { id: 'first_bloom', title: 'Show Me How', artist: 'Men I Trust' },
   { id: 'ye_flashing_lights', title: 'Flashing Lights', artist: 'Kanye West' },
   { id: 'ye_ghost_town', title: 'Ghost Town', artist: 'Kanye West' },
