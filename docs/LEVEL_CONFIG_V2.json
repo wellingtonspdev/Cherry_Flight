@@ -44,6 +44,7 @@
       "chapter": "first_bloom",
       "chapterName": "First Bloom",
       "targetScore": 8,
+      "targetDuration": 15.34,
       "difficulty": {
         "gapRatio": 0.42,
         "speedWidthPerSecond": 0.35,
@@ -63,6 +64,7 @@
       "chapter": "first_bloom",
       "chapterName": "First Bloom",
       "targetScore": 10,
+      "targetDuration": 18.0,
       "difficulty": {
         "gapRatio": 0.4,
         "speedWidthPerSecond": 0.36,
@@ -82,6 +84,7 @@
       "chapter": "first_bloom",
       "chapterName": "First Bloom",
       "targetScore": 12,
+      "targetDuration": 19.8,
       "difficulty": {
         "gapRatio": 0.38,
         "speedWidthPerSecond": 0.38,
@@ -101,6 +104,7 @@
       "chapter": "sakura_garden",
       "chapterName": "Sakura Garden",
       "targetScore": 12,
+      "targetDuration": 18.7,
       "difficulty": {
         "gapRatio": 0.37,
         "speedWidthPerSecond": 0.39,
@@ -120,6 +124,7 @@
       "chapter": "sakura_garden",
       "chapterName": "Sakura Garden",
       "targetScore": 14,
+      "targetDuration": 20.4,
       "difficulty": {
         "gapRatio": 0.35,
         "speedWidthPerSecond": 0.41,
@@ -139,6 +144,7 @@
       "chapter": "sakura_garden",
       "chapterName": "Sakura Garden",
       "targetScore": 15,
+      "targetDuration": 21.0,
       "difficulty": {
         "gapRatio": 0.34,
         "speedWidthPerSecond": 0.42,
@@ -158,6 +164,7 @@
       "chapter": "golden_bloom",
       "chapterName": "Golden Bloom",
       "targetScore": 15,
+      "targetDuration": 20.1,
       "difficulty": {
         "gapRatio": 0.33,
         "speedWidthPerSecond": 0.43,
@@ -177,6 +184,7 @@
       "chapter": "golden_bloom",
       "chapterName": "Golden Bloom",
       "targetScore": 17,
+      "targetDuration": 21.4,
       "difficulty": {
         "gapRatio": 0.32,
         "speedWidthPerSecond": 0.45,
@@ -196,6 +204,7 @@
       "chapter": "golden_bloom",
       "chapterName": "Golden Bloom",
       "targetScore": 18,
+      "targetDuration": 21.7,
       "difficulty": {
         "gapRatio": 0.31,
         "speedWidthPerSecond": 0.46,
@@ -215,6 +224,7 @@
       "chapter": "yozakura",
       "chapterName": "Yozakura",
       "targetScore": 18,
+      "targetDuration": 20.9,
       "difficulty": {
         "gapRatio": 0.3,
         "speedWidthPerSecond": 0.47,
@@ -234,6 +244,7 @@
       "chapter": "yozakura",
       "chapterName": "Yozakura",
       "targetScore": 20,
+      "targetDuration": 22.3,
       "difficulty": {
         "gapRatio": 0.29,
         "speedWidthPerSecond": 0.48,
@@ -253,6 +264,7 @@
       "chapter": "yozakura",
       "chapterName": "Yozakura",
       "targetScore": 60,
+      "targetDuration": 73.6,
       "difficulty": {
         "gapRatio": 0.31,
         "speedWidthPerSecond": 0.46,

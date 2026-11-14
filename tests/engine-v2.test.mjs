@@ -82,6 +82,21 @@ test('V2 score is once per pair and completion fires once at the configured targ
   assert.equal(r.events.length, 0);
 });
 
+test('Level completes when targetDuration of the chorus is reached', () => {
+  assert.ok(engine);
+  const r = engine.createRound({ width: 844, height: 354, levelId: 1 }, () => 0.5);
+  engine.jumpRound(r);
+  assert.ok(r.params.targetDuration > 0);
+  r.elapsed = r.params.targetDuration - 0.01;
+  // Move player safely in corridor
+  r.player.y = r.pairs[0].gapY + 10;
+  r.player.velocity = 0;
+  engine.stepRound(r, 0.02);
+  assert.equal(r.status, 'LEVEL_COMPLETE');
+  assert.equal(r.events.filter(e => e.type === 'complete').length, 1);
+});
+
+
 test('V2 pool reuses mounted slot identities and has three constrained future descriptors', () => {
   assert.ok(engine);
   for (let levelId = 1; levelId <= 12; levelId++) {

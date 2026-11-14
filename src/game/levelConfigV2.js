@@ -45,6 +45,7 @@ export const LEVEL_CONFIG = {
       "chapter": "first_bloom",
       "chapterName": "First Bloom",
       "targetScore": 8,
+      "targetDuration": 15.34,
       "difficulty": {
         "gapRatio": 0.42,
         "speedWidthPerSecond": 0.35,
@@ -64,6 +65,7 @@ export const LEVEL_CONFIG = {
       "chapter": "first_bloom",
       "chapterName": "First Bloom",
       "targetScore": 10,
+      "targetDuration": 18,
       "difficulty": {
         "gapRatio": 0.4,
         "speedWidthPerSecond": 0.36,
@@ -83,6 +85,7 @@ export const LEVEL_CONFIG = {
       "chapter": "first_bloom",
       "chapterName": "First Bloom",
       "targetScore": 12,
+      "targetDuration": 19.8,
       "difficulty": {
         "gapRatio": 0.38,
         "speedWidthPerSecond": 0.38,
@@ -102,6 +105,7 @@ export const LEVEL_CONFIG = {
       "chapter": "sakura_garden",
       "chapterName": "Sakura Garden",
       "targetScore": 12,
+      "targetDuration": 18.7,
       "difficulty": {
         "gapRatio": 0.37,
         "speedWidthPerSecond": 0.39,
@@ -121,6 +125,7 @@ export const LEVEL_CONFIG = {
       "chapter": "sakura_garden",
       "chapterName": "Sakura Garden",
       "targetScore": 14,
+      "targetDuration": 20.4,
       "difficulty": {
         "gapRatio": 0.35,
         "speedWidthPerSecond": 0.41,
@@ -140,6 +145,7 @@ export const LEVEL_CONFIG = {
       "chapter": "sakura_garden",
       "chapterName": "Sakura Garden",
       "targetScore": 15,
+      "targetDuration": 21,
       "difficulty": {
         "gapRatio": 0.34,
         "speedWidthPerSecond": 0.42,
@@ -159,6 +165,7 @@ export const LEVEL_CONFIG = {
       "chapter": "golden_bloom",
       "chapterName": "Golden Bloom",
       "targetScore": 15,
+      "targetDuration": 20.1,
       "difficulty": {
         "gapRatio": 0.33,
         "speedWidthPerSecond": 0.43,
@@ -178,6 +185,7 @@ export const LEVEL_CONFIG = {
       "chapter": "golden_bloom",
       "chapterName": "Golden Bloom",
       "targetScore": 17,
+      "targetDuration": 21.4,
       "difficulty": {
         "gapRatio": 0.32,
         "speedWidthPerSecond": 0.45,
@@ -197,6 +205,7 @@ export const LEVEL_CONFIG = {
       "chapter": "golden_bloom",
       "chapterName": "Golden Bloom",
       "targetScore": 18,
+      "targetDuration": 21.7,
       "difficulty": {
         "gapRatio": 0.31,
         "speedWidthPerSecond": 0.46,
@@ -216,6 +225,7 @@ export const LEVEL_CONFIG = {
       "chapter": "yozakura",
       "chapterName": "Yozakura",
       "targetScore": 18,
+      "targetDuration": 20.9,
       "difficulty": {
         "gapRatio": 0.3,
         "speedWidthPerSecond": 0.47,
@@ -235,6 +245,7 @@ export const LEVEL_CONFIG = {
       "chapter": "yozakura",
       "chapterName": "Yozakura",
       "targetScore": 20,
+      "targetDuration": 22.3,
       "difficulty": {
         "gapRatio": 0.29,
         "speedWidthPerSecond": 0.48,
@@ -254,6 +265,7 @@ export const LEVEL_CONFIG = {
       "chapter": "yozakura",
       "chapterName": "Yozakura",
       "targetScore": 60,
+      "targetDuration": 73.6,
       "difficulty": {
         "gapRatio": 0.31,
         "speedWidthPerSecond": 0.46,
