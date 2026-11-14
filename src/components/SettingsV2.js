@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Switch, Text, useWindowDimensions, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CherryButton from './CherryButton';
@@ -12,6 +12,7 @@ import { colors, radius, spacing, typography } from '../theme/theme';
 export default function SettingsV2({ navigation }) {
   const { width, height } = useWindowDimensions();
   const { data, loaded, setSetting, selectMusic, warning } = useProgress();
+  const [isPlayingPreview, setIsPlayingPreview] = useState(false);
 
   const selectedId = data.selectedMusic || 'auto';
   const currentIndex = Math.max(0, MUSIC_TRACKS.findIndex(t => t.id === selectedId));
@@ -23,6 +24,19 @@ export default function SettingsV2({ navigation }) {
     };
   }, []);
 
+  const togglePreview = () => {
+    if (!loaded) return;
+    if (isPlayingPreview) {
+      audioManager.pause();
+      setIsPlayingPreview(false);
+    } else {
+      audioManager.settings({ selectedMusic: currentTrack.id });
+      audioManager.prepare(currentTrack.id === 'auto' ? 'first_bloom' : currentTrack.id);
+      audioManager.start();
+      setIsPlayingPreview(true);
+    }
+  };
+
   const changeTrackByIndex = (delta) => {
     if (!loaded) return;
     const nextIndex = (currentIndex + delta + MUSIC_TRACKS.length) % MUSIC_TRACKS.length;
@@ -32,6 +46,7 @@ export default function SettingsV2({ navigation }) {
       audioManager.settings({ selectedMusic: nextTrack.id });
       audioManager.prepare(nextTrack.id === 'auto' ? 'first_bloom' : nextTrack.id);
       audioManager.start();
+      setIsPlayingPreview(true);
     }
   };
 
@@ -42,6 +57,7 @@ export default function SettingsV2({ navigation }) {
       audioManager.settings({ selectedMusic: trackId });
       audioManager.prepare(trackId === 'auto' ? 'first_bloom' : trackId);
       audioManager.start();
+      setIsPlayingPreview(true);
     }
   };
 
@@ -192,36 +208,65 @@ export default function SettingsV2({ navigation }) {
             </View>
 
 
-            {/* Seletor de Trilha Sonora / Jukebox */}
+            {/* Seletor de Trilha Sonora / Jukebox Estilo Instagram */}
             <View style={styles.jukeboxSection}>
               <View style={styles.jukeboxHeader}>
-                <Text style={styles.jukeboxTitle}>🎵 Trilha Sonora (BGM)</Text>
-                <Text style={styles.jukeboxSubtitle}>Escolha a música que toca no jogo</Text>
+                <Text style={styles.jukeboxTitle}>🎵 Trilha Sonora (Refrão / 片段版)</Text>
+                <Text style={styles.jukeboxSubtitle}>Recorte do refrão sincronizado estilo Reels/TikTok</Text>
               </View>
 
-              <View style={styles.trackCard}>
-                <Pressable
-                  accessibilityRole="button"
-                  accessibilityLabel="Música anterior"
-                  onPress={() => changeTrackByIndex(-1)}
-                  style={styles.navButton}
-                >
-                  <Text style={styles.navButtonText}>◀</Text>
-                </Pressable>
-
-                <View style={styles.trackInfo}>
-                  <Text numberOfLines={1} style={styles.trackTitle}>{currentTrack.title}</Text>
-                  <Text numberOfLines={1} style={styles.trackArtist}>{currentTrack.artist}</Text>
+              {/* Instagram-style Music Card */}
+              <View style={styles.instagramCard}>
+                <View style={[styles.coverBox, { backgroundColor: currentTrack.coverColor || '#FF6B8B' }]}>
+                  <Text style={styles.coverEmoji}>{currentTrack.icon || '🎵'}</Text>
+                  <Pressable
+                    accessibilityRole="button"
+                    accessibilityLabel={isPlayingPreview ? "Pausar prévia do refrão" : "Ouvir prévia do refrão"}
+                    onPress={togglePreview}
+                    style={styles.previewBtn}
+                  >
+                    <Text style={styles.previewBtnText}>{isPlayingPreview ? '⏸' : '▶'}</Text>
+                  </Pressable>
                 </View>
 
-                <Pressable
-                  accessibilityRole="button"
-                  accessibilityLabel="Próxima música"
-                  onPress={() => changeTrackByIndex(1)}
-                  style={styles.navButton}
-                >
-                  <Text style={styles.navButtonText}>▶</Text>
-                </Pressable>
+                <View style={styles.trackMetaCol}>
+                  <Text numberOfLines={1} style={styles.igTrackTitle}>{currentTrack.title}</Text>
+                  <Text numberOfLines={1} style={styles.igTrackArtist}>{currentTrack.artist}</Text>
+                  {currentTrack.highlight && (
+                    <Text numberOfLines={1} style={styles.igTrackHighlight}>
+                      "{currentTrack.highlight}"
+                    </Text>
+                  )}
+                  <View style={styles.badgeRow}>
+                    <View style={styles.tagSnippet}>
+                      <Text style={styles.tagSnippetText}>✂️ REFRÃO</Text>
+                    </View>
+                    {currentTrack.durationFormatted && (
+                      <View style={styles.tagDuration}>
+                        <Text style={styles.tagDurationText}>⏱️ {currentTrack.durationFormatted}</Text>
+                      </View>
+                    )}
+                  </View>
+                </View>
+
+                <View style={styles.navCol}>
+                  <Pressable
+                    accessibilityRole="button"
+                    accessibilityLabel="Música anterior"
+                    onPress={() => changeTrackByIndex(-1)}
+                    style={styles.navBtnSmall}
+                  >
+                    <Text style={styles.navBtnTextSmall}>◀</Text>
+                  </Pressable>
+                  <Pressable
+                    accessibilityRole="button"
+                    accessibilityLabel="Próxima música"
+                    onPress={() => changeTrackByIndex(1)}
+                    style={styles.navBtnSmall}
+                  >
+                    <Text style={styles.navBtnTextSmall}>▶</Text>
+                  </Pressable>
+                </View>
               </View>
 
               <ScrollView
@@ -231,6 +276,7 @@ export default function SettingsV2({ navigation }) {
               >
                 {MUSIC_TRACKS.map(track => {
                   const active = track.id === selectedId;
+                  const shortName = track.id === 'auto' ? 'Auto' : track.title.split(' (')[0];
                   return (
                     <Pressable
                       key={track.id}
@@ -240,7 +286,7 @@ export default function SettingsV2({ navigation }) {
                       style={[styles.chip, active && styles.chipActive]}
                     >
                       <Text style={[styles.chipText, active && styles.chipTextActive]}>
-                        {track.id === 'auto' ? '⚡ Auto' : track.id === 'luolei_yuexinmiao' ? '🌟 落泪 (月薪喵)' : track.title}
+                        {track.icon || '🎵'} {shortName}
                       </Text>
                     </Pressable>
                   );
@@ -423,45 +469,120 @@ const styles = StyleSheet.create({
     fontFamily: typography.fontFamily.body,
     color: colors.ink700,
   },
-  trackCard: {
+  instagramCard: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
-    backgroundColor: '#FFF8F2',
-    borderRadius: radius.md,
-    borderWidth: 1.5,
-    borderColor: colors.blossom300,
-    padding: 6,
-    gap: 8,
+    backgroundColor: '#1E1620',
+    borderRadius: radius.lg,
+    borderWidth: 2,
+    borderColor: 'rgba(255, 183, 197, 0.4)',
+    padding: 8,
+    gap: 10,
+    shadowColor: '#000000',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
   },
-  trackInfo: {
-    flex: 1,
+  coverBox: {
+    width: 58,
+    height: 58,
+    borderRadius: 14,
     alignItems: 'center',
+    justifyContent: 'center',
+    position: 'relative',
+    overflow: 'hidden',
   },
-  trackTitle: {
-    fontSize: 13,
-    fontWeight: '800',
-    fontFamily: typography.fontFamily.display,
-    color: colors.cherry700,
-    textAlign: 'center',
+  coverEmoji: {
+    fontSize: 26,
+    opacity: 0.85,
   },
-  trackArtist: {
-    fontSize: 11,
-    fontFamily: typography.fontFamily.body,
-    color: colors.ink700,
-    textAlign: 'center',
-  },
-  navButton: {
+  previewBtn: {
+    position: 'absolute',
     width: 32,
     height: 32,
     borderRadius: 16,
-    backgroundColor: colors.cherryLip,
+    backgroundColor: 'rgba(20, 14, 20, 0.78)',
+    borderWidth: 1.5,
+    borderColor: '#FFF8F2',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  navButtonText: {
+  previewBtnText: {
     color: '#FFF8F2',
     fontSize: 13,
+    fontWeight: '900',
+    marginLeft: 1,
+  },
+  trackMetaCol: {
+    flex: 1,
+    justifyContent: 'center',
+    gap: 2,
+  },
+  igTrackTitle: {
+    fontSize: 13,
+    fontWeight: '900',
+    fontFamily: typography.fontFamily.display,
+    color: '#FFF8F2',
+  },
+  igTrackArtist: {
+    fontSize: 11,
+    fontWeight: '700',
+    fontFamily: typography.fontFamily.body,
+    color: 'rgba(255, 230, 240, 0.85)',
+  },
+  igTrackHighlight: {
+    fontSize: 10,
+    fontStyle: 'italic',
+    fontFamily: typography.fontFamily.body,
+    color: '#FFB7C5',
+  },
+  badgeRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    marginTop: 2,
+  },
+  tagSnippet: {
+    backgroundColor: colors.cherryLip,
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: radius.pill,
+  },
+  tagSnippetText: {
+    color: '#FFF8F2',
+    fontSize: 9,
+    fontWeight: '900',
+  },
+  tagDuration: {
+    backgroundColor: 'rgba(255, 255, 255, 0.15)',
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: radius.pill,
+  },
+  tagDurationText: {
+    color: '#FFF8F2',
+    fontSize: 9,
+    fontWeight: '800',
+  },
+  navCol: {
+    flexDirection: 'column',
+    gap: 4,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  navBtnSmall: {
+    width: 28,
+    height: 28,
+    borderRadius: 14,
+    backgroundColor: 'rgba(255, 255, 255, 0.15)',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.3)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  navBtnTextSmall: {
+    color: '#FFF8F2',
+    fontSize: 11,
     fontWeight: '900',
   },
   chipsRow: {

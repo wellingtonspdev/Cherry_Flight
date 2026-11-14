@@ -16,6 +16,7 @@ import { colors, radius, spacing, typography } from '../theme/theme';
 import { useProgress } from '../game/ProgressProviderV2';
 import { isUnlocked } from '../game/progressionV2';
 import { audioManager } from '../game/AudioManagerV2';
+import { MUSIC_TRACKS } from '../game/audioSourcesV2';
 
 export default function GameFieldV2({ navigation, route }) {
   const viewport = useWindowDimensions();
@@ -194,6 +195,11 @@ export default function GameFieldV2({ navigation, route }) {
 
   const level = LEVELS.find(l => l.id === levelId) || LEVELS[0];
   const phaseConfig = { id: biome, label: (CHAPTERS.find(chapter => chapter.id === biome)?.name || level.chapterName).toUpperCase(), hudScrim: 'rgba(37,26,32,.45)' };
+  const targetTheme = progress.data.selectedMusic && progress.data.selectedMusic !== 'auto'
+    ? progress.data.selectedMusic
+    : (level.audioTheme || level.chapter);
+  const activeMusic = MUSIC_TRACKS.find(t => t.id === targetTheme);
+
   return (
     <View style={styles.root} onLayout={({ nativeEvent: { layout: next } }) => {
       if (next.width <= 0 || next.height <= 0) return;
@@ -211,6 +217,32 @@ export default function GameFieldV2({ navigation, route }) {
         {status === 'READY' && <View pointerEvents="none" style={styles.prompt}><View style={styles.banner}><Text style={styles.readyTitle}>TAP TO FLY</Text><Text style={styles.hint}>{endless ? 'Endless Bloom' : `LEVEL ${level.id} · ${level.targetScore} pontos`} · Toque ou use ESPAÇO</Text></View></View>}
       </Pressable>
       <ScoreHUD score={score} bobuxCount={bobuxCount} phaseConfig={phaseConfig} targetScore={endless ? null : level.targetScore} topInset={insets.top} />
+      
+      {/* Instagram Story-style progress bar */}
+      {!endless && Boolean(level.targetDuration) && (
+        <View pointerEvents="none" style={[styles.storyProgressBar, { top: insets.top }]}>
+          <View
+            style={[
+              styles.storyProgressBarFill,
+              { width: `${Math.min(100, Math.max(0, (seconds / level.targetDuration) * 100))}%` },
+            ]}
+          />
+        </View>
+      )}
+
+      {/* Floating Instagram music sticker */}
+      {activeMusic && status === 'PLAYING' && (
+        <View pointerEvents="none" style={[styles.musicStickerBadge, { top: Math.max(46, insets.top + 40) }]}>
+          <Text style={styles.musicStickerIcon}>{activeMusic.icon || '🎵'}</Text>
+          <Text numberOfLines={1} style={styles.musicStickerTitle}>
+            {activeMusic.title.split(' (')[0]} • {activeMusic.artist}
+          </Text>
+          <View style={styles.musicStickerSnippetTag}>
+            <Text style={styles.musicStickerSnippetText}>REFRÃO</Text>
+          </View>
+        </View>
+      )}
+
       <View pointerEvents="box-none" style={[styles.topBar, { top: Math.max(8, insets.top + 4), paddingLeft: Math.max(12, insets.left + 8), paddingRight: Math.max(12, insets.right + 8) }]}>
         <Pressable accessibilityRole="button" accessibilityLabel="Voltar para a tela inicial" onPress={goHome} style={styles.pill}><Text style={styles.pillText}>← HOME</Text></Pressable>
         <View style={styles.rightBar}>
@@ -236,6 +268,62 @@ const styles = StyleSheet.create({
   root: { flex: 1, overflow: 'hidden', backgroundColor: colors.cream50 },
   field: { flex: 1 },
   topBar: { position: 'absolute', left: 0, right: 0, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', zIndex: 50 },
+  storyProgressBar: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    height: 3,
+    backgroundColor: 'rgba(255, 255, 255, 0.25)',
+    zIndex: 99,
+  },
+  storyProgressBarFill: {
+    height: '100%',
+    backgroundColor: '#FF6B8B',
+    borderRadius: 2,
+    shadowColor: '#FF6B8B',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.8,
+    shadowRadius: 4,
+  },
+  musicStickerBadge: {
+    position: 'absolute',
+    alignSelf: 'center',
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: 'rgba(30, 22, 32, 0.78)',
+    borderRadius: radius.pill,
+    borderWidth: 1.5,
+    borderColor: 'rgba(255, 183, 197, 0.45)',
+    paddingHorizontal: 10,
+    paddingVertical: 3,
+    gap: 6,
+    zIndex: 45,
+    shadowColor: '#000000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+  },
+  musicStickerIcon: {
+    fontSize: 12,
+  },
+  musicStickerTitle: {
+    fontSize: 11,
+    fontWeight: '800',
+    fontFamily: typography.fontFamily.display,
+    color: '#FFF8F2',
+    maxWidth: 200,
+  },
+  musicStickerSnippetTag: {
+    backgroundColor: colors.cherryLip,
+    paddingHorizontal: 5,
+    paddingVertical: 1,
+    borderRadius: radius.pill,
+  },
+  musicStickerSnippetText: {
+    fontSize: 8,
+    fontWeight: '900',
+    color: '#FFF8F2',
+  },
   rightBar: { flexDirection: 'row', gap: 8, alignItems: 'center' },
   pill: {
     minHeight: 38,
