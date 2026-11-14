@@ -31,6 +31,7 @@ export function resolveDifficulty(levelId, width, height, score = 0, endless = f
     topMargin, bottomMargin, width: GAME.obstacleWidth,
     poolSize: level.obstaclePoolSize, prewarmPairs: level.prewarmPairs,
     targetScore: endless ? Infinity : level.targetScore,
+    targetDuration: endless ? null : (level.targetDuration || null),
   };
 }
 
@@ -153,7 +154,9 @@ export function stepRound(round, rawDt, random = Math.random) {
       round.events.push({ type: 'score', score: round.score });
     }
   }
-  if (round.score >= round.params.targetScore) {
+  const reachedScore = round.score >= round.params.targetScore;
+  const reachedDuration = Boolean(round.params.targetDuration && round.elapsed >= round.params.targetDuration);
+  if (!round.endless && (reachedScore || reachedDuration)) {
     round.status = 'LEVEL_COMPLETE';
     round.events.push({ type: 'complete', levelId: round.levelId, score: round.score });
   } else if (round.endless) {

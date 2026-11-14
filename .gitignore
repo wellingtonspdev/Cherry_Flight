@@ -23,6 +23,9 @@ audit-evidence/*.b64
 .env*
 Cherry_Bloom_V2_Handoff/
 .superpowers/
+.raw_bgm_backup/
+.temp_audio/
+.temp_batch_audio/
 __pycache__/
 *.pyc
 

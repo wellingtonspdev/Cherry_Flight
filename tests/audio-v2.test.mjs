@@ -70,7 +70,7 @@ test('Audio assets contain 12 unique extended level themes and 10 arcade kawaii 
     const filePath = path.join(rootAudio, `${name}.wav`);
     assert.ok(fs.existsSync(filePath), `Missing music file: ${name}.wav`);
     const stats = fs.statSync(filePath);
-    assert.ok(stats.size > 1500000, `BGM ${name}.wav should be an extended loop (>1.5MB), got ${stats.size} bytes`);
+    assert.ok(stats.size > 600000, `BGM ${name}.wav should be a valid chorus snippet (>600KB), got ${stats.size} bytes`);
   }
 
   for (const name of expectedSfx) {
@@ -190,6 +190,27 @@ test('audioService dynamically scales musicVolume and sfxVolume independently', 
   assert.equal(jumpPlayer.volume, 0.45);
   assert.equal(bobuxPlayer.volume, 0.6);
 });
+
+test('All 12 campaign levels have BGM audio duration synchronized with targetDuration', async () => {
+  const rootAudio = path.resolve('assets/v2/audio');
+  const configModule = await import('../src/game/levelConfigV2.js');
+  const { LEVEL_CONFIG } = configModule;
+
+  for (const level of LEVEL_CONFIG.levels) {
+    const filePath = path.join(rootAudio, `${level.audioTheme}.wav`);
+    assert.ok(fs.existsSync(filePath), `Audio file must exist: ${filePath}`);
+    const buffer = fs.readFileSync(filePath);
+    // WAV PCM 16-bit mono 22050Hz has 44100 bytes per second (header is 44 bytes)
+    const audioDataSize = buffer.length - 44;
+    const durationSeconds = audioDataSize / (22050 * 2);
+    assert.ok(level.targetDuration > 0, `Level ${level.id} must define targetDuration`);
+    assert.ok(
+      Math.abs(durationSeconds - level.targetDuration) < 0.5,
+      `Level ${level.id} (${level.audioTheme}) duration mismatch: audio=${durationSeconds.toFixed(2)}s, target=${level.targetDuration}s`
+    );
+  }
+});
+
 
 
 
