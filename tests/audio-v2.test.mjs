@@ -211,6 +211,28 @@ test('All 12 campaign levels have BGM audio duration synchronized with targetDur
   }
 });
 
+test('All MUSIC_TRACKS have Instagram-style chorus snippet metadata and cover icons', async () => {
+  const sourcesModule = await import('../src/game/audioSourcesV2.js');
+  const { MUSIC_TRACKS } = sourcesModule;
+
+  for (const track of MUSIC_TRACKS) {
+    assert.ok(track.id, 'Track must have an id');
+    assert.ok(track.title, 'Track must have a title');
+    assert.ok(track.artist, 'Track must have an artist');
+    assert.ok(track.icon, `Track ${track.id} must have an icon`);
+    assert.ok(track.coverColor, `Track ${track.id} must have a coverColor`);
+    if (track.id !== 'auto') {
+      assert.ok(track.durationFormatted, `Track ${track.id} must have durationFormatted`);
+      assert.ok(track.highlight, `Track ${track.id} must have a highlight quote`);
+      assert.ok(
+        track.title.includes('Refrão') || track.title.includes('片段版') || track.title.includes('Tema'),
+        `Track ${track.id} title must designate chorus snippet: ${track.title}`
+      );
+    }
+  }
+});
+
+
 
 
 
