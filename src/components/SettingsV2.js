@@ -45,6 +45,22 @@ export default function SettingsV2({ navigation }) {
     }
   };
 
+  const changeVolume = (key, delta) => {
+    if (!loaded) return;
+    const current = typeof data.settings[key] === 'number' ? data.settings[key] : 100;
+    const next = Math.max(0, Math.min(100, current + delta));
+    setSetting(key, next);
+    if (key === 'sfxVolume') {
+      audioManager.settings({ sfxVolume: next });
+      audioManager.effect('ui');
+    } else if (key === 'musicVolume') {
+      audioManager.settings({ musicVolume: next });
+    }
+  };
+
+  const musicVol = typeof data.settings.musicVolume === 'number' ? data.settings.musicVolume : 100;
+  const sfxVol = typeof data.settings.sfxVolume === 'number' ? data.settings.sfxVolume : 100;
+
   return (
     <View style={styles.root}>
       <World
@@ -65,32 +81,116 @@ export default function SettingsV2({ navigation }) {
             </View>
 
             <View style={styles.settingsList}>
-              {[
-                ['music', 'Música do Jogo', 'Desligue para ouvir seu Spotify / app de música'],
-                ['sfx', 'Efeitos Sonoros (SFX)', 'Sons táteis (tocam junto do seu app de música)'],
-                ['haptics', 'Vibração Tátil', 'Feedback nos saltos'],
-              ].map(([key, label, desc]) => (
-                <View key={key} style={styles.row}>
-                  <View style={styles.labelCol}>
-                    <Text style={styles.label}>{label}</Text>
-                    <Text style={styles.desc}>{desc}</Text>
-                  </View>
-                  <Switch
-                    accessibilityLabel={label}
-                    value={data.settings[key]}
-                    disabled={!loaded}
-                    onValueChange={value => {
-                      setSetting(key, value);
-                      if (key === 'music' && !value) {
-                        audioManager.pause();
-                      }
-                    }}
-                    trackColor={{ true: colors.cherry700, false: '#D4C9C0' }}
-                    thumbColor={data.settings[key] ? '#FFF8F2' : '#F4ECE4'}
-                  />
+              {/* Música */}
+              <View style={styles.row}>
+                <View style={styles.labelCol}>
+                  <Text style={styles.label}>Música do Jogo</Text>
+                  <Text style={styles.desc}>Desligue para ouvir seu Spotify / app de música</Text>
                 </View>
-              ))}
+                <Switch
+                  accessibilityLabel="Música do Jogo"
+                  value={data.settings.music}
+                  disabled={!loaded}
+                  onValueChange={value => {
+                    setSetting('music', value);
+                    if (!value) {
+                      audioManager.pause();
+                    }
+                  }}
+                  trackColor={{ true: colors.cherry700, false: '#D4C9C0' }}
+                  thumbColor={data.settings.music ? '#FFF8F2' : '#F4ECE4'}
+                />
+              </View>
+
+              {data.settings.music && (
+                <View style={styles.volumeRow}>
+                  <Text style={styles.volLabel}>Volume:</Text>
+                  <Pressable
+                    accessibilityRole="button"
+                    accessibilityLabel="Diminuir volume da música"
+                    disabled={!loaded || musicVol <= 0}
+                    onPress={() => changeVolume('musicVolume', -10)}
+                    style={[styles.volStepBtn, musicVol <= 0 && styles.volBtnDisabled]}
+                  >
+                    <Text style={styles.volStepBtnText}>-</Text>
+                  </Pressable>
+                  <View style={styles.volTrack}>
+                    <View style={[styles.volFill, { width: `${musicVol}%` }]} />
+                  </View>
+                  <Text style={styles.volPercentText}>{musicVol}%</Text>
+                  <Pressable
+                    accessibilityRole="button"
+                    accessibilityLabel="Aumentar volume da música"
+                    disabled={!loaded || musicVol >= 100}
+                    onPress={() => changeVolume('musicVolume', 10)}
+                    style={[styles.volStepBtn, musicVol >= 100 && styles.volBtnDisabled]}
+                  >
+                    <Text style={styles.volStepBtnText}>+</Text>
+                  </Pressable>
+                </View>
+              )}
+
+              {/* SFX */}
+              <View style={styles.row}>
+                <View style={styles.labelCol}>
+                  <Text style={styles.label}>Efeitos Sonoros (SFX)</Text>
+                  <Text style={styles.desc}>Sons táteis (tocam junto do seu app de música)</Text>
+                </View>
+                <Switch
+                  accessibilityLabel="Efeitos Sonoros (SFX)"
+                  value={data.settings.sfx}
+                  disabled={!loaded}
+                  onValueChange={value => setSetting('sfx', value)}
+                  trackColor={{ true: colors.cherry700, false: '#D4C9C0' }}
+                  thumbColor={data.settings.sfx ? '#FFF8F2' : '#F4ECE4'}
+                />
+              </View>
+
+              {data.settings.sfx && (
+                <View style={styles.volumeRow}>
+                  <Text style={styles.volLabel}>Volume:</Text>
+                  <Pressable
+                    accessibilityRole="button"
+                    accessibilityLabel="Diminuir volume dos efeitos sonoros"
+                    disabled={!loaded || sfxVol <= 0}
+                    onPress={() => changeVolume('sfxVolume', -10)}
+                    style={[styles.volStepBtn, sfxVol <= 0 && styles.volBtnDisabled]}
+                  >
+                    <Text style={styles.volStepBtnText}>-</Text>
+                  </Pressable>
+                  <View style={styles.volTrack}>
+                    <View style={[styles.volFill, { width: `${sfxVol}%` }]} />
+                  </View>
+                  <Text style={styles.volPercentText}>{sfxVol}%</Text>
+                  <Pressable
+                    accessibilityRole="button"
+                    accessibilityLabel="Aumentar volume dos efeitos sonoros"
+                    disabled={!loaded || sfxVol >= 100}
+                    onPress={() => changeVolume('sfxVolume', 10)}
+                    style={[styles.volStepBtn, sfxVol >= 100 && styles.volBtnDisabled]}
+                  >
+                    <Text style={styles.volStepBtnText}>+</Text>
+                  </Pressable>
+                </View>
+              )}
+
+              {/* Vibração Tátil */}
+              <View style={styles.row}>
+                <View style={styles.labelCol}>
+                  <Text style={styles.label}>Vibração Tátil</Text>
+                  <Text style={styles.desc}>Feedback nos saltos</Text>
+                </View>
+                <Switch
+                  accessibilityLabel="Vibração Tátil"
+                  value={data.settings.haptics}
+                  disabled={!loaded}
+                  onValueChange={value => setSetting('haptics', value)}
+                  trackColor={{ true: colors.cherry700, false: '#D4C9C0' }}
+                  thumbColor={data.settings.haptics ? '#FFF8F2' : '#F4ECE4'}
+                />
+              </View>
             </View>
+
 
             {/* Seletor de Trilha Sonora / Jukebox */}
             <View style={styles.jukeboxSection}>
@@ -244,6 +344,61 @@ const styles = StyleSheet.create({
     fontFamily: typography.fontFamily.body,
     color: colors.ink700,
     marginTop: 1,
+  },
+  volumeRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#FFF8F2',
+    borderRadius: radius.md,
+    borderWidth: 1,
+    borderColor: colors.blossom200,
+    paddingHorizontal: 8,
+    paddingVertical: 5,
+    gap: 8,
+    marginBottom: 4,
+  },
+  volLabel: {
+    fontSize: 11,
+    fontWeight: '800',
+    fontFamily: typography.fontFamily.display,
+    color: colors.ink700,
+  },
+  volStepBtn: {
+    width: 26,
+    height: 26,
+    borderRadius: 13,
+    backgroundColor: colors.cherryLip,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  volBtnDisabled: {
+    opacity: 0.35,
+  },
+  volStepBtnText: {
+    color: '#FFF8F2',
+    fontSize: 15,
+    fontWeight: '900',
+    lineHeight: 18,
+  },
+  volTrack: {
+    flex: 1,
+    height: 8,
+    backgroundColor: '#E6DCCE',
+    borderRadius: 4,
+    overflow: 'hidden',
+  },
+  volFill: {
+    height: '100%',
+    backgroundColor: colors.cherry700,
+    borderRadius: 4,
+  },
+  volPercentText: {
+    width: 36,
+    fontSize: 11,
+    fontWeight: '800',
+    fontFamily: typography.fontFamily.body,
+    color: colors.cherry700,
+    textAlign: 'right',
   },
   jukeboxSection: {
     backgroundColor: '#FFFFFF',

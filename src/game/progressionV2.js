@@ -12,7 +12,7 @@ export function createProgress() {
     lastCompletedLevel: 0,
     levelResults: {},
     endlessUnlocked: false,
-    settings: { music: true, sfx: true, haptics: true },
+    settings: { music: true, sfx: true, haptics: true, musicVolume: 100, sfxVolume: 100 },
     selectedMusic: 'auto',
     bobux: 0,
     unlockedSkins: [DEFAULT_SKIN],
@@ -23,9 +23,15 @@ export function createProgress() {
 export function sanitizeProgress(raw) {
   const data = createProgress();
   if (!raw || raw.schemaVersion !== 2) return data;
-  for (const key of Object.keys(data.settings)) {
+  for (const key of ['music', 'sfx', 'haptics']) {
     if (typeof raw.settings?.[key] === 'boolean') data.settings[key] = raw.settings[key];
   }
+  data.settings.musicVolume = (typeof raw.settings?.musicVolume === 'number' && Number.isFinite(raw.settings.musicVolume))
+    ? Math.max(0, Math.min(100, Math.round(raw.settings.musicVolume)))
+    : 100;
+  data.settings.sfxVolume = (typeof raw.settings?.sfxVolume === 'number' && Number.isFinite(raw.settings.sfxVolume))
+    ? Math.max(0, Math.min(100, Math.round(raw.settings.sfxVolume)))
+    : 100;
   const validTracks = new Set(Array.isArray(MUSIC_TRACKS) ? MUSIC_TRACKS.map(t => t.id) : ['auto']);
   data.selectedMusic = typeof raw.selectedMusic === 'string' && validTracks.has(raw.selectedMusic)
     ? raw.selectedMusic

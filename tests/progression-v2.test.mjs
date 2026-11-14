@@ -97,3 +97,43 @@ test('selectedMusic defaults to auto, sanitizes invalid track IDs, and persists 
   assert.equal(sanitizedBad.selectedMusic, 'auto');
 });
 
+test('musicVolume and sfxVolume default to 100, clamp 0-100, and sanitize non-numeric values', () => {
+  assert.ok(p);
+  const data = p.createProgress();
+  assert.equal(data.settings.musicVolume, 100);
+  assert.equal(data.settings.sfxVolume, 100);
+
+  const sanitized = p.sanitizeProgress({
+    schemaVersion: 2,
+    settings: {
+      music: true,
+      sfx: false,
+      musicVolume: 75,
+      sfxVolume: 30,
+    },
+  });
+  assert.equal(sanitized.settings.musicVolume, 75);
+  assert.equal(sanitized.settings.sfxVolume, 30);
+
+  const clamped = p.sanitizeProgress({
+    schemaVersion: 2,
+    settings: {
+      musicVolume: -20,
+      sfxVolume: 150,
+    },
+  });
+  assert.equal(clamped.settings.musicVolume, 0);
+  assert.equal(clamped.settings.sfxVolume, 100);
+
+  const invalid = p.sanitizeProgress({
+    schemaVersion: 2,
+    settings: {
+      musicVolume: 'loud',
+      sfxVolume: null,
+    },
+  });
+  assert.equal(invalid.settings.musicVolume, 100);
+  assert.equal(invalid.settings.sfxVolume, 100);
+});
+
+

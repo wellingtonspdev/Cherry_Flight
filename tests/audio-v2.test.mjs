@@ -151,4 +151,45 @@ test('audioService respects selectedMusic override and avoids resetting track on
   assert.equal(playedTracks[playedTracks.length - 1], 'theme_sakura');
 });
 
+test('audioService dynamically scales musicVolume and sfxVolume independently', async () => {
+  assert.ok(module);
+  const players = [];
+  const service = module.createAudioService(source => {
+    const player = { source, isLoaded: true, playing: false, currentTime: 0, volume: 1, play() { this.playing = true; }, pause() { this.playing = false; }, async seekTo(value) { this.currentTime = value; }, remove() { this.removed = true; } };
+    players.push(player);
+    return player;
+  }, {
+    music: { first_bloom: 'theme_first_bloom' },
+    sfx: { jump: 'sfx_jump', bobux: 'sfx_bobux' },
+  });
+
+  await service.prepare('first_bloom');
+  service.start();
+
+  const musicPlayer = players[0];
+  const jumpPlayer = players[1];
+  const bobuxPlayer = players[2];
+
+  // Baseline at default 100% volume
+  assert.equal(musicPlayer.volume, 0.35);
+  assert.equal(jumpPlayer.volume, 0.45);
+  assert.equal(bobuxPlayer.volume, 0.6);
+
+  // Scale down music to 50% and sfx to 40%
+  service.settings({ musicVolume: 50, sfxVolume: 40 });
+  assert.ok(Math.abs(musicPlayer.volume - 0.175) < 0.001);
+  assert.ok(Math.abs(jumpPlayer.volume - 0.18) < 0.001);
+  assert.ok(Math.abs(bobuxPlayer.volume - 0.24) < 0.001);
+
+  // Set music volume to 0%
+  service.settings({ musicVolume: 0 });
+  assert.equal(musicPlayer.volume, 0);
+
+  // Set SFX volume to 100%
+  service.settings({ sfxVolume: 100 });
+  assert.equal(jumpPlayer.volume, 0.45);
+  assert.equal(bobuxPlayer.volume, 0.6);
+});
+
+
 
