@@ -1,5 +1,6 @@
 import { LEVEL_CONFIG } from './levelConfigV2.js';
 import { SKINS, DEFAULT_SKIN } from './skinsV2.js';
+import { MUSIC_TRACKS } from './audioSourcesV2.js';
 
 const scoreValue = value => Number.isFinite(value) ? Math.max(0, Math.floor(value)) : 0;
 
@@ -12,6 +13,7 @@ export function createProgress() {
     levelResults: {},
     endlessUnlocked: false,
     settings: { music: true, sfx: true, haptics: true },
+    selectedMusic: 'auto',
     bobux: 0,
     unlockedSkins: [DEFAULT_SKIN],
     equippedSkin: DEFAULT_SKIN,
@@ -24,7 +26,12 @@ export function sanitizeProgress(raw) {
   for (const key of Object.keys(data.settings)) {
     if (typeof raw.settings?.[key] === 'boolean') data.settings[key] = raw.settings[key];
   }
+  const validTracks = new Set(Array.isArray(MUSIC_TRACKS) ? MUSIC_TRACKS.map(t => t.id) : ['auto']);
+  data.selectedMusic = typeof raw.selectedMusic === 'string' && validTracks.has(raw.selectedMusic)
+    ? raw.selectedMusic
+    : 'auto';
   let contiguous = true;
+
   for (const level of LEVEL_CONFIG.levels) {
     const result = raw.levelResults?.[level.id];
     if (result && typeof result === 'object') {
@@ -89,6 +96,13 @@ export function equipSkin(data, skinId) {
   if (!data.unlockedSkins.includes(skinId)) return data;
   return sanitizeProgress({ ...data, equippedSkin: skinId });
 }
+
+export function setSelectedMusic(data, trackId) {
+  const validTracks = new Set(Array.isArray(MUSIC_TRACKS) ? MUSIC_TRACKS.map(t => t.id) : ['auto']);
+  const selected = validTracks.has(trackId) ? trackId : 'auto';
+  return sanitizeProgress({ ...data, selectedMusic: selected });
+}
+
 
 export function recordAttempt(data, id, score, bobuxCollected = 0) {
   if (id === 'endless' ? !data.endlessUnlocked : !isUnlocked(data, id)) return data;

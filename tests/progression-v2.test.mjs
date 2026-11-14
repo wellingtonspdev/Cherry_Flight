@@ -72,3 +72,28 @@ test('Corrupt and oversized storage fall back, legacy best is preserved, and wri
   map.set(storage.SAVE_KEY, 'x'.repeat(100000));
   assert.equal((await service.load()).data.highestUnlockedLevel, 1);
 });
+
+test('selectedMusic defaults to auto, sanitizes invalid track IDs, and persists updates', () => {
+  assert.ok(p);
+  const data = p.createProgress();
+  assert.equal(data.selectedMusic, 'auto');
+
+  const custom = p.setSelectedMusic(data, 'luolei_yuexinmiao');
+  assert.equal(custom.selectedMusic, 'luolei_yuexinmiao');
+
+  const invalid = p.setSelectedMusic(data, 'non_existent_track_xyz');
+  assert.equal(invalid.selectedMusic, 'auto');
+
+  const sanitized = p.sanitizeProgress({
+    schemaVersion: 2,
+    selectedMusic: 'luolei_yuexinmiao',
+  });
+  assert.equal(sanitized.selectedMusic, 'luolei_yuexinmiao');
+
+  const sanitizedBad = p.sanitizeProgress({
+    schemaVersion: 2,
+    selectedMusic: 'hacker_song',
+  });
+  assert.equal(sanitizedBad.selectedMusic, 'auto');
+});
+

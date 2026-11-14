@@ -1,6 +1,6 @@
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { createProgress, startLevel, completeLevel, recordAttempt, addBobux, unlockSkin, equipSkin } from './progressionV2';
+import { createProgress, startLevel, completeLevel, recordAttempt, addBobux, unlockSkin, equipSkin, setSelectedMusic } from './progressionV2';
 import { createSaveService } from './saveServiceV2';
 import { audioManager } from './AudioManagerV2';
 
@@ -13,7 +13,9 @@ export function ProgressProvider({ children }) {
   const [hasSave, setHasSave] = useState(false);
   const [warning, setWarning] = useState('');
 
-  useEffect(() => { audioManager.settings(data.settings); }, [data.settings]);
+  useEffect(() => {
+    audioManager.settings({ ...data.settings, selectedMusic: data.selectedMusic });
+  }, [data.settings, data.selectedMusic]);
   useEffect(() => {
     let active = true;
     service.load().then(result => {
@@ -44,14 +46,16 @@ export function ProgressProvider({ children }) {
     }).then(ok => ok && outcome);
   }, [update]);
   const equip = useCallback(skinId => update(value => equipSkin(value, skinId)), [update]);
+  const selectMusic = useCallback(trackId => update(value => setSelectedMusic(value, trackId)), [update]);
   const setSetting = useCallback((key, enabled) => update(value => Object.hasOwn(value.settings, key) && typeof enabled === 'boolean' ? { ...value, settings: { ...value.settings, [key]: enabled } } : null), [update]);
 
   const value = useMemo(() => ({
     data, loaded, hasSave, warning,
-    begin, complete, attempt, addBobux: addCoins, unlockSkin: unlock, equipSkin: equip, setSetting,
-  }), [data, loaded, hasSave, warning, begin, complete, attempt, addCoins, unlock, equip, setSetting]);
+    begin, complete, attempt, addBobux: addCoins, unlockSkin: unlock, equipSkin: equip, selectMusic, setSetting,
+  }), [data, loaded, hasSave, warning, begin, complete, attempt, addCoins, unlock, equip, selectMusic, setSetting]);
 
   return <Context.Provider value={value}>{children}</Context.Provider>;
 }
+
 
 export const useProgress = () => useContext(Context);

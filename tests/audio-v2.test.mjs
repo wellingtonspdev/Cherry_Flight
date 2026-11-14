@@ -92,3 +92,63 @@ test('Audio assets contain 12 unique extended level themes and 10 arcade kawaii 
   assert.equal(levelThemes.length, 12, '12 levels must be configured');
   assert.equal(new Set(levelThemes).size, 12, 'All 12 levels must have unique non-repeated soundtracks');
 });
+
+test('Custom BGM luolei_yuexinmiao is declared in AUDIO_SOURCES and MUSIC_TRACKS exposes all tracks plus auto', async () => {
+  globalThis.require = globalThis.require || (id => id);
+  const rootAudio = path.resolve('assets/v2/audio');
+  const filePath = path.join(rootAudio, 'luolei_yuexinmiao.wav');
+  assert.ok(fs.existsSync(filePath), 'Missing luolei_yuexinmiao.wav');
+  assert.ok(fs.statSync(filePath).size > 1500000);
+
+  const sourcesModule = await import('../src/game/audioSourcesV2.js');
+  assert.ok(sourcesModule.AUDIO_SOURCES.music.luolei_yuexinmiao, 'luolei_yuexinmiao must be in AUDIO_SOURCES.music');
+  assert.ok(Array.isArray(sourcesModule.MUSIC_TRACKS), 'MUSIC_TRACKS must be an array');
+  assert.equal(sourcesModule.MUSIC_TRACKS[0].id, 'auto', 'First MUSIC_TRACK must be auto');
+  const trackIds = sourcesModule.MUSIC_TRACKS.map(t => t.id);
+  assert.ok(trackIds.includes('luolei_yuexinmiao'), 'luolei_yuexinmiao must be in MUSIC_TRACKS');
+  for (const key of Object.keys(sourcesModule.AUDIO_SOURCES.music)) {
+    assert.ok(trackIds.includes(key), `Track ${key} must be in MUSIC_TRACKS`);
+  }
+});
+
+test('audioService respects selectedMusic override and avoids resetting track on biome switch', async () => {
+  assert.ok(module);
+  const playedTracks = [];
+  const players = [];
+  const service = module.createAudioService(source => {
+    const player = { source, isLoaded: true, playing: false, currentTime: 0, play() { this.playing = true; }, pause() { this.playing = false; }, async seekTo(value) { this.currentTime = value; }, remove() { this.removed = true; } };
+    players.push(player);
+    playedTracks.push(source);
+    return player;
+  }, {
+    music: {
+      first_bloom: 'theme_first_bloom',
+      sakura_garden: 'theme_sakura',
+      luolei_yuexinmiao: 'theme_luolei',
+    },
+    sfx: { jump: 'jump' },
+  });
+
+  // Default auto behavior
+  await service.prepare('first_bloom');
+  service.start();
+  assert.equal(playedTracks[0], 'theme_first_bloom');
+
+  // Change to custom music
+  service.settings({ selectedMusic: 'luolei_yuexinmiao' });
+  await service.prepare('first_bloom');
+  assert.equal(playedTracks[playedTracks.length - 1], 'theme_luolei');
+
+  const countBeforeBiome = playedTracks.length;
+  // Biome change in endless mode while custom song is active
+  await service.prepare('sakura_garden');
+  // Should NOT have created a new player or switched track!
+  assert.equal(playedTracks.length, countBeforeBiome);
+
+  // Switch back to auto
+  service.settings({ selectedMusic: 'auto' });
+  await service.prepare('sakura_garden');
+  assert.equal(playedTracks[playedTracks.length - 1], 'theme_sakura');
+});
+
+

@@ -2,7 +2,7 @@ const VOLUMES = { jump: 0.45, bobux: 0.6, score: 0.55, collision: 0.7, checkpoin
 export function createAudioService(createPlayer, sources) {
   let music = null, chapter = '', active = false, failures = 0, generation = 0;
   let effectRevision = 0;
-  let preferences = { music: true, sfx: true };
+  let preferences = { music: true, sfx: true, selectedMusic: 'auto' };
   const effects = new Map();
   const events = [];
   const safely = action => {
@@ -13,10 +13,13 @@ export function createAudioService(createPlayer, sources) {
   const api = {
     async prepare(biome) {
       const ticket = ++generation;
-      if (chapter !== biome || !music) {
+      const targetTrack = (preferences.selectedMusic && preferences.selectedMusic !== 'auto' && sources.music?.[preferences.selectedMusic])
+        ? preferences.selectedMusic
+        : biome;
+      if (chapter !== targetTrack || !music) {
         if (music) safely(() => music.remove());
-        music = null; chapter = biome;
-        safely(() => { music = createPlayer(sources.music[biome]); music.loop = true; music.volume = 0.35; });
+        music = null; chapter = targetTrack;
+        safely(() => { music = createPlayer(sources.music[targetTrack]); music.loop = true; music.volume = 0.35; });
       }
       for (const [event, source] of Object.entries(sources.sfx)) if (!effects.has(event)) safely(() => {
         const player = createPlayer(source); player.volume = VOLUMES[event] || 0.6; effects.set(event, player);
@@ -37,7 +40,20 @@ export function createAudioService(createPlayer, sources) {
       safely(() => { player.seekTo(0).then(() => { if (revision === effectRevision && preferences.sfx && effects.get(event) === player) safely(() => player.play()); }).catch(() => { failures++; }); });
     },
     settings(next) {
+      const prevSelected = preferences.selectedMusic;
       preferences = { ...preferences, ...next };
+      if (next.selectedMusic !== undefined && next.selectedMusic !== prevSelected && chapter && sources.music) {
+        const nextTarget = (preferences.selectedMusic && preferences.selectedMusic !== 'auto' && sources.music[preferences.selectedMusic])
+          ? preferences.selectedMusic
+          : chapter;
+        if (nextTarget !== chapter) {
+          generation++;
+          if (music) safely(() => music.remove());
+          music = null; chapter = nextTarget;
+          safely(() => { music = createPlayer(sources.music[nextTarget]); music.loop = true; music.volume = 0.35; });
+          if (active && preferences.music && music) safely(() => music.play());
+        }
+      }
       if (!preferences.music && music) safely(() => music.pause());
       else if (active && music) safely(() => music.play());
       if (!preferences.sfx) effectRevision++;
@@ -52,3 +68,4 @@ export function createAudioService(createPlayer, sources) {
   };
   return api;
 }
+

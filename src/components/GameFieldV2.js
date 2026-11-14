@@ -88,7 +88,9 @@ export default function GameFieldV2({ navigation, route }) {
     return () => { cancelled = true; stop(); };
   }, [focused, allowed, width, height, levelId, endless, retry, stop, distance, progress.begin]);
 
-  useEffect(() => { audioManager.settings(progress.data.settings); }, [progress.data.settings]);
+  useEffect(() => {
+    audioManager.settings({ ...progress.data.settings, selectedMusic: progress.data.selectedMusic });
+  }, [progress.data.settings, progress.data.selectedMusic]);
   useEffect(() => { if (!focused) audioManager.release(); return () => audioManager.release(); }, [focused]);
 
   useEffect(() => {
