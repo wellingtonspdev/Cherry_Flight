@@ -42,7 +42,8 @@ export function sanitizeProgress(raw) {
     const result = raw.levelResults?.[level.id];
     if (result && typeof result === 'object') {
       const bestScore = scoreValue(result.bestScore);
-      const completed = contiguous && result.completed === true && bestScore >= level.targetScore;
+      const minRequired = Math.min(8, level.targetScore);
+      const completed = contiguous && result.completed === true && bestScore >= minRequired;
       data.levelResults[level.id] = { bestScore, completed };
       if (completed) data.lastCompletedLevel = level.id;
       else contiguous = false;
@@ -128,7 +129,8 @@ export function recordAttempt(data, id, score, bobuxCollected = 0) {
 
 export function completeLevel(data, id, score, bobuxCollected = 0) {
   const level = LEVEL_CONFIG.levels.find(item => item.id === id);
-  if (!level || !isUnlocked(data, id) || scoreValue(score) < level.targetScore) return data;
+  const minRequired = Math.min(8, level?.targetScore ?? 8);
+  if (!level || !isUnlocked(data, id) || scoreValue(score) < minRequired) return data;
   const wasCompleted = data.levelResults[id]?.completed === true;
   const firstTimeBonus = wasCompleted ? 0 : 5;
   const bobuxGain = (Number.isInteger(bobuxCollected) && bobuxCollected > 0 ? bobuxCollected : 0) + firstTimeBonus;

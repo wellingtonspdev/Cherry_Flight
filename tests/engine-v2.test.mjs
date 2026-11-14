@@ -74,9 +74,9 @@ test('V2 score is once per pair and completion fires once at the configured targ
   r.player.y = p.gapY + 30; r.player.velocity = 0;
   engine.stepRound(r, 0.001); assert.equal(r.score, 1);
   engine.stepRound(r, 0.001); assert.equal(r.score, 1);
-  r.score = 7; p.scored = false;
+  r.score = r.params.targetScore - 1; p.scored = false;
   engine.stepRound(r, 0.001);
-  assert.equal(r.score, 8); assert.equal(r.status, 'LEVEL_COMPLETE');
+  assert.equal(r.score, r.params.targetScore); assert.equal(r.status, 'LEVEL_COMPLETE');
   assert.equal(r.events.filter(e => e.type === 'complete').length, 1);
   engine.stepRound(r, 0.001);
   assert.equal(r.events.length, 0);
